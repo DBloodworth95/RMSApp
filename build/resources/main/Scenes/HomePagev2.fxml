@@ -7,40 +7,55 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100.0" prefWidth="1774.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.HomePageController">
    <children>
-      <HBox alignment="BOTTOM_LEFT" layoutX="-3.0" layoutY="-4.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="468.0" AnchorPane.topAnchor="-4.0">
+      <HBox alignment="CENTER_LEFT" layoutX="-3.0" layoutY="-4.0" style="-fx-background-color: #4b7063;" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="468.0" AnchorPane.topAnchor="-4.0">
          <children>
-            <Button mnemonicParsing="false" text="Button">
+            <Button fx:id="backBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="105.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="72.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="134.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="196.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="258.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="320.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="382.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="444.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="506.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <AnchorPane prefHeight="94.0" prefWidth="679.0">
+            <Button fx:id="fwdBtn" layoutX="10.0" layoutY="105.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="homeBtn" layoutX="72.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="refreshBtn" layoutX="134.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="zoomInBtn" layoutX="196.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="zoomOutBtn" layoutX="258.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="undoBtn" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="redoBtn" layoutX="382.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="faqBtn" layoutX="444.0" layoutY="78.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FAQ">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+            <Button fx:id="legalBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" text="LEGAL" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <AnchorPane prefHeight="94.0" prefWidth="608.0" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="136.0" layoutY="-3.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="94.0" prefWidth="1015.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="-472.0" AnchorPane.topAnchor="-4.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="134.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="94.0" prefWidth="1013.0" style="-fx-background-color: #4b7063;" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="-468.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button layoutX="413.0" layoutY="47.0" mnemonicParsing="false" text="Button" />
-                        <Text fx:id="loginLabel" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as Dan" wrappingWidth="162.91241455078125">
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="profileBtn" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+                        <Text fx:id="loginLabel" fill="WHITE" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as Dan" wrappingWidth="162.91241455078125" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets left="50.0" />
                            </HBox.margin>
                         </Text>
-                        <Text fx:id="dateLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019">
+                        <Text fx:id="dateLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets left="50.0" right="50.0" />
                            </HBox.margin>
@@ -51,28 +66,75 @@
             </AnchorPane>
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutY="91.0" prefHeight="190.0" prefWidth="234.0" AnchorPane.leftAnchor="-3.0">
+      <HBox alignment="CENTER" layoutY="91.0" prefHeight="190.0" prefWidth="197.0" AnchorPane.leftAnchor="-3.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logo Image" />
+            <ImageView fitHeight="179.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Woodlands.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
-      <HBox layoutX="192.0" layoutY="90.0" prefHeight="189.0" prefWidth="1103.0">
+      <HBox layoutX="192.0" layoutY="90.0" prefHeight="190.0" prefWidth="1632.0" AnchorPane.bottomAnchor="820.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="-58.0" AnchorPane.topAnchor="90.0">
          <children>
-            <AnchorPane prefHeight="189.0" prefWidth="1105.0">
+            <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="185.0" prefWidth="1640.0" style="-fx-background-color: #aaaaaa;" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="1.0" prefHeight="189.0" prefWidth="1584.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-478.0" AnchorPane.topAnchor="0.0">
+                  <HBox alignment="CENTER_LEFT" layoutY="-1.0" prefHeight="133.0" prefWidth="1585.0" style="-fx-background-color: #aaaaaa;" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Button">
+                        <Button mnemonicParsing="false" onAction="#createTab" text="STUDENTS">
                            <HBox.margin>
                               <Insets right="25.0" />
                            </HBox.margin>
                         </Button>
-                        <Button layoutX="60.0" layoutY="91.0" mnemonicParsing="false" text="Button">
+                        <Button layoutX="60.0" layoutY="55.0" mnemonicParsing="false" text="STAFF">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="147.0" layoutY="55.0" mnemonicParsing="false" text="MODULES">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="209.0" layoutY="55.0" mnemonicParsing="false" text="COURSES">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="271.0" layoutY="55.0" mnemonicParsing="false" text="PERSONAL TUTORS">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="333.0" layoutY="55.0" mnemonicParsing="false" text="TIMETABLE">
+                           <HBox.margin>
+                              <Insets right="250.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ChoiceBox prefHeight="26.0" prefWidth="234.0">
+                           <HBox.margin>
+                              <Insets right="250.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                        <Button fx:id="notifBtn" mnemonicParsing="false" prefHeight="48.0" prefWidth="135.0" style="-fx-background-color: transparent; -fx-border-color: black;" />
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="55.0" layoutY="123.0" prefHeight="64.0" prefWidth="1585.0" style="-fx-background-color: #aaaaaa;">
+                     <children>
+                        <Button mnemonicParsing="false" text="ASSESMENTS">
                            <HBox.margin>
                               <Insets right="25.0" />
                            </HBox.margin>
                         </Button>
-                        <Button layoutX="122.0" layoutY="91.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="60.0" layoutY="91.0" mnemonicParsing="false" text="ATTENDANCE">
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="122.0" layoutY="91.0" mnemonicParsing="false" text="GRADES" />
                         <ChoiceBox prefHeight="26.0" prefWidth="234.0">
                            <HBox.margin>
                               <Insets left="300.0" />
@@ -80,7 +142,7 @@
                         </ChoiceBox>
                         <Button mnemonicParsing="false" text="Button">
                            <HBox.margin>
-                              <Insets left="350.0" />
+                              <Insets left="259.0" />
                            </HBox.margin>
                         </Button>
                         <Button layoutX="846.0" layoutY="91.0" mnemonicParsing="false" text="Button">
@@ -107,7 +169,7 @@
       </HBox>
       <HBox layoutX="4.0" layoutY="279.0" prefHeight="768.0" prefWidth="1764.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="279.0">
          <children>
-            <TabPane prefHeight="714.0" prefWidth="1762.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+            <TabPane fx:id="homePageTab" prefHeight="714.0" prefWidth="1762.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
               <tabs>
                 <Tab text="Untitled Tab 1">
                   <content>
@@ -115,7 +177,10 @@
                            <children>
                               <HBox layoutX="-2.0" layoutY="-2.0" prefHeight="108.0" prefWidth="1776.0" AnchorPane.bottomAnchor="531.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="-2.0">
                                  <children>
-                                    <Button mnemonicParsing="false" text="CREATE" />
+                                    <Button mnemonicParsing="false" text="CREATE">
+                                       <effect>
+                                          <Glow />
+                                       </effect></Button>
                                     <Button layoutX="30.0" layoutY="51.0" mnemonicParsing="false" text="SAVE">
                                        <HBox.margin>
                                           <Insets left="50.0" />
@@ -177,43 +242,43 @@
             </TabPane>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="-6.0" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-4.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="-6.0" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-4.0">
          <children>
-            <Button layoutX="841.0" layoutY="47.0" mnemonicParsing="false" text="Button">
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Button>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
-               <HBox.margin>
-                  <Insets right="600.0" />
-               </HBox.margin>
-            </Text>
-            <Button mnemonicParsing="false" text="Button">
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Button>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
+            <Button fx:id="copyrightBtn" layoutX="841.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
+            </Button>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
+               <HBox.margin>
+                  <Insets right="300.0" />
+               </HBox.margin>
             </Text>
-            <Button layoutX="1107.0" layoutY="47.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="1343.0" layoutY="47.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="1343.0" layoutY="47.0" mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button">
+            <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <HBox.margin>
                   <Insets right="50.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Button" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WILDE">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WOODLANDSUC.UK">
+               <HBox.margin>
+                  <Insets right="200.0" />
+               </HBox.margin>
+            </Text>
+            <Button fx:id="twitterBtn" layoutX="1107.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="linkedInBtn" layoutX="1343.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="googleBtn" layoutX="1343.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <HBox.margin>
                   <Insets right="50.0" />
                </HBox.margin>
+            </Button>
+            <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WILDE">
+               <HBox.margin>
+                  <Insets right="300.0" />
+               </HBox.margin>
             </Text>
-            <Text fx:id="lastLogLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019">
+            <Text fx:id="lastLogLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>

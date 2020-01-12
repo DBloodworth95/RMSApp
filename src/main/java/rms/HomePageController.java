@@ -1,14 +1,21 @@
 package rms;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
+import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-
-import java.text.ParseException;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class HomePageController {
     @FXML
@@ -19,7 +26,11 @@ public class HomePageController {
     private Text dateLabel;
     @FXML
     private Button copyrightBtn, woodlandsBtn, twitterBtn, googleBtn, linkedInBtn, facebookBtn, wildeBtn,
-            backBtn, fwdBtn, faqBtn, homeBtn, redoBtn, refreshBtn, undoBtn, zoomInBtn, zoomOutBtn;
+            backBtn, fwdBtn, faqBtn, homeBtn, redoBtn, refreshBtn, undoBtn, zoomInBtn, zoomOutBtn, profileBtn, notifBtn, logoutBtn;
+    @FXML
+    private TabPane homePageTab;
+    private Tab studentTab;
+    private TableView studentTable;
 
 
     public void setLoginUsername(String name) {
@@ -28,10 +39,20 @@ public class HomePageController {
     public void setLastLogLabel(String timestamp) {
         lastLogLabel.setText(timestamp);
     }
-    public void setDateLabel()  {
-        java.util.Date date=new java.util.Date();
-        dateLabel.setText(String.valueOf(date));
+    public void setDateLabel() {
+        Calendar cal=Calendar.getInstance();
+        SimpleDateFormat formatDate = new SimpleDateFormat("MMM-dd");
+        String dateForLabel = formatDate.format(cal.getTime());
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                String string = new SimpleDateFormat("HH:mm:ss").format(new Date());
+                dateLabel.setText(dateForLabel + " " + string);
+            }
+        }, 0, 1000);
     }
+
     public void getBtnImages() {
         Image copyrightImage = new Image(getClass().getResourceAsStream("/Scenes/Images/copyrightBtn.png"));
         copyrightBtn.setGraphic(new ImageView(copyrightImage));
@@ -65,6 +86,22 @@ public class HomePageController {
         zoomInBtn.setGraphic(new ImageView(zoomInImage));
         Image zoomOutImage = new Image(getClass().getResourceAsStream("/Scenes/Images/zoomOutBtn.png"));
         zoomOutBtn.setGraphic(new ImageView(zoomOutImage));
+        Image logoutImage = new Image(getClass().getResourceAsStream("/Scenes/Images/logoutBtn.png"));
+        logoutBtn.setGraphic(new ImageView(logoutImage));
+        Image notifImage = new Image(getClass().getResourceAsStream("/Scenes/Images/notifBtn.png"));
+        notifBtn.setGraphic(new ImageView(notifImage));
+        Image profileImage = new Image(getClass().getResourceAsStream("/Scenes/Images/profileBtn.png"));
+        profileBtn.setGraphic(new ImageView(profileImage));
 
+    }
+
+    public void createTab() throws IOException {
+        Tab studentTab = new Tab();
+        TableView studentTable = new TableView();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/StudentTab.fxml"));
+        AnchorPane studentTabContent = loader.load();
+        homePageTab.getTabs().add(studentTab);
+        studentTab.setText("Students");
+        studentTab.setContent(studentTabContent);
     }
 }
