@@ -61,13 +61,13 @@ public class CreateGUI extends Application {
     @FXML
     public void loginAttempt(ActionEvent event) throws SQLException, IOException, ParseException {
 
-        passwordError.setFill(Color.FIREBRICK);
-        passwordError.setText("Incorrect username or password! Please try again...");
+        //passwordError.setFill(Color.FIREBRICK);
+       // passwordError.setText("Incorrect username or password! Please try again...");
 
-        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
-        String username = "root";
-        String password = "root";
-        String query = "SELECT * FROM users WHERE username ='" + userField.getText() + "'";
+        String dbUrl = "jdbc:mysql://v.je:3306/csy2028";
+        String username = "student";
+        String password = "student";
+        String query = "SELECT * FROM users1 WHERE username ='" + userField.getText() + "'";
         System.out.println(query);
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
         PreparedStatement myStatement = myConnection.prepareStatement(query);
@@ -98,7 +98,7 @@ public class CreateGUI extends Application {
                 SimpleDateFormat formatter= new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
                 String dateNow = formatter.format(currentDate.getTime());
                 System.out.println(dateNow);
-                String updateLog = "UPDATE users SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
+                String updateLog = "UPDATE users1 SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
                 PreparedStatement updateLoggedin = myConnection.prepareStatement(updateLog);
                 updateLoggedin.execute();
 

@@ -8,75 +8,80 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100.0" prefWidth="1774.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.CreateGUI">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1100.0" prefWidth="1774.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.CreateGUI">
    <children>
-      <HBox alignment="CENTER" layoutX="616.0" layoutY="78.0" prefHeight="338.0" prefWidth="360.0" AnchorPane.bottomAnchor="712.0" AnchorPane.leftAnchor="707.0" AnchorPane.rightAnchor="707.0" AnchorPane.topAnchor="50.0">
+      <ImageView blendMode="DARKEN" fitHeight="1101.0" fitWidth="1775.0" opacity="0.91" pickOnBounds="true">
+         <image>
+            <Image url="@Images/bg2.png" />
+         </image></ImageView>
+      <HBox alignment="CENTER" layoutX="616.0" layoutY="78.0" prefHeight="338.0" prefWidth="968.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <ImageView fitHeight="318.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
-               <image>
-                  <Image url="@../../../../images/Woodlands.png" />
-               </image>
-            </ImageView>
+            <HBox style="-fx-border-width: 12px; -fx-border-color: white; -fx-border-radius: 0px 150px 150px 150px; -fx-background-insets: 10px 10px 30px 30px; -fx-border-style: solid; -fx-padding: 5px; f: dropshadow( three-pass-box, white, 10, 10, 1, 1);" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fitHeight="318.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/Woodlands.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
          </children>
       </HBox>
-      <Text layoutX="393.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Woodlands University RMS System." AnchorPane.bottomAnchor="505.56640625" AnchorPane.leftAnchor="393.0" AnchorPane.rightAnchor="419.515625" AnchorPane.topAnchor="547.87109375">
-         <font>
-            <Font size="40.0" />
-         </font>
-      </Text>
-      <HBox alignment="CENTER_LEFT" layoutX="416.0" layoutY="697.0" prefHeight="116.0" prefWidth="946.0" AnchorPane.bottomAnchor="287.0" AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="412.0" AnchorPane.topAnchor="697.0">
+      <HBox alignment="CENTER" layoutX="393.0" layoutY="547.87109375" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" HBox.hgrow="ALWAYS">
+            <Text fill="#325139" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Woodlands University RMS System!" textAlignment="CENTER">
                <font>
-                  <Font size="30.0" />
+                  <Font name="System Bold" size="46.0" />
                </font>
-               <HBox.margin>
-                  <Insets left="200.0" />
-               </HBox.margin>
             </Text>
-            <TextField fx:id="userField" prefHeight="48.0" prefWidth="289.0">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets left="100.0" />
-               </HBox.margin>
-            </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="408.0" layoutY="806.0" prefHeight="116.0" prefWidth="946.0" AnchorPane.bottomAnchor="178.0" AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="412.0" AnchorPane.topAnchor="806.0">
+      <VBox alignment="CENTER" layoutY="697.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" HBox.hgrow="ALWAYS">
-               <font>
-                  <Font size="30.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="200.0" />
-               </HBox.margin>
-            </Text>
-            <PasswordField fx:id="passwordField" prefHeight="48.0" prefWidth="289.0">
-               <HBox.margin>
-                  <Insets left="110.0" />
-               </HBox.margin>
-            </PasswordField>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="946.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="userField" prefHeight="48.0" prefWidth="289.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="946.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" Password:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Text>
+                  <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="289.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="87.0" prefWidth="1774.0">
+               <children>
+                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginAttempt" prefHeight="48.0" prefWidth="289.0" text="Login" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="0.0" VBox.vgrow="ALWAYS" />
          </children>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" layoutX="400.0" layoutY="911.0" prefHeight="116.0" prefWidth="946.0" AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="412.0">
-         <children>
-            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginAttempt" prefHeight="48.0" prefWidth="289.0" text="Login">
-               <HBox.margin>
-                  <Insets left="300.0" />
-               </HBox.margin>
-            </Button>
-            <Text fx:id="passwordError" strokeType="OUTSIDE" strokeWidth="0.0">
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin>
-            </Text>
-         </children>
-      </HBox>
+      </VBox>
    </children>
 </AnchorPane>
