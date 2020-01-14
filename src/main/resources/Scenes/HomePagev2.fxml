@@ -58,12 +58,12 @@
                      </HBox.margin>
                   </Button>
                   <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
-                  <Button alignment="CENTER" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="zoomInBtnzoomInBtn" alignment="CENTER" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button alignment="CENTER" layoutX="382.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                  <Button fx:id="zoomOutBtnzoomOutBtn" alignment="CENTER" layoutX="382.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -391,7 +391,7 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" layoutX="-6.0" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button layoutX="841.0" layoutY="47.0" mnemonicParsing="false" text="Button">
+            <Button fx:id="copyrightBtn" layoutX="841.0" layoutY="47.0" mnemonicParsing="false" text="Button">
                <HBox.margin>
                   <Insets right="50.0" />
                </HBox.margin>
