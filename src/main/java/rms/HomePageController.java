@@ -21,7 +21,6 @@ public class HomePageController {
     private Button copyrightBtn, woodlandsBtn, twitterBtn, googleBtn, linkedInBtn, facebookBtn, wildeBtn,
             backBtn, fwdBtn, faqBtn, homeBtn, redoBtn, refreshBtn, undoBtn, zoomInBtn, zoomOutBtn;
 
-
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
     }
@@ -33,6 +32,9 @@ public class HomePageController {
         dateLabel.setText(String.valueOf(date));
     }
     public void getBtnImages() {
+
+        //copyrightBtn.setId("copyrightBtn");
+
         Image copyrightImage = new Image(getClass().getResourceAsStream("/Scenes/Images/copyrightBtn.png"));
         copyrightBtn.setGraphic(new ImageView(copyrightImage));
         Image woodlandsImage = new Image(getClass().getResourceAsStream("/Scenes/Images/woodlandsBtn.png"));

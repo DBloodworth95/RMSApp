@@ -54,8 +54,11 @@ public class CreateGUI extends Application {
         window = primaryStage;
         Parent loginPage = FXMLLoader.load(getClass().getResource("/Scenes/Login.fxml"));
         Scene scene = new Scene(loginPage);
+        //add css
+        scene.getStylesheets().add("/Scenes/style.css");
         window.setScene(scene);
         window.show();
+
 
     }
     @FXML
@@ -64,10 +67,11 @@ public class CreateGUI extends Application {
         passwordError.setFill(Color.FIREBRICK);
         passwordError.setText("Incorrect username or password! Please try again...");
 
-        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
-        String username = "root";
-        String password = "root";
-        String query = "SELECT * FROM users WHERE username ='" + userField.getText() + "'";
+        String dbUrl = "jdbc:mysql://v.je:3306/csy2028";
+        String username = "student";
+        String password = "student";
+        String query = "SELECT * FROM users1 WHERE username ='" + userField.getText() + "'";
+        //String query = "SELECT * FROM users WHERE email_address = 'admin@gmail.com'";
         System.out.println(query);
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
         PreparedStatement myStatement = myConnection.prepareStatement(query);
@@ -79,7 +83,7 @@ public class CreateGUI extends Application {
             int accesslevel = myResultSet.getInt("user_level");
             String pass = myResultSet.getString("password");
             int userId = myResultSet.getInt("user_id");
-
+    System.out.println(userName);
             if (pass.equals(passwordField.getText())) {
 
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
@@ -98,7 +102,7 @@ public class CreateGUI extends Application {
                 SimpleDateFormat formatter= new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
                 String dateNow = formatter.format(currentDate.getTime());
                 System.out.println(dateNow);
-                String updateLog = "UPDATE users SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
+                String updateLog = "UPDATE users1 SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
                 PreparedStatement updateLoggedin = myConnection.prepareStatement(updateLog);
                 updateLoggedin.execute();
 

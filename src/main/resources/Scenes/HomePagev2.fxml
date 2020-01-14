@@ -3,111 +3,323 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100.0" prefWidth="1774.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.HomePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1100.0" prefWidth="1774.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.HomePageController">
    <children>
-      <HBox alignment="BOTTOM_LEFT" layoutX="-3.0" layoutY="-4.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="468.0" AnchorPane.topAnchor="-4.0">
+      <AnchorPane prefHeight="51.0" prefWidth="683.0" style="-fx-background-color: #276136#276136;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button mnemonicParsing="false" text="Button">
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </Button>
-            <Button layoutX="10.0" layoutY="105.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="72.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="134.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="196.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="258.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="320.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="382.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="444.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="506.0" layoutY="78.0" mnemonicParsing="false" text="Button" />
-            <AnchorPane prefHeight="94.0" prefWidth="679.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="601.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="11.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="136.0" layoutY="-3.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="94.0" prefWidth="1015.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="-472.0" AnchorPane.topAnchor="-4.0">
-                     <children>
-                        <Button mnemonicParsing="false" text="Button" />
-                        <Button layoutX="413.0" layoutY="47.0" mnemonicParsing="false" text="Button" />
-                        <Text fx:id="loginLabel" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as Dan" wrappingWidth="162.91241455078125">
-                           <HBox.margin>
-                              <Insets left="50.0" />
-                           </HBox.margin>
-                        </Text>
-                        <Text fx:id="dateLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019">
-                           <HBox.margin>
-                              <Insets left="50.0" right="50.0" />
-                           </HBox.margin>
-                        </Text>
-                     </children>
-                  </HBox>
+                  <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="105.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                  <Button alignment="CENTER" layoutX="72.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="134.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                  <Button alignment="CENTER" layoutX="196.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="258.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                  <Button alignment="CENTER" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="382.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                  <Button alignment="CENTER" layoutX="444.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label minWidth="-Infinity" prefWidth="50.0" text="FAQ" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                  <Label minWidth="-Infinity" prefWidth="59.0" text="Legal" textFill="WHITE" />
+                  <Button alignment="CENTER" layoutX="506.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="Button" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
                </children>
-            </AnchorPane>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutY="91.0" prefHeight="190.0" prefWidth="234.0" AnchorPane.leftAnchor="-3.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logo Image" />
-         </children>
-      </HBox>
-      <HBox layoutX="192.0" layoutY="90.0" prefHeight="189.0" prefWidth="1103.0">
-         <children>
-            <AnchorPane prefHeight="189.0" prefWidth="1105.0">
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="649.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="1.0" prefHeight="189.0" prefWidth="1584.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-478.0" AnchorPane.topAnchor="0.0">
+                  <Text fx:id="lastLogLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019" textOrigin="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="loginLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as Dan" wrappingWidth="162.91241455078125">
+                     <HBox.margin>
+                        <Insets right="-20.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" text="Account">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Settings" />
+                  <Button mnemonicParsing="false" text="Exit">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="53.0" prefHeight="85.0" prefWidth="154.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="53.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@Images/Woodlands.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="138.0" prefWidth="1359.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+         <children>
+            <VBox layoutX="-1.0" layoutY="1.0" prefHeight="164.0" prefWidth="1359.0" AnchorPane.bottomAnchor="-117.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="1359.0" style="-fx-background-color: #c4c4c4#c4c4c4;">
                      <children>
-                        <Button mnemonicParsing="false" text="Button">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Students" textAlignment="CENTER">
                            <HBox.margin>
-                              <Insets right="25.0" />
+                              <Insets right="15.0" />
                            </HBox.margin>
                         </Button>
-                        <Button layoutX="60.0" layoutY="91.0" mnemonicParsing="false" text="Button">
+                        <Button layoutX="60.0" layoutY="91.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Tutors" textAlignment="CENTER">
                            <HBox.margin>
-                              <Insets right="25.0" />
+                              <Insets right="15.0" />
                            </HBox.margin>
                         </Button>
-                        <Button layoutX="122.0" layoutY="91.0" mnemonicParsing="false" text="Button" />
-                        <ChoiceBox prefHeight="26.0" prefWidth="234.0">
+                        <Button layoutX="122.0" layoutY="91.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Courses" textAlignment="CENTER">
                            <HBox.margin>
-                              <Insets left="300.0" />
-                           </HBox.margin>
-                        </ChoiceBox>
-                        <Button mnemonicParsing="false" text="Button">
-                           <HBox.margin>
-                              <Insets left="350.0" />
+                              <Insets right="15.0" />
                            </HBox.margin>
                         </Button>
-                        <Button layoutX="846.0" layoutY="91.0" mnemonicParsing="false" text="Button">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Modules" textAlignment="CENTER">
                            <HBox.margin>
-                              <Insets left="50.0" />
+                              <Insets right="15.0" />
                            </HBox.margin>
                         </Button>
-                        <Button layoutX="928.0" layoutY="91.0" mnemonicParsing="false" text="Button">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Personal Tutors" textAlignment="CENTER">
                            <HBox.margin>
-                              <Insets left="50.0" />
+                              <Insets right="15.0" />
                            </HBox.margin>
                         </Button>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" text="Timetable" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                        <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Reports">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <Separator layoutX="915.0" layoutY="34.0" minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="59.0" text="Button" />
+                              <Label text="Notifications" textFill="WHITE" />
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Button" />
+                           </children>
+                        </HBox>
                      </children>
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                      <padding>
-                        <Insets left="50.0" />
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="1359.0" style="-fx-background-color: #ebebeb#ebebeb;">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Assessments">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Attendance">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Grades">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Separator minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Forms">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0" text="Forms">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Diary">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0" text="Diary">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Room Booking">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="100.0" text="Room Booking">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="News">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="50.0" text="News">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Announcements">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="110.0" text="Announcements">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator layoutX="355.0" layoutY="35.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                        <HBox prefHeight="0.0" prefWidth="0.0" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="230.0" text="Search">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="190.0" text="Search me" />
+                           </graphic>
+                           <padding>
+                              <Insets left="-5.0" />
+                           </padding>
+                        </Button>
+                        <Separator layoutX="540.0" layoutY="35.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="33.0" rotate="90.0" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Message">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Calendar">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Email">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="Contacts">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
                      </padding>
                   </HBox>
                </children>
-            </AnchorPane>
+            </VBox>
          </children>
-      </HBox>
-      <HBox layoutX="4.0" layoutY="279.0" prefHeight="768.0" prefWidth="1764.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="279.0">
+      </AnchorPane>
+      <HBox layoutX="4.0" layoutY="279.0" prefHeight="768.0" prefWidth="1764.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="163.0">
          <children>
-            <TabPane prefHeight="714.0" prefWidth="1762.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+            <TabPane prefHeight="892.0" prefWidth="1764.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
               <tabs>
                 <Tab text="Untitled Tab 1">
                   <content>
@@ -177,7 +389,7 @@
             </TabPane>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="-6.0" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-4.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="-6.0" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Button layoutX="841.0" layoutY="47.0" mnemonicParsing="false" text="Button">
                <HBox.margin>
@@ -213,9 +425,9 @@
                   <Insets right="50.0" />
                </HBox.margin>
             </Text>
-            <Text fx:id="lastLogLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019">
+            <Text fx:id="dateLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019">
                <HBox.margin>
-                  <Insets right="10.0" />
+                  <Insets left="50.0" right="50.0" />
                </HBox.margin>
             </Text>
          </children>
