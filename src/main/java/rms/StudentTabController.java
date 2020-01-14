@@ -52,8 +52,8 @@ public class StudentTabController {
     }
 
     public TableView populateTable(List<Staff> newStaff, TableColumn firstNameCol, TableColumn lastNameCol, TableView tableView) {
-        firstNameCol.setCellFactory(new PropertyValueFactory<Staff, String>("firstName"));
-        lastNameCol.setCellFactory(new PropertyValueFactory<Staff, String>("surname"));
+        firstNameCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("firstName"));
+        lastNameCol.setCellValueFactory(new PropertyValueFactory<Staff, String>("surname"));
         firstNameCol.setEditable(true);
         lastNameCol.setEditable(true);
         tableView.setEditable(true);
