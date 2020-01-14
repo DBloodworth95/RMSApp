@@ -97,7 +97,8 @@ public class HomePageController {
         homePageTab.getTabs().add(studentTab);
         studentTab.setText("Students");
         studentTab.setContent(studentTabContent);
-        StudentTabController studentTabController = new StudentTabController();
-        studentTabController.populate();
+        Object temp = loader.getController();
+        StudentTabController controller = (StudentTabController) temp;
+        controller.populate();
     }
 }

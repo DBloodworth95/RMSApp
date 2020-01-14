@@ -27,8 +27,8 @@ public class StudentTabController {
         String password = "root";
         String fetchQuery = ("SELECT * FROM staff");
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
-        PreparedStatement fetchStaff = rmsConnection.prepareStatement(fetchQuery);
-        ResultSet result = fetchStaff.executeQuery();
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result = fetchStaff.executeQuery("SELECT * FROM staff");
         List<Staff> newStaff = new ArrayList<>();
         while (result.next()) {
             int id = Integer.parseInt(result.getString("staff_id"));
@@ -52,13 +52,16 @@ public class StudentTabController {
     }
 
     public TableView populateTable(List<Staff> newStaff, TableColumn firstNameCol, TableColumn lastNameCol, TableView tableView) {
-        tableView.getColumns().addAll(firstNameCol, lastNameCol);
-        firstNameCol.setCellFactory(new PropertyValueFactory<Staff, String>("First Name"));
-        lastNameCol.setCellFactory(new PropertyValueFactory<Staff, String>("Last Name"));
+        firstNameCol.setCellFactory(new PropertyValueFactory<Staff, String>("firstName"));
+        lastNameCol.setCellFactory(new PropertyValueFactory<Staff, String>("surname"));
+        firstNameCol.setEditable(true);
+        lastNameCol.setEditable(true);
+        tableView.setEditable(true);
         ObservableList<Staff> rows = FXCollections.observableArrayList();
         for (Staff staff: newStaff) {
             rows.add(staff);
         }
+        tableView.setItems(rows);
         tableView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         firstNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         lastNameCol.setCellFactory(TextFieldTableCell.forTableColumn());
