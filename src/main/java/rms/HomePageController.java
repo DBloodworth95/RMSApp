@@ -2,20 +2,15 @@ package rms;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 public class HomePageController {
     @FXML
@@ -30,7 +25,7 @@ public class HomePageController {
     @FXML
     private TabPane homePageTab;
     private Tab studentTab;
-    private TableView studentTable;
+
 
 
     public void setLoginUsername(String name) {
@@ -95,13 +90,14 @@ public class HomePageController {
 
     }
 
-    public void createTab() throws IOException {
+    public void createTab() throws IOException, SQLException {
         Tab studentTab = new Tab();
-        TableView studentTable = new TableView();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/StudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
         homePageTab.getTabs().add(studentTab);
         studentTab.setText("Students");
         studentTab.setContent(studentTabContent);
+        StudentTabController studentTabController = new StudentTabController();
+        studentTabController.populate();
     }
 }
