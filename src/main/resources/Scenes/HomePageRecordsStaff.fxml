@@ -194,7 +194,7 @@
             </HBox>
          </children>
       </VBox>
-      <StackPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+      <StackPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-350.0" AnchorPane.topAnchor="110.0">
          <children>
             <HBox alignment="CENTER_LEFT" StackPane.alignment="CENTER_LEFT">
                <children>
