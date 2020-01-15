@@ -65,12 +65,36 @@
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Text>
-                  <Button fx:id="profileBtn" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" />
+                  <Button fx:id="profileBtn" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/profileBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="-2.0" top="4.0" />
+                     </HBox.margin></Button>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/settingsBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                   <Button fx:id="logoutBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets right="20.0" top="4.0" />
                      </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/logoutBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
             </HBox>
@@ -165,7 +189,7 @@
                   <HBox alignment="CENTER_LEFT">
                      <children>
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #f0f1f2#f0f1f2;" text="FORMS" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="FORMS" />
                      </children>
                   </HBox>
                   <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
@@ -223,7 +247,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -295,7 +319,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -333,27 +357,99 @@
             </AnchorPane>
          </children>
       </StackPane>
-      <HBox alignment="CENTER_LEFT" layoutX="-6.0" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="1061.0" minHeight="-Infinity" prefHeight="50.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <HBox alignment="CENTER_LEFT">
                <children>
                   <Button fx:id="copyrightBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets left="20.0" />
-                     </HBox.margin></Button>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020" />
-                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Hyperlink text="WOODLANDSUC.UK" textFill="WHITE" />
-                  <Button fx:id="twitterBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="linkedInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="googleBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/copyrightBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
+                     <HBox.margin>
+                        <Insets right="70.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/woodlandsBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Hyperlink text="WOODLANDSUC.UK" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="150.0" />
+                     </HBox.margin>
+                  </Hyperlink>
+                  <Button fx:id="twitterBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/twitterBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="linkedInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/linkedInBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="googleBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/googleBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/facebookBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+               <children>
+                  <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/wildeBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                   <Hyperlink text="WILDE" textFill="WHITE" />
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefWidth="200.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" />
                </HBox.margin>
