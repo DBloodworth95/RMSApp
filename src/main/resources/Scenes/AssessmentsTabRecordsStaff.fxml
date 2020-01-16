@@ -60,12 +60,12 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" prefHeight="54.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
          <children>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="CREATE" textFill="#09adff">
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="ADD" textFill="#09adff">
                <effect>
                   <Glow />
                </effect>
                <graphic>
-                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Images/addBtn.png" />
                      </image>
@@ -116,7 +116,7 @@
             </Button>
             <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
                <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="29.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Images/saveBtn.png" />
                      </image>

@@ -170,7 +170,7 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1585.0" style="-fx-background-color: #f2f2f0#f2f2f0 #f2f2f0#f2f2f0;">
                <children>
-                  <MenuButton alignment="CENTER" minHeight="0.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="RECORDS">
+                  <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="CORE RECORDS">
                     <items>
                       <MenuItem mnemonicParsing="false" text="STUDENTS" />
                       <MenuItem mnemonicParsing="false" text="STAFF" />
@@ -184,18 +184,34 @@
                   <Separator prefWidth="40.0" rotate="90.0" />
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="ATTENDANCE" />
-                        <Separator prefWidth="40.0" rotate="90.0" />
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="GRADES" />
-                        <Separator prefWidth="40.0" rotate="90.0" />
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="ASSESSMENTS" />
-                        <Separator prefWidth="40.0" rotate="90.0" />
+                        <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="OTHER RECORDS">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="ASSESSMENTS" />
+                              <MenuItem mnemonicParsing="false" text="GRADES" />
+                              <MenuItem mnemonicParsing="false" text="ATTENDANCE" />
+                              <MenuItem mnemonicParsing="false" text="PERSONAL TUTORSHIP" />
+                           </items>
+                        </MenuButton>
+                        <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
+                        <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="ARCHIVED RECORDS">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="STUDENTS" />
+                              <MenuItem mnemonicParsing="false" text="STAFF" />
+                              <MenuItem mnemonicParsing="false" text="MODULES" />
+                              <MenuItem mnemonicParsing="false" text="COURSES" />
+                              <MenuItem mnemonicParsing="false" text="ASSESSMENTS" />
+                              <MenuItem mnemonicParsing="false" text="GRADES" />
+                              <MenuItem mnemonicParsing="false" text="ATTENDANCE" />
+                           </items>
+                        </MenuButton>
+                        <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="REPORTS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
                         </Button>
-                        <Separator prefWidth="40.0" rotate="90.0" />
+                        <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" />
                         <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
                      </children></HBox>
                   <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="226.0">
@@ -252,23 +268,45 @@
                      </padding>
                   </HBox>
                   <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
-                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="200.0">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 5PX;" text="PERSONAL TUTORSHIP" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Button">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/timetableBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="TIMETABLE" />
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </HBox>
                   <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Button">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/calendarBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="TIMETABLE" />
-                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
+                  <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="200.0">
+                     <children>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/calendarBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="CALENDAR" />
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin></Separator>
                   <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="0.0" HBox.hgrow="ALWAYS" />
                   <HBox alignment="CENTER_LEFT">
                      <children>
@@ -283,7 +321,7 @@
                         </Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="FORMS">
                            <HBox.margin>
-                              <Insets left="3.0" right="20.0" />
+                              <Insets right="20.0" />
                            </HBox.margin>
                         </Text>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
