@@ -92,7 +92,7 @@ public class CreateGUI extends Application {
                 controller.setLoginUsername("Logged in as " + session.getUsername());
                 controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
                 controller.setDateLabel();
-                controller.getBtnImages();
+                //controller.getBtnImages();
 
                 Calendar currentDate = Calendar.getInstance();
                 SimpleDateFormat formatter= new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");

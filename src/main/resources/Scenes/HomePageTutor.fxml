@@ -25,28 +25,88 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="809.0" style="-fx-background-color: #447463;">
                <children>
-                  <Button fx:id="backBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="fwdBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="backBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/backBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="fwdBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/fwdBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                   <Separator prefWidth="35.0" rotate="90.0" />
-                  <Button fx:id="homeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="refreshBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="homeBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/homeBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                   <Separator prefWidth="35.0" rotate="90.0" />
-                  <Button fx:id="zoomInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="zoomOutBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="refreshBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/refreshBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
                   <Separator prefWidth="35.0" rotate="90.0" />
-                  <Button fx:id="undoBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                  <Button fx:id="redoBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="undoBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/undoBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="redoBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/redoBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                   <Separator prefWidth="35.0" rotate="90.0" />
-                  <Button fx:id="faqBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="faqBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/faqBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Button>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="FAQ">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Text>
                   <Separator prefWidth="35.0" rotate="90.0" />
-                  <Button fx:id="legalBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" text="LEGAL" textFill="WHITE">
+                  <Button fx:id="legalBtn1" mnemonicParsing="false" style="-fx-background-color: transparent;" text="LEGAL" textFill="WHITE">
                      <HBox.margin>
-                        <Insets left="20.0" />
+                        <Insets left="3.0" />
                      </HBox.margin>
                   </Button>
                   <Separator prefWidth="35.0" rotate="90.0" />
@@ -60,9 +120,10 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Text>
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
                   <Text fx:id="loginLabel1" fill="WHITE" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as Dan" wrappingWidth="162.91241455078125" HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets left="50.0" />
+                        <Insets />
                      </HBox.margin>
                   </Text>
                   <Button fx:id="profileBtn" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
@@ -116,7 +177,7 @@
       </HBox>
       <VBox alignment="CENTER_LEFT" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1585.0" style="-fx-background-color: #cbced1#cbced1;">
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1585.0" style="-fx-background-color: #f2f2f0#f2f2f0; -fx-border-style: solid; -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #e6e8e8#e6e8e8;">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                      <children>
@@ -185,10 +246,17 @@
                      </children></HBox>
                   <HBox alignment="CENTER_RIGHT">
                      <children>
-                        <Button fx:id="notifBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0">
+                        <Button fx:id="notifBtn" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="NOTIFICATIONS">
                            <HBox.margin>
                               <Insets right="50.0" />
-                           </HBox.margin></Button>
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/notificationsBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                      </children>
                      <HBox.margin>
                         <Insets right="10.0" />
@@ -199,19 +267,26 @@
                   <Insets left="20.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1263.0" style="-fx-background-color: #e1e4e8#e1e4e8;">
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1263.0" style="-fx-background-color: #f7f7f7#f7f7f7;">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="211.0" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white;">
+                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="160.0" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #9ccce4#9ccce4; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;" text="Search me">
                            <HBox.margin>
                               <Insets top="1.0" />
                            </HBox.margin>
                         </TextField>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 0px;" textFill="WHITE">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: #9ccce4#9ccce4; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
                            <HBox.margin>
-                              <Insets />
+                              <Insets top="1.0" />
                            </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/searchBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
                      </children>
                      <padding>
@@ -222,7 +297,19 @@
                      <children>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="PERSONAL TUTORSHIP" />
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="TIMETABLE" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Button">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/calendarBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="TIMETABLE">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
@@ -232,25 +319,56 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/forms2Btn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="FORMS">
                            <HBox.margin>
-                              <Insets left="3.0" right="10.0" />
+                              <Insets left="3.0" right="20.0" />
                            </HBox.margin>
                         </Text>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/bookroomBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOK ROOM">
                            <HBox.margin>
-                              <Insets left="3.0" right="10.0" />
+                              <Insets left="3.0" right="20.0" />
                            </HBox.margin>
                         </Text>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/messagesBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="MESSAGE">
                            <HBox.margin>
-                              <Insets left="3.0" right="10.0" />
+                              <Insets left="3.0" right="25.0" />
                            </HBox.margin>
                         </Text>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" />
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/diaryBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="DIARY">
                            <HBox.margin>
                               <Insets left="3.0" right="10.0" />
