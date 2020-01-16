@@ -1,9 +1,9 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -18,9 +18,49 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.StudentTabController">
    <children>
-      <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="54.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="54.0" style="-fx-background-color: #e9e9e9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="CREATE" textFill="#09adff">
+            <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="54.0">
+               <children>
+                  <Label text="MODULE">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox prefWidth="150.0" style="-fx-background-color: WHITE; -fx-background-radius: 5PX; -fx-border-color: GREY; -fx-border-radius: 5PX;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Label text="STUDENT ID">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField promptText="12345678">
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="YEAR">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox prefWidth="150.0" style="-fx-background-color: WHITE; -fx-background-radius: 5PX; -fx-border-color: GREY; -fx-border-radius: 5PX;" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" prefHeight="54.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+         <children>
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="CREATE" textFill="#09adff">
                <effect>
                   <Glow />
                </effect>
@@ -35,10 +75,46 @@
                   <Insets right="35.0" />
                </padding>
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets right="20.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="ARCHIVE" textFill="#09adff">
+               <effect>
+                  <Glow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/archiveBtn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="35.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="DELETE" textFill="#09adff">
+               <effect>
+                  <Glow />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/deleteBtn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -47,13 +123,13 @@
                   </ImageView>
                </graphic>
                <padding>
-                  <Insets right="55.0" />
+                  <Insets right="45.0" />
                </padding>
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets right="20.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="PRINT" textFill="#09adff">
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="PRINT" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -65,14 +141,14 @@
                   <Insets right="45.0" />
                </padding>
             </Button>
-            <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0">
+            <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="100.0">
                <children>
-                  <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="160.0" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;" text="Search me">
+                  <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="150.0" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;" text="Search me">
                      <HBox.margin>
                         <Insets top="1.0" />
                      </HBox.margin>
                      <padding>
-                        <Insets left="45.0" />
+                        <Insets left="20.0" />
                      </padding>
                   </TextField>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: grey; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
@@ -92,13 +168,13 @@
                   <Insets left="10.0" />
                </padding>
                <HBox.margin>
-                  <Insets left="150.0" />
+                  <Insets left="20.0" />
                </HBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
             <HBox>
                <children>
-                  <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 1px 0px 1px 1px; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px;" text="DISPLAY">
+                  <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 1px 0px 1px 1px; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px;" text="DISPLAY">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -113,7 +189,7 @@
                   </ComboBox>
                   <Separator orientation="VERTICAL" prefHeight="200.0">
                      <HBox.margin>
-                        <Insets left="20.0" right="20.0" />
+                        <Insets />
                      </HBox.margin>
                   </Separator>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
@@ -142,7 +218,7 @@
                   </Button>
                   <Separator orientation="VERTICAL" prefHeight="200.0">
                      <HBox.margin>
-                        <Insets left="20.0" right="20.0" />
+                        <Insets />
                      </HBox.margin>
                   </Separator>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
@@ -164,7 +240,7 @@
             <Insets bottom="10.0" left="30.0" top="10.0" />
          </padding>
       </HBox>
-      <TableView fx:id="studentTable" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+      <TableView fx:id="studentTable" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
          <columns>
             <TableColumn fx:id="firstNameCol8" editable="false" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" sortable="false">
                <graphic>
