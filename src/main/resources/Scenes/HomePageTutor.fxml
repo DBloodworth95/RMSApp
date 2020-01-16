@@ -275,6 +275,9 @@
                            <HBox.margin>
                               <Insets top="1.0" />
                            </HBox.margin>
+                           <padding>
+                              <Insets left="45.0" />
+                           </padding>
                         </TextField>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: #9ccce4#9ccce4; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
                            <HBox.margin>
@@ -398,12 +401,11 @@
                <children>
                   <TabPane fx:id="homePageTab" HBox.hgrow="ALWAYS">
                      <tabs>
-                        <Tab text="Untitled Tab 2">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                           </content>
-                        </Tab>
+                        <Tab text="Untitled Tab 2" />
                      </tabs>
+                     <HBox.margin>
+                        <Insets right="350.0" />
+                     </HBox.margin>
                   </TabPane>
                </children>
             </HBox>
