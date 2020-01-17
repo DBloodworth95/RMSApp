@@ -293,13 +293,35 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
                      </children>
                      <padding>
                         <Insets left="10.0" />
                      </padding></HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                  <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0">
                      <children>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Button">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/reportsBtn.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="-30.0" right="-30.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="REPORTS" />
+                        <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;">
+                           <HBox.margin>
+                              <Insets right="-5.0" />
+                           </HBox.margin>
+                        </Separator>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Button">
                            <graphic>
                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -315,7 +337,7 @@
                            </HBox.margin></Button>
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;">
                            <HBox.margin>
-                              <Insets left="20.0" right="20.0" />
+                              <Insets left="-5.0" right="-5.0" />
                            </HBox.margin>
                         </Separator>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Button">
@@ -330,12 +352,15 @@
                         <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="CALENDAR" />
                      </children>
                      <HBox.margin>
-                        <Insets left="20.0" right="20.0" />
+                        <Insets left="10.0" />
                      </HBox.margin>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                  <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="0.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
+                        <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;">
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin></Separator>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT">
@@ -350,7 +375,7 @@
                            </graphic></Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="FORMS">
                            <HBox.margin>
-                              <Insets right="30.0" />
+                              <Insets right="10.0" />
                            </HBox.margin>
                         </Text>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
@@ -363,7 +388,7 @@
                            </graphic></Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOK ROOM">
                            <HBox.margin>
-                              <Insets left="3.0" right="30.0" />
+                              <Insets left="3.0" right="10.0" />
                            </HBox.margin>
                         </Text>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
@@ -379,7 +404,7 @@
                            </HBox.margin></Button>
                         <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="MESSAGE">
                            <HBox.margin>
-                              <Insets left="3.0" right="30.0" />
+                              <Insets left="3.0" right="10.0" />
                            </HBox.margin>
                         </Text>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
@@ -431,7 +456,7 @@
                <children>
                   <ScrollPane layoutX="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <SplitPane dividerPositions="0.5, 0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="350.0">
+                        <SplitPane dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="350.0">
                            <items>
                               <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
                                  <children>
@@ -512,6 +537,42 @@
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" layoutY="-13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">

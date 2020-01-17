@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.StudentTabController">
+   <children>
+      <HBox prefHeight="577.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <ScrollPane layoutX="-2.0" minWidth="-Infinity" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <HBox>
+                           <children>
+                              <SplitPane minWidth="-Infinity" orientation="VERTICAL" prefWidth="700.0">
+                                 <items>
+                                    <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="700.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutY="-13.0" minWidth="-Infinity" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="60.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NOTIFICATIONS">
+                                                         <font>
+                                                            <Font size="23.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="250.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="250.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="250.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="60.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="15.0" right="15.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <SplitPane minWidth="-Infinity" orientation="VERTICAL" prefWidth="700.0">
+                                 <items>
+                                    <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="700.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutY="-13.0" minWidth="-Infinity" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="60.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CURRENT STATISTICS">
+                                                         <font>
+                                                            <Font size="23.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" />
+                                                         </HBox.margin>
+                                                         <image>
+                                                            <Image url="@Images/studentStatIcon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Courses across the University" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Images/studentStatIcon.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" students enrolled in first year" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Images/scrollStatIcon.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="enrolled in second year" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Images/studentStatIcon.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" students enrolled in third year" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Images/studentStatIcon.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" students enrolled in the year" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Images/scrollStatIcon.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" students enrolled on your modules" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@Images/studentStatIcon.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" students enrolled on your course " />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="15.0" right="15.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
