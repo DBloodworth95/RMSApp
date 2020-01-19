@@ -64,10 +64,10 @@ public class CreateGUI extends Application {
         //passwordError.setFill(Color.FIREBRICK);
        // passwordError.setText("Incorrect username or password! Please try again...");
 
-        String dbUrl = "jdbc:mysql://v.je:3306/csy2028";
-        String username = "student";
-        String password = "student";
-        String query = "SELECT * FROM users1 WHERE username ='" + userField.getText() + "'";
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "rootroot";
+        String query = "SELECT * FROM users WHERE username ='" + userField.getText() + "'";
         System.out.println(query);
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
         PreparedStatement myStatement = myConnection.prepareStatement(query);
@@ -84,7 +84,7 @@ public class CreateGUI extends Application {
 
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
                 //Parent homePage = FXMLLoader.load(getClass().getResource("/Scenes/HomePagev2.fxml"));
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePagev2.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaff.fxml"));
                 Parent homePage = loader.load();
                 loginButton.getScene().setRoot(homePage);
                 Object temp = loader.getController();
@@ -92,13 +92,16 @@ public class CreateGUI extends Application {
                 controller.setLoginUsername("Logged in as " + session.getUsername());
                 controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
                 controller.setDateLabel();
+                controller.createTab();
                 //controller.getBtnImages();
+
+                System.out.println("Works");
 
                 Calendar currentDate = Calendar.getInstance();
                 SimpleDateFormat formatter= new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
                 String dateNow = formatter.format(currentDate.getTime());
                 System.out.println(dateNow);
-                String updateLog = "UPDATE users1 SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
+                String updateLog = "UPDATE users SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
                 PreparedStatement updateLoggedin = myConnection.prepareStatement(updateLog);
                 updateLoggedin.execute();
 

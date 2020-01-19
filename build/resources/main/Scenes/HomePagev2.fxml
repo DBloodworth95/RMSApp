@@ -256,42 +256,23 @@
             </TabPane>
          </children>
       </HBox>
-      <HBox alignment="CENTER_RIGHT" layoutX="-6.0" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-4.0">
+      <HBox alignment="CENTER_LEFT" layoutY="1041.0" prefHeight="50.0" prefWidth="1784.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="copyrightBtn" layoutX="841.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
-               <HBox.margin>
-                  <Insets right="20.0" />
-               </HBox.margin>
-            </Button>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
-               <HBox.margin>
-                  <Insets right="300.0" />
-               </HBox.margin>
-            </Text>
-            <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Button>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WOODLANDSUC.UK">
-               <HBox.margin>
-                  <Insets right="200.0" />
-               </HBox.margin>
-            </Text>
-            <Button fx:id="twitterBtn" layoutX="1107.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-            <Button fx:id="linkedInBtn" layoutX="1343.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-            <Button fx:id="googleBtn" layoutX="1343.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-            <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WILDE">
-               <HBox.margin>
-                  <Insets right="300.0" />
-               </HBox.margin>
-            </Text>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Button fx:id="copyrightBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020" />
+                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WOODLANDSUC.UK" />
+                  <Button fx:id="twitterBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="linkedInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="googleBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="WILDE" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
             <Text fx:id="dateLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" />
