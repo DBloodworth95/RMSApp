@@ -22,7 +22,7 @@
                      <children>
                         <AnchorPane StackPane.alignment="TOP_CENTER">
                            <children>
-                              <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                              <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
                                  <content>
                                     <HBox>
                                        <children>

@@ -225,7 +225,7 @@
                   </ComboBox>
                   <Separator orientation="VERTICAL" prefHeight="200.0">
                      <HBox.margin>
-                        <Insets />
+                        <Insets left="10.0" />
                      </HBox.margin>
                   </Separator>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
@@ -254,7 +254,7 @@
                   </Button>
                   <Separator orientation="VERTICAL" prefHeight="200.0">
                      <HBox.margin>
-                        <Insets />
+                        <Insets left="10.0" />
                      </HBox.margin>
                   </Separator>
                   <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
