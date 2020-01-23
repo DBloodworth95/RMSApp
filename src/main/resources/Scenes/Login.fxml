@@ -18,7 +18,7 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rms.CreateGUI">
    <children>
-      <ImageView blendMode="DARKEN" fitHeight="900.0" fitWidth="1440.0" opacity="0.74" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView blendMode="DARKEN" fitHeight="2500.0" fitWidth="2500.0" opacity="0.74" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@Images/bg1.png" />
          </image>
