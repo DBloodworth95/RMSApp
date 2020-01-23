@@ -92,7 +92,7 @@ public class HomePageController {
 
     public void createTab() throws IOException, SQLException {
         Tab studentTab = new Tab();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaffTab.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/NotificationsTab.fxml"));
         AnchorPane studentTabContent = loader.load();
         homePageTab.getTabs().add(studentTab);
         studentTab.setText("Students");

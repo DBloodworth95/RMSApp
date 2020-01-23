@@ -84,7 +84,8 @@ public class CreateGUI extends Application {
 
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
                 //Parent homePage = FXMLLoader.load(getClass().getResource("/Scenes/HomePagev2.fxml"));
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaff.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaff" +
+                        ".fxml"));
                 Parent homePage = loader.load();
                 loginButton.getScene().setRoot(homePage);
                 Object temp = loader.getController();
