@@ -56,6 +56,7 @@ public class CreateGUI extends Application {
         Scene scene = new Scene(loginPage);
         window.setScene(scene);
         window.show();
+        window.setTitle("Woodlands RMS");
 
     }
     @FXML
@@ -66,7 +67,7 @@ public class CreateGUI extends Application {
 
         String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
-        String password = "rootroot";
+        String password = "root";
         String query = "SELECT * FROM users WHERE username ='" + userField.getText() + "'";
         System.out.println(query);
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
@@ -84,8 +85,9 @@ public class CreateGUI extends Application {
 
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
                 //Parent homePage = FXMLLoader.load(getClass().getResource("/Scenes/HomePagev2.fxml"));
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaff" +
-                        ".fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaff.fxml"));
+
+                //HomePageRecordsStaff
                 Parent homePage = loader.load();
                 loginButton.getScene().setRoot(homePage);
                 Object temp = loader.getController();

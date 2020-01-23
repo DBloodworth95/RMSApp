@@ -14,9 +14,9 @@ import java.util.*;
 
 public class HomePageController {
     @FXML
-    private Text loginLabel;
+    private Text loginLabel1;
     @FXML
-    private Text lastLogLabel;
+    private Text lastLogLabel1;
     @FXML
     private Text dateLabel;
     @FXML
@@ -29,13 +29,13 @@ public class HomePageController {
 
 
     public void setLoginUsername(String name) {
-        loginLabel.setText(name);
+        loginLabel1.setText(name);
     }
     public void setLastLogLabel(String timestamp) {
-        lastLogLabel.setText(timestamp);
+        lastLogLabel1.setText(timestamp);
     }
     public void setDateLabel() {
-        Calendar cal=Calendar.getInstance();
+        Calendar cal = Calendar.getInstance();
         SimpleDateFormat formatDate = new SimpleDateFormat("MMM-dd");
         String dateForLabel = formatDate.format(cal.getTime());
         Timer timer = new Timer();
@@ -92,7 +92,7 @@ public class HomePageController {
 
     public void createTab() throws IOException, SQLException {
         Tab studentTab = new Tab();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/NotificationsTab.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/NewStudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
         homePageTab.getTabs().add(studentTab);
         studentTab.setText("Students");
