@@ -54,6 +54,7 @@ public class CreateGUI extends Application {
         window = primaryStage;
         Parent loginPage = FXMLLoader.load(getClass().getResource("/Scenes/Login.fxml"));
         Scene scene = new Scene(loginPage);
+        scene.getStylesheets().add("mai.css");
         window.setScene(scene);
         window.show();
         window.setTitle("Woodlands RMS");
@@ -67,7 +68,7 @@ public class CreateGUI extends Application {
 
         String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
-        String password = "root";
+        String password = "rootroot";
         String query = "SELECT * FROM users WHERE username ='" + userField.getText() + "'";
         System.out.println(query);
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
