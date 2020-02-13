@@ -235,11 +235,8 @@
             <TableColumn fx:id="firstNameCol11" editable="false" prefWidth="112.0" text="Student course title" />
             <TableColumn fx:id="firstNameCol111" editable="false" prefWidth="172.6666259765625" text="Student module title" />
             <TableColumn fx:id="firstNameCol1111" editable="false" minWidth="0.0" prefWidth="54.3333740234375" text="Year" />
-            <TableColumn fx:id="firstNameCol11111" editable="false" prefWidth="112.0" text="PAT1" />
-            <TableColumn fx:id="firstNameCol111111" editable="false" prefWidth="112.0" text="PAT2" />
-            <TableColumn fx:id="firstNameCol111112" editable="false" prefWidth="112.0" text="PAT3" />
-            <TableColumn fx:id="firstNameCol1111121" editable="false" prefWidth="112.0" text="PAT4" />
-            <TableColumn fx:id="firstNameCol1111122" editable="false" prefWidth="112.0" text="PAT5" />
+            <TableColumn fx:id="firstNameCol11111" editable="false" prefWidth="112.0" text="Appointment Date" />
+            <TableColumn fx:id="firstNameCol111111" editable="false" prefWidth="112.0" text="PAT Form" />
          </columns>
       </TableView>
    </children>

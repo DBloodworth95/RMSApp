@@ -229,6 +229,9 @@
                </graphic>
             </TableColumn>
             <TableColumn fx:id="firstNameCol" prefWidth="152.12436485290527" text="Staff ID" />
+            <TableColumn prefWidth="75.0" text="Status" />
+            <TableColumn prefWidth="75.0" text="Dormancy Reason" />
+            <TableColumn prefWidth="75.0" text="Password" />
             <TableColumn fx:id="lastNameCol" prefWidth="107.0" text="First name" />
             <TableColumn fx:id="firstNameCol1" prefWidth="112.0" text="Last Name" />
             <TableColumn fx:id="firstNameCol2" prefWidth="112.0" text="Middle Name" />
@@ -244,6 +247,7 @@
             <TableColumn fx:id="firstNameCol71" prefWidth="112.0" text="Religious Considerations" />
             <TableColumn fx:id="firstNameCol62" prefWidth="112.0" text="Resume" />
             <TableColumn fx:id="firstNameCol621" prefWidth="112.0" text="Image" />
+            <TableColumn prefWidth="75.0" text="Additional notes" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

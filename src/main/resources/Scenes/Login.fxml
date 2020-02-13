@@ -22,7 +22,7 @@
             <HBox minHeight="25.0" VBox.vgrow="ALWAYS" />
             <HBox alignment="CENTER">
                <children>
-                  <HBox style="-fx-border-width: 8px; -fx-border-color: white; -fx-border-radius: 0px 150px 150px 150px; -fx-background-insets: 10px 10px 30px 30px; -fx-border-style: solid; -fx-padding: 5px;" HBox.hgrow="NEVER">
+                  <HBox style="-fx-border-width: 6px; -fx-border-color: white; -fx-border-radius: 0px 150px 150px 150px; -fx-background-insets: 10px 10px 30px 30px; -fx-border-style: solid; -fx-padding: 5px;" HBox.hgrow="NEVER">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -42,7 +42,7 @@
             <HBox minHeight="40.0" VBox.vgrow="ALWAYS" />
             <StackPane>
                <children>
-                  <HBox alignment="CENTER" minHeight="-Infinity" opacity="0.77" prefHeight="65.0" style="-fx-background-color: lightgrey;">
+                  <HBox alignment="CENTER" minHeight="-Infinity" opacity="0.83" prefHeight="65.0" style="-fx-background-color: white;">
                      <StackPane.margin>
                         <Insets />
                      </StackPane.margin>
@@ -50,7 +50,7 @@
                         <Glow />
                      </effect>
                   </HBox>
-                  <Text fill="#006868" nodeOrientation="LEFT_TO_RIGHT" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Woodlands Records Management System!" textAlignment="CENTER">
+                  <Text nodeOrientation="LEFT_TO_RIGHT" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Woodlands Records Management System!" textAlignment="CENTER">
                      <font>
                         <Font name="Helvetica" size="34.0" />
                      </font>

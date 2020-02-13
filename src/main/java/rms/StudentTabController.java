@@ -24,7 +24,7 @@ public class StudentTabController {
     public List<Staff> fetchTable() throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
-        String password = "root";
+        String password = "rootroot";
         String fetchQuery = ("SELECT * FROM staff");
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();

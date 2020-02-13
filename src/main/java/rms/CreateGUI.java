@@ -54,7 +54,7 @@ public class CreateGUI extends Application {
         window = primaryStage;
         Parent loginPage = FXMLLoader.load(getClass().getResource("/Scenes/Login.fxml"));
         Scene scene = new Scene(loginPage);
-        scene.getStylesheets().add("mai.css");
+        scene.getStylesheets().add("main.css");
         window.setScene(scene);
         window.show();
         window.setTitle("Woodlands RMS");
@@ -83,7 +83,7 @@ public class CreateGUI extends Application {
             int userId = myResultSet.getInt("user_id");
 
             if (pass.equals(passwordField.getText())) {
-
+//must check access level and open corresponding home page
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
                 //Parent homePage = FXMLLoader.load(getClass().getResource("/Scenes/HomePagev2.fxml"));
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaff.fxml"));

@@ -16,7 +16,7 @@
    <children>
       <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_LEFT">
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
                <children>
                   <VBox HBox.hgrow="ALWAYS">
                      <children>
@@ -50,6 +50,19 @@
                                              </font>
                                           </Label>
                                           <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="100.0" text="Start year">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox minWidth="-Infinity" prefHeight="29.0" prefWidth="102.0" promptText="2019" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
+                                             </children>
+                                          </HBox>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
@@ -63,24 +76,20 @@
                                              </font>
                                           </Label>
                                           <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
-                                       <children>
-                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="100.0" text="Year span">
-                                             <HBox.margin>
-                                                <Insets right="5.0" />
-                                             </HBox.margin>
+                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="100.0" text="End year">
                                              <font>
                                                 <Font size="12.0" />
                                              </font>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="1" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
+                                          <ComboBox minWidth="-Infinity" prefHeight="29.0" prefWidth="102.0" promptText="2020" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                        <children>
-                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="100.0" text="Leader">
+                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="100.0" text="Leader ID">
                                              <HBox.margin>
                                                 <Insets right="5.0" />
                                              </HBox.margin>
@@ -95,12 +104,12 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="0.0">
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Separator HBox.hgrow="ALWAYS" />
+                              <Separator minHeight="-Infinity" prefHeight="50.0" HBox.hgrow="ALWAYS" />
                            </children>
                            <VBox.margin>
-                              <Insets bottom="10.0" top="20.0" />
+                              <Insets bottom="10.0" top="55.0" />
                            </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
@@ -200,6 +209,9 @@
                                  </children>
                               </VBox>
                            </children>
+                           <VBox.margin>
+                              <Insets bottom="150.0" />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -215,27 +227,28 @@
                <children>
                   <VBox HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets top="30.0" />
+                        <Insets />
                      </HBox.margin>
                      <children>
-                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0">
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
                            <children>
-                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Description">
-                                 <HBox.margin>
-                                    <Insets right="5.0" />
-                                 </HBox.margin>
+                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Description" textFill="#378d94">
                                  <font>
                                     <Font size="12.0" />
                                  </font>
                               </Label>
-                              <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity">
+                           <children>
+                              <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
-                                    <Insets />
+                                    <Insets right="50.0" />
                                  </HBox.margin>
                               </TextArea>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0">
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS">
                            <children>
                               <Separator HBox.hgrow="ALWAYS" />
                            </children>
@@ -243,36 +256,37 @@
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0">
+                        <HBox minHeight="-Infinity" prefHeight="40.0">
                            <children>
-                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Aims and objectives">
-                                 <HBox.margin>
-                                    <Insets right="5.0" />
-                                 </HBox.margin>
+                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Aims and objectives" textFill="#378d94">
                                  <font>
                                     <Font size="12.0" />
                                  </font>
                               </Label>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0">
+                           <children>
                               <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
-                                    <Insets />
+                                    <Insets right="50.0" />
                                  </HBox.margin>
                               </TextArea>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS" />
+                        <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="20.0" VBox.vgrow="ALWAYS" />
                         <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0">
                            <children>
                               <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
                                  <HBox.margin>
-                                    <Insets />
+                                    <Insets right="50.0" />
                                  </HBox.margin>
                                  <font>
                                     <Font size="12.0" />
                                  </font></Button>
                            </children>
                            <VBox.margin>
-                              <Insets bottom="50.0" />
+                              <Insets bottom="100.0" />
                            </VBox.margin>
                         </HBox>
                      </children>
@@ -281,6 +295,9 @@
                <padding>
                   <Insets right="70.0" />
                </padding>
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
             </HBox>
          </children>
       </HBox>

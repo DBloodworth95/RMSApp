@@ -22,7 +22,7 @@
                      <children>
                         <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
                            <children>
-                              <Label minWidth="-Infinity" prefWidth="130.0" text="New Module Details" textFill="#378d94">
+                              <Label minWidth="-Infinity" prefWidth="390.0" text="Basic" textFill="#378d94">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
@@ -32,26 +32,13 @@
                               </Label>
                            </children>
                            <VBox.margin>
-                              <Insets top="30.0" />
+                              <Insets bottom="10.0" top="50.0" />
                            </VBox.margin>
                         </HBox>
                         <HBox prefWidth="542.0">
                            <children>
                               <VBox>
                                  <children>
-                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
-                                       <children>
-                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="130.0" text="Module Code">
-                                             <HBox.margin>
-                                                <Insets right="5.0" />
-                                             </HBox.margin>
-                                             <font>
-                                                <Font size="12.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
-                                       </children>
-                                    </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
                                        <children>
                                           <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="130.0" text="Title">
@@ -75,7 +62,10 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="1" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
+                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="1" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                             <padding>
+                                                <Insets left="90.0" />
+                                             </padding></ComboBox>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
@@ -104,21 +94,80 @@
                                           <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                        </children>
                                     </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
+                                       <children>
+                                          <Label alignment="TOP_RIGHT" prefWidth="130.0" text="Start year">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="2019" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                             <padding>
+                                                <Insets left="60.0" />
+                                             </padding>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
+                                       <children>
+                                          <Label alignment="TOP_RIGHT" prefWidth="130.0" text="End year">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="2020" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                             <padding>
+                                                <Insets left="60.0" />
+                                             </padding>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
+                                       <children>
+                                          <Label alignment="TOP_RIGHT" prefWidth="130.0" text="Select Course">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="CSY-1920" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                             <padding>
+                                                <Insets left="60.0" />
+                                             </padding>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="130.0" text="Module Code">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin></TextField>
+                                          <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="GENERATE">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
                                  </children>
                               </VBox>
-                           </children>
-                        </HBox>
-                        <HBox minHeight="-Infinity" prefHeight="110.0">
-                           <children>
-                              <Label alignment="TOP_RIGHT" prefWidth="130.0" text="Select course">
-                                 <HBox.margin>
-                                    <Insets right="5.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="12.0" />
-                                 </font>
-                              </Label>
-                              <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="CSY2020" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
                            </children>
                         </HBox>
                      </children>
@@ -128,7 +177,7 @@
                   <Insets left="30.0" right="80.0" />
                </padding>
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets />
                </HBox.margin>
             </HBox>
             <HBox HBox.hgrow="ALWAYS">
@@ -140,7 +189,7 @@
                      <children>
                         <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="180.0">
                            <children>
-                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Description">
+                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Description" textFill="#378d94">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
@@ -150,19 +199,25 @@
                               </Label>
                               <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
-                                    <Insets />
+                                    <Insets right="70.0" />
                                  </HBox.margin>
                               </TextArea>
                            </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0">
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS">
                            <children>
                               <Separator HBox.hgrow="ALWAYS" />
                            </children>
+                           <VBox.margin>
+                              <Insets right="70.0" />
+                           </VBox.margin>
                         </HBox>
                         <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="180.0">
                            <children>
-                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Aims and objectives">
+                              <Label alignment="TOP_LEFT" prefWidth="150.0" text="Aims and objectives" textFill="#378d94">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
@@ -172,7 +227,7 @@
                               </Label>
                               <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
-                                    <Insets />
+                                    <Insets right="70.0" />
                                  </HBox.margin>
                               </TextArea>
                            </children>
@@ -183,10 +238,13 @@
                               <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
                                  <font>
                                     <Font size="12.0" />
-                                 </font></Button>
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="70.0" />
+                                 </HBox.margin></Button>
                            </children>
                            <VBox.margin>
-                              <Insets bottom="50.0" />
+                              <Insets bottom="100.0" />
                            </VBox.margin>
                         </HBox>
                      </children>

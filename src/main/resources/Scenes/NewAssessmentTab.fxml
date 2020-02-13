@@ -14,7 +14,7 @@
    <children>
       <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_LEFT">
+            <HBox alignment="CENTER_LEFT" prefHeight="580.0" prefWidth="901.0" HBox.hgrow="ALWAYS">
                <children>
                   <VBox HBox.hgrow="ALWAYS">
                      <children>
@@ -61,19 +61,6 @@
                                              </font>
                                           </Label>
                                           <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
-                                       <children>
-                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="140.0" text="Year">
-                                             <HBox.margin>
-                                                <Insets right="5.0" />
-                                             </HBox.margin>
-                                             <font>
-                                                <Font size="12.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="2001" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
@@ -145,16 +132,20 @@
                                                       <Insets right="5.0" />
                                                    </HBox.margin>
                                                 </TextField>
-                                                <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="70.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
-                                                   <HBox.margin>
-                                                      <Insets />
-                                                   </HBox.margin>
-                                                   <font>
-                                                      <Font size="12.0" />
-                                                   </font>
-                                                </Button>
                                              </children>
                                           </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="40.0">
+                                       <children>
+                                          <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="70.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Button>
                                        </children>
                                     </HBox>
                                  </children>
@@ -166,13 +157,12 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <VBox layoutX="70.0" layoutY="10.0" />
                </children>
                <padding>
                   <Insets left="60.0" right="30.0" />
                </padding>
                <HBox.margin>
-                  <Insets right="30.0" />
+                  <Insets left="100.0" />
                </HBox.margin>
             </HBox>
             <HBox HBox.hgrow="ALWAYS">
@@ -182,7 +172,7 @@
                         <Insets top="30.0" />
                      </HBox.margin>
                      <children>
-                        <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
                         <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0">
                            <children>
                               <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
@@ -195,6 +185,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
                   </VBox>
                </children>
                <padding>
