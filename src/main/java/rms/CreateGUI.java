@@ -86,7 +86,7 @@ public class CreateGUI extends Application {
 //must check access level and open corresponding home page
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
                 //Parent homePage = FXMLLoader.load(getClass().getResource("/Scenes/HomePagev2.fxml"));
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageRecordsStaff.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Scenes/HomePageCourseLeader.fxml"));
 
                 //HomePageRecordsStaff
                 Parent homePage = loader.load();
