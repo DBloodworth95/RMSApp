@@ -476,7 +476,7 @@
                   <Insets top="46.0" />
                </StackPane.margin>
                <children>
-                  <TabPane fx:id="homePageTab" HBox.hgrow="ALWAYS">
+                  <TabPane fx:id="homePageTabPane" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets right="350.0" />
                      </HBox.margin>

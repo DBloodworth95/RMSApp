@@ -9,7 +9,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -167,10 +166,10 @@
                <children>
                   <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: transparent;" text="CORE RECORDS">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#createTab" text="STUDENTS" />
-                      <MenuItem mnemonicParsing="false" text="STAFF" />
-                        <MenuItem mnemonicParsing="false" text="MODULES" />
-                        <MenuItem mnemonicParsing="false" text="COURSES" />
+                      <MenuItem mnemonicParsing="false" onAction="#createStudentTab" text="STUDENTS" />
+                      <MenuItem mnemonicParsing="false" onAction="#createStaffTab" text="STAFF" />
+                        <MenuItem mnemonicParsing="false" onAction="#createModuleTab" text="MODULES" />
+                        <MenuItem mnemonicParsing="false" onAction="#createCourseTab" text="COURSES" />
                     </items>
                      <HBox.margin>
                         <Insets />
@@ -184,10 +183,10 @@
                      <children>
                         <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: transparent;" text="OTHER RECORDS">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="ASSESSMENTS" />
-                              <MenuItem mnemonicParsing="false" text="GRADES" />
-                              <MenuItem mnemonicParsing="false" text="ATTENDANCE" />
-                              <MenuItem mnemonicParsing="false" text="PERSONAL TUTORSHIP" />
+                              <MenuItem mnemonicParsing="false" onAction="#createAssessmentTabRS" text="ASSESSMENTS" />
+                              <MenuItem mnemonicParsing="false" onAction="#createGradesTabRS" text="GRADES" />
+                              <MenuItem mnemonicParsing="false" onAction="#createAttendanceTabRS" text="ATTENDANCE" />
+                              <MenuItem mnemonicParsing="false" onAction="#createTutorshipTabRS" text="PERSONAL TUTORSHIP" />
                            </items>
                            <font>
                               <Font size="12.0" />
@@ -432,10 +431,7 @@
          <children>
             <HBox alignment="CENTER_LEFT" StackPane.alignment="CENTER_LEFT">
                <children>
-                  <TabPane fx:id="homePageTab" HBox.hgrow="ALWAYS">
-                    <tabs>
-                      <Tab text="Home" />
-                    </tabs>
+                  <TabPane fx:id="homePageTabPane" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets right="350.0" />
                      </HBox.margin>

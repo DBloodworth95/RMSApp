@@ -9,7 +9,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -450,10 +449,7 @@
                   <Insets top="46.0" />
                </StackPane.margin>
                <children>
-                  <TabPane fx:id="homePageTab" HBox.hgrow="ALWAYS">
-                     <tabs>
-                        <Tab text="Untitled Tab 2" />
-                     </tabs>
+                  <TabPane fx:id="homePageTabPane" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets right="350.0" />
                      </HBox.margin>

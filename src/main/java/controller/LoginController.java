@@ -66,7 +66,7 @@ public class LoginController {
                     controller.setLoginUsername("Logged in as " + session.getUsername());
                     controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
                     controller.setDateLabel();
-                    controller.createTab();
+                    controller.createHomeTab(session);
                     Calendar currentDate = Calendar.getInstance();
                     SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
                     String dateNow = formatter.format(currentDate.getTime());
