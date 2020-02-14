@@ -9,7 +9,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -103,7 +102,7 @@
             <HBox minHeight="-Infinity" prefHeight="35.0" style="-fx-background-color: #2c787c #2c787c;" HBox.hgrow="ALWAYS" />
             <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" style="-fx-background-color: #2c787c #2c787c;">
                <children>
-                  <Text fx:id="lastLogLabel11" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019">
+                  <Text fx:id="lastLogLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Logged in Monday 4th November 2019">
                      <HBox.margin>
                         <Insets right="30.0" />
                      </HBox.margin>
@@ -111,7 +110,7 @@
                         <Font size="11.0" />
                      </font>
                   </Text>
-                  <Text fx:id="loginLabel11" fill="WHITE" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dan" HBox.hgrow="ALWAYS">
+                  <Text fx:id="loginLabel" fill="WHITE" layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dan" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -478,9 +477,6 @@
                </StackPane.margin>
                <children>
                   <TabPane fx:id="homePageTab" HBox.hgrow="ALWAYS">
-                     <tabs>
-                        <Tab text="Untitled Tab 2" />
-                     </tabs>
                      <HBox.margin>
                         <Insets right="350.0" />
                      </HBox.margin>

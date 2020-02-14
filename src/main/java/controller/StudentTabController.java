@@ -72,7 +72,4 @@ public class StudentTabController {
         List<Staff> newStaff = fetchTable();
         populateTable(newStaff, firstNameCol, lastNameCol, studentTable);
     }
-
-
-
 }

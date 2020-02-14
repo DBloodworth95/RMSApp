@@ -22,10 +22,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class LoginController {
-    Stage window;
-    Scene loginScene;
-    Stage primaryStage;
-    Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
     @FXML
     private Text passwordError;
     @FXML
@@ -34,6 +30,7 @@ public class LoginController {
     private PasswordField passwordField;
     @FXML
     private Button loginButton;
+    private FXMLLoader loader;
 
 
     public void loginAttempt(ActionEvent event) throws SQLException, IOException, ParseException {
@@ -55,26 +52,28 @@ public class LoginController {
 
             if (pass.equals(passwordField.getText())) {
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/HomePageCourseLeader.fxml"));
-                Parent homePage = loader.load();
-                loginButton.getScene().setRoot(homePage);
-                Object temp = loader.getController();
-                HomePageController controller = (HomePageController) temp;
-                controller.setLoginUsername("Logged in as " + session.getUsername());
-                controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
-                controller.setDateLabel();
-                controller.createTab();
-
-                System.out.println("Works");
-
-                Calendar currentDate = Calendar.getInstance();
-                SimpleDateFormat formatter= new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
-                String dateNow = formatter.format(currentDate.getTime());
-                System.out.println(dateNow);
-                String updateLog = "UPDATE users SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
-                PreparedStatement updateLoggedin = myConnection.prepareStatement(updateLog);
-                updateLoggedin.execute();
-                System.out.println("Works");
+                if (session.getAccessLevel().hasAccessToSysAdminView() || session.getAccessLevel().hasAccessToRecView()) {
+                    loader = new FXMLLoader(getClass().getResource("/view/HomePageRecordsStaff.fxml"));
+                } else if (session.getAccessLevel().hasAccessToCourseLeadView()) {
+                    loader = new FXMLLoader(getClass().getResource("/view/HomePageCourseLeader.fxml"));
+                } else {
+                    loader = new FXMLLoader(getClass().getResource("/view/HomePageTutor.fxml"));
+                }
+                    Parent homePage = loader.load();
+                    loginButton.getScene().setRoot(homePage);
+                    Object temp = loader.getController();
+                    HomePageController controller = (HomePageController) temp;
+                    controller.setLoginUsername("Logged in as " + session.getUsername());
+                    controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
+                    controller.setDateLabel();
+                    controller.createTab();
+                    Calendar currentDate = Calendar.getInstance();
+                    SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
+                    String dateNow = formatter.format(currentDate.getTime());
+                    System.out.println(dateNow);
+                    String updateLog = "UPDATE users SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
+                    PreparedStatement updateLoggedin = myConnection.prepareStatement(updateLog);
+                    updateLoggedin.execute();
             }
         }
     }

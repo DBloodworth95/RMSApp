@@ -12,9 +12,9 @@ import java.util.*;
 
 public class HomePageController {
     @FXML
-    private Text loginLabel11;
+    private Text loginLabel;
     @FXML
-    private Text lastLogLabel11;
+    private Text lastLogLabel;
     @FXML
     private Text dateLabel;
     @FXML
@@ -27,10 +27,10 @@ public class HomePageController {
 
 
     public void setLoginUsername(String name) {
-        loginLabel11.setText(name);
+        loginLabel.setText(name);
     }
     public void setLastLogLabel(String timestamp) {
-        lastLogLabel11.setText(timestamp);
+        lastLogLabel.setText(timestamp);
     }
     public void setDateLabel() {
         Calendar cal = Calendar.getInstance();
@@ -54,10 +54,5 @@ public class HomePageController {
         homePageTab.getTabs().add(studentTab);
         studentTab.setText("Home");
         studentTab.setContent(studentTabContent);
-
-        Object temp = loader.getController();
-        StudentTabController controller = (StudentTabController) temp;
-        controller.populate();
-
     }
 }
