@@ -48,7 +48,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField alignment="CENTER" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" text="12345678">
+                                    <TextField editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" text="12345678">
                                        <font>
                                           <Font size="12.0" />
                                        </font></TextField>

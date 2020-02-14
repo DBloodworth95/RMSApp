@@ -73,7 +73,10 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="Assignment" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
+                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="Assignment" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                             <padding>
+                                                <Insets left="60.0" />
+                                             </padding></ComboBox>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
@@ -112,7 +115,10 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="Pending" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3" />
+                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="Pending" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                             <padding>
+                                                <Insets left="60.0" />
+                                             </padding></ComboBox>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">

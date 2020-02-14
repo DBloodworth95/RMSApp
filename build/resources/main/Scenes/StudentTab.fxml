@@ -247,6 +247,13 @@
                </graphic>
             </TableColumn>
             <TableColumn fx:id="firstNameCol" prefWidth="152.12436485290527" text="Student ID" />
+            <TableColumn fx:id="firstNameCol611" prefWidth="112.0" text="Password" />
+            <TableColumn fx:id="lastNameCol611" prefWidth="107.0" text="Status" />
+            <TableColumn fx:id="firstNameCol712" prefWidth="112.0" text="Dormancy_reason" />
+            <TableColumn fx:id="firstNameCol6111" prefWidth="112.0" text="Current Course Code" />
+            <TableColumn fx:id="lastNameCol6111" prefWidth="107.0" text="Current Year" />
+            <TableColumn fx:id="firstNameCol7121" prefWidth="112.0" text="Enrollment Year" />
+            <TableColumn fx:id="firstNameCol5" prefWidth="112.0" text="Entry qualifications" />
             <TableColumn fx:id="lastNameCol" prefWidth="107.0" text="First name" />
             <TableColumn fx:id="firstNameCol1" prefWidth="112.0" text="Last Name" />
             <TableColumn fx:id="firstNameCol2" prefWidth="112.0" text="Middle Name" />
@@ -255,8 +262,6 @@
             <TableColumn fx:id="firstNameCol3" prefWidth="112.0" text="Address (outside term)" />
             <TableColumn fx:id="lastNameCol3" prefWidth="107.0" text="Telephone" />
             <TableColumn fx:id="firstNameCol4" prefWidth="112.0" text="Email" />
-            <TableColumn fx:id="lastNameCol4" prefWidth="107.0" text="Course Code" />
-            <TableColumn fx:id="firstNameCol5" prefWidth="112.0" text="Entry qualifications" />
             <TableColumn fx:id="lastNameCol7" prefWidth="107.0" text="Personal Tutor" />
             <TableColumn fx:id="lastNameCol5" prefWidth="107.0" text="Emergency Contact Phone" />
             <TableColumn fx:id="firstNameCol6" prefWidth="112.0" text="Emergency Contact Email" />
@@ -266,10 +271,6 @@
             <TableColumn fx:id="lastNameCol61" prefWidth="107.0" text="Allergies" />
             <TableColumn fx:id="firstNameCol71" prefWidth="112.0" text="Religious Considerations" />
             <TableColumn fx:id="firstNameCol711" prefWidth="112.0" text="Image" />
-            <TableColumn fx:id="firstNameCol611" prefWidth="112.0" text="Password" />
-            <TableColumn fx:id="lastNameCol611" prefWidth="107.0" text="Status" />
-            <TableColumn fx:id="firstNameCol712" prefWidth="112.0" text="Dormancy_reason" />
-            <TableColumn fx:id="firstNameCol7111" prefWidth="112.0" text="Image" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
