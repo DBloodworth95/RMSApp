@@ -2,12 +2,17 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import model.Session;
+import view.CalendarView;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.YearMonth;
 import java.util.*;
 
 public class HomePageController {
@@ -44,9 +49,9 @@ public class HomePageController {
     public void createHomeTab(Session session) throws IOException {
         Tab homeTab = new Tab();
         if (session.getAccessLevel().hasAccessToSysAdminView() || session.getAccessLevel().hasAccessToRecView()) {
-            loader = new FXMLLoader(getClass().getResource("/view/HomePageRecordsStaffTab.fxml"));
+            loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageRecordsStaffTab.fxml"));
         } else {
-            loader = new FXMLLoader(getClass().getResource("/view/HomePageTutorTab.fxml"));
+            loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutorTab.fxml"));
         }
         AnchorPane homeTabContent = loader.load();
         homePageTabPane.getTabs().add(homeTab);
@@ -56,7 +61,7 @@ public class HomePageController {
 
     public void createStudentTab() throws IOException {
         Tab studentTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/StudentTab.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
         homePageTabPane.getTabs().add(studentTab);
         studentTab.setText("Students");
@@ -65,7 +70,7 @@ public class HomePageController {
 
     public void createStaffTab() throws IOException {
         Tab staffTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/StaffTab.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/StaffTab.fxml"));
         AnchorPane staffTabContent = loader.load();
         homePageTabPane.getTabs().add(staffTab);
         staffTab.setText("Staff");
@@ -74,7 +79,7 @@ public class HomePageController {
 
     public void createModuleTab() throws IOException {
         Tab moduleTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/ModulesTab.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/ModulesTab.fxml"));
         AnchorPane moduleTabContent = loader.load();
         homePageTabPane.getTabs().add(moduleTab);
         moduleTab.setText("Modules");
@@ -83,7 +88,7 @@ public class HomePageController {
 
     public void createCourseTab() throws IOException {
         Tab courseTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/CoursesTab.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/CoursesTab.fxml"));
         AnchorPane courseTabContent = loader.load();
         homePageTabPane.getTabs().add(courseTab);
         courseTab.setText("Courses");
@@ -92,7 +97,7 @@ public class HomePageController {
 
     public void createAssessmentTabRS() throws IOException {
         Tab assessmentTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/AssessmentsTabRecordsStaff.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/AssessmentsTabRecordsStaff.fxml"));
         AnchorPane assessmentTabContent = loader.load();
         homePageTabPane.getTabs().add(assessmentTab);
         assessmentTab.setText("Assessments");
@@ -101,7 +106,7 @@ public class HomePageController {
 
     public void createAssessmentTabT() throws IOException {
         Tab assessmentTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/AssessmentsTabTutor.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/AssessmentsTabTutor.fxml"));
         AnchorPane assessmentTabContent = loader.load();
         homePageTabPane.getTabs().add(assessmentTab);
         assessmentTab.setText("Assessments");
@@ -110,7 +115,7 @@ public class HomePageController {
 
     public void createGradesTabRS() throws IOException {
         Tab gradesTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/GradesTabRecordsStaff.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/GradesTabRecordsStaff.fxml"));
         AnchorPane gradesTabContent = loader.load();
         homePageTabPane.getTabs().add(gradesTab);
         gradesTab.setText("Grades");
@@ -119,7 +124,7 @@ public class HomePageController {
 
     public void createGradesTabT() throws IOException {
         Tab gradesTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/GradesTabTutor.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/GradesTabTutor.fxml"));
         AnchorPane gradesTabContent = loader.load();
         homePageTabPane.getTabs().add(gradesTab);
         gradesTab.setText("Grades");
@@ -128,7 +133,7 @@ public class HomePageController {
 
     public void createAttendanceTabRS() throws IOException {
         Tab attendanceTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/AttendanceTabRecordsStaff.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/AttendanceTabRecordsStaff.fxml"));
         AnchorPane attendanceTabContent = loader.load();
         homePageTabPane.getTabs().add(attendanceTab);
         attendanceTab.setText("Attendance");
@@ -137,7 +142,7 @@ public class HomePageController {
 
     public void createAttendanceTabT() throws IOException {
         Tab attendanceTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/AttendanceTabTutor.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/AttendanceTabTutor.fxml"));
         AnchorPane attendanceTabContent = loader.load();
         homePageTabPane.getTabs().add(attendanceTab);
         attendanceTab.setText("Attendance");
@@ -146,7 +151,7 @@ public class HomePageController {
 
     public void createTutorshipTabRS() throws IOException {
         Tab tutorshipTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/PersonalTutorshipRecordsStaffTab.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/PersonalTutorshipRecordsStaffTab.fxml"));
         AnchorPane tutorshipTabContent = loader.load();
         homePageTabPane.getTabs().add(tutorshipTab);
         tutorshipTab.setText("Personal Tutorship");
@@ -155,10 +160,42 @@ public class HomePageController {
 
     public void createTutorshipTabT() throws IOException {
         Tab tutorshipTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/view/PersonalTutorshipTutorTab.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/PersonalTutorshipTutorTab.fxml"));
         AnchorPane tutorshipTabContent = loader.load();
         homePageTabPane.getTabs().add(tutorshipTab);
         tutorshipTab.setText("Personal Tutorship");
         tutorshipTab.setContent(tutorshipTabContent);
+    }
+
+    public void createNotifTab() throws IOException {
+        Tab notificationTab = new Tab();
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/NotificationsTab.fxml"));
+        AnchorPane notificationTabContent = loader.load();
+        homePageTabPane.getTabs().add(notificationTab);
+        notificationTab.setText("Notifications");
+        notificationTab.setContent(notificationTabContent);
+    }
+
+    public void createDiaryTab() throws IOException {
+        Tab diaryTab = new Tab();
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/DiaryTab.fxml"));
+        AnchorPane diaryTabContent = loader.load();
+        homePageTabPane.getTabs().add(diaryTab);
+        diaryTab.setText("Diary");
+        diaryTab.setContent(diaryTabContent);
+    }
+
+    public void createCalendar() throws IOException {
+        FXMLLoader calendarLoader = new FXMLLoader();
+        calendarLoader.setLocation(getClass().getResource("/FXMLview/CalendarView.fxml"));
+        Scene scene = new Scene(calendarLoader.load(), 800,800);
+        Stage stage = new Stage();
+        stage.setTitle("Calendar");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        Object temp = calendarLoader.getController();
+        CalendarController controller = (CalendarController) temp;
+        controller.calendarPane.getChildren().add(new CalendarView(YearMonth.now()).getView());
     }
 }

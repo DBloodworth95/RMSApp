@@ -259,7 +259,7 @@
                   <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
                   <HBox alignment="CENTER_RIGHT">
                      <children>
-                        <Button fx:id="notifBtn" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="NOTIFICATIONS">
+                        <Button fx:id="notifBtn" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#createNotifTab" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="NOTIFICATIONS">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>

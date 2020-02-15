@@ -165,12 +165,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="45.0" style="-fx-background-color: #f2f2f0#f2f2f0 #f2f2f0#f2f2f0;">
                <children>
                   <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: transparent;" text="CORE RECORDS">
-                    <items>
-                      <MenuItem mnemonicParsing="false" onAction="#createStudentTab" text="STUDENTS" />
-                      <MenuItem mnemonicParsing="false" onAction="#createStaffTab" text="STAFF" />
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#createStudentTab" text="STUDENTS" />
+                        <MenuItem mnemonicParsing="false" onAction="#createStaffTab" text="STAFF" />
                         <MenuItem mnemonicParsing="false" onAction="#createModuleTab" text="MODULES" />
                         <MenuItem mnemonicParsing="false" onAction="#createCourseTab" text="COURSES" />
-                    </items>
+                     </items>
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -195,7 +195,7 @@
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
                         <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: transparent;" text="ARCHIVED RECORDS">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="STUDENTS" />
+                              <MenuItem mnemonicParsing="false" onAction="#createCalendar" text="STUDENTS" />
                               <MenuItem mnemonicParsing="false" text="STAFF" />
                               <MenuItem mnemonicParsing="false" text="MODULES" />
                               <MenuItem mnemonicParsing="false" text="COURSES" />
@@ -313,7 +313,7 @@
                      </HBox.margin></Separator>
                   <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="160.0">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCalendar" onMouseClicked="#createCalendar" prefHeight="40.0" prefWidth="58.0" style="-fx-background-color: transparent;">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -322,7 +322,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="CALENDAR">
+                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCalendar" onMouseClicked="#createCalendar" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="CALENDAR">
                            <font>
                               <Font size="12.0" />
                            </font></Button>
@@ -446,8 +446,8 @@
                   <ScrollPane layoutX="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
                         <SplitPane dividerPositions="0.5, 0.5, 0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="350.0">
-                          <items>
-                            <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
+                           <items>
+                              <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
                                  <children>
                                     <VBox alignment="CENTER_LEFT" layoutY="-13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
                                        <children>
@@ -591,7 +591,7 @@
                                     </VBox>
                                  </children>
                               </AnchorPane>
-                          </items>
+                           </items>
                         </SplitPane>
                      </content>
                   </ScrollPane>

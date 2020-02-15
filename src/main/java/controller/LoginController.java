@@ -5,16 +5,10 @@ import model.Session;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import javafx.event.ActionEvent;
-
-//import java.awt.*;
-import java.awt.Dimension;
 import java.io.IOException;
 import java.sql.*;
 import java.text.ParseException;
@@ -22,8 +16,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class LoginController {
-    @FXML
-    private Text passwordError;
     @FXML
     private TextField userField;
     @FXML
@@ -53,11 +45,11 @@ public class LoginController {
             if (pass.equals(passwordField.getText())) {
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
                 if (session.getAccessLevel().hasAccessToSysAdminView() || session.getAccessLevel().hasAccessToRecView()) {
-                    loader = new FXMLLoader(getClass().getResource("/view/HomePageRecordsStaff.fxml"));
+                    loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageRecordsStaff.fxml"));
                 } else if (session.getAccessLevel().hasAccessToCourseLeadView()) {
-                    loader = new FXMLLoader(getClass().getResource("/view/HomePageCourseLeader.fxml"));
+                    loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageCourseLeader.fxml"));
                 } else {
-                    loader = new FXMLLoader(getClass().getResource("/view/HomePageTutor.fxml"));
+                    loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutor.fxml"));
                 }
                     Parent homePage = loader.load();
                     loginButton.getScene().setRoot(homePage);

@@ -9,7 +9,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import model.Staff;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
