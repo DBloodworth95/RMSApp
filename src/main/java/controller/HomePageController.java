@@ -9,7 +9,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Session;
 import view.CalendarView;
-
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.YearMonth;
@@ -198,4 +197,32 @@ public class HomePageController {
         CalendarController controller = (CalendarController) temp;
         controller.calendarPane.getChildren().add(new CalendarView(YearMonth.now()).getView());
     }
+
+    public void createHomeTabRS() throws IOException {
+            Tab homeTab = new Tab();
+            loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageRecordsStaffTab.fxml"));
+            AnchorPane homeTabContent = loader.load();
+            homePageTabPane.getTabs().add(homeTab);
+            homeTab.setText("Home");
+            homeTab.setContent(homeTabContent);
+    }
+
+    public void createHomeTabCL() throws IOException {
+        Tab homeTab = new Tab();
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutor.fxml"));
+        AnchorPane homeTabContent = loader.load();
+        homePageTabPane.getTabs().add(homeTab);
+        homeTab.setText("Home");
+        homeTab.setContent(homeTabContent);
+    }
+
+    public void createHomeTabT() throws IOException {
+        Tab homeTab = new Tab();
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutor.fxml"));
+        AnchorPane homeTabContent = loader.load();
+        homePageTabPane.getTabs().add(homeTab);
+        homeTab.setText("Home");
+        homeTab.setContent(homeTabContent);
+    }
 }
+

@@ -2,7 +2,6 @@ package view;
 
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
-
 import java.time.LocalDate;
 
 public class AnchorPaneNode extends AnchorPane {
