@@ -469,7 +469,116 @@
             </HBox>
          </children>
       </VBox>
-      <StackPane alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-350.0" AnchorPane.topAnchor="85.0">
+      <HBox alignment="CENTER_LEFT" layoutX="4.0" layoutY="1051.0" minHeight="-Infinity" prefHeight="35.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
+               <children>
+                  <Button fx:id="copyrightBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/copyrightBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
+                     <HBox.margin>
+                        <Insets right="70.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font></Text>
+                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/woodlandsBtn.png" />
+                           </image></ImageView>
+                     </graphic></Button>
+                  <Hyperlink text="WOODLANDSUC.UK" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="150.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font></Hyperlink>
+                  <Button fx:id="twitterBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/twitterBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="linkedInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/linkedInBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="googleBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/googleBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/facebookBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+               <children>
+                  <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/wildeBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Hyperlink text="WILDE" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Hyperlink>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </HBox.margin>
+               <children>
+                  <Text fx:id="dateLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Text>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <StackPane alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-350.0" AnchorPane.topAnchor="130.0">
          <children>
             <HBox alignment="CENTER_LEFT" StackPane.alignment="CENTER_LEFT">
                <StackPane.margin>
@@ -641,114 +750,5 @@
             </AnchorPane>
          </children>
       </StackPane>
-      <HBox alignment="CENTER_LEFT" layoutX="4.0" layoutY="1051.0" minHeight="-Infinity" prefHeight="35.0" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
-               <children>
-                  <Button fx:id="copyrightBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-                     <HBox.margin>
-                        <Insets left="20.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/copyrightBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020">
-                     <HBox.margin>
-                        <Insets right="70.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="11.0" />
-                     </font></Text>
-                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/woodlandsBtn.png" />
-                           </image></ImageView>
-                     </graphic></Button>
-                  <Hyperlink text="WOODLANDSUC.UK" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets right="150.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="11.0" />
-                     </font></Hyperlink>
-                  <Button fx:id="twitterBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/twitterBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="linkedInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/linkedInBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="googleBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/googleBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/facebookBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
-               <HBox.margin>
-                  <Insets left="150.0" />
-               </HBox.margin>
-               <children>
-                  <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/wildeBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Hyperlink text="WILDE" textFill="WHITE">
-                     <font>
-                        <Font size="11.0" />
-                     </font></Hyperlink>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
-               <HBox.margin>
-                  <Insets left="50.0" right="50.0" />
-               </HBox.margin>
-               <children>
-                  <Text fx:id="dateLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019">
-                     <font>
-                        <Font size="11.0" />
-                     </font></Text>
-               </children>
-            </HBox>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </HBox>
    </children>
 </AnchorPane>
