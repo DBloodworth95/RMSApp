@@ -199,12 +199,12 @@ public class HomePageController {
     }
 
     public void createHomeTabRS() throws IOException {
-            Tab homeTab = new Tab();
-            loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageRecordsStaffTab.fxml"));
-            AnchorPane homeTabContent = loader.load();
-            homePageTabPane.getTabs().add(homeTab);
-            homeTab.setText("Home");
-            homeTab.setContent(homeTabContent);
+        Tab homeTab = new Tab();
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageRecordsStaffTab.fxml"));
+        AnchorPane homeTabContent = loader.load();
+        homePageTabPane.getTabs().add(homeTab);
+        homeTab.setText("Home");
+        homeTab.setContent(homeTabContent);
     }
 
     public void createHomeTabCL() throws IOException {
