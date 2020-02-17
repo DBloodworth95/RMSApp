@@ -98,7 +98,7 @@
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateTableEntries" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -239,7 +239,7 @@
             <Insets bottom="10.0" left="30.0" top="10.0" />
          </padding>
       </HBox>
-      <TableView fx:id="studentTable" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+      <TableView fx:id="studentTV" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
          <columns>
             <TableColumn fx:id="firstNameCol8" editable="false" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" sortable="false" style="-fx-background-color: transparent;">
                <graphic>
@@ -257,9 +257,21 @@
             <TableColumn fx:id="firstNCol" prefWidth="107.0" text="First name" />
             <TableColumn fx:id="lastNCol" prefWidth="112.0" text="Last Name" />
             <TableColumn fx:id="midNCol" prefWidth="112.0" text="Middle Name" />
-            <TableColumn fx:id="genderCol" prefWidth="107.0" text="Gender" />
-            <TableColumn fx:id="termAddCol" prefWidth="107.0" text="Address (term)" />
-            <TableColumn fx:id="homeAddCol" prefWidth="112.0" text="Address (outside term)" />
+            <TableColumn fx:id="genderCol" minWidth="0.0" prefWidth="0.0" text="Gender" />
+            <TableColumn fx:id="termAddNCol" minWidth="0.0" prefWidth="124.0" text="Address Number (term)" />
+            <TableColumn fx:id="termAddHCol" minWidth="0.0" prefWidth="0.0" text="Address House (term)" />
+            <TableColumn fx:id="termAddSCol" prefWidth="86.0" text="Address Street(term)" />
+            <TableColumn fx:id="termAddTCol" prefWidth="86.0" text="Address Town(term)" />
+            <TableColumn fx:id="termAddCountCol" minWidth="0.0" prefWidth="0.0" text="Address County (term)" />
+            <TableColumn fx:id="termAddCountryCol" prefWidth="107.0" text="Address Country (term)" />
+            <TableColumn fx:id="termAddZipCol" prefWidth="107.0" text="Address Zip(term)" />
+            <TableColumn fx:id="homeAddNCol" minWidth="0.0" prefWidth="124.0" text="Address Number" />
+            <TableColumn fx:id="homeAddHCol" minWidth="0.0" prefWidth="0.0" text="Address House" />
+            <TableColumn fx:id="homeAddSCol" prefWidth="86.0" text="Address Street" />
+            <TableColumn fx:id="homeAddTCol" prefWidth="86.0" text="Address Town" />
+            <TableColumn fx:id="homeAddCountCol" minWidth="0.0" prefWidth="0.0" text="Address County" />
+            <TableColumn fx:id="homeAddCountryCol" prefWidth="107.0" text="Address Country" />
+            <TableColumn fx:id="homeAddZipCol" prefWidth="107.0" text="Address Zip" />
             <TableColumn fx:id="phoneCol" prefWidth="107.0" text="Telephone" />
             <TableColumn fx:id="emailCol" prefWidth="112.0" text="Email" />
             <TableColumn fx:id="tutorCol" prefWidth="107.0" text="Personal Tutor" />
@@ -269,7 +281,7 @@
             <TableColumn fx:id="addNotesCol" prefWidth="112.0" text="Additional Notes" />
             <TableColumn fx:id="medicalCol" prefWidth="112.0" text="Medical History" />
             <TableColumn fx:id="allergyCol" prefWidth="107.0" text="Allergies" />
-            <TableColumn fx:id="ReligionCol" prefWidth="112.0" text="Religious Considerations" />
+            <TableColumn fx:id="religionCol" prefWidth="112.0" text="Religious Considerations" />
             <TableColumn fx:id="imgCol" prefWidth="112.0" text="Image" />
          </columns>
          <columnResizePolicy>

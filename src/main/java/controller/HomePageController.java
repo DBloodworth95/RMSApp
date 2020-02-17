@@ -9,7 +9,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Session;
 import view.CalendarView;
+
+import javax.imageio.IIOParam;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.YearMonth;
 import java.util.*;
@@ -58,13 +61,16 @@ public class HomePageController {
         homeTab.setContent(homeTabContent);
     }
 
-    public void createStudentTab() throws IOException {
+    public void createStudentTab() throws IOException, SQLException {
         Tab studentTab = new Tab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
         homePageTabPane.getTabs().add(studentTab);
         studentTab.setText("Students");
         studentTab.setContent(studentTabContent);
+        Object temp = loader.getController();
+        StudentTabController controller = (StudentTabController) temp;
+        controller.populate();
     }
 
     public void createStaffTab() throws IOException {
