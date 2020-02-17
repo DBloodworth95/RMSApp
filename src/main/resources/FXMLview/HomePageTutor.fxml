@@ -442,7 +442,7 @@
             </HBox>
          </children>
       </VBox>
-      <StackPane alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-350.0" AnchorPane.topAnchor="130.0">
+      <StackPane alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-350.0" AnchorPane.topAnchor="85.0">
          <children>
             <HBox alignment="CENTER_LEFT" StackPane.alignment="CENTER_LEFT">
                <StackPane.margin>
@@ -706,8 +706,8 @@
                      </font></Hyperlink>
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-            <HBox fx:id="dateLabel" alignment="CENTER_RIGHT" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefHeight="35.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="50.0" right="50.0" />
                </HBox.margin>
