@@ -4,10 +4,10 @@ public class TempMedicalStorage {
 
     private String allergies, religious, medicalHistory;
 
-    public TempMedicalStorage(String allergies, String religious, String medicalHistory) {
-        this.allergies = allergies;
-        this.religious = religious;
-        this.medicalHistory = medicalHistory;
+    public TempMedicalStorage() {
+        this.allergies = "N/A";
+        this.religious = "N/A";
+        this.medicalHistory = "N/A";
     }
 
     public String getAllergies() {

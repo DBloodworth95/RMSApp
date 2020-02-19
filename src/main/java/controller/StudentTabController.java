@@ -375,6 +375,7 @@ public class StudentTabController {
         stage.show();
         Object temp = createStudentLoader.getController();
         NewStudentTabController controller = (NewStudentTabController) temp;
+        controller.populateComboBoxes();
     }
 }
 

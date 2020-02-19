@@ -9,8 +9,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Session;
 import view.CalendarView;
-
-import javax.imageio.IIOParam;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
