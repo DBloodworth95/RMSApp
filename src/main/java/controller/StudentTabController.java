@@ -4,14 +4,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
 import model.student.Student;
+
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -358,6 +362,16 @@ public class StudentTabController {
             preparedStatement.execute();
             System.out.println("Saved!");
         }
+    }
+
+    public void createStudent() throws IOException {
+        Tab newStudentTab = new Tab();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXMLview/NewStudentTab.fxml"));
+        AnchorPane staffTabContent = loader.load();
+        HomePageController homePageController = new HomePageController();
+        homePageController.getHomePageTabPane().getTabs().add(newStudentTab);
+        newStudentTab.setText("Staff");
+        newStudentTab.setContent(staffTabContent);
     }
 }
 

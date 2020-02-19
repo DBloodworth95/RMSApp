@@ -25,7 +25,7 @@ public class HomePageController {
     @FXML
     private Text dateLabel;
     @FXML
-    private TabPane homePageTabPane;
+    public TabPane homePageTabPane;
     private FXMLLoader loader;
 
     public void setLoginUsername(String name) {
@@ -229,6 +229,10 @@ public class HomePageController {
         homePageTabPane.getTabs().add(homeTab);
         homeTab.setText("Home");
         homeTab.setContent(homeTabContent);
+    }
+
+    public TabPane getHomePageTabPane() {
+        return homePageTabPane;
     }
 }
 
