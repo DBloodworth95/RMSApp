@@ -365,13 +365,16 @@ public class StudentTabController {
     }
 
     public void createStudent() throws IOException {
-        Tab newStudentTab = new Tab();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXMLview/NewStudentTab.fxml"));
-        AnchorPane staffTabContent = loader.load();
-        HomePageController homePageController = new HomePageController();
-        homePageController.getHomePageTabPane().getTabs().add(newStudentTab);
-        newStudentTab.setText("Staff");
-        newStudentTab.setContent(staffTabContent);
+        FXMLLoader createStudentLoader = new FXMLLoader();
+        createStudentLoader.setLocation(getClass().getResource("/FXMLview/NewStudentTab.fxml"));
+        Scene scene = new Scene(createStudentLoader.load(), 1440,580);
+        Stage stage = new Stage();
+        stage.setTitle("Add a Student");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        Object temp = createStudentLoader.getController();
+        NewStudentTabController controller = (NewStudentTabController) temp;
     }
 }
 

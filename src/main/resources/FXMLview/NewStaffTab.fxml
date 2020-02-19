@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentTabController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewStaffTabController">
    <children>
       <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -536,7 +536,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0">
                            <children>
-                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;">
+                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openMedical" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent;">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -548,7 +548,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Medical file" textFill="#378d94">
+                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openMedical" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Medical file" textFill="#378d94">
                                  <font>
                                     <Font size="12.0" />
                                  </font>

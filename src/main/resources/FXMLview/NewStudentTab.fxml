@@ -693,7 +693,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Medical file" textFill="#378d94">
+                        <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openMedical" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Medical file" textFill="#378d94">
                            <font>
                               <Font size="12.0" />
                            </font></Button>
