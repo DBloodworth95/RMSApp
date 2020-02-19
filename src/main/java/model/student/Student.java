@@ -1,13 +1,19 @@
 package model.student;
 
 public class Student {
-    private int id, personalTutor;
+    private int id, personalTutor, currYear, enrolYear;
     private String password, status, dormancyReason, firstName, middleName, surname, image, phoneNumber,
-    currCourseCode, currYear, enrolYear, entryQual, emergContactPhone, emergContactEmail, employer, addNotes,
-    medicalHistory, medicalAllergies, medicalReligious, termAddress, homeAddress;
-    private Gender gender;
+    currCourseCode, entryQual, emergContactPhone, emergContactEmail, employer, addNotes,
+    medicalHistory, medicalAllergies, medicalReligious, termAddress, homeAddress, email,
+    addTermNumber, addTermHouse, addTermTown, addTermCounty, addTermCountry, addTermZip,
+    homeNumber, homeHouse, homeTown, homeCounty, homeCountry, homeZip, addTermStreet, homeStreet, gender;
 
-    public Student(int id, int personalTutor, String password, String status, String dormancyReason, String firstName, String middleName, String surname, String image, Gender gender, String phoneNumber, String currCourseCode, String currYear, String enrolYear, String entryQual, String emergContactPhone, String emergContactEmail, String employer, String addNotes, String medicalHistory, String medicalAllergies, String medicalReligious, String termAddress, String homeAddress) {
+    public Student() {
+
+    }
+
+    public Student(int id, int personalTutor, String password, String status, String dormancyReason, String firstName, String middleName, String surname, String image, String gender, String phoneNumber, String currCourseCode, int currYear, int enrolYear, String entryQual, String emergContactPhone, String emergContactEmail, String employer, String addNotes, String medicalHistory, String medicalAllergies, String medicalReligious,  String email, String addTermNumber,String addTermHouse, String addTermStreet, String addTermTown,String addTermCounty,String addTermCountry,String addTermZip,
+                   String homeNumber, String homeHouse, String homeTown, String homeStreet, String homeCounty, String homeCountry, String homeZip) {
         this.id = id;
         this.personalTutor = personalTutor;
         this.password = password;
@@ -30,8 +36,147 @@ public class Student {
         this.medicalHistory = medicalHistory;
         this.medicalAllergies = medicalAllergies;
         this.medicalReligious = medicalReligious;
-        this.termAddress = termAddress;
-        this.homeAddress = homeAddress;
+        this.addTermNumber = addTermNumber;
+        this.addTermHouse = addTermHouse;
+        this.addTermStreet = addTermStreet;
+        this.addTermTown = addTermTown;
+        this.addTermCounty = addTermCounty;
+        this.addTermCountry = addTermCountry;
+        this.homeNumber = homeNumber;
+        this.homeHouse = homeHouse;
+        this.homeStreet = homeStreet;
+        this.homeTown = homeTown;
+        this.homeCounty = homeCounty;
+        this.homeCountry = homeCountry;
+        this.homeZip = homeZip;
+        this.addTermZip = addTermZip;
+        this.homeNumber = homeNumber;
+        this.homeHouse = homeHouse;
+        this.homeTown = homeTown;
+        this.homeCounty = homeCounty;
+        this.homeCountry = homeCountry;
+        this.homeZip = homeZip;
+        this.email = email;
+    }
+
+    public String getAddTermStreet() {
+        return addTermStreet;
+    }
+
+    public void setAddTermStreet(String addTermStreet) {
+        this.addTermStreet = addTermStreet;
+    }
+
+    public String getHomeStreet() {
+        return homeStreet;
+    }
+
+    public void setHomeStreet(String homeStreet) {
+        this.homeStreet = homeStreet;
+    }
+
+    public String getAddTermNumber() {
+        return addTermNumber;
+    }
+
+    public void setAddTermNumber(String addTermNumber) {
+        this.addTermNumber = addTermNumber;
+    }
+
+    public String getAddTermHouse() {
+        return addTermHouse;
+    }
+
+    public void setAddTermHouse(String addTermHouse) {
+        this.addTermHouse = addTermHouse;
+    }
+
+    public String getAddTermTown() {
+        return addTermTown;
+    }
+
+    public void setAddTermTown(String addTermTown) {
+        this.addTermTown = addTermTown;
+    }
+
+    public String getAddTermCounty() {
+        return addTermCounty;
+    }
+
+    public void setAddTermCounty(String addTermCounty) {
+        this.addTermCounty = addTermCounty;
+    }
+
+    public String getAddTermCountry() {
+        return addTermCountry;
+    }
+
+    public void setAddTermCountry(String addTermCountry) {
+        this.addTermCountry = addTermCountry;
+    }
+
+    public String getAddTermZip() {
+        return addTermZip;
+    }
+
+    public void setAddTermZip(String addTermZip) {
+        this.addTermZip = addTermZip;
+    }
+
+    public String getHomeNumber() {
+        return homeNumber;
+    }
+
+    public void setHomeNumber(String homeNumber) {
+        this.homeNumber = homeNumber;
+    }
+
+    public String getHomeHouse() {
+        return homeHouse;
+    }
+
+    public void setHomeHouse(String homeHouse) {
+        this.homeHouse = homeHouse;
+    }
+
+    public String getHomeTown() {
+        return homeTown;
+    }
+
+    public void setHomeTown(String homeTown) {
+        this.homeTown = homeTown;
+    }
+
+    public String getHomeCounty() {
+        return homeCounty;
+    }
+
+    public void setHomeCounty(String homeCounty) {
+        this.homeCounty = homeCounty;
+    }
+
+    public String getHomeCountry() {
+        return homeCountry;
+    }
+
+    public void setHomeCountry(String homeCountry) {
+        this.homeCountry = homeCountry;
+    }
+
+    public String getHomeZip() {
+        return homeZip;
+    }
+
+    public void setHomeZip(String homeZip) {
+        this.homeZip = homeZip;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getId() {
@@ -122,19 +267,19 @@ public class Student {
         this.currCourseCode = currCourseCode;
     }
 
-    public String getCurrYear() {
+    public int getCurrYear() {
         return currYear;
     }
 
-    public void setCurrYear(String currYear) {
+    public void setCurrYear(int currYear) {
         this.currYear = currYear;
     }
 
-    public String getEnrolYear() {
+    public int getEnrolYear() {
         return enrolYear;
     }
 
-    public void setEnrolYear(String enrolYear) {
+    public void setEnrolYear(int enrolYear) {
         this.enrolYear = enrolYear;
     }
 
@@ -218,11 +363,11 @@ public class Student {
         this.homeAddress = homeAddress;
     }
 
-    public Gender getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 }

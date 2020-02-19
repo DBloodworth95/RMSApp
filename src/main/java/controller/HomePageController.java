@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import model.Session;
 import view.CalendarView;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.YearMonth;
 import java.util.*;
@@ -22,7 +23,7 @@ public class HomePageController {
     @FXML
     private Text dateLabel;
     @FXML
-    private TabPane homePageTabPane;
+    public TabPane homePageTabPane;
     private FXMLLoader loader;
 
     public void setLoginUsername(String name) {
@@ -58,13 +59,16 @@ public class HomePageController {
         homeTab.setContent(homeTabContent);
     }
 
-    public void createStudentTab() throws IOException {
+    public void createStudentTab() throws IOException, SQLException {
         Tab studentTab = new Tab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
         homePageTabPane.getTabs().add(studentTab);
         studentTab.setText("Students");
         studentTab.setContent(studentTabContent);
+        Object temp = loader.getController();
+        StudentTabController controller = (StudentTabController) temp;
+        controller.populate();
     }
 
     public void createStaffTab() throws IOException {
@@ -223,6 +227,10 @@ public class HomePageController {
         homePageTabPane.getTabs().add(homeTab);
         homeTab.setText("Home");
         homeTab.setContent(homeTabContent);
+    }
+
+    public TabPane getHomePageTabPane() {
+        return homePageTabPane;
     }
 }
 

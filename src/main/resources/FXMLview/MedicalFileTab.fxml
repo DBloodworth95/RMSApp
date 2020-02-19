@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentTabController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewStudentTabController">
    <children>
       <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -34,7 +34,7 @@
                                     <Insets right="5.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField minWidth="-Infinity" prefHeight="200.0" prefWidth="399.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                              <TextField fx:id="allergyTF" minWidth="-Infinity" prefHeight="200.0" prefWidth="399.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                            </children>
                         </HBox>
                         <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="200.0">
@@ -44,7 +44,7 @@
                                     <Insets right="5.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="399.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                              <TextArea fx:id="religionTF" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="399.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                            </children>
                            <VBox.margin>
                               <Insets top="10.0" />
@@ -73,7 +73,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <TextArea prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                        <TextArea fx:id="medicalTF" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                            <VBox.margin>
                               <Insets left="50.0" right="100.0" />
                            </VBox.margin>
@@ -89,7 +89,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="40.0">
                                        <children>
-                                          <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
+                                          <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createMedicalFile" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
                                              <font>
                                                 <Font size="12.0" />
                                              </font>
