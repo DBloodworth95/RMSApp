@@ -253,6 +253,7 @@ public class HomePageController {
             }
             homePageTabPane.getSelectionModel().select(currentTabView);
         }
+        tabArrayList.removeAll(tabArrayList);
     }
 }
 
