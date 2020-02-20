@@ -10,6 +10,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Session;
 import view.CalendarView;
+import view.StudentTab;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -27,7 +29,8 @@ public class HomePageController {
     public TabPane homePageTabPane;
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
-    public ArrayList<Node> tabContentList = new ArrayList<>();
+    private int currentTabView;
+
 
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
@@ -63,6 +66,7 @@ public class HomePageController {
     }
 
     public void createStudentTab() throws IOException, SQLException {
+        /*
         Tab studentTab = new Tab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
@@ -72,6 +76,8 @@ public class HomePageController {
         Object temp = loader.getController();
         StudentTabController controller = (StudentTabController) temp;
         controller.populate();
+        */
+        StudentTab studentTab = new StudentTab(homePageTabPane, loader);
     }
 
     public void createStaffTab() throws IOException {
@@ -232,27 +238,20 @@ public class HomePageController {
         homeTab.setContent(homeTabContent);
     }
 
-    public TabPane getHomePageTabPane() {
-        return homePageTabPane;
-    }
-
-    public Tab getTabState() {
-        Tab tab = homePageTabPane.getTabs().get(0);
-        return tab;
-    }
-
-    public void refresh() throws IOException {
-        System.out.println("Test");
+    public void refresh() throws IOException, SQLException {
+        System.out.println("Refresh method called.");
         for (int i = 0; i < homePageTabPane.getTabs().size(); i++) {
             tabArrayList.add(homePageTabPane.getTabs().get(i));
-            tabContentList.add(homePageTabPane.getTabs().get(i).getContent());
         }
+        currentTabView = homePageTabPane.getSelectionModel().getSelectedIndex();
         homePageTabPane.getTabs().clear();
         for (Tab tab: tabArrayList) {
-            homePageTabPane.getTabs().add(tab);
-            for (Node node: tabContentList) {
-                tab.setContent(node);
+            if (tab instanceof StudentTab) {
+                StudentTab st = new StudentTab(homePageTabPane, loader);
+            } else {
+                homePageTabPane.getTabs().add(tab);
             }
+            homePageTabPane.getSelectionModel().select(currentTabView);
         }
     }
 }

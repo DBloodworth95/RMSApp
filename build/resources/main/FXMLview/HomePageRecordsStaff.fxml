@@ -435,7 +435,7 @@
                   </TabPane>
                </children>
                <StackPane.margin>
-                  <Insets top="46.0" />
+                  <Insets />
                </StackPane.margin>
             </HBox>
             <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" StackPane.alignment="CENTER_RIGHT">
