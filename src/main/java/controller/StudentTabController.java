@@ -10,11 +10,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
 import model.student.Student;
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -376,6 +374,21 @@ public class StudentTabController {
         Object temp = createStudentLoader.getController();
         NewStudentTabController controller = (NewStudentTabController) temp;
         controller.populateComboBoxes();
+    }
+
+    public void removeStudent() throws SQLException {
+        Object selectedItems = studentTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("DELETE FROM students WHERE student_id ='" + idCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        ObservableList<Student> allRows, singleRow;
+        allRows = studentTV.getItems();
+        singleRow = studentTV.getSelectionModel().getSelectedItems();
+        singleRow.forEach(allRows::remove);
     }
 }
 

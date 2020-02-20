@@ -2,6 +2,7 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -25,6 +26,8 @@ public class HomePageController {
     @FXML
     public TabPane homePageTabPane;
     private FXMLLoader loader;
+    public ArrayList<Tab> tabArrayList = new ArrayList<>();
+    public ArrayList<Node> tabContentList = new ArrayList<>();
 
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
@@ -231,6 +234,26 @@ public class HomePageController {
 
     public TabPane getHomePageTabPane() {
         return homePageTabPane;
+    }
+
+    public Tab getTabState() {
+        Tab tab = homePageTabPane.getTabs().get(0);
+        return tab;
+    }
+
+    public void refresh() throws IOException {
+        System.out.println("Test");
+        for (int i = 0; i < homePageTabPane.getTabs().size(); i++) {
+            tabArrayList.add(homePageTabPane.getTabs().get(i));
+            tabContentList.add(homePageTabPane.getTabs().get(i).getContent());
+        }
+        homePageTabPane.getTabs().clear();
+        for (Tab tab: tabArrayList) {
+            homePageTabPane.getTabs().add(tab);
+            for (Node node: tabContentList) {
+                tab.setContent(node);
+            }
+        }
     }
 }
 
