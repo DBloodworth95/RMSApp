@@ -397,34 +397,13 @@ public class StudentTabController {
     }
 
     public void printTable() {
-        System.out.println("test method");
-        PrinterJob job = PrinterJob.createPrinterJob();
-        System.out.println("test method");
-        if(job != null && job.showPrintDialog(printBtn.getScene().getWindow())){
-            Printer printer = job.getPrinter();
-            PageLayout pageLayout = printer.createPageLayout(Paper.A4, PageOrientation.LANDSCAPE, Printer.MarginType.HARDWARE_MINIMUM);
-            double width = printBtn.getScene().getWindow().getWidth();
-            double height = printBtn.getScene().getWindow().getHeight();
-
-            PrintResolution resolution = job.getJobSettings().getPrintResolution();
-
-            width /= resolution.getFeedResolution();
-
-            height /= resolution.getCrossFeedResolution();
-
-            double scaleX = pageLayout.getPrintableWidth()/width/600;
-            double scaleY = pageLayout.getPrintableHeight()/height/600;
-
-            Scale scale = new Scale(scaleX, scaleY);
-            printBtn.getScene().getWindow().getScene().getRoot().getTransforms().add(scale);
-
-            boolean success = job.printPage(pageLayout, printBtn.getScene().getWindow().getScene().getRoot());
-            System.out.println("test");
-            if(success){
-                job.endJob();
-                System.out.println("end");
+        PrinterJob printerJob = PrinterJob.createPrinterJob();
+        if (printerJob != null) {
+            PageLayout pageLayout = printerJob.getPrinter().createPageLayout(Paper.A4, PageOrientation.LANDSCAPE, 0, 0, 0, 0);
+            boolean success = printerJob.printPage(pageLayout, studentTV);
+            if (success) {
+                printerJob.endJob();
             }
-            printBtn.getScene().getWindow().getScene().getRoot().getTransforms().remove(scale);
         }
     }
 }
