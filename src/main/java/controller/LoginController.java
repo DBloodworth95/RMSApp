@@ -28,7 +28,7 @@ public class LoginController {
     public void loginAttempt(ActionEvent event) throws SQLException, IOException, ParseException {
         String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
-        String password = "root";
+        String password = "rootroot";
         String query = "SELECT * FROM users WHERE username ='" + userField.getText() + "'";
         System.out.println(query);
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
