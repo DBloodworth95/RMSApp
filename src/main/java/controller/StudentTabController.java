@@ -378,7 +378,6 @@ public class StudentTabController {
         Object temp = createStudentLoader.getController();
         NewStudentTabController controller = (NewStudentTabController) temp;
         controller.populateComboBoxes();
-
     }
 
     public void removeStudent() throws SQLException {
@@ -397,10 +396,15 @@ public class StudentTabController {
     }
 
     public void printTable() {
-        PrinterJob printerJob = PrinterJob.createPrinterJob();
+        Printer printer = Printer.getDefaultPrinter();
+        PrinterJob printerJob = PrinterJob.createPrinterJob(printer);
+        System.out.println("Printing.");
         if (printerJob != null) {
+            System.out.println("Printing..");
             PageLayout pageLayout = printerJob.getPrinter().createPageLayout(Paper.A4, PageOrientation.LANDSCAPE, 0, 0, 0, 0);
+            System.out.println("Printing...");
             boolean success = printerJob.printPage(pageLayout, studentTV);
+            System.out.println("Printing");
             if (success) {
                 printerJob.endJob();
             }
