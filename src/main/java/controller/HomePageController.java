@@ -3,6 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -27,6 +28,8 @@ public class HomePageController {
     private Text dateLabel;
     @FXML
     public TabPane homePageTabPane;
+    @FXML
+    private Button logoutBtn;
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
@@ -254,6 +257,17 @@ public class HomePageController {
             homePageTabPane.getSelectionModel().select(currentTabView);
         }
         tabArrayList.removeAll(tabArrayList);
+    }
+
+    public void endSession() throws IOException {
+        Stage stage = (Stage) logoutBtn.getScene().getWindow();
+        stage.close();
+        Parent loginPage = FXMLLoader.load(getClass().getResource("/FXMLview/Login.fxml"));
+        Scene scene = new Scene(loginPage);
+        scene.getStylesheets().add("main.css");
+        stage.setScene(scene);
+        stage.setTitle("Woodlands RMS");
+        stage.show();
     }
 }
 

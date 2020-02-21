@@ -139,10 +139,10 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="logoutBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
-                     <HBox.margin>
-                        <Insets right="20.0" top="4.0" />
-                     </HBox.margin>
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#endSession" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
                   </Button>
                </children>
             </HBox>
