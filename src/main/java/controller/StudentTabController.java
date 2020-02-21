@@ -14,6 +14,7 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
+import model.TablePrinter;
 import model.student.Student;
 import java.io.IOException;
 import java.sql.*;
@@ -396,19 +397,8 @@ public class StudentTabController {
     }
 
     public void printTable() {
-        Printer printer = Printer.getDefaultPrinter();
-        PrinterJob printerJob = PrinterJob.createPrinterJob(printer);
-        System.out.println("Printing.");
-        if (printerJob != null) {
-            System.out.println("Printing..");
-            PageLayout pageLayout = printerJob.getPrinter().createPageLayout(Paper.A4, PageOrientation.LANDSCAPE, 0, 0, 0, 0);
-            System.out.println("Printing...");
-            boolean success = printerJob.printPage(pageLayout, studentTV);
-            System.out.println("Printing");
-            if (success) {
-                printerJob.endJob();
-            }
-        }
+        TablePrinter tablePrinter = new TablePrinter();
+        tablePrinter.print(Paper.A4, studentTV);
     }
 }
 
