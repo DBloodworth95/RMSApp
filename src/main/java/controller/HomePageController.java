@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Session;
+import model.Staff;
 import view.CalendarView;
 import view.StaffTab;
 import view.StudentTab;
@@ -236,6 +237,8 @@ public class HomePageController {
         for (Tab tab: tabArrayList) {
             if (tab instanceof StudentTab) {
                 StudentTab st = new StudentTab(homePageTabPane, loader);
+            } else if (tab instanceof StaffTab) {
+                StaffTab staffTab = new StaffTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }
