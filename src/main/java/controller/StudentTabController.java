@@ -5,15 +5,18 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.print.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.ComboBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.transform.Scale;
 import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
+import model.TablePrinter;
 import model.student.Student;
+import view.NewStudentWindow;
 
 import java.io.IOException;
 import java.sql.*;
@@ -28,12 +31,14 @@ public class StudentTabController {
             genderCol, phoneCol, emailCol, tutorCol, emPhonCol, emEmailCol, employerCol, addNotesCol, medicalCol,
             allergyCol, religionCol, imgCol, termAddNCol, termAddHCol, termAddTCol, termAddCountCol, termAddCountryCol, termAddZipCol,
             homeAddNCol, homeAddHCol, homeAddTCol, homeAddCountCol, homeAddCountryCol, homeAddZipCol, termAddSCol, homeAddSCol;
+    @FXML
+    private Button printBtn;
 
     public List<Student> fetchTable() throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
-        String fetchQuery = ("SELECT * FROM staff");
+        String fetchQuery = ("SELECT * FROM students");
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
         ResultSet result = fetchStaff.executeQuery("SELECT * FROM students");
@@ -360,22 +365,32 @@ public class StudentTabController {
             Connection myConnection = DriverManager.getConnection(dbURL, username, password);
             PreparedStatement preparedStatement = myConnection.prepareStatement(query);
             preparedStatement.execute();
-            System.out.println("Saved!");
         }
+        System.out.println("Saved!");
     }
 
     public void createStudent() throws IOException {
-        FXMLLoader createStudentLoader = new FXMLLoader();
-        createStudentLoader.setLocation(getClass().getResource("/FXMLview/NewStudentTab.fxml"));
-        Scene scene = new Scene(createStudentLoader.load(), 1440,580);
-        Stage stage = new Stage();
-        stage.setTitle("Add a Student");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
-        Object temp = createStudentLoader.getController();
-        NewStudentTabController controller = (NewStudentTabController) temp;
-        controller.populateComboBoxes();
+        new NewStudentWindow();
+    }
+
+    public void removeStudent() throws SQLException {
+        Object selectedItems = studentTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("DELETE FROM students WHERE student_id ='" + idCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        ObservableList<Student> allRows, singleRow;
+        allRows = studentTV.getItems();
+        singleRow = studentTV.getSelectionModel().getSelectedItems();
+        singleRow.forEach(allRows::remove);
+    }
+
+    public void printTable() {
+        TablePrinter tablePrinter = new TablePrinter();
+        tablePrinter.print(Paper.A4, studentTV);
     }
 }
 

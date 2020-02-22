@@ -2,13 +2,19 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Session;
+import model.Staff;
 import view.CalendarView;
+import view.StaffTab;
+import view.StudentTab;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -24,7 +30,12 @@ public class HomePageController {
     private Text dateLabel;
     @FXML
     public TabPane homePageTabPane;
+    @FXML
+    private Button logoutBtn;
     private FXMLLoader loader;
+    public ArrayList<Tab> tabArrayList = new ArrayList<>();
+    private int currentTabView;
+
 
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
@@ -60,24 +71,11 @@ public class HomePageController {
     }
 
     public void createStudentTab() throws IOException, SQLException {
-        Tab studentTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
-        AnchorPane studentTabContent = loader.load();
-        homePageTabPane.getTabs().add(studentTab);
-        studentTab.setText("Students");
-        studentTab.setContent(studentTabContent);
-        Object temp = loader.getController();
-        StudentTabController controller = (StudentTabController) temp;
-        controller.populate();
+        StudentTab studentTab = new StudentTab(homePageTabPane, loader);
     }
 
-    public void createStaffTab() throws IOException {
-        Tab staffTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/StaffTab.fxml"));
-        AnchorPane staffTabContent = loader.load();
-        homePageTabPane.getTabs().add(staffTab);
-        staffTab.setText("Staff");
-        staffTab.setContent(staffTabContent);
+    public void createStaffTab() throws IOException, SQLException {
+        StaffTab staffTab = new StaffTab(homePageTabPane, loader);
     }
 
     public void createModuleTab() throws IOException {
@@ -229,8 +227,35 @@ public class HomePageController {
         homeTab.setContent(homeTabContent);
     }
 
-    public TabPane getHomePageTabPane() {
-        return homePageTabPane;
+    public void refresh() throws IOException, SQLException {
+        System.out.println("Refresh method called.");
+        for (int i = 0; i < homePageTabPane.getTabs().size(); i++) {
+            tabArrayList.add(homePageTabPane.getTabs().get(i));
+        }
+        currentTabView = homePageTabPane.getSelectionModel().getSelectedIndex();
+        homePageTabPane.getTabs().clear();
+        for (Tab tab: tabArrayList) {
+            if (tab instanceof StudentTab) {
+                StudentTab st = new StudentTab(homePageTabPane, loader);
+            } else if (tab instanceof StaffTab) {
+                StaffTab staffTab = new StaffTab(homePageTabPane, loader);
+            } else {
+                homePageTabPane.getTabs().add(tab);
+            }
+            homePageTabPane.getSelectionModel().select(currentTabView);
+        }
+        tabArrayList.removeAll(tabArrayList);
+    }
+
+    public void endSession() throws IOException {
+        Stage stage = (Stage) logoutBtn.getScene().getWindow();
+        stage.close();
+        Parent loginPage = FXMLLoader.load(getClass().getResource("/FXMLview/Login.fxml"));
+        Scene scene = new Scene(loginPage);
+        scene.getStylesheets().add("main.css");
+        stage.setScene(scene);
+        stage.setTitle("Woodlands RMS");
+        stage.show();
     }
 }
 

@@ -139,13 +139,13 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="logoutBtn" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
-                     <HBox.margin>
-                        <Insets right="20.0" top="4.0" />
-                     </HBox.margin>
-                  </Button>
                </children>
             </HBox>
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#endSession" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutY="91.0" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
@@ -185,30 +185,30 @@
                            </font></Button>
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
                         <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="MODULES">
-                          <items>
-                            <MenuItem mnemonicParsing="false">
+                           <items>
+                              <MenuItem mnemonicParsing="false">
                                  <graphic>
                                     <MenuButton alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="RIGHT" text="Module 1">
-                                      <items>
-                                        <MenuItem mnemonicParsing="false" text="View students" />
-                                          <MenuItem mnemonicParsing="false" text="View staff" />
-                                        <MenuItem mnemonicParsing="false" text="View module file" />
-                                      </items>
-                                    </MenuButton>
-                                 </graphic>
-                              </MenuItem>
-                            <MenuItem mnemonicParsing="false">
-                                 <graphic>
-                                    <MenuButton alignment="CENTER_RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="RIGHT" text="Module 2">
-                                      <items>
+                                       <items>
                                           <MenuItem mnemonicParsing="false" text="View students" />
                                           <MenuItem mnemonicParsing="false" text="View staff" />
                                           <MenuItem mnemonicParsing="false" text="View module file" />
-                                      </items>
+                                       </items>
                                     </MenuButton>
                                  </graphic>
                               </MenuItem>
-                          </items>
+                              <MenuItem mnemonicParsing="false">
+                                 <graphic>
+                                    <MenuButton alignment="CENTER_RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="RIGHT" text="Module 2">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="View students" />
+                                          <MenuItem mnemonicParsing="false" text="View staff" />
+                                          <MenuItem mnemonicParsing="false" text="View module file" />
+                                       </items>
+                                    </MenuButton>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
                            <font>
                               <Font size="12.0" />
                            </font>

@@ -52,7 +52,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" text="12345678">
+                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                                    <font>
                                                       <Font size="12.0" />
                                                    </font>
@@ -69,7 +69,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                                <TextField fx:id="firstNameTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                              </children>
                                              <VBox.margin>
                                                 <Insets top="5.0" />
@@ -85,7 +85,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                                <TextField fx:id="middleNameTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                              </children>
                                              <VBox.margin>
                                                 <Insets top="5.0" />
@@ -101,7 +101,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                                <TextField fx:id="surnameTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                              </children>
                                              <VBox.margin>
                                                 <Insets top="5.0" />
@@ -127,7 +127,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                                <TextField fx:id="pwTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
@@ -143,7 +143,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="M" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                                                <ComboBox fx:id="genderCB" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                                    <padding>
                                                       <Insets left="80.0" />
                                                    </padding>
@@ -216,7 +216,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="addNumberTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                     <Label minWidth="-Infinity" prefWidth="105.0" text="House Name">
                                        <HBox.margin>
                                           <Insets right="5.0" />
@@ -228,7 +228,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="houseNTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
@@ -241,7 +241,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="houseSTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                     <Label minWidth="-Infinity" prefWidth="105.0" text="Town">
                                        <HBox.margin>
                                           <Insets right="5.0" />
@@ -253,7 +253,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="houseTTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                                  <VBox.margin>
                                     <Insets top="5.0" />
@@ -269,7 +269,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="countyTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                     <Label minWidth="-Infinity" prefWidth="105.0" text="Country">
                                        <HBox.margin>
                                           <Insets right="5.0" />
@@ -281,7 +281,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="countryTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                                  <VBox.margin>
                                     <Insets top="5.0" />
@@ -297,7 +297,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="zipTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="0.0" VBox.vgrow="ALWAYS">
@@ -333,7 +333,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="phoneTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                     <Label minWidth="-Infinity" prefWidth="105.0" text="Email address">
                                        <HBox.margin>
                                           <Insets right="5.0" />
@@ -345,7 +345,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="emailTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                                  <VBox.margin>
                                     <Insets top="5.0" />
@@ -373,7 +373,7 @@
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <TextField prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <TextField fx:id="emergPTF" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                     <VBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="40.0">
                                        <children>
                                           <Label contentDisplay="RIGHT" prefWidth="105.0" text="Emergency">
@@ -400,7 +400,7 @@
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <TextField fx:id="emergETF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -430,7 +430,7 @@
                                                       <Insets right="5.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <TextArea fx:id="religionTF1" minHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                                <TextArea fx:id="allergyTA" minHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                                    <HBox.margin>
                                                       <Insets bottom="50.0" />
                                                    </HBox.margin>
@@ -444,7 +444,7 @@
                                                       <Insets right="5.0" />
                                                    </HBox.margin>
                                                 </Label>
-                                                <TextArea fx:id="religionTF" minHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                                <TextArea fx:id="religiousTA" minHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                                    <HBox.margin>
                                                       <Insets />
                                                    </HBox.margin>
@@ -500,7 +500,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox minWidth="-Infinity" prefWidth="170.0" promptText="Dormant" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="170.0" promptText="Dormant" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets right="30.0" />
                                        </HBox.margin>
@@ -516,7 +516,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox minWidth="-Infinity" prefWidth="170.0" promptText="Retired" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="dormCB" minWidth="-Infinity" prefWidth="170.0" promptText="Retired" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <padding>
                                           <Insets left="50.0" />
                                        </padding>
@@ -533,7 +533,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox minWidth="-Infinity" prefWidth="170.0" promptText="Databases" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="specialismCB" minWidth="-Infinity" prefWidth="170.0" promptText="Databases" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <padding>
                                           <Insets left="45.0" />
                                        </padding>
@@ -593,7 +593,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                                    <TextArea fx:id="addNoteTA" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -650,7 +650,7 @@
                                                       </Label>
                                                    </children>
                                                 </VBox>
-                                                <TextArea fx:id="medicalTF" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0;" HBox.hgrow="ALWAYS" />
+                                                <TextArea fx:id="medicalHTA" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0;" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
@@ -664,7 +664,7 @@
                                                       </HBox>
                                                       <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="40.0">
                                                          <children>
-                                                            <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createMedicalFile" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
+                                                            <Button fx:id="saveBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createStaff" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
                                                                <font>
                                                                   <Font size="12.0" />
                                                                </font>
