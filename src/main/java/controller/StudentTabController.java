@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
 import model.TablePrinter;
 import model.student.Student;
+import view.NewStudentWindow;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -363,22 +365,12 @@ public class StudentTabController {
             Connection myConnection = DriverManager.getConnection(dbURL, username, password);
             PreparedStatement preparedStatement = myConnection.prepareStatement(query);
             preparedStatement.execute();
-            System.out.println("Saved!");
         }
+        System.out.println("Saved!");
     }
 
     public void createStudent() throws IOException {
-        FXMLLoader createStudentLoader = new FXMLLoader();
-        createStudentLoader.setLocation(getClass().getResource("/FXMLview/NewStudentTab.fxml"));
-        Scene scene = new Scene(createStudentLoader.load(), 1440,580);
-        Stage stage = new Stage();
-        stage.setTitle("Add a Student");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
-        Object temp = createStudentLoader.getController();
-        NewStudentTabController controller = (NewStudentTabController) temp;
-        controller.populateComboBoxes();
+        new NewStudentWindow();
     }
 
     public void removeStudent() throws SQLException {

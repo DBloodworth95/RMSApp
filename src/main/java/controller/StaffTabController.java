@@ -2,7 +2,9 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.print.Paper;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -11,6 +13,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.IntegerStringConverter;
 import model.Staff;
+import model.TablePrinter;
+import view.NewStaffWindow;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -132,6 +137,127 @@ public class StaffTabController {
     }
 
     public void editColumns() {
+        staffIDCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, Integer>>) staffIntegerCellEditEvent -> ((Staff) staffIntegerCellEditEvent.getTableView().getItems().get(staffIntegerCellEditEvent.getTablePosition().getRow())).setStaffID(staffIntegerCellEditEvent.getNewValue()));
+        statusCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setStatus(staffStringCellEditEvent.getNewValue()));
+        dormCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setDorm(staffStringCellEditEvent.getNewValue()));
+        firstNameCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setFirstName(staffStringCellEditEvent.getNewValue()));
+        lastNameCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setSurname(staffStringCellEditEvent.getNewValue()));
+        middleNameCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setMiddleName(staffStringCellEditEvent.getNewValue()));
+        genderCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setGender(staffStringCellEditEvent.getNewValue()));
+        houseNumCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setAddressNumber(staffStringCellEditEvent.getNewValue()));
+        houseNameCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setAddressName(staffStringCellEditEvent.getNewValue()));
+        streetCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setAddressStreet(staffStringCellEditEvent.getNewValue()));
+        townCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setAddressTown(staffStringCellEditEvent.getNewValue()));
+        countyCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setAddressCounty(staffStringCellEditEvent.getNewValue()));
+        countryCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setAddressCountry(staffStringCellEditEvent.getNewValue()));
+        zipCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setZipCode(staffStringCellEditEvent.getNewValue()));
+        phoneCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setTelephone(staffStringCellEditEvent.getNewValue()));
+        emailCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setEmail(staffStringCellEditEvent.getNewValue()));
+        specialistCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setSpecialism(staffStringCellEditEvent.getNewValue()));
+        emergPCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setEmergPhone(staffStringCellEditEvent.getNewValue()));
+        emergECol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setEmergEmail(staffStringCellEditEvent.getNewValue()));
+        medicalHCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setMedicalHistory(staffStringCellEditEvent.getNewValue()));
+        medicalRCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setMedicalReligious(staffStringCellEditEvent.getNewValue()));
+        resumeCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setResume(staffStringCellEditEvent.getNewValue()));
+        imgCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setImage(staffStringCellEditEvent.getNewValue()));
+        addNoteCol.setOnEditCommit(
+                (EventHandler<TableColumn.CellEditEvent<Staff, String>>) staffStringCellEditEvent -> ((Staff) staffStringCellEditEvent.getTableView().getItems().get(staffStringCellEditEvent.getTablePosition().getRow())).setAddNotes(staffStringCellEditEvent.getNewValue()));
+    }
 
+    public void updateTable() throws SQLException {
+        Staff staff;
+        List <List<String>> staffList = new ArrayList<>();
+        for (int i = 0; i < staffTV.getItems().size(); i++) {
+            staff = (Staff) staffTV.getItems().get(i);
+            staffList.add(new ArrayList<>());
+            staffList.get(i).add(Integer.toString(staff.getStaffID()));
+            staffList.get(i).add(staff.getStatus());
+            staffList.get(i).add(staff.getDorm());
+            staffList.get(i).add(staff.getFirstName());
+            staffList.get(i).add(staff.getMiddleName());
+            staffList.get(i).add(staff.getSurname());
+            staffList.get(i).add(staff.getGender());
+            staffList.get(i).add(staff.getAddressNumber());
+            staffList.get(i).add(staff.getAddressName());
+            staffList.get(i).add(staff.getAddressStreet());
+            staffList.get(i).add(staff.getAddressTown());
+            staffList.get(i).add(staff.getAddressCounty());
+            staffList.get(i).add(staff.getAddressCountry());
+            staffList.get(i).add(staff.getZipCode());
+            staffList.get(i).add(staff.getTelephone());
+            staffList.get(i).add(staff.getEmail());
+            staffList.get(i).add(staff.getEmergPhone());
+            staffList.get(i).add(staff.getEmergEmail());
+            staffList.get(i).add(staff.getSpecialism());
+            staffList.get(i).add(staff.getResume());
+            staffList.get(i).add(staff.getAddNotes());
+            staffList.get(i).add(staff.getMedicalHistory());
+            staffList.get(i).add(staff.getMedicalAllergy());
+            staffList.get(i).add(staff.getMedicalReligious());
+            staffList.get(i).add(staff.getImage());
+
+            String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+            String username = "root";
+            String password = "root";
+            String query = ("UPDATE staff SET status='" + staff.getStatus() + "', dormancy_reason='" + staff.getDorm() + "', first_name='" + staff.getFirstName() + "', middle_name='" +
+                    staff.getMiddleName() + "', surname='" + staff.getSurname() + "', gender='" + staff.getGender() + "', address_number='" + staff.getAddressNumber() + "', address_house_name='" +
+                    staff.getAddressName() + "', address_street='" + staff.getAddressStreet() + "', address_town='" + staff.getAddressTown() + "', address_county='" + staff.getAddressCounty() +
+                    "', address_country='" + staff.getAddressCountry() + "', zip_code='" + staff.getZipCode() + "', telephone='" + staff.getTelephone() + "', email_address='" + staff.getEmail() +
+                    "', emergency_contact_phone='" + staff.getEmergPhone() + "', emergency_contact_email='" + staff.getEmergEmail() + "', specialist_subject='" + staff.getSpecialism() +
+                    "', resume='" + staff.getResume() + "', additional_notes='" + staff.getAddNotes() + "', medical_history='" + staff.getMedicalHistory() + "', medical_allergies='" +
+                    staff.getMedicalAllergy() + "', medical_religious='" + staff.getMedicalReligious() + "', image='" + staff.getImage() + "' WHERE staff_id='" + staff.getStaffID() + "'");
+            Connection myCon = DriverManager.getConnection(dbURL, username, password);
+            PreparedStatement preparedStatement = myCon.prepareStatement(query);
+            preparedStatement.execute();
+        }
+        System.out.println("Saved!");
+    }
+
+    public void removeStaff() throws SQLException {
+        Object selectedItems = staffTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("DELETE FROM staff WHERE staff_id ='" + staffIDCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        ObservableList<Staff> allRows, singleRow;
+        allRows = staffTV.getItems();
+        singleRow = staffTV.getSelectionModel().getSelectedItems();
+        singleRow.forEach(allRows::remove);
+        System.out.println("Removed selected items!");
+    }
+
+    public void openNewStaffTab() throws IOException {
+        new NewStaffWindow();
+    }
+
+    public void printTable() {
+        TablePrinter tablePrinter = new TablePrinter();
+        tablePrinter.print(Paper.A4, staffTV);
     }
 }

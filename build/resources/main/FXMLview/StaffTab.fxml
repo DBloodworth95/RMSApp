@@ -32,7 +32,7 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="CREATE" textFill="#09adff">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openNewStaffTab" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="CREATE" textFill="#09adff">
                <effect>
                   <Glow />
                </effect>
@@ -68,7 +68,7 @@
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="DELETE" textFill="#09adff">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeStaff" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="DELETE" textFill="#09adff">
                <effect>
                   <Glow />
                </effect>
@@ -86,7 +86,7 @@
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateTable" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -101,7 +101,7 @@
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="PRINT" textFill="#09adff">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#printTable" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="PRINT" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
