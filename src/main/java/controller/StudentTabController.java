@@ -36,7 +36,7 @@ public class StudentTabController {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
-        String fetchQuery = ("SELECT * FROM staff");
+        String fetchQuery = ("SELECT * FROM students");
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
         ResultSet result = fetchStaff.executeQuery("SELECT * FROM students");

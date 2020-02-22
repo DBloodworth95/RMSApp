@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Session;
 import view.CalendarView;
+import view.StaffTab;
 import view.StudentTab;
 
 import java.io.IOException;
@@ -69,27 +70,11 @@ public class HomePageController {
     }
 
     public void createStudentTab() throws IOException, SQLException {
-        /*
-        Tab studentTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
-        AnchorPane studentTabContent = loader.load();
-        homePageTabPane.getTabs().add(studentTab);
-        studentTab.setText("Students");
-        studentTab.setContent(studentTabContent);
-        Object temp = loader.getController();
-        StudentTabController controller = (StudentTabController) temp;
-        controller.populate();
-        */
         StudentTab studentTab = new StudentTab(homePageTabPane, loader);
     }
 
-    public void createStaffTab() throws IOException {
-        Tab staffTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/StaffTab.fxml"));
-        AnchorPane staffTabContent = loader.load();
-        homePageTabPane.getTabs().add(staffTab);
-        staffTab.setText("Staff");
-        staffTab.setContent(staffTabContent);
+    public void createStaffTab() throws IOException, SQLException {
+        StaffTab staffTab = new StaffTab(homePageTabPane, loader);
     }
 
     public void createModuleTab() throws IOException {
