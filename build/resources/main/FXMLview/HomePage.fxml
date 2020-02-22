@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="test" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <ButtonBar buttonMinWidth="40.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_CENTER">
+         <buttons>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="923.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged in as Dan" wrappingWidth="126.0628662109375" />
+                  <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday 5th November 2019" wrappingWidth="228.7293701171875" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button alignment="TOP_CENTER" mnemonicParsing="false" text="Button" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </buttons>
+      </ButtonBar>
+   </top>
+   <left>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="139.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Text layoutX="21.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logo Image" wrappingWidth="95.39615631103516" />
+         </children>
+      </Pane>
+   </left>
+   <bottom>
+      <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="46.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <buttons>
+            <HBox alignment="CENTER_RIGHT" prefHeight="89.0" prefWidth="858.0">
+               <children>
+                  <Text nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Sign in Monday 4th November 2019" textOrigin="TOP" wrappingWidth="296.72943115234375" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WILDE" />
+                  <Button alignment="CENTER" mnemonicParsing="false" text="Button" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="193.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020" wrappingWidth="93.73486328125" />
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Button" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="APEX 2020" wrappingWidth="91.0682373046875" />
+                  <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Button" />
+               </children>
+            </HBox>
+         </buttons>
+      </ButtonBar>
+   </bottom>
+   <center>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1156.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <TabPane layoutX="-3.0" layoutY="101.0" prefHeight="557.0" prefWidth="1235.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="1135.0">
+                           <children>
+                              <ButtonBar layoutX="-1.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="103.0" prefWidth="1212.0">
+                                 <buttons>
+                                    <ChoiceBox prefWidth="150.0" />
+                                    <ChoiceBox layoutX="1007.0" layoutY="49.0" prefWidth="150.0" />
+                                    <ChoiceBox layoutX="847.0" layoutY="49.0" prefWidth="150.0" />
+                                    <ChoiceBox layoutX="687.0" layoutY="49.0" prefWidth="150.0" />
+                                 </buttons>
+                              </ButtonBar>
+                              <ButtonBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="1145.0">
+                                <buttons>
+                                  <Button mnemonicParsing="false" text="PRINT" />
+                                    <Button layoutX="1070.0" layoutY="33.0" mnemonicParsing="false" text="SAVE" />
+                                    <Button layoutX="1070.0" layoutY="33.0" mnemonicParsing="false" text="CREATE" />
+                                </buttons>
+                              </ButtonBar>
+                              <TableView layoutY="71.0" prefHeight="460.0" prefWidth="1161.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Column1" />
+                                  <TableColumn prefWidth="75.0" text="Column2" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <ButtonBar layoutY="-1.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="103.0" prefWidth="1141.0">
+              <buttons>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="103.0" prefWidth="1174.0">
+                     <children>
+                        <Button alignment="CENTER" layoutX="573.0" layoutY="49.0" mnemonicParsing="false" text="Button" />
+                        <Button alignment="CENTER" layoutX="511.0" layoutY="49.0" mnemonicParsing="false" text="Button" />
+                        <Button alignment="CENTER" layoutX="935.0" layoutY="49.0" mnemonicParsing="false" text="Button" />
+                        <ChoiceBox prefWidth="150.0">
+                           <HBox.margin>
+                              <Insets left="400.0" right="150.0" />
+                           </HBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ChoiceBox>
+                        <Button alignment="CENTER" mnemonicParsing="false" text="Button" />
+                        <Button alignment="CENTER" layoutX="148.0" layoutY="49.0" mnemonicParsing="false" text="Button">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="148.0" layoutY="49.0" mnemonicParsing="false" text="Button">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+              </buttons>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ButtonBar>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
