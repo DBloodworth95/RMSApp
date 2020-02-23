@@ -7,10 +7,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class NewModuleWindow {
 
-    public NewModuleWindow() throws IOException {
+    public NewModuleWindow() throws IOException, SQLException {
         FXMLLoader createModuleLoader = new FXMLLoader();
         createModuleLoader.setLocation(getClass().getResource("/FXMLview/NewModuleTab.fxml"));
         Scene scene = new Scene(createModuleLoader.load(), 1440,580);

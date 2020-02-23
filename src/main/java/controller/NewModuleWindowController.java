@@ -7,10 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class NewModuleWindowController {
     @FXML
@@ -45,9 +42,9 @@ public class NewModuleWindowController {
         stage.close();
     }
 
-    public void populateCB() {
+    public void populateCB() throws SQLException {
         levelCB.getItems().addAll("4", "5", "6");
-        courseCB.getItems().addAll("CSY2028", "CSY9999");
+        populateCourse();
         populateYearCB();
     }
 
@@ -58,8 +55,32 @@ public class NewModuleWindowController {
         }
     }
 
-    public void generateCode() {
-        int code = (int) (Math.random()*3000);
-        moduleTF.setText("CSY" + code);
+    public void generateCode() throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result = fetchStaff.executeQuery("SELECT module_code FROM modules");
+        while (result.next()) {
+            int code = (int) (Math.random() * 3000);
+            if (!result.getString("module_code").equals("CSY" + code)) {
+                moduleTF.setText("CSY" + code);
+            } else {
+                generateCode();
+            }
+        }
+    }
+
+    private void populateCourse() throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result = fetchStaff.executeQuery("SELECT course_code FROM courses");
+        while (result.next()) {
+            courseCB.getItems().addAll(result.getString("course_code"));
+        }
     }
 }

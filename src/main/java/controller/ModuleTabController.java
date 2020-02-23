@@ -11,12 +11,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.IntegerStringConverter;
-import model.Staff;
 import model.Module;
 import model.TablePrinter;
 import view.NewModuleWindow;
-import view.NewStaffWindow;
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -168,7 +165,7 @@ public class ModuleTabController {
         tablePrinter.print(Paper.A4, moduleTV);
     }
 
-    public void openNewModuleWindow() throws IOException {
+    public void openNewModuleWindow() throws IOException, SQLException {
         new NewModuleWindow();
     }
 }

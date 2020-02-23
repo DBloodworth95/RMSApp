@@ -9,12 +9,10 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Course;
 import model.Session;
 import model.Staff;
-import view.CalendarView;
-import view.ModuleTab;
-import view.StaffTab;
-import view.StudentTab;
+import view.*;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -83,13 +81,8 @@ public class HomePageController {
         new ModuleTab(homePageTabPane, loader);
     }
 
-    public void createCourseTab() throws IOException {
-        Tab courseTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/CoursesTab.fxml"));
-        AnchorPane courseTabContent = loader.load();
-        homePageTabPane.getTabs().add(courseTab);
-        courseTab.setText("Courses");
-        courseTab.setContent(courseTabContent);
+    public void createCourseTab() throws IOException, SQLException {
+        new CourseTab(homePageTabPane, loader);
     }
 
     public void createAssessmentTabRS() throws IOException {
@@ -237,6 +230,8 @@ public class HomePageController {
                 StaffTab staffTab = new StaffTab(homePageTabPane, loader);
             } else if (tab instanceof  ModuleTab) {
                 ModuleTab moduleTab = new ModuleTab(homePageTabPane, loader);
+            } else if (tab instanceof CourseTab) {
+                CourseTab courseTab = new CourseTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }

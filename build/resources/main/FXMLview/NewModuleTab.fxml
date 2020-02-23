@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentTabController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewModuleWindowController">
    <children>
       <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -49,7 +49,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                          <TextField fx:id="titleTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
@@ -62,7 +62,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="1" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="levelCB" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="90.0" />
                                              </padding></ComboBox>
@@ -70,7 +70,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
                                        <children>
-                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="130.0" text="Points">
+                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="130.0" text="Credits">
                                              <HBox.margin>
                                                 <Insets right="5.0" />
                                              </HBox.margin>
@@ -78,7 +78,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                          <TextField fx:id="creditTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
@@ -91,7 +91,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                          <TextField fx:id="leaderTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
@@ -104,7 +104,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="2019" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="startCB" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding>
@@ -121,7 +121,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="2020" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="endCB" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding>
@@ -138,7 +138,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="CSY-1920" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="courseCB" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding>
@@ -155,11 +155,11 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <TextField minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                          <TextField fx:id="moduleTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                              <HBox.margin>
                                                 <Insets right="10.0" />
                                              </HBox.margin></TextField>
-                                          <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="GENERATE">
+                                          <Button fx:id="genCodeBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#generateCode" prefHeight="29.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="GENERATE">
                                              <font>
                                                 <Font size="12.0" />
                                              </font>
@@ -197,7 +197,7 @@
                                     <Font size="12.0" />
                                  </font>
                               </Label>
-                              <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                              <TextArea fx:id="descTA" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets right="70.0" />
                                  </HBox.margin>
@@ -225,7 +225,7 @@
                                     <Font size="12.0" />
                                  </font>
                               </Label>
-                              <TextArea minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                              <TextArea fx:id="aimTA" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets right="70.0" />
                                  </HBox.margin>
@@ -235,7 +235,7 @@
                         <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="0.0" VBox.vgrow="ALWAYS" />
                         <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0">
                            <children>
-                              <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
+                              <Button fx:id="saveBtn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createModule" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: #ceedf0#ceedf0; -fx-border-radius: 5px;" text="Save and close">
                                  <font>
                                     <Font size="12.0" />
                                  </font>
