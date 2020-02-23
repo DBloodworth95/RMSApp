@@ -11,6 +11,8 @@ import model.Course;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class NewCourseWindowController {
     @FXML
@@ -29,7 +31,7 @@ public class NewCourseWindowController {
         String query = "INSERT INTO courses(course_code, course_title, start_year, end_year, description, aims_and_objectives, course_leader) VALUES (?,?,?,?,?,?,?)";
         Connection myConnection = DriverManager.getConnection(dbURL, username, password);
         PreparedStatement preparedStatement = myConnection.prepareStatement(query);
-        preparedStatement.setString(1, courseTF.getText());
+        preparedStatement.setString(1, generateCode());
         preparedStatement.setString(2, titleTF.getText());
         preparedStatement.setString(3, startCB.getValue().toString());
         preparedStatement.setString(4, endCB.getValue().toString());
@@ -70,6 +72,20 @@ public class NewCourseWindowController {
             module6CB.getItems().addAll(result.getString("module_code"));
         }
     }
+
+    private String generateCode() {
+        Pattern pattern = Pattern.compile("((^| )[A-Za-z])");
+        Matcher matcher = pattern.matcher(titleTF.getText());
+        String initials = "";
+        while(matcher.find()) {
+            initials += matcher.group().trim();
+        }
+        String code = initials.toUpperCase() + "Y" + "-" + startCB.getValue().toString().charAt(2) + startCB.getValue().toString().charAt(3) +
+                endCB.getValue().toString().charAt(2) + endCB.getValue().toString().charAt(3);
+        return code;
+    }
+
+
 
 
 }

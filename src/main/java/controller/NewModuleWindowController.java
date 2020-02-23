@@ -6,8 +6,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.sql.*;
+import java.util.regex.Pattern;
 
 public class NewModuleWindowController {
     @FXML
@@ -61,20 +61,24 @@ public class NewModuleWindowController {
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT module_code FROM modules");
-        char Ci = courseCB.getValue().toString().charAt(0);
-        char Mi = titleTF.getText().charAt(0);
-        String initials = (""+Ci + Mi);
-        String year = startCB.getValue().toString();
-        String genCode = ("" + initials + year);
+        ResultSet result = fetchStaff.executeQuery("SELECT * FROM modules");
+
+        String text = courseCB.getValue().toString();
+        String code = new String();
+        int amount = 1;
         while (result.next()) {
-            int code = (int) (Math.random() * 999);
-            if (!result.getString("module_code").equals("" + genCode+code)) {
-                moduleTF.setText(""+genCode+code);
+            ++amount;
+        }
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == '-') {
+                break;
             } else {
-                generateCode();
+                code += text.charAt(i);
             }
         }
+        String genCode = code + "0" + amount + "-" + startCB.getValue().toString().charAt(2) + startCB.getValue().toString().charAt(3) + "-" + endCB.getValue().toString().charAt(2) +
+                endCB.getValue().toString().charAt(3);
+        moduleTF.setText(genCode);
     }
 
     private void populateCourse() throws SQLException {
