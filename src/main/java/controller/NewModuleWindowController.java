@@ -62,10 +62,15 @@ public class NewModuleWindowController {
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
         ResultSet result = fetchStaff.executeQuery("SELECT module_code FROM modules");
+        char Ci = courseCB.getValue().toString().charAt(0);
+        char Mi = titleTF.getText().charAt(0);
+        String initials = (""+Ci + Mi);
+        String year = startCB.getValue().toString();
+        String genCode = ("" + initials + year);
         while (result.next()) {
-            int code = (int) (Math.random() * 3000);
-            if (!result.getString("module_code").equals("CSY" + code)) {
-                moduleTF.setText("CSY" + code);
+            int code = (int) (Math.random() * 999);
+            if (!result.getString("module_code").equals("" + genCode+code)) {
+                moduleTF.setText(""+genCode+code);
             } else {
                 generateCode();
             }
