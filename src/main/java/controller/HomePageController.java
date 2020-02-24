@@ -98,13 +98,8 @@ public class HomePageController {
         assessmentTab.setContent(assessmentTabContent);
     }
 
-    public void createGradesTabRS() throws IOException {
-        Tab gradesTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/GradesTabRecordsStaff.fxml"));
-        AnchorPane gradesTabContent = loader.load();
-        homePageTabPane.getTabs().add(gradesTab);
-        gradesTab.setText("Grades");
-        gradesTab.setContent(gradesTabContent);
+    public void createGradesTabRS() throws IOException, SQLException {
+        new GradesTab(homePageTabPane, loader);
     }
 
     public void createGradesTabT() throws IOException {
@@ -229,6 +224,8 @@ public class HomePageController {
                 CourseTab courseTab = new CourseTab(homePageTabPane, loader);
             } else if (tab instanceof AssessmentTab) {
                 AssessmentTab assessmentTab = new AssessmentTab(homePageTabPane, loader);
+            } else if (tab instanceof GradesTab) {
+                GradesTab gradesTab = new GradesTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }
