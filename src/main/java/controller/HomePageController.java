@@ -85,13 +85,8 @@ public class HomePageController {
         new CourseTab(homePageTabPane, loader);
     }
 
-    public void createAssessmentTabRS() throws IOException {
-        Tab assessmentTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/AssessmentsTabRecordsStaff.fxml"));
-        AnchorPane assessmentTabContent = loader.load();
-        homePageTabPane.getTabs().add(assessmentTab);
-        assessmentTab.setText("Assessments");
-        assessmentTab.setContent(assessmentTabContent);
+    public void createAssessmentTabRS() throws IOException, SQLException {
+        new AssessmentTab(homePageTabPane, loader);
     }
 
     public void createAssessmentTabT() throws IOException {
@@ -232,6 +227,8 @@ public class HomePageController {
                 ModuleTab moduleTab = new ModuleTab(homePageTabPane, loader);
             } else if (tab instanceof CourseTab) {
                 CourseTab courseTab = new CourseTab(homePageTabPane, loader);
+            } else if (tab instanceof AssessmentTab) {
+                AssessmentTab assessmentTab = new AssessmentTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }
