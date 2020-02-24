@@ -9,11 +9,10 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.Course;
 import model.Session;
 import model.Staff;
-import view.CalendarView;
-import view.StaffTab;
-import view.StudentTab;
+import view.*;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -71,38 +70,23 @@ public class HomePageController {
     }
 
     public void createStudentTab() throws IOException, SQLException {
-        StudentTab studentTab = new StudentTab(homePageTabPane, loader);
+        new StudentTab(homePageTabPane, loader);
     }
 
     public void createStaffTab() throws IOException, SQLException {
-        StaffTab staffTab = new StaffTab(homePageTabPane, loader);
+        new StaffTab(homePageTabPane, loader);
     }
 
-    public void createModuleTab() throws IOException {
-        Tab moduleTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/ModulesTab.fxml"));
-        AnchorPane moduleTabContent = loader.load();
-        homePageTabPane.getTabs().add(moduleTab);
-        moduleTab.setText("Modules");
-        moduleTab.setContent(moduleTabContent);
+    public void createModuleTab() throws IOException, SQLException {
+        new ModuleTab(homePageTabPane, loader);
     }
 
-    public void createCourseTab() throws IOException {
-        Tab courseTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/CoursesTab.fxml"));
-        AnchorPane courseTabContent = loader.load();
-        homePageTabPane.getTabs().add(courseTab);
-        courseTab.setText("Courses");
-        courseTab.setContent(courseTabContent);
+    public void createCourseTab() throws IOException, SQLException {
+        new CourseTab(homePageTabPane, loader);
     }
 
-    public void createAssessmentTabRS() throws IOException {
-        Tab assessmentTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/AssessmentsTabRecordsStaff.fxml"));
-        AnchorPane assessmentTabContent = loader.load();
-        homePageTabPane.getTabs().add(assessmentTab);
-        assessmentTab.setText("Assessments");
-        assessmentTab.setContent(assessmentTabContent);
+    public void createAssessmentTabRS() throws IOException, SQLException {
+        new AssessmentTab(homePageTabPane, loader);
     }
 
     public void createAssessmentTabT() throws IOException {
@@ -114,13 +98,8 @@ public class HomePageController {
         assessmentTab.setContent(assessmentTabContent);
     }
 
-    public void createGradesTabRS() throws IOException {
-        Tab gradesTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/GradesTabRecordsStaff.fxml"));
-        AnchorPane gradesTabContent = loader.load();
-        homePageTabPane.getTabs().add(gradesTab);
-        gradesTab.setText("Grades");
-        gradesTab.setContent(gradesTabContent);
+    public void createGradesTabRS() throws IOException, SQLException {
+        new GradesTab(homePageTabPane, loader);
     }
 
     public void createGradesTabT() throws IOException {
@@ -239,6 +218,14 @@ public class HomePageController {
                 StudentTab st = new StudentTab(homePageTabPane, loader);
             } else if (tab instanceof StaffTab) {
                 StaffTab staffTab = new StaffTab(homePageTabPane, loader);
+            } else if (tab instanceof  ModuleTab) {
+                ModuleTab moduleTab = new ModuleTab(homePageTabPane, loader);
+            } else if (tab instanceof CourseTab) {
+                CourseTab courseTab = new CourseTab(homePageTabPane, loader);
+            } else if (tab instanceof AssessmentTab) {
+                AssessmentTab assessmentTab = new AssessmentTab(homePageTabPane, loader);
+            } else if (tab instanceof GradesTab) {
+                GradesTab gradesTab = new GradesTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }
