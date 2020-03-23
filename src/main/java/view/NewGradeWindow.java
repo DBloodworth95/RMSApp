@@ -13,7 +13,7 @@ public class NewGradeWindow {
 
     public NewGradeWindow() throws IOException, SQLException {
         FXMLLoader createGradeLoader = new FXMLLoader();
-        createGradeLoader.setLocation(getClass().getResource("/FXMLview/NewModuleTab.fxml"));
+        createGradeLoader.setLocation(getClass().getResource("/FXMLview/NewGradeTab.fxml"));
         Scene scene = new Scene(createGradeLoader.load(), 1440,580);
         Stage stage = new Stage();
         stage.setTitle("Add a Grade");

@@ -168,11 +168,11 @@ public class HomePageController {
     public void createCalendar() throws IOException {
         FXMLLoader calendarLoader = new FXMLLoader();
         calendarLoader.setLocation(getClass().getResource("/FXMLview/CalendarView.fxml"));
-        Scene scene = new Scene(calendarLoader.load(), 800,800);
+        Scene scene = new Scene(calendarLoader.load(), 1200,1200);
         Stage stage = new Stage();
         stage.setTitle("Calendar");
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
         Object temp = calendarLoader.getController();
         CalendarController controller = (CalendarController) temp;

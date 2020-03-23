@@ -8,9 +8,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import model.CalendarEntry;
+
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class CalendarView {
     private ArrayList<AnchorPaneNode> allCalendarDays = new ArrayList<>(35);
@@ -24,8 +27,9 @@ public class CalendarView {
         // Create the calendar grid pane
         GridPane calendar = new GridPane();
         calendar.setPadding(new Insets(10,10,10,85));
-        calendar.setPrefSize(700, 700);
+        calendar.setPrefSize(1200, 1200);
         calendar.setGridLinesVisible(true);
+
         // Create rows and columns with anchor panes for the calendar
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 7; j++) {
@@ -67,6 +71,7 @@ public class CalendarView {
         populateCalendar(yearMonth);
         // Create the calendar view
         view = new VBox(titleBar, dayLabels, calendar);
+
     }
 
     /**
@@ -99,6 +104,13 @@ public class CalendarView {
             } else {
                 ap.styleProperty().set(null);
             }
+            CalendarEntry entry = new CalendarEntry(1,"Super fun meeting - ", "Test", 1200, 1400, ap.getDate());
+            ap.getChildren().add(entry);
+            entry.setMinSize(75,25);
+
+            entry.setLayoutX(10);
+            entry.setLayoutY(30);
+            entry.setText(entry.getTitle() + Integer.toString(entry.getStartTime()));
         }
         // Change the title of the calendar
         calendarTitle.setText(yearMonth.getMonth().toString() + " " + String.valueOf(yearMonth.getYear()));
