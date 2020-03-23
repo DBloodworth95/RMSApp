@@ -90,7 +90,7 @@
                                     <Insets left="-30.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.76" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Use your University student ID" visible="false" HBox.hgrow="ALWAYS">
+                              <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Please enter a valid ID!" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="15.0" />
                                  </HBox.margin>
@@ -125,7 +125,7 @@
                                     <Insets left="-30.0" />
                                  </HBox.margin>
                               </PasswordField>
-                              <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.76" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Password doesn't match ID" visible="false" HBox.hgrow="ALWAYS">
+                              <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Please enter a valid password!" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="15.0" />
                                  </HBox.margin>

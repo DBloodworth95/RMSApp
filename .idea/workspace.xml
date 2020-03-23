@@ -2,33 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b22efc5-99a1-4bdf-b46f-bdad8b4e5302" name="Default Changelist" comment="changed the county in students and staff&#10;added medical file in students and staff + scroll&#10;changed the odd gap that was visible on top of the tabs.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/CalendarEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/Images/logout.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/CalendarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/CalendarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/HomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/HomePageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/StudentTabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/StudentTabController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/CalendarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/CalendarView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/CalendarView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/CalendarView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/GradesTabRecordsStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/GradesTabRecordsStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/GradesTabTutor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/GradesTabTutor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CalendarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CalendarView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewGradeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewGradeWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/CalendarView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/CalendarView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/GradesTabRecordsStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/GradesTabRecordsStaff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageCourseLeader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageCourseLeader.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageRecordsStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageRecordsStaff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageTutor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageTutor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/NewStaffTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/NewStaffTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/NewStudentTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/NewStudentTab.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,16 +148,17 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/Scenes/Images" />
-      <recent name="$PROJECT_DIR$/src/main/resources/Scenes/" />
-      <recent name="$PROJECT_DIR$/src/main/resources/Scenes/Stylesheets" />
-      <recent name="$PROJECT_DIR$/images/img2" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/FXMLview" />
       <recent name="$PROJECT_DIR$/src/main/resources/Scenes" />
       <recent name="$PROJECT_DIR$/src/main/resources/Scenes/Images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/FXMLview/Images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Scenes/Images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Scenes/" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Scenes/Stylesheets" />
+      <recent name="$PROJECT_DIR$/images/img2" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -569,54 +560,54 @@
     </state>
     <state x="144" y="77" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1582283944260" />
     <state x="144" y="95" key="DiffContextDialog/0.23.1440.838@0.23.1440.838" timestamp="1582141782331" />
-    <state width="1809" height="368" key="GridCell.Tab.0.bottom" timestamp="1584028661672">
-      <screen x="65" y="25" width="1855" height="1055" />
+    <state width="678" height="236" key="GridCell.Tab.0.bottom" timestamp="1584982048436">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579010530804" />
-    <state width="1398" height="235" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1582565401435" />
+    <state width="678" height="236" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1584982048436" />
     <state width="1398" height="101" key="GridCell.Tab.0.bottom/0.23.1440.839@0.23.1440.839" timestamp="1581675684125" />
-    <state width="1398" height="100" key="GridCell.Tab.0.bottom/0.23.1440.840@0.23.1440.840" timestamp="1582061999601" />
-    <state width="1398" height="100" key="GridCell.Tab.0.bottom/0.23.1440.841@0.23.1440.841" timestamp="1582062215234" />
-    <state width="1398" height="101" key="GridCell.Tab.0.bottom/0.23.1440.842@0.23.1440.842" timestamp="1581676661982" />
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.23.1440.840@0.23.1440.840" timestamp="1584966800087" />
+    <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.23.1440.841@0.23.1440.841" timestamp="1584967318143" />
+    <state width="678" height="236" key="GridCell.Tab.0.bottom/0.23.1440.842@0.23.1440.842" timestamp="1584977679374" />
     <state width="678" height="101" key="GridCell.Tab.0.bottom/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.23.1440.844@0.23.1440.844" timestamp="1579798947633" />
     <state width="1809" height="118" key="GridCell.Tab.0.bottom/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1583932239459" />
     <state width="1809" height="368" key="GridCell.Tab.0.bottom/65.25.1855.1055@65.25.1855.1055" timestamp="1584028661672" />
-    <state width="1809" height="368" key="GridCell.Tab.0.center" timestamp="1584028661671">
-      <screen x="65" y="25" width="1855" height="1055" />
+    <state width="678" height="236" key="GridCell.Tab.0.center" timestamp="1584982048435">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579010530803" />
-    <state width="1398" height="235" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1582565401433" />
+    <state width="678" height="236" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1584982048435" />
     <state width="1398" height="101" key="GridCell.Tab.0.center/0.23.1440.839@0.23.1440.839" timestamp="1581675684124" />
-    <state width="1398" height="100" key="GridCell.Tab.0.center/0.23.1440.840@0.23.1440.840" timestamp="1582061999600" />
-    <state width="1398" height="100" key="GridCell.Tab.0.center/0.23.1440.841@0.23.1440.841" timestamp="1582062215234" />
-    <state width="1398" height="101" key="GridCell.Tab.0.center/0.23.1440.842@0.23.1440.842" timestamp="1581676661982" />
+    <state width="1398" height="236" key="GridCell.Tab.0.center/0.23.1440.840@0.23.1440.840" timestamp="1584966800086" />
+    <state width="1398" height="236" key="GridCell.Tab.0.center/0.23.1440.841@0.23.1440.841" timestamp="1584967318143" />
+    <state width="678" height="236" key="GridCell.Tab.0.center/0.23.1440.842@0.23.1440.842" timestamp="1584977679373" />
     <state width="678" height="101" key="GridCell.Tab.0.center/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.23.1440.844@0.23.1440.844" timestamp="1579798947633" />
     <state width="1809" height="118" key="GridCell.Tab.0.center/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1583932239459" />
     <state width="1809" height="368" key="GridCell.Tab.0.center/65.25.1855.1055@65.25.1855.1055" timestamp="1584028661671" />
-    <state width="1809" height="368" key="GridCell.Tab.0.left" timestamp="1584028661671">
-      <screen x="65" y="25" width="1855" height="1055" />
+    <state width="678" height="236" key="GridCell.Tab.0.left" timestamp="1584982048434">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579010530800" />
-    <state width="1398" height="235" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1582565401428" />
+    <state width="678" height="236" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1584982048434" />
     <state width="1398" height="101" key="GridCell.Tab.0.left/0.23.1440.839@0.23.1440.839" timestamp="1581675684123" />
-    <state width="1398" height="100" key="GridCell.Tab.0.left/0.23.1440.840@0.23.1440.840" timestamp="1582061999600" />
-    <state width="1398" height="100" key="GridCell.Tab.0.left/0.23.1440.841@0.23.1440.841" timestamp="1582062215234" />
-    <state width="1398" height="101" key="GridCell.Tab.0.left/0.23.1440.842@0.23.1440.842" timestamp="1581676661981" />
+    <state width="1398" height="236" key="GridCell.Tab.0.left/0.23.1440.840@0.23.1440.840" timestamp="1584966800085" />
+    <state width="1398" height="236" key="GridCell.Tab.0.left/0.23.1440.841@0.23.1440.841" timestamp="1584967318142" />
+    <state width="678" height="236" key="GridCell.Tab.0.left/0.23.1440.842@0.23.1440.842" timestamp="1584977679372" />
     <state width="678" height="101" key="GridCell.Tab.0.left/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.23.1440.844@0.23.1440.844" timestamp="1579798947632" />
     <state width="1809" height="118" key="GridCell.Tab.0.left/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1583932239459" />
     <state width="1809" height="368" key="GridCell.Tab.0.left/65.25.1855.1055@65.25.1855.1055" timestamp="1584028661671" />
-    <state width="1809" height="368" key="GridCell.Tab.0.right" timestamp="1584028661671">
-      <screen x="65" y="25" width="1855" height="1055" />
+    <state width="678" height="236" key="GridCell.Tab.0.right" timestamp="1584982048435">
+      <screen x="0" y="23" width="1440" height="838" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579010530804" />
-    <state width="1398" height="235" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1582565401433" />
+    <state width="678" height="236" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1584982048435" />
     <state width="1398" height="101" key="GridCell.Tab.0.right/0.23.1440.839@0.23.1440.839" timestamp="1581675684125" />
-    <state width="1398" height="100" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1582061999601" />
-    <state width="1398" height="100" key="GridCell.Tab.0.right/0.23.1440.841@0.23.1440.841" timestamp="1582062215234" />
-    <state width="1398" height="101" key="GridCell.Tab.0.right/0.23.1440.842@0.23.1440.842" timestamp="1581676661982" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1584966800087" />
+    <state width="1398" height="236" key="GridCell.Tab.0.right/0.23.1440.841@0.23.1440.841" timestamp="1584967318143" />
+    <state width="678" height="236" key="GridCell.Tab.0.right/0.23.1440.842@0.23.1440.842" timestamp="1584977679374" />
     <state width="678" height="101" key="GridCell.Tab.0.right/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.23.1440.844@0.23.1440.844" timestamp="1579798947633" />
     <state width="1809" height="118" key="GridCell.Tab.0.right/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1583932239459" />
