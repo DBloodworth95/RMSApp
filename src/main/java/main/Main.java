@@ -26,6 +26,7 @@ public class Main extends Application {
         Object temp = loader.getController();
         LoginController controller = (LoginController) temp;
         controller.initial();
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 }

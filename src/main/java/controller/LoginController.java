@@ -66,6 +66,7 @@ public class LoginController {
                 HomePageController controller = (HomePageController) temp;
                 controller.setLoginUsername("Logged in as " + session.getUsername());
                 controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
+                controller.setGhostSessionL(Integer.toString(session.getId()));
                 controller.setDateLabel();
                 controller.createHomeTab(session);
                 Calendar currentDate = Calendar.getInstance();

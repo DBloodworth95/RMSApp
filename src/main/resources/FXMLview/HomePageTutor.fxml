@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
@@ -97,6 +98,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Label fx:id="ghostSessionL" text="Label" visible="false" />
                </children>
             </HBox>
             <HBox minHeight="-Infinity" prefHeight="35.0" style="-fx-background-color: #2c787c;" HBox.hgrow="ALWAYS" />

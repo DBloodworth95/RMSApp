@@ -7,8 +7,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import jfxtras.icalendarfx.VCalendar;
+import jfxtras.scene.control.agenda.icalendar.ICalendarAgenda;
 import model.Course;
 import model.Session;
 import model.Staff;
@@ -31,6 +34,8 @@ public class HomePageController {
     public TabPane homePageTabPane;
     @FXML
     private Button logoutBtn;
+    @FXML
+    private Label ghostSessionL;
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
@@ -41,6 +46,12 @@ public class HomePageController {
     }
     public void setLastLogLabel(String timestamp) {
         lastLogLabel.setText(timestamp);
+    }
+    public void setGhostSessionL(String id) {
+        ghostSessionL.setText(id);
+    }
+    public void setLabel(Label label, String id) {
+        label.setText(id);
     }
     public void setDateLabel() {
         Calendar cal = Calendar.getInstance();
@@ -165,18 +176,8 @@ public class HomePageController {
         diaryTab.setContent(diaryTabContent);
     }
 
-    public void createCalendar() throws IOException {
-        FXMLLoader calendarLoader = new FXMLLoader();
-        calendarLoader.setLocation(getClass().getResource("/FXMLview/CalendarView.fxml"));
-        Scene scene = new Scene(calendarLoader.load(), 1200,1200);
-        Stage stage = new Stage();
-        stage.setTitle("Calendar");
-        stage.setScene(scene);
-        stage.setResizable(true);
-        stage.show();
-        Object temp = calendarLoader.getController();
-        CalendarController controller = (CalendarController) temp;
-        controller.calendarPane.getChildren().add(new CalendarView(YearMonth.now()).getView());
+    public void createCalendar() throws SQLException {
+        new CalendarWindow(ghostSessionL);
     }
 
     public void createHomeTabRS() throws IOException {
