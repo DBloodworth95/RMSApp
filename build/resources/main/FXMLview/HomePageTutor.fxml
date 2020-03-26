@@ -23,7 +23,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
    <children>
-      <HBox alignment="CENTER_LEFT" layoutX="-3.0" layoutY="-4.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="1440.0" style="-fx-background-color: #378d94#378d94;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" layoutX="-3.0" layoutY="-4.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="1440.0" style="-fx-background-color: #2c787c #2c787c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0" prefWidth="809.0" style="-fx-background-color: #2c787c;">
                <children>
@@ -141,10 +141,16 @@
                   </Button>
                </children>
             </HBox>
-            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#endSession" text="Button">
+            <Button fx:id="logoutBtn" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#endSession" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
                <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/logout.png" />
+                     </image></ImageView>
                </graphic>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="30.0" />
+               </HBox.margin>
             </Button>
          </children>
       </HBox>

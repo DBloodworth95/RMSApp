@@ -208,7 +208,7 @@
                               </HBox>
                               <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                  <children>
-                                    <Label minWidth="-Infinity" prefWidth="135.0" text="Number">
+                                    <Label minWidth="-Infinity" prefWidth="135.0" text="House Number">
                                        <HBox.margin>
                                           <Insets right="5.0" />
                                        </HBox.margin>
@@ -513,7 +513,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="170.0" promptText="Dormant" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="170.0" promptText="----------" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets right="30.0" />
                                        </HBox.margin>
@@ -534,7 +534,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="dormCB" minWidth="-Infinity" prefWidth="170.0" promptText="Retired" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="dormCB" minWidth="-Infinity" prefWidth="170.0" promptText="----------" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <padding>
                                           <Insets left="50.0" />
                                        </padding>
@@ -551,7 +551,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="specialismCB" minWidth="-Infinity" prefWidth="170.0" promptText="Databases" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="specialismCB" minWidth="-Infinity" prefWidth="170.0" promptText="----------" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <padding>
                                           <Insets left="45.0" />
                                        </padding>

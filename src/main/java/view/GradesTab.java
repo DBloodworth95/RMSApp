@@ -22,6 +22,7 @@ public class GradesTab extends Tab {
         Object temp = loader.getController();
         GradesTabController controller = (GradesTabController) temp;
         controller.populate();
+        tabPane.getSelectionModel().select(gradesTab);
     }
 
     public GradesTab() {

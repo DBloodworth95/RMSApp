@@ -17,6 +17,7 @@ public class NewStudentWindow {
         stage.setTitle("Add a Student");
         stage.setScene(scene);
         stage.setResizable(true);
+        stage.setMaximized(true);
         stage.show();
         Object temp = createStudentLoader.getController();
         NewStudentTabController controller = (NewStudentTabController) temp;

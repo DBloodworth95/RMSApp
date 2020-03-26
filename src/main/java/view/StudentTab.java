@@ -21,6 +21,7 @@ public class StudentTab extends Tab {
         Object temp = loader.getController();
         StudentTabController controller = (StudentTabController) temp;
         controller.populate();
+        tabPane.getSelectionModel().select(studentTab);
     }
 
     public StudentTab() {

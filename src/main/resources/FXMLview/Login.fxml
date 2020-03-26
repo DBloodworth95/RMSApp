@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" styleClass="background" stylesheets="@Stylesheets/main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="800.0" prefWidth="1440.0" styleClass="background" stylesheets="@Stylesheets/main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
       <VBox layoutY="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -90,7 +90,7 @@
                                     <Insets left="-30.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Please enter a valid ID!" HBox.hgrow="ALWAYS">
+                              <Label fx:id="invalidIDLabel" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Please enter a valid ID!" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="15.0" />
                                  </HBox.margin>
@@ -125,7 +125,7 @@
                                     <Insets left="-30.0" />
                                  </HBox.margin>
                               </PasswordField>
-                              <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Please enter a valid password!" HBox.hgrow="ALWAYS">
+                              <Label fx:id="invalidPWLabel" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-background-radius: 5px;" text="Please enter a valid password!" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets left="15.0" />
                                  </HBox.margin>

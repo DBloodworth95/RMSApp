@@ -44,23 +44,6 @@
                                        <children>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                              <children>
-                                                <Label minWidth="-Infinity" prefWidth="100.0" text="Staff ID">
-                                                   <HBox.margin>
-                                                      <Insets right="5.0" />
-                                                   </HBox.margin>
-                                                   <font>
-                                                      <Font size="12.0" />
-                                                   </font>
-                                                </Label>
-                                                <TextField editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" text="12345678">
-                                                   <font>
-                                                      <Font size="12.0" />
-                                                   </font>
-                                                </TextField>
-                                             </children>
-                                          </HBox>
-                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
-                                             <children>
                                                 <Label minWidth="-Infinity" prefWidth="100.0" text="First name">
                                                    <HBox.margin>
                                                       <Insets right="5.0" />
@@ -125,7 +108,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <ComboBox fx:id="genderCB" minWidth="-Infinity" prefWidth="204.0" promptText="M" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                                                <ComboBox fx:id="genderCB" minWidth="-Infinity" prefWidth="204.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                                    <padding>
                                                       <Insets left="80.0" />
                                                    </padding>
@@ -520,7 +503,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="currYearCB" minWidth="-Infinity" prefHeight="29.0" prefWidth="67.0" promptText="1" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <ComboBox fx:id="currYearCB" minWidth="-Infinity" prefHeight="29.0" prefWidth="67.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0">
@@ -533,7 +516,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="enrolYearCB" minWidth="-Infinity" prefWidth="180.0" promptText="2018" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="enrolYearCB" minWidth="-Infinity" prefWidth="180.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <padding>
                                           <Insets left="60.0" />
                                        </padding>
@@ -549,13 +532,13 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="entryQCB1" minWidth="-Infinity" prefWidth="67.0" promptText="A+" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
-                                    <ComboBox fx:id="entryQCB2" minWidth="-Infinity" prefWidth="67.0" promptText="A" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="entryQCB1" minWidth="-Infinity" prefHeight="28.0" prefWidth="77.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <ComboBox fx:id="entryQCB2" minWidth="-Infinity" prefWidth="77.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets left="1.0" />
                                        </HBox.margin>
                                     </ComboBox>
-                                    <ComboBox fx:id="entryQCB3" minWidth="-Infinity" prefWidth="67.0" promptText="A" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="entryQCB3" minWidth="-Infinity" prefWidth="77.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -572,7 +555,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="180.0" promptText="Dormant" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="180.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
@@ -591,7 +574,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="dormCB" minWidth="-Infinity" prefWidth="204.0" promptText="Graduated" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="dormCB" minWidth="-Infinity" prefWidth="204.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>

@@ -20,6 +20,7 @@ public class ModuleTab extends Tab {
         Object temp = loader.getController();
         ModuleTabController controller = (ModuleTabController) temp;
         controller.populate();
+        tabPane.getSelectionModel().select(moduleTab);
     }
 
     public ModuleTab() {

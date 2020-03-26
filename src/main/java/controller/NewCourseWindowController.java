@@ -1,10 +1,7 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import java.sql.*;
 import java.util.regex.Matcher;
@@ -19,25 +16,28 @@ public class NewCourseWindowController {
     private TextArea descTA, aimTA;
     @FXML
     private Button saveBtn;
+    private Alert errorAlert = new Alert(Alert.AlertType.INFORMATION);
 
     public void createCourse() throws SQLException {
-        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
-        String username = "root";
-        String password = "root";
-        String query = "INSERT INTO courses(course_code, course_title, start_year, end_year, description, aims_and_objectives, course_leader) VALUES (?,?,?,?,?,?,?)";
-        Connection myConnection = DriverManager.getConnection(dbURL, username, password);
-        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
-        preparedStatement.setString(1, generateCode());
-        preparedStatement.setString(2, titleTF.getText());
-        preparedStatement.setString(3, startCB.getValue().toString());
-        preparedStatement.setString(4, endCB.getValue().toString());
-        preparedStatement.setString(5, descTA.getText());
-        preparedStatement.setString(6, aimTA.getText());
-        preparedStatement.setString(7, leaderTF.getText());
-        preparedStatement.executeUpdate();
-        System.out.println("Course created!");
-        Stage stage = (Stage) saveBtn.getScene().getWindow();
-        stage.close();
+        if(!verifyFilledInputFields()) {
+            String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+            String username = "root";
+            String password = "root";
+            String query = "INSERT INTO courses(course_code, course_title, start_year, end_year, description, aims_and_objectives, course_leader) VALUES (?,?,?,?,?,?,?)";
+            Connection myConnection = DriverManager.getConnection(dbURL, username, password);
+            PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+            preparedStatement.setString(1, generateCode());
+            preparedStatement.setString(2, titleTF.getText());
+            preparedStatement.setString(3, startCB.getValue().toString());
+            preparedStatement.setString(4, endCB.getValue().toString());
+            preparedStatement.setString(5, descTA.getText());
+            preparedStatement.setString(6, aimTA.getText());
+            preparedStatement.setString(7, leaderTF.getText());
+            preparedStatement.executeUpdate();
+            System.out.println("Course created!");
+            Stage stage = (Stage) saveBtn.getScene().getWindow();
+            stage.close();
+        }
     }
 
     public void populateCB() throws SQLException {
@@ -81,7 +81,43 @@ public class NewCourseWindowController {
         return code;
     }
 
-
-
-
+    private boolean verifyFilledInputFields() {
+        TextField[] inputForms = new TextField[] {
+                courseTF, titleTF, leaderTF
+        };
+        ComboBox[] comboForms = new ComboBox[] {
+                startCB, endCB, module1CB, module2CB, module3CB, module4CB, module5CB, module6CB
+        };
+        TextArea[] inputFormsTA = new TextArea[] {
+                descTA, aimTA
+        };
+        for (TextField inputForm : inputForms) {
+            if (inputForm.getText() == null || inputForm.getText().trim().isEmpty()) {
+                errorAlert.setTitle("Record entry failed.");
+                errorAlert.setHeaderText(null);
+                errorAlert.setContentText("Some fields were left empty!");
+                errorAlert.showAndWait();
+                return true;
+            }
+        }
+        for (ComboBox comboBox : comboForms) {
+            if (comboBox.getValue() == null) {
+                errorAlert.setTitle("Record entry failed.");
+                errorAlert.setHeaderText(null);
+                errorAlert.setContentText("Some fields were left empty!");
+                errorAlert.showAndWait();
+                return true;
+            }
+        }
+        for (TextArea textArea : inputFormsTA) {
+            if (textArea.getText().isEmpty()) {
+                errorAlert.setTitle("Record entry failed.");
+                errorAlert.setHeaderText(null);
+                errorAlert.setContentText("Some fields were left empty!");
+                errorAlert.showAndWait();
+                return true;
+            }
+        }
+        return false;
+    }
 }

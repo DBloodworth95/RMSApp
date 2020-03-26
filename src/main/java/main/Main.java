@@ -1,5 +1,7 @@
 package main;
 
+import controller.HomePageController;
+import controller.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,11 +17,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent loginPage = FXMLLoader.load(getClass().getResource("/FXMLview/Login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXMLview/Login.fxml"));
+        Parent loginPage = loader.load();
         Scene scene = new Scene(loginPage);
         scene.getStylesheets().add("main.css");
         primaryStage.setScene(scene);
         primaryStage.setTitle("Woodlands RMS");
+        Object temp = loader.getController();
+        LoginController controller = (LoginController) temp;
+        controller.initial();
         primaryStage.show();
     }
 }

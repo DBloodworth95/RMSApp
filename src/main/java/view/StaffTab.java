@@ -22,6 +22,7 @@ public class StaffTab extends Tab {
         Object temp = loader.getController();
         StaffTabController controller = (StaffTabController) temp;
         controller.populate();
+        tabPane.getSelectionModel().select(staffTab);
     }
 
     public StaffTab() {

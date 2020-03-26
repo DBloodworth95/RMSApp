@@ -22,6 +22,7 @@ public class AssessmentTab extends Tab {
         Object temp = loader.getController();
         AssessmentTabController controller = (AssessmentTabController) temp;
         controller.populate();
+        tabPane.getSelectionModel().select(assessmentTab);
     }
 
     public AssessmentTab() {

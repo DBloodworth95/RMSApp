@@ -39,19 +39,6 @@
                                  <children>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
                                        <children>
-                                          <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="140.0" text="Assessment ID">
-                                             <HBox.margin>
-                                                <Insets right="5.0" />
-                                             </HBox.margin>
-                                             <font>
-                                                <Font size="12.0" />
-                                             </font>
-                                          </Label>
-                                          <TextField editable="false" minWidth="-Infinity" prefWidth="204.0" promptText="12345678" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0">
-                                       <children>
                                           <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="140.0" text="Module Code">
                                              <HBox.margin>
                                                 <Insets right="5.0" />
@@ -60,7 +47,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox fx:id="moduleCB" minWidth="-Infinity" prefWidth="204.0" promptText="Pending" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="moduleCB" minWidth="-Infinity" prefWidth="204.0" promptText="-----" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding>
@@ -77,7 +64,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox fx:id="typeCB" minWidth="-Infinity" prefWidth="204.0" promptText="Assignment" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="typeCB" minWidth="-Infinity" prefWidth="204.0" promptText="-----" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding></ComboBox>
@@ -119,7 +106,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="204.0" promptText="Pending" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="204.0" promptText="-----" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding></ComboBox>
@@ -164,7 +151,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox fx:id="courseCB" minWidth="-Infinity" prefWidth="204.0" promptText="Pending" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="courseCB" minWidth="-Infinity" prefWidth="204.0" promptText="-----" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding>
@@ -181,7 +168,7 @@
                                                 <Font size="12.0" />
                                              </font>
                                           </Label>
-                                          <ComboBox fx:id="yearCB" minWidth="-Infinity" prefWidth="204.0" promptText="Pending" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
+                                          <ComboBox fx:id="yearCB" minWidth="-Infinity" prefWidth="204.0" promptText="-----" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="3">
                                              <padding>
                                                 <Insets left="60.0" />
                                              </padding>
