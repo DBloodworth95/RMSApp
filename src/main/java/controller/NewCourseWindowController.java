@@ -120,4 +120,15 @@ public class NewCourseWindowController {
         }
         return false;
     }
+
+    public void checkForSave(CourseTabController courseTabController) {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createCourse();
+                courseTabController.populate();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

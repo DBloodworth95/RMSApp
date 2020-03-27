@@ -253,7 +253,7 @@ public class StaffTabController {
     }
 
     public void openNewStaffTab() throws IOException {
-        new NewStaffWindow();
+        new NewStaffWindow(this);
     }
 
     public void printTable() {

@@ -370,7 +370,7 @@ public class StudentTabController {
     }
 
     public void createStudent() throws IOException {
-        new NewStudentWindow();
+        new NewStudentWindow(this);
     }
 
     public void removeStudent() throws SQLException {

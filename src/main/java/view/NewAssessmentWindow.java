@@ -1,5 +1,6 @@
 package view;
 
+import controller.AssessmentTabController;
 import controller.NewAssessmentWindowController;
 import controller.NewCourseWindowController;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,7 @@ import java.sql.SQLException;
 
 public class NewAssessmentWindow {
 
-    public NewAssessmentWindow() throws IOException, SQLException {
+    public NewAssessmentWindow(AssessmentTabController assessmentTabController) throws IOException, SQLException {
         FXMLLoader createCourseLoader = new FXMLLoader();
         createCourseLoader.setLocation(getClass().getResource("/FXMLview/NewAssessmentTab.fxml"));
         Scene scene = new Scene(createCourseLoader.load(), 1440,580);
@@ -24,5 +25,6 @@ public class NewAssessmentWindow {
         Object temp = createCourseLoader.getController();
         NewAssessmentWindowController controller = (NewAssessmentWindowController) temp;
         controller.populateCB();
+        controller.checkForSave(assessmentTabController);
     }
 }

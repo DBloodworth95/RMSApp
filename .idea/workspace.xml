@@ -2,41 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b22efc5-99a1-4bdf-b46f-bdad8b4e5302" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/CalendarWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/HomePageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/HomePageController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/HomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/HomePageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/AnchorPaneNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/CalendarView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/NewStaffWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/NewStaffWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/NewStudentWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/NewStudentWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/StaffTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/StaffTab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/StudentTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/StudentTab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/HomePageCourseLeader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/HomePageCourseLeader.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/HomePageRecordsStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/HomePageRecordsStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/HomePageTutor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/HomePageTutor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/NewAssessmentTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/NewAssessmentTab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/NewStaffTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/NewStaffTab.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/NewStudentTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/NewStudentTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AssessmentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AssessmentTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CourseTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CourseTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GradesTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GradesTabController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/CalendarEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/AnchorPaneNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CalendarView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageCourseLeader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageCourseLeader.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageRecordsStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageRecordsStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageTutor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/HomePageTutor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ModuleTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ModuleTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewAssessmentWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewAssessmentWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewCourseWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewCourseWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewGradeWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewGradeWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewModuleWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewModuleWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewStaffTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewStaffTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewStudentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewStudentTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StaffTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StaffTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CalendarWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CalendarWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewAssessmentWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewAssessmentWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewCourseWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewCourseWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewGradeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewGradeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewModuleWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewModuleWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewStaffWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewStaffWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewStudentWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewStudentWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/NewGradeTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/NewGradeTab.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +285,8 @@
       <workItem from="1584023313606" duration="1363000" />
       <workItem from="1585173275296" duration="3459000" />
       <workItem from="1585221380091" duration="5182000" />
-      <workItem from="1585229026218" duration="16536000" />
+      <workItem from="1585229026218" duration="18740000" />
+      <workItem from="1585304672611" duration="10224000" />
     </task>
     <task id="LOCAL-00001" summary="Log in page background image">
       <created>1578852457920</created>
@@ -525,14 +519,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585230975558</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Optimized calendar, implemented loading/saving &amp; is now user-specific.">
+      <created>1585263277782</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1585263277782</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" nav for different types of users" />
     <MESSAGE value="SIDE BAR ADDED, PLUS GENERAL PRETTINESS" />
     <MESSAGE value="TUTOR HOME PAGE" />
     <MESSAGE value="Notification panel updated" />
@@ -557,7 +557,8 @@
     <MESSAGE value="no actual changes here" />
     <MESSAGE value="changed the county in students and staff&#10;added medical file in students and staff + scroll&#10;changed the odd gap that was visible on top of the tabs." />
     <MESSAGE value="Added QoL features such as &quot;Enter&quot; to login, form validation, Tab focusing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added QoL features such as &quot;Enter&quot; to login, form validation, Tab focusing." />
+    <MESSAGE value="Optimized calendar, implemented loading/saving &amp; is now user-specific." />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized calendar, implemented loading/saving &amp; is now user-specific." />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="108" width="1269" height="669" key="#Project_Structure" timestamp="1582061315442">
@@ -588,7 +589,7 @@
     <state x="98" y="196" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.838@0.23.1440.838" timestamp="1579909669246" />
     <state x="98" y="196" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.840@0.23.1440.840" timestamp="1579134972554" />
     <state x="191" y="243" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585255383391" />
-    <state x="469" y="34" width="884" height="960" key="CommitChangelistDialog2" timestamp="1585230974514">
+    <state x="469" y="34" width="884" height="960" key="CommitChangelistDialog2" timestamp="1585263277153">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state x="314" y="8" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1582283966693" />
@@ -598,7 +599,7 @@
     <state x="314" y="44" key="CommitChangelistDialog2/0.23.1440.841@0.23.1440.841" timestamp="1579571285990" />
     <state x="314" y="44" key="CommitChangelistDialog2/0.23.1440.842@0.23.1440.842" timestamp="1579752718757" />
     <state x="314" y="44" key="CommitChangelistDialog2/0.23.1440.844@0.23.1440.844" timestamp="1579796726213" />
-    <state x="469" y="34" width="884" height="960" key="CommitChangelistDialog2/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585230974514" />
+    <state x="469" y="34" width="884" height="960" key="CommitChangelistDialog2/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585263277153" />
     <state x="144" y="77" key="DiffContextDialog" timestamp="1582283944260">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -608,7 +609,7 @@
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state x="775" y="310" width="424" height="490" key="FileChooserDialogImpl/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585239015386" />
-    <state width="1809" height="66" key="GridCell.Tab.0.bottom" timestamp="1585263087493">
+    <state width="1809" height="232" key="GridCell.Tab.0.bottom" timestamp="1585321518760">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579010530804" />
@@ -619,9 +620,9 @@
     <state width="678" height="236" key="GridCell.Tab.0.bottom/0.23.1440.842@0.23.1440.842" timestamp="1584977679374" />
     <state width="678" height="101" key="GridCell.Tab.0.bottom/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.23.1440.844@0.23.1440.844" timestamp="1579798947633" />
-    <state width="1809" height="66" key="GridCell.Tab.0.bottom/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585263087493" />
+    <state width="1809" height="232" key="GridCell.Tab.0.bottom/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585321518760" />
     <state width="1809" height="368" key="GridCell.Tab.0.bottom/65.25.1855.1055@65.25.1855.1055" timestamp="1584028661672" />
-    <state width="1809" height="66" key="GridCell.Tab.0.center" timestamp="1585263087493">
+    <state width="1809" height="232" key="GridCell.Tab.0.center" timestamp="1585321518760">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579010530803" />
@@ -632,9 +633,9 @@
     <state width="678" height="236" key="GridCell.Tab.0.center/0.23.1440.842@0.23.1440.842" timestamp="1584977679373" />
     <state width="678" height="101" key="GridCell.Tab.0.center/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.23.1440.844@0.23.1440.844" timestamp="1579798947633" />
-    <state width="1809" height="66" key="GridCell.Tab.0.center/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585263087493" />
+    <state width="1809" height="232" key="GridCell.Tab.0.center/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585321518760" />
     <state width="1809" height="368" key="GridCell.Tab.0.center/65.25.1855.1055@65.25.1855.1055" timestamp="1584028661671" />
-    <state width="1809" height="66" key="GridCell.Tab.0.left" timestamp="1585263087493">
+    <state width="1809" height="232" key="GridCell.Tab.0.left" timestamp="1585321518760">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579010530800" />
@@ -645,9 +646,9 @@
     <state width="678" height="236" key="GridCell.Tab.0.left/0.23.1440.842@0.23.1440.842" timestamp="1584977679372" />
     <state width="678" height="101" key="GridCell.Tab.0.left/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.23.1440.844@0.23.1440.844" timestamp="1579798947632" />
-    <state width="1809" height="66" key="GridCell.Tab.0.left/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585263087493" />
+    <state width="1809" height="232" key="GridCell.Tab.0.left/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585321518760" />
     <state width="1809" height="368" key="GridCell.Tab.0.left/65.25.1855.1055@65.25.1855.1055" timestamp="1584028661671" />
-    <state width="1809" height="66" key="GridCell.Tab.0.right" timestamp="1585263087493">
+    <state width="1809" height="232" key="GridCell.Tab.0.right" timestamp="1585321518760">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579010530804" />
@@ -658,7 +659,7 @@
     <state width="678" height="236" key="GridCell.Tab.0.right/0.23.1440.842@0.23.1440.842" timestamp="1584977679374" />
     <state width="678" height="101" key="GridCell.Tab.0.right/0.23.1440.843@0.23.1440.843" timestamp="1581541693188" />
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.23.1440.844@0.23.1440.844" timestamp="1579798947633" />
-    <state width="1809" height="66" key="GridCell.Tab.0.right/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585263087493" />
+    <state width="1809" height="232" key="GridCell.Tab.0.right/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585321518760" />
     <state width="1809" height="368" key="GridCell.Tab.0.right/65.25.1855.1055@65.25.1855.1055" timestamp="1584028661671" />
     <state width="1398" height="270" key="GridCell.Tab.1.bottom" timestamp="1579009944851">
       <screen x="0" y="23" width="1440" height="838" />

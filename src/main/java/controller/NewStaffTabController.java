@@ -119,4 +119,15 @@ public class NewStaffTabController {
         }
         return false;
     }
+
+    public void checkForSave(StaffTabController staffTabController) {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createStaff();
+                staffTabController.populate();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

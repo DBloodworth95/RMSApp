@@ -1,5 +1,6 @@
 package view;
 
+import controller.GradesTabController;
 import controller.NewGradeWindowController;
 import controller.NewModuleWindowController;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,7 @@ import java.sql.SQLException;
 
 public class NewGradeWindow {
 
-    public NewGradeWindow() throws IOException, SQLException {
+    public NewGradeWindow(GradesTabController gradesTabController) throws IOException, SQLException {
         FXMLLoader createGradeLoader = new FXMLLoader();
         createGradeLoader.setLocation(getClass().getResource("/FXMLview/NewGradeTab.fxml"));
         Scene scene = new Scene(createGradeLoader.load(), 1440,580);
@@ -23,6 +24,7 @@ public class NewGradeWindow {
         stage.show();
         Object temp = createGradeLoader.getController();
         NewGradeWindowController controller = (NewGradeWindowController) temp;
-        //controller.populateCB();
+        controller.populateCB();
+        controller.newRecordCheck(gradesTabController);
     }
 }

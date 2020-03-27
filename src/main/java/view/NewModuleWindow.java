@@ -1,5 +1,6 @@
 package view;
 
+import controller.ModuleTabController;
 import controller.NewModuleWindowController;
 import controller.NewStaffTabController;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,7 @@ import java.sql.SQLException;
 
 public class NewModuleWindow {
 
-    public NewModuleWindow() throws IOException, SQLException {
+    public NewModuleWindow(ModuleTabController moduleTabController) throws IOException, SQLException {
         FXMLLoader createModuleLoader = new FXMLLoader();
         createModuleLoader.setLocation(getClass().getResource("/FXMLview/NewModuleTab.fxml"));
         Scene scene = new Scene(createModuleLoader.load(), 1440,580);
@@ -24,5 +25,6 @@ public class NewModuleWindow {
         Object temp = createModuleLoader.getController();
         NewModuleWindowController controller = (NewModuleWindowController) temp;
         controller.populateCB();
+        controller.checkForSave(moduleTabController);
     }
 }

@@ -111,4 +111,15 @@ public class NewAssessmentWindowController {
         }
         return false;
     }
+
+    public void checkForSave(AssessmentTabController assessmentTabController) {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createAssessment();
+                assessmentTabController.populate();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

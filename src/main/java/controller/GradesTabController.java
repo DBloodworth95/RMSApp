@@ -168,7 +168,6 @@ public class GradesTabController {
     }
 
     public void openNewGradeWindow() throws IOException, SQLException {
-        new NewGradeWindow();
+        new NewGradeWindow(this);
     }
-
 }

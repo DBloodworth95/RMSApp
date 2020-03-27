@@ -1,6 +1,7 @@
 package view;
 
 import controller.NewStaffTabController;
+import controller.StaffTabController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -8,7 +9,7 @@ import java.io.IOException;
 
 public class NewStaffWindow {
 
-    public NewStaffWindow() throws IOException {
+    public NewStaffWindow(StaffTabController staffTabController) throws IOException {
         FXMLLoader createStaffLoader = new FXMLLoader();
         createStaffLoader.setLocation(getClass().getResource("/FXMLview/NewStaffTab.fxml"));
         Scene scene = new Scene(createStaffLoader.load(), 1440,580);
@@ -21,5 +22,6 @@ public class NewStaffWindow {
         Object temp = createStaffLoader.getController();
         NewStaffTabController controller = (NewStaffTabController) temp;
         controller.populateCB();
+        controller.checkForSave(staffTabController);
     }
 }

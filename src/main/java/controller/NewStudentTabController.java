@@ -139,4 +139,15 @@ public class NewStudentTabController {
         }
         return false;
     }
+
+    public void checkForSave(StudentTabController studentTabController) {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createStudent();
+                studentTabController.populate();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

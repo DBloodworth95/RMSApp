@@ -131,4 +131,15 @@ public class NewModuleWindowController {
         }
         return false;
     }
+
+    public void checkForSave(ModuleTabController moduleTabController) {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createModule();
+                moduleTabController.populate();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

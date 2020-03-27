@@ -156,6 +156,6 @@ public class AssessmentTabController {
     }
 
     public void openNewAssessmentWindow() throws IOException, SQLException {
-        new NewAssessmentWindow();
+        new NewAssessmentWindow(this);
     }
 }

@@ -166,6 +166,6 @@ public class ModuleTabController {
     }
 
     public void openNewModuleWindow() throws IOException, SQLException {
-        new NewModuleWindow();
+        new NewModuleWindow(this);
     }
 }

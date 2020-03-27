@@ -1,6 +1,7 @@
 package view;
 
 import controller.NewStudentTabController;
+import controller.StudentTabController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -9,7 +10,7 @@ import java.io.IOException;
 
 public class NewStudentWindow {
 
-    public NewStudentWindow() throws IOException {
+    public NewStudentWindow(StudentTabController studentTabController) throws IOException {
         FXMLLoader createStudentLoader = new FXMLLoader();
         createStudentLoader.setLocation(getClass().getResource("/FXMLview/NewStudentTab.fxml"));
         Scene scene = new Scene(createStudentLoader.load(), 1440,580);
@@ -22,5 +23,6 @@ public class NewStudentWindow {
         Object temp = createStudentLoader.getController();
         NewStudentTabController controller = (NewStudentTabController) temp;
         controller.populateComboBoxes();
+        controller.checkForSave(studentTabController);
     }
 }

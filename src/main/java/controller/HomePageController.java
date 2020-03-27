@@ -50,9 +50,7 @@ public class HomePageController {
     public void setGhostSessionL(String id) {
         ghostSessionL.setText(id);
     }
-    public void setLabel(Label label, String id) {
-        label.setText(id);
-    }
+
     public void setDateLabel() {
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat formatDate = new SimpleDateFormat("MMM-dd");

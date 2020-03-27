@@ -151,7 +151,7 @@ public class CourseTabController {
     }
 
     public void openNewCourseWindow() throws IOException, SQLException {
-        new NewCourseWindow();
+        new NewCourseWindow(this);
     }
 
 }

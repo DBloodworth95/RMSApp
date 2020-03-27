@@ -7,10 +7,10 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import jfxtras.icalendarfx.VCalendar;
 import jfxtras.scene.control.agenda.icalendar.ICalendarAgenda;
-
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.Period;
+
 
 
 public class CalendarWindow {
@@ -19,7 +19,6 @@ public class CalendarWindow {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
-        String fetchQuery = ("SELECT * FROM students");
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
         ResultSet result = fetchStaff.executeQuery("SELECT * FROM users WHERE user_id ='" + Integer.parseInt(label.getText()) + "'");
@@ -36,6 +35,7 @@ public class CalendarWindow {
             stage.setScene(scene);
             stage.show();
             closeCalendar(stage, vCalendar, ghostL);
+
         }
     }
 
