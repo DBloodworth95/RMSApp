@@ -32,7 +32,7 @@ public class StudentTabController {
             allergyCol, religionCol, imgCol, termAddNCol, termAddHCol, termAddTCol, termAddCountCol, termAddCountryCol, termAddZipCol,
             homeAddNCol, homeAddHCol, homeAddTCol, homeAddCountCol, homeAddCountryCol, homeAddZipCol, termAddSCol, homeAddSCol;
     @FXML
-    private Button printBtn;
+    private Button printBtn, createBtn, archiveBtn;
 
     public List<Student> fetchTable(Boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -229,6 +229,8 @@ public class StudentTabController {
     public void populateArchive() throws SQLException {
         List<Student> newStudent = fetchTable(true);
         populateTable(newStudent);
+        createBtn.setVisible(false);
+        archiveBtn.setVisible(false);
     }
 
     public void editColumns() {
@@ -437,6 +439,18 @@ public class StudentTabController {
         allRows = studentTV.getItems();
         singleRow = studentTV.getSelectionModel().getSelectedItems();
         singleRow.forEach(allRows::remove);
+    }
+
+    public void archiveStudent() throws SQLException {
+        Object selectedItems = studentTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("UPDATE students SET archived= 1 WHERE student_id ='" + idCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        populate();
     }
 
     public void printTable() {

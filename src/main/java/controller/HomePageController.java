@@ -39,6 +39,7 @@ public class HomePageController {
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
+    private Alert tabLimitError = new Alert(Alert.AlertType.ERROR);
 
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
@@ -78,39 +79,39 @@ public class HomePageController {
     }
 
     public void createStudentTab() throws IOException, SQLException {
-        new StudentTab(homePageTabPane, loader);
+        checkTabLimit(new StudentTab(homePageTabPane, loader));
     }
     public void archiveCreateStudentTab() throws IOException, SQLException {
-        new ArchiveStudentTab(homePageTabPane, loader);
+        checkTabLimit(new ArchiveStudentTab(homePageTabPane, loader));
     }
     public void createStaffTab() throws IOException, SQLException {
-        new StaffTab(homePageTabPane, loader);
+        checkTabLimit(new StaffTab(homePageTabPane, loader));
     }
     public void archiveCreateStaffTab() throws IOException, SQLException {
-        new ArchiveStaffTab(homePageTabPane, loader);
+        checkTabLimit(new ArchiveStaffTab(homePageTabPane, loader));
     }
 
     public void createModuleTab() throws IOException, SQLException {
-        new ModuleTab(homePageTabPane, loader);
+        checkTabLimit(new ModuleTab(homePageTabPane, loader));
     }
 
     public void createArchiveModuleTab() throws IOException, SQLException {
-        new ArchiveModuleTab(homePageTabPane, loader);
+        checkTabLimit(new ArchiveModuleTab(homePageTabPane, loader));
     }
 
     public void createCourseTab() throws IOException, SQLException {
-        new CourseTab(homePageTabPane, loader);
+        checkTabLimit(new CourseTab(homePageTabPane, loader));
     }
 
     public void createArchiveCourseTab() throws IOException, SQLException {
-        new ArchiveCourseTab(homePageTabPane, loader);
+        checkTabLimit(new ArchiveCourseTab(homePageTabPane, loader));
     }
 
     public void createAssessmentTabRS() throws IOException, SQLException {
-        new AssessmentTab(homePageTabPane, loader);
+        checkTabLimit(new AssessmentTab(homePageTabPane, loader));
     }
     public void createArchiveAssessmentTab() throws IOException, SQLException {
-        new ArchiveAssessmentTab(homePageTabPane, loader);
+        checkTabLimit(new ArchiveAssessmentTab(homePageTabPane, loader));
     }
 
     public void createAssessmentTabT() throws IOException {
@@ -123,7 +124,7 @@ public class HomePageController {
     }
 
     public void createGradesTabRS() throws IOException, SQLException {
-        new GradesTab(homePageTabPane, loader);
+        checkTabLimit(new GradesTab(homePageTabPane, loader));
     }
 
     public void createGradesTabT() throws IOException {
@@ -136,15 +137,15 @@ public class HomePageController {
     }
 
     public void createArchiveGradesTab() throws IOException, SQLException {
-        new ArchiveGradesTab(homePageTabPane,loader);
+        checkTabLimit(new ArchiveGradesTab(homePageTabPane, loader));
     }
 
     public void createAttendanceTabRS() throws IOException, SQLException {
-        new AttendanceTab(homePageTabPane,loader);
+        checkTabLimit(new AttendanceTab(homePageTabPane,loader));
     }
 
     public void createArchiveAttendanceTab() throws IOException, SQLException {
-        new ArchiveAttendanceTab(homePageTabPane, loader);
+        checkTabLimit(new ArchiveAttendanceTab(homePageTabPane, loader));
     }
 
     public void createAttendanceTabT() throws IOException {
@@ -157,10 +158,10 @@ public class HomePageController {
     }
 
     public void createTutorshipTabRS() throws IOException, SQLException {
-        new PersonalTutorTab(homePageTabPane, loader);
+        checkTabLimit(new PersonalTutorTab(homePageTabPane, loader));
     }
     public void archiveCreateTutorshipTabRS() throws IOException, SQLException {
-        new ArchivePersonalTutorTab(homePageTabPane, loader);
+        checkTabLimit(new ArchivePersonalTutorTab(homePageTabPane, loader));
     }
 
     public void createTutorshipTabT() throws IOException {
@@ -276,6 +277,16 @@ public class HomePageController {
         stage.setScene(scene);
         stage.setTitle("Woodlands RMS");
         stage.show();
+    }
+
+    private void checkTabLimit(Tab tab) {
+        if(homePageTabPane.getTabs().size() > 10) {
+            tabLimitError.setTitle("Tab Limit Reached!");
+            tabLimitError.setHeaderText(null);
+            tabLimitError.setContentText("Please close some tabs before attempting to open more! (Max 10)");
+            homePageTabPane.getTabs().remove(10);
+            tabLimitError.showAndWait();
+        }
     }
 }
 

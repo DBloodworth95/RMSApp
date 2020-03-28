@@ -105,7 +105,7 @@
                   <Insets right="5.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openNewGradeWindow" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="CREATE" textFill="#09adff">
+            <Button fx:id="createBtn" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openNewGradeWindow" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="CREATE" textFill="#09adff">
                <effect>
                   <Glow />
                </effect>
@@ -126,7 +126,7 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="ARCHIVE" textFill="#09adff">
+            <Button fx:id="archiveBtn" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#archiveGrade" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="ARCHIVE" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>

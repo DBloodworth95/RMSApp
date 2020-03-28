@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
+import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -26,6 +27,8 @@ public class StaffTabController {
     @FXML
     private TableColumn staffIDCol, statusCol, dormCol, firstNameCol, lastNameCol, middleNameCol, genderCol, houseNumCol, houseNameCol, streetCol, townCol, countyCol,
             countryCol, zipCol, phoneCol, emailCol, specialistCol, emergPCol, emergECol, medicalHCol, allergyCol, medicalRCol, resumeCol, imgCol, addNoteCol;
+    @FXML
+    private Button createBtn, archiveBtn;
 
     public List<Staff> fetchTable(Boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -173,6 +176,8 @@ public class StaffTabController {
     public void populateArchive() throws SQLException {
         List<Staff> newStaff = fetchTable(true);
         populateTable(newStaff);
+        createBtn.setVisible(false);
+        archiveBtn.setVisible(false);
     }
 
     public void editColumns() {
@@ -293,6 +298,18 @@ public class StaffTabController {
 
     public void openNewStaffTab() throws IOException {
         new NewStaffWindow(this);
+    }
+
+    public void archiveStaff() throws SQLException {
+        Object selectedItems = staffTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("UPDATE staff SET archived= 1 WHERE staff_id ='" + staffIDCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        populate();
     }
 
     public void printTable() {

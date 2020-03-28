@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
+import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -27,6 +28,8 @@ public class CourseTabController {
     private TableView courseTV;
     @FXML
     private TableColumn idCol, codeCol, nameCol, startCol, endCol, descCol, aimCol, leaderCol;
+    @FXML
+    private Button createBtn, archiveBtn;
 
     public List<Course> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -100,6 +103,8 @@ public class CourseTabController {
     public void populateArchive() throws SQLException {
         List<Course> newCourse = fetchTable(true);
         populateTable(newCourse);
+        createBtn.setVisible(false);
+        archiveBtn.setVisible(false);
     }
 
     public void editColumns() {
@@ -162,6 +167,18 @@ public class CourseTabController {
         singleRow = courseTV.getSelectionModel().getSelectedItems();
         singleRow.forEach(allRows::remove);
         System.out.println("Removed selected items!");
+    }
+
+    public void archiveCourse() throws SQLException {
+        Object selectedItems = courseTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("UPDATE courses SET archived= 1 WHERE course_id ='" + idCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        populate();
     }
 
     public void printTable() {

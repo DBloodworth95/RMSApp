@@ -5,12 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
+import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.util.converter.DateStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 import model.Attendant;
 import model.Course;
@@ -26,6 +26,8 @@ public class AttendanceTabController {
     private TableView attendanceTV;
     @FXML
     private TableColumn studentCol, firstCol, surnameCol, attendedCol, causeCol, courseCol, moduleCol;
+    @FXML
+    private Button archiveBtn;
 
     public List<Attendant> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -97,6 +99,7 @@ public class AttendanceTabController {
     public void populateArchive() throws SQLException {
         List<Attendant> newAttendant = fetchTable(true);
         populateTable(newAttendant);
+        archiveBtn.setVisible(false);
     }
 
     public void editColumns() {
@@ -163,5 +166,4 @@ public class AttendanceTabController {
         TablePrinter tablePrinter = new TablePrinter();
         tablePrinter.print(Paper.A4, attendanceTV);
     }
-
 }

@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
+import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -25,6 +26,8 @@ public class ModuleTabController {
     @FXML
     private TableColumn idCol, codeCol, levelCol, creditCol, titleCol, leaderCol, startCol,
             endCol, descCol, aimCol, courseCol;
+    @FXML
+    private Button createBtn, archiveBtn;
 
     public List<Module> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -110,6 +113,8 @@ public class ModuleTabController {
     public void populateArchive() throws SQLException {
         List<Module> newModule = fetchTable(true);
         populateTable(newModule);
+        createBtn.setVisible(false);
+        archiveBtn.setVisible(false);
     }
 
     public void editColumns() {
@@ -185,6 +190,18 @@ public class ModuleTabController {
     public void printTable() {
         TablePrinter tablePrinter = new TablePrinter();
         tablePrinter.print(Paper.A4, moduleTV);
+    }
+
+    public void archiveModule() throws SQLException {
+        Object selectedItems = moduleTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("UPDATE modules SET archived= 1 WHERE module_id ='" + idCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        populate();
     }
 
     public void openNewModuleWindow() throws IOException, SQLException {

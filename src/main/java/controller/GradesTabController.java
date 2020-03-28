@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
+import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -28,6 +29,8 @@ public class GradesTabController {
     private TableView gradesTV;
     @FXML
     private TableColumn idCol, yearCol, studentCol, moduleCol, firstMarkCol, secondMarkCol, finalGradeCol, termCol, weightCol, fileCol, assessmentCol;
+    @FXML
+    private Button createBtn, archiveBtn;
 
     public List<Grade> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -114,6 +117,8 @@ public class GradesTabController {
     public void populateArchive() throws SQLException {
         List<Grade> newGrade = fetchTable(true);
         populateTable(newGrade);
+        createBtn.setVisible(false);
+        archiveBtn.setVisible(false);
     }
 
     public void editColumns() {
@@ -183,6 +188,18 @@ public class GradesTabController {
         singleRow = gradesTV.getSelectionModel().getSelectedItems();
         singleRow.forEach(allRows::remove);
         System.out.println("Removed selected items!");
+    }
+
+    public void archiveGrade() throws SQLException {
+        Object selectedItems = gradesTV.getSelectionModel().getSelectedItems().get(0);
+        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        String query = ("UPDATE grades SET archived= 1 WHERE grade_id ='" + idCol.getCellData(selectedItems) + "'");
+        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
+        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+        preparedStatement.execute();
+        populate();
     }
 
     public void printTable() {
