@@ -26,27 +26,45 @@ public class ModuleTabController {
     private TableColumn idCol, codeCol, levelCol, creditCol, titleCol, leaderCol, startCol,
             endCol, descCol, aimCol, courseCol;
 
-    public List<Module> fetchTable() throws SQLException {
+    public List<Module> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT * FROM modules");
         List<Module> modules = new ArrayList<>();
-        while (result.next()) {
-            int id = Integer.parseInt(result.getString("module_id"));
-            String code = result.getString("module_code");
-            String start = result.getString("start_year");
-            String end = result.getString("end_year");
-            String level = result.getString("level");
-            String credits = result.getString("credits");
-            String title = result.getString("title");
-            int leader = Integer.parseInt(result.getString("leader"));
-            String desc = result.getString("description");
-            String aims = result.getString("aims_and_objectives");
-            String course = result.getString("course");
-            modules.add(new Module(id, code, course, start, end, level, credits, title, desc, aims, leader));
+        if(isArchive) {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM modules WHERE archived = 1");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("module_id"));
+                String code = result.getString("module_code");
+                String start = result.getString("start_year");
+                String end = result.getString("end_year");
+                String level = result.getString("level");
+                String credits = result.getString("credits");
+                String title = result.getString("title");
+                int leader = Integer.parseInt(result.getString("leader"));
+                String desc = result.getString("description");
+                String aims = result.getString("aims_and_objectives");
+                String course = result.getString("course");
+                modules.add(new Module(id, code, course, start, end, level, credits, title, desc, aims, leader));
+            }
+        } else {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM modules WHERE archived = 0");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("module_id"));
+                String code = result.getString("module_code");
+                String start = result.getString("start_year");
+                String end = result.getString("end_year");
+                String level = result.getString("level");
+                String credits = result.getString("credits");
+                String title = result.getString("title");
+                int leader = Integer.parseInt(result.getString("leader"));
+                String desc = result.getString("description");
+                String aims = result.getString("aims_and_objectives");
+                String course = result.getString("course");
+                modules.add(new Module(id, code, course, start, end, level, credits, title, desc, aims, leader));
+            }
         }
         return modules;
     }
@@ -86,7 +104,11 @@ public class ModuleTabController {
     }
 
     public void populate() throws SQLException {
-        List<Module> newModule = fetchTable();
+        List<Module> newModule = fetchTable(false);
+        populateTable(newModule);
+    }
+    public void populateArchive() throws SQLException {
+        List<Module> newModule = fetchTable(true);
         populateTable(newModule);
     }
 

@@ -28,24 +28,39 @@ public class CourseTabController {
     @FXML
     private TableColumn idCol, codeCol, nameCol, startCol, endCol, descCol, aimCol, leaderCol;
 
-    public List<Course> fetchTable() throws SQLException {
+    public List<Course> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT * FROM courses");
         List<Course> courses = new ArrayList<>();
-        while (result.next()) {
-            int id = Integer.parseInt(result.getString("course_id"));
-            String code = result.getString("course_code");
-            String title = result.getString("course_title");
-            String start = result.getString("start_year");
-            String end = result.getString("end_year");
-            String desc = result.getString("description");
-            String aims = result.getString("aims_and_objectives");
-            int leader = Integer.parseInt(result.getString("course_leader"));
-            courses.add(new Course(id, leader, code, title, start, end, desc, aims));
+        if(isArchive) {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM courses WHERE archived = 1");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("course_id"));
+                String code = result.getString("course_code");
+                String title = result.getString("course_title");
+                String start = result.getString("start_year");
+                String end = result.getString("end_year");
+                String desc = result.getString("description");
+                String aims = result.getString("aims_and_objectives");
+                int leader = Integer.parseInt(result.getString("course_leader"));
+                courses.add(new Course(id, leader, code, title, start, end, desc, aims));
+            }
+        } else {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM courses WHERE archived = 0");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("course_id"));
+                String code = result.getString("course_code");
+                String title = result.getString("course_title");
+                String start = result.getString("start_year");
+                String end = result.getString("end_year");
+                String desc = result.getString("description");
+                String aims = result.getString("aims_and_objectives");
+                int leader = Integer.parseInt(result.getString("course_leader"));
+                courses.add(new Course(id, leader, code, title, start, end, desc, aims));
+            }
         }
         return courses;
     }
@@ -79,7 +94,11 @@ public class CourseTabController {
     }
 
     public void populate() throws SQLException {
-        List<Course> newCourse = fetchTable();
+        List<Course> newCourse = fetchTable(false);
+        populateTable(newCourse);
+    }
+    public void populateArchive() throws SQLException {
+        List<Course> newCourse = fetchTable(true);
         populateTable(newCourse);
     }
 

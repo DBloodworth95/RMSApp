@@ -203,13 +203,13 @@
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" />
                         <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: transparent;" text="ARCHIVED RECORDS">
                            <items>
-                              <MenuItem mnemonicParsing="false" onAction="#createCalendar" text="STUDENTS" />
-                              <MenuItem mnemonicParsing="false" text="STAFF" />
-                              <MenuItem mnemonicParsing="false" text="MODULES" />
-                              <MenuItem mnemonicParsing="false" text="COURSES" />
-                              <MenuItem mnemonicParsing="false" text="ASSESSMENTS" />
-                              <MenuItem mnemonicParsing="false" text="GRADES" />
-                              <MenuItem mnemonicParsing="false" text="ATTENDANCE" />
+                              <MenuItem fx:id="archiveStudent" mnemonicParsing="false" onAction="#archiveCreateStudentTab" text="STUDENTS" />
+                              <MenuItem fx:id="archiveStaff" mnemonicParsing="false" onAction="#archiveCreateStaffTab" text="STAFF" />
+                              <MenuItem fx:id="archiveModule" mnemonicParsing="false" onAction="#createArchiveModuleTab" text="MODULES" />
+                              <MenuItem fx:id="archiveCourse" mnemonicParsing="false" onAction="#createArchiveCourseTab" text="COURSES" />
+                              <MenuItem fx:id="archiveAssessment" mnemonicParsing="false" onAction="#createArchiveAssessmentTab" text="ASSESSMENTS" />
+                              <MenuItem fx:id="archiveGrades" mnemonicParsing="false" onAction="#createArchiveGradesTab" text="GRADES" />
+                              <MenuItem fx:id="archiveAttendance" mnemonicParsing="false" onAction="#createArchiveAttendanceTab" text="ATTENDANCE" />
                            </items>
                            <font>
                               <Font size="12.0" />

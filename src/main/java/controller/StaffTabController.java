@@ -27,44 +27,79 @@ public class StaffTabController {
     private TableColumn staffIDCol, statusCol, dormCol, firstNameCol, lastNameCol, middleNameCol, genderCol, houseNumCol, houseNameCol, streetCol, townCol, countyCol,
             countryCol, zipCol, phoneCol, emailCol, specialistCol, emergPCol, emergECol, medicalHCol, allergyCol, medicalRCol, resumeCol, imgCol, addNoteCol;
 
-    public List<Staff> fetchTable() throws SQLException {
+    public List<Staff> fetchTable(Boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT * FROM staff");
         List<Staff> staff = new ArrayList<>();
-        while(result.next()) {
-            int id = Integer.parseInt(result.getString("staff_id"));
-            String status = result.getString("status");
-            String dormReason = result.getString("dormancy_reason");
-            String firstName = result.getString("first_name");
-            String middleName = result.getString("middle_name");
-            String surname = result.getString("surname");
-            String gender = result.getString("gender");
-            String addNumber = result.getString("address_number");
-            String houseName = result.getString("address_house_name");
-            String street = result.getString("address_street");
-            String town = result.getString("address_town");
-            String county = result.getString("address_county");
-            String country = result.getString("address_country");
-            String zip = result.getString("zip_code");
-            String telephone = result.getString("telephone");
-            String email = result.getString("email_address");
-            String emergP = result.getString("emergency_contact_phone");
-            String emergE = result.getString("emergency_contact_email");
-            String specialism = result.getString("specialist_subject");
-            String resume = result.getString("resume");
-            String notes = result.getString("additional_notes");
-            String medicalH = result.getString("medical_history");
-            String medicalA = result.getString("medical_allergies");
-            String medicalR = result.getString("medical_religious");
-            String image = result.getString("image");
-            staff.add(new Staff(id, status, dormReason, firstName, middleName, surname,
-                    gender, addNumber, houseName, street, town, county, country,
-                    zip, telephone, email, emergP, emergE, specialism, resume, notes, medicalH,
-                    medicalA, medicalR, image));
+        if(isArchive){
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 1");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("staff_id"));
+                String status = result.getString("status");
+                String dormReason = result.getString("dormancy_reason");
+                String firstName = result.getString("first_name");
+                String middleName = result.getString("middle_name");
+                String surname = result.getString("surname");
+                String gender = result.getString("gender");
+                String addNumber = result.getString("address_number");
+                String houseName = result.getString("address_house_name");
+                String street = result.getString("address_street");
+                String town = result.getString("address_town");
+                String county = result.getString("address_county");
+                String country = result.getString("address_country");
+                String zip = result.getString("zip_code");
+                String telephone = result.getString("telephone");
+                String email = result.getString("email_address");
+                String emergP = result.getString("emergency_contact_phone");
+                String emergE = result.getString("emergency_contact_email");
+                String specialism = result.getString("specialist_subject");
+                String resume = result.getString("resume");
+                String notes = result.getString("additional_notes");
+                String medicalH = result.getString("medical_history");
+                String medicalA = result.getString("medical_allergies");
+                String medicalR = result.getString("medical_religious");
+                String image = result.getString("image");
+                staff.add(new Staff(id, status, dormReason, firstName, middleName, surname,
+                        gender, addNumber, houseName, street, town, county, country,
+                        zip, telephone, email, emergP, emergE, specialism, resume, notes, medicalH,
+                        medicalA, medicalR, image));
+            }
+        } else {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 0");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("staff_id"));
+                String status = result.getString("status");
+                String dormReason = result.getString("dormancy_reason");
+                String firstName = result.getString("first_name");
+                String middleName = result.getString("middle_name");
+                String surname = result.getString("surname");
+                String gender = result.getString("gender");
+                String addNumber = result.getString("address_number");
+                String houseName = result.getString("address_house_name");
+                String street = result.getString("address_street");
+                String town = result.getString("address_town");
+                String county = result.getString("address_county");
+                String country = result.getString("address_country");
+                String zip = result.getString("zip_code");
+                String telephone = result.getString("telephone");
+                String email = result.getString("email_address");
+                String emergP = result.getString("emergency_contact_phone");
+                String emergE = result.getString("emergency_contact_email");
+                String specialism = result.getString("specialist_subject");
+                String resume = result.getString("resume");
+                String notes = result.getString("additional_notes");
+                String medicalH = result.getString("medical_history");
+                String medicalA = result.getString("medical_allergies");
+                String medicalR = result.getString("medical_religious");
+                String image = result.getString("image");
+                staff.add(new Staff(id, status, dormReason, firstName, middleName, surname,
+                        gender, addNumber, houseName, street, town, county, country,
+                        zip, telephone, email, emergP, emergE, specialism, resume, notes, medicalH,
+                        medicalA, medicalR, image));
+            }
         }
         return staff;
     }
@@ -132,7 +167,11 @@ public class StaffTabController {
     }
 
     public void populate() throws SQLException {
-        List<Staff> newStaff = fetchTable();
+        List<Staff> newStaff = fetchTable(false);
+        populateTable(newStaff);
+    }
+    public void populateArchive() throws SQLException {
+        List<Staff> newStaff = fetchTable(true);
         populateTable(newStaff);
     }
 

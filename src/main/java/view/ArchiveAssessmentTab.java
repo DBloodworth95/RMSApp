@@ -9,10 +9,10 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class AssessmentTab extends Tab {
+public class ArchiveAssessmentTab extends Tab {
 
-    public AssessmentTab(TabPane tabPane, FXMLLoader loader) throws IOException, SQLException {
-        AssessmentTab assessmentTab = new AssessmentTab();
+    public ArchiveAssessmentTab(TabPane tabPane, FXMLLoader loader) throws IOException, SQLException {
+        ArchiveAssessmentTab assessmentTab = new ArchiveAssessmentTab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/AssessmentsTabRecordsStaff.fxml"));
         AnchorPane assessmentTabContent = loader.load();
         tabPane.getTabs().add(assessmentTab);
@@ -20,11 +20,11 @@ public class AssessmentTab extends Tab {
         assessmentTab.setContent(assessmentTabContent);
         Object temp = loader.getController();
         AssessmentTabController controller = (AssessmentTabController) temp;
-        controller.populate();
+        controller.populateArchive();
         tabPane.getSelectionModel().select(assessmentTab);
     }
 
-    public AssessmentTab() {
+    public ArchiveAssessmentTab() {
 
     }
 }

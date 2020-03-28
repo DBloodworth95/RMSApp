@@ -40,7 +40,6 @@ public class HomePageController {
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
 
-
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
     }
@@ -81,21 +80,37 @@ public class HomePageController {
     public void createStudentTab() throws IOException, SQLException {
         new StudentTab(homePageTabPane, loader);
     }
-
+    public void archiveCreateStudentTab() throws IOException, SQLException {
+        new ArchiveStudentTab(homePageTabPane, loader);
+    }
     public void createStaffTab() throws IOException, SQLException {
         new StaffTab(homePageTabPane, loader);
+    }
+    public void archiveCreateStaffTab() throws IOException, SQLException {
+        new ArchiveStaffTab(homePageTabPane, loader);
     }
 
     public void createModuleTab() throws IOException, SQLException {
         new ModuleTab(homePageTabPane, loader);
     }
 
+    public void createArchiveModuleTab() throws IOException, SQLException {
+        new ArchiveModuleTab(homePageTabPane, loader);
+    }
+
     public void createCourseTab() throws IOException, SQLException {
         new CourseTab(homePageTabPane, loader);
     }
 
+    public void createArchiveCourseTab() throws IOException, SQLException {
+        new ArchiveCourseTab(homePageTabPane, loader);
+    }
+
     public void createAssessmentTabRS() throws IOException, SQLException {
         new AssessmentTab(homePageTabPane, loader);
+    }
+    public void createArchiveAssessmentTab() throws IOException, SQLException {
+        new ArchiveAssessmentTab(homePageTabPane, loader);
     }
 
     public void createAssessmentTabT() throws IOException {
@@ -120,13 +135,16 @@ public class HomePageController {
         gradesTab.setContent(gradesTabContent);
     }
 
-    public void createAttendanceTabRS() throws IOException {
-        Tab attendanceTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/AttendanceTabRecordsStaff.fxml"));
-        AnchorPane attendanceTabContent = loader.load();
-        homePageTabPane.getTabs().add(attendanceTab);
-        attendanceTab.setText("Attendance");
-        attendanceTab.setContent(attendanceTabContent);
+    public void createArchiveGradesTab() throws IOException, SQLException {
+        new ArchiveGradesTab(homePageTabPane,loader);
+    }
+
+    public void createAttendanceTabRS() throws IOException, SQLException {
+        new AttendanceTab(homePageTabPane,loader);
+    }
+
+    public void createArchiveAttendanceTab() throws IOException, SQLException {
+        new ArchiveAttendanceTab(homePageTabPane, loader);
     }
 
     public void createAttendanceTabT() throws IOException {
@@ -138,13 +156,11 @@ public class HomePageController {
         attendanceTab.setContent(attendanceTabContent);
     }
 
-    public void createTutorshipTabRS() throws IOException {
-        Tab tutorshipTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/PersonalTutorshipRecordsStaffTab.fxml"));
-        AnchorPane tutorshipTabContent = loader.load();
-        homePageTabPane.getTabs().add(tutorshipTab);
-        tutorshipTab.setText("Personal Tutorship");
-        tutorshipTab.setContent(tutorshipTabContent);
+    public void createTutorshipTabRS() throws IOException, SQLException {
+        new PersonalTutorTab(homePageTabPane, loader);
+    }
+    public void archiveCreateTutorshipTabRS() throws IOException, SQLException {
+        new ArchivePersonalTutorTab(homePageTabPane, loader);
     }
 
     public void createTutorshipTabT() throws IOException {
@@ -225,6 +241,24 @@ public class HomePageController {
                 AssessmentTab assessmentTab = new AssessmentTab(homePageTabPane, loader);
             } else if (tab instanceof GradesTab) {
                 GradesTab gradesTab = new GradesTab(homePageTabPane, loader);
+            } else if (tab instanceof PersonalTutorTab) {
+                PersonalTutorTab tutorTab = new PersonalTutorTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchiveStudentTab) {
+                ArchiveStudentTab archiveStudentTab = new ArchiveStudentTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchiveStaffTab) {
+                ArchiveStaffTab archiveStaffTab = new ArchiveStaffTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchiveAssessmentTab) {
+                ArchiveAssessmentTab archiveAssessmentTab = new ArchiveAssessmentTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchiveCourseTab) {
+                ArchiveCourseTab archiveCourseTab = new ArchiveCourseTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchiveGradesTab) {
+                ArchiveGradesTab archiveGradesTab = new ArchiveGradesTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchiveModuleTab) {
+                ArchiveModuleTab archiveModuleTab = new ArchiveModuleTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchivePersonalTutorTab) {
+                ArchivePersonalTutorTab archivePersonalTutorTab = new ArchivePersonalTutorTab(homePageTabPane, loader);
+            } else if (tab instanceof ArchiveAttendanceTab) {
+                ArchiveAttendanceTab archiveAttendanceTab = new ArchiveAttendanceTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }

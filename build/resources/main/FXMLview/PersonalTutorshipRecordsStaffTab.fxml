@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentTabController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PersonalTutorTabController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" prefHeight="54.0" style="-fx-background-color: #e9e9e9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -90,7 +90,7 @@
                   <Insets right="5.0" />
                </padding>
             </Button>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateTable" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -105,7 +105,7 @@
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="PRINT" textFill="#09adff">
+            <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#printTable" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="PRINT" textFill="#09adff">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -219,24 +219,24 @@
             <Insets bottom="10.0" left="30.0" top="10.0" />
          </padding>
       </HBox>
-      <TableView fx:id="studentTable" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
+      <TableView fx:id="tutorTV" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
          <columns>
             <TableColumn fx:id="firstNameCol8" editable="false" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" sortable="false">
                <graphic>
                   <CheckBox mnemonicParsing="false" selected="true" />
                </graphic>
             </TableColumn>
-            <TableColumn fx:id="lastNameCol2" editable="false" prefWidth="107.0" text="Student ID" />
-            <TableColumn fx:id="firstNameCol2" editable="false" prefWidth="112.0" text="Student first name" />
-            <TableColumn fx:id="lastNameCol1" editable="false" prefWidth="107.0" text="Student surname" />
-            <TableColumn fx:id="firstNameCol" prefWidth="152.12436485290527" text="Tutor ID" />
-            <TableColumn fx:id="firstNameCol21" editable="false" prefWidth="112.0" text="Tutor first name" />
-            <TableColumn fx:id="lastNameCol11" editable="false" prefWidth="107.0" text="Tutor surname" />
-            <TableColumn fx:id="firstNameCol11" editable="false" prefWidth="112.0" text="Student course title" />
-            <TableColumn fx:id="firstNameCol111" editable="false" prefWidth="172.6666259765625" text="Student module title" />
-            <TableColumn fx:id="firstNameCol1111" editable="false" minWidth="0.0" prefWidth="54.3333740234375" text="Year" />
-            <TableColumn fx:id="firstNameCol11111" editable="false" prefWidth="112.0" text="Appointment Date" />
-            <TableColumn fx:id="firstNameCol111111" editable="false" prefWidth="112.0" text="PAT Form" />
+            <TableColumn fx:id="studentCol" editable="false" prefWidth="107.0" text="Student ID" />
+            <TableColumn fx:id="studentFCol" editable="false" prefWidth="112.0" text="Student first name" />
+            <TableColumn fx:id="studentSCol" editable="false" prefWidth="107.0" text="Student surname" />
+            <TableColumn fx:id="tutorCol" prefWidth="152.12436485290527" text="Tutor ID" />
+            <TableColumn fx:id="tutorFCol" editable="false" prefWidth="112.0" text="Tutor first name" />
+            <TableColumn fx:id="tutorSCol" editable="false" prefWidth="107.0" text="Tutor surname" />
+            <TableColumn fx:id="courseCol" editable="false" prefWidth="112.0" text="Student course title" />
+            <TableColumn fx:id="moduleCol" editable="false" prefWidth="172.6666259765625" text="Student module title" />
+            <TableColumn fx:id="yearCol" editable="false" minWidth="0.0" prefWidth="54.3333740234375" text="Year" />
+            <TableColumn fx:id="appCol" editable="false" prefWidth="112.0" text="Appointment Date" />
+            <TableColumn fx:id="patCol" editable="false" prefWidth="112.0" text="PAT Form" />
          </columns>
       </TableView>
    </children>

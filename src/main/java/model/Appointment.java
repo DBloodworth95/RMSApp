@@ -1,0 +1,108 @@
+package model;
+
+public class Appointment {
+    private int studentId, tutorId;
+    private String studentFN, studentS, tutorFN, tutorS, course, module, year, appDate, patForm;
+
+    public Appointment(int studentId, int tutorId, String studentFN, String studentS, String tutorFN, String tutorS, String course, String module, String year, String appDate, String patForm) {
+        this.studentId = studentId;
+        this.tutorId = tutorId;
+        this.studentFN = studentFN;
+        this.studentS = studentS;
+        this.tutorFN = tutorFN;
+        this.tutorS = tutorS;
+        this.course = course;
+        this.module = module;
+        this.year = year;
+        this.appDate = appDate;
+        this.patForm = patForm;
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public int getTutorId() {
+        return tutorId;
+    }
+
+    public void setTutorId(int tutorId) {
+        this.tutorId = tutorId;
+    }
+
+    public String getStudentFN() {
+        return studentFN;
+    }
+
+    public void setStudentFN(String studentFN) {
+        this.studentFN = studentFN;
+    }
+
+    public String getStudentS() {
+        return studentS;
+    }
+
+    public void setStudentS(String studentS) {
+        this.studentS = studentS;
+    }
+
+    public String getTutorFN() {
+        return tutorFN;
+    }
+
+    public void setTutorFN(String tutorFN) {
+        this.tutorFN = tutorFN;
+    }
+
+    public String getTutorS() {
+        return tutorS;
+    }
+
+    public void setTutorS(String tutorS) {
+        this.tutorS = tutorS;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getModule() {
+        return module;
+    }
+
+    public void setModule(String module) {
+        this.module = module;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getAppDate() {
+        return appDate;
+    }
+
+    public void setAppDate(String appDate) {
+        this.appDate = appDate;
+    }
+
+    public String getPatForm() {
+        return patForm;
+    }
+
+    public void setPatForm(String patForm) {
+        this.patForm = patForm;
+    }
+}

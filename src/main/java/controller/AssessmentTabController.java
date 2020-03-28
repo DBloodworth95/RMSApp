@@ -26,26 +26,43 @@ public class AssessmentTabController {
     @FXML
     private TableColumn idCol, courseCol, moduleCol, yearCol, termCol, typeCol, weightCol, statusCol, briefCol;
 
-    public List<Assessment> fetchTable() throws SQLException {
+    public List<Assessment> fetchTable(Boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT * FROM assessments");
         List<Assessment> assessments = new ArrayList<>();
-        while (result.next()) {
-            int id = Integer.parseInt(result.getString("assessment_id"));
-            String moduleCode = result.getString("module_code");
-            String type = result.getString("type");
-            String term = result.getString("term");
-            float weight = Float.parseFloat(result.getString("weighting"));
-            String brief = result.getString("brief");
-            String status = result.getString("status");
-            String year = result.getString("year");
-            String courseCode = result.getString("course_code");
+        if (isArchive) {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM assessments WHERE archived = 1");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("assessment_id"));
+                String moduleCode = result.getString("module_code");
+                String type = result.getString("type");
+                String term = result.getString("term");
+                float weight = Float.parseFloat(result.getString("weighting"));
+                String brief = result.getString("brief");
+                String status = result.getString("status");
+                String year = result.getString("year");
+                String courseCode = result.getString("course_code");
 
-            assessments.add(new Assessment(id, courseCode, moduleCode, year, term, type, status, brief, weight));
+                assessments.add(new Assessment(id, courseCode, moduleCode, year, term, type, status, brief, weight));
+            }
+        } else {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM assessments WHERE archived = 0");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("assessment_id"));
+                String moduleCode = result.getString("module_code");
+                String type = result.getString("type");
+                String term = result.getString("term");
+                float weight = Float.parseFloat(result.getString("weighting"));
+                String brief = result.getString("brief");
+                String status = result.getString("status");
+                String year = result.getString("year");
+                String courseCode = result.getString("course_code");
+
+                assessments.add(new Assessment(id, courseCode, moduleCode, year, term, type, status, brief, weight));
+            }
         }
         return assessments;
     }
@@ -81,7 +98,11 @@ public class AssessmentTabController {
     }
 
     public void populate() throws SQLException {
-        List<Assessment> newAssessment = fetchTable();
+        List<Assessment> newAssessment = fetchTable(false);
+        populateTable(newAssessment);
+    }
+    public void populateArchive() throws SQLException {
+        List<Assessment> newAssessment = fetchTable(true);
         populateTable(newAssessment);
     }
 

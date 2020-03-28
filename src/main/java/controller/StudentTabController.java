@@ -34,57 +34,104 @@ public class StudentTabController {
     @FXML
     private Button printBtn;
 
-    public List<Student> fetchTable() throws SQLException {
+    public List<Student> fetchTable(Boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         String fetchQuery = ("SELECT * FROM students");
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT * FROM students");
         List<Student> students = new ArrayList<>();
-        while (result.next()) {
-            int id = Integer.parseInt(result.getString("student_id"));
-            String pw = result.getString("password");
-            String status = result.getString("status");
-            String dorm = result.getString("dormancy_reason");
-            String firstName = result.getString("first_name");
-            String midName = result.getString("middle_name");
-            String surname = result.getString("surname");
-            String image = result.getString("image");
-            String gender = result.getString("gender");
-            String telephone = result.getString("telephone");
-            String currCourse = result.getString("current_course_code");
-            int currYear = Integer.parseInt(result.getString("current_year"));
-            int enrollYear = Integer.parseInt(result.getString("enrollment_year"));
-            String entQual = result.getString("entry_qualifications");
-            String emPhone = result.getString("emergency_contact_phone");
-            String emEmail = result.getString("emergency_contact_email");
-            String employer = result.getString("employer");
-            String addNotes = result.getString("additional_notes");
-            int tutor = Integer.parseInt(result.getString("personal_tutor"));
-            String mediHistory = result.getString("medical_history");
-            String allergies = result.getString("medical_allergies");
-            String religious = result.getString("medical_religious");
-            String email = result.getString("email");
-            String termNumber = (result.getString("address_term_number"));
-            String termHouseName = result.getString("address_term_house_name");
-            String termHouseStreet = result.getString("address_term_street");
-            String termHouseTown = result.getString("address_term_town");
-            String termHouseCounty = result.getString("address_term_county");
-            String termHouseCountry = result.getString("address_term_country");
-            String termHouseZip = result.getString("address_term_zip_code");
-            String homeNumber = (result.getString("noterm_address_number"));
-            String homeHouseName = result.getString("noterm_address_house_name");
-            String homeHouseStreet = result.getString("noterm_address_street");
-            String homeHouseTown = result.getString("noterm_address_town");
-            String homeHouseCounty = result.getString("noterm_address_county");
-            String homeHouseCountry = result.getString("noterm_address_country");
-            String homeHouseZip = result.getString("noterm_zip_code");
-            students.add(new Student(id, tutor, pw, status, dorm, firstName, midName, surname, image, gender, telephone, currCourse, currYear, enrollYear, entQual, emPhone,
-                    emEmail, employer, addNotes, mediHistory, allergies, religious, termNumber, termHouseName, termHouseStreet, termHouseTown,
-                    termHouseCounty, termHouseCountry, termHouseZip, homeNumber, homeHouseName, homeHouseStreet, homeHouseTown, homeHouseCounty
-                    , homeHouseCountry, homeHouseZip, email));
+        if(isArchive) {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 1");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("student_id"));
+                String pw = result.getString("password");
+                String status = result.getString("status");
+                String dorm = result.getString("dormancy_reason");
+                String firstName = result.getString("first_name");
+                String midName = result.getString("middle_name");
+                String surname = result.getString("surname");
+                String image = result.getString("image");
+                String gender = result.getString("gender");
+                String telephone = result.getString("telephone");
+                String currCourse = result.getString("current_course_code");
+                int currYear = Integer.parseInt(result.getString("current_year"));
+                int enrollYear = Integer.parseInt(result.getString("enrollment_year"));
+                String entQual = result.getString("entry_qualifications");
+                String emPhone = result.getString("emergency_contact_phone");
+                String emEmail = result.getString("emergency_contact_email");
+                String employer = result.getString("employer");
+                String addNotes = result.getString("additional_notes");
+                int tutor = Integer.parseInt(result.getString("personal_tutor"));
+                String mediHistory = result.getString("medical_history");
+                String allergies = result.getString("medical_allergies");
+                String religious = result.getString("medical_religious");
+                String email = result.getString("email");
+                String termNumber = (result.getString("address_term_number"));
+                String termHouseName = result.getString("address_term_house_name");
+                String termHouseStreet = result.getString("address_term_street");
+                String termHouseTown = result.getString("address_term_town");
+                String termHouseCounty = result.getString("address_term_county");
+                String termHouseCountry = result.getString("address_term_country");
+                String termHouseZip = result.getString("address_term_zip_code");
+                String homeNumber = (result.getString("noterm_address_number"));
+                String homeHouseName = result.getString("noterm_address_house_name");
+                String homeHouseStreet = result.getString("noterm_address_street");
+                String homeHouseTown = result.getString("noterm_address_town");
+                String homeHouseCounty = result.getString("noterm_address_county");
+                String homeHouseCountry = result.getString("noterm_address_country");
+                String homeHouseZip = result.getString("noterm_zip_code");
+                students.add(new Student(id, tutor, pw, status, dorm, firstName, midName, surname, image, gender, telephone, currCourse, currYear, enrollYear, entQual, emPhone,
+                        emEmail, employer, addNotes, mediHistory, allergies, religious, termNumber, termHouseName, termHouseStreet, termHouseTown,
+                        termHouseCounty, termHouseCountry, termHouseZip, homeNumber, homeHouseName, homeHouseStreet, homeHouseTown, homeHouseCounty
+                        , homeHouseCountry, homeHouseZip, email));
+            }
+        } else {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 0");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("student_id"));
+                String pw = result.getString("password");
+                String status = result.getString("status");
+                String dorm = result.getString("dormancy_reason");
+                String firstName = result.getString("first_name");
+                String midName = result.getString("middle_name");
+                String surname = result.getString("surname");
+                String image = result.getString("image");
+                String gender = result.getString("gender");
+                String telephone = result.getString("telephone");
+                String currCourse = result.getString("current_course_code");
+                int currYear = Integer.parseInt(result.getString("current_year"));
+                int enrollYear = Integer.parseInt(result.getString("enrollment_year"));
+                String entQual = result.getString("entry_qualifications");
+                String emPhone = result.getString("emergency_contact_phone");
+                String emEmail = result.getString("emergency_contact_email");
+                String employer = result.getString("employer");
+                String addNotes = result.getString("additional_notes");
+                int tutor = Integer.parseInt(result.getString("personal_tutor"));
+                String mediHistory = result.getString("medical_history");
+                String allergies = result.getString("medical_allergies");
+                String religious = result.getString("medical_religious");
+                String email = result.getString("email");
+                String termNumber = (result.getString("address_term_number"));
+                String termHouseName = result.getString("address_term_house_name");
+                String termHouseStreet = result.getString("address_term_street");
+                String termHouseTown = result.getString("address_term_town");
+                String termHouseCounty = result.getString("address_term_county");
+                String termHouseCountry = result.getString("address_term_country");
+                String termHouseZip = result.getString("address_term_zip_code");
+                String homeNumber = (result.getString("noterm_address_number"));
+                String homeHouseName = result.getString("noterm_address_house_name");
+                String homeHouseStreet = result.getString("noterm_address_street");
+                String homeHouseTown = result.getString("noterm_address_town");
+                String homeHouseCounty = result.getString("noterm_address_county");
+                String homeHouseCountry = result.getString("noterm_address_country");
+                String homeHouseZip = result.getString("noterm_zip_code");
+                students.add(new Student(id, tutor, pw, status, dorm, firstName, midName, surname, image, gender, telephone, currCourse, currYear, enrollYear, entQual, emPhone,
+                        emEmail, employer, addNotes, mediHistory, allergies, religious, termNumber, termHouseName, termHouseStreet, termHouseTown,
+                        termHouseCounty, termHouseCountry, termHouseZip, homeNumber, homeHouseName, homeHouseStreet, homeHouseTown, homeHouseCounty
+                        , homeHouseCountry, homeHouseZip, email));
+            }
         }
         return students;
     }
@@ -176,7 +223,11 @@ public class StudentTabController {
     }
 
     public void populate() throws SQLException {
-        List<Student> newStudent = fetchTable();
+        List<Student> newStudent = fetchTable(false);
+        populateTable(newStudent);
+    }
+    public void populateArchive() throws SQLException {
+        List<Student> newStudent = fetchTable(true);
         populateTable(newStudent);
     }
 

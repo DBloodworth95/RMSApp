@@ -29,28 +29,47 @@ public class GradesTabController {
     @FXML
     private TableColumn idCol, yearCol, studentCol, moduleCol, firstMarkCol, secondMarkCol, finalGradeCol, termCol, weightCol, fileCol, assessmentCol;
 
-    public List<Grade> fetchTable() throws SQLException {
+    public List<Grade> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT * FROM grades");
         List<Grade> grades = new ArrayList<>();
-        while (result.next()) {
-            int id = Integer.parseInt(result.getString("grade_id"));
-            int studentID = Integer.parseInt(result.getString("student_id"));
-            int assessmentID = Integer.parseInt(result.getString("assessment_id"));
-            String file = result.getString("file");
-            String first = result.getString("first_marking");
-            String second = result.getString("second_marking");
-            String finalG = result.getString("final_grade");
-            String year = result.getString("year");
-            String module = result.getString("module_code");
-            String term = result.getString("term");
-            float weight = Float.parseFloat(result.getString("weighting"));
+        if(isArchive) {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM grades WHERE archived = 1");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("grade_id"));
+                int studentID = Integer.parseInt(result.getString("student_id"));
+                int assessmentID = Integer.parseInt(result.getString("assessment_id"));
+                String file = result.getString("file");
+                String first = result.getString("first_marking");
+                String second = result.getString("second_marking");
+                String finalG = result.getString("final_grade");
+                String year = result.getString("year");
+                String module = result.getString("module_code");
+                String term = result.getString("term");
+                float weight = Float.parseFloat(result.getString("weighting"));
 
-            grades.add(new Grade(id, studentID, assessmentID, first, second, finalG, year, module, term, weight, file));
+                grades.add(new Grade(id, studentID, assessmentID, first, second, finalG, year, module, term, weight, file));
+            }
+        } else {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM grades WHERE archived = 0");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("grade_id"));
+                int studentID = Integer.parseInt(result.getString("student_id"));
+                int assessmentID = Integer.parseInt(result.getString("assessment_id"));
+                String file = result.getString("file");
+                String first = result.getString("first_marking");
+                String second = result.getString("second_marking");
+                String finalG = result.getString("final_grade");
+                String year = result.getString("year");
+                String module = result.getString("module_code");
+                String term = result.getString("term");
+                float weight = Float.parseFloat(result.getString("weighting"));
+
+                grades.add(new Grade(id, studentID, assessmentID, first, second, finalG, year, module, term, weight, file));
+            }
         }
         return grades;
     }
@@ -89,7 +108,11 @@ public class GradesTabController {
     }
 
     public void populate() throws SQLException {
-        List<Grade> newGrade = fetchTable();
+        List<Grade> newGrade = fetchTable(false);
+        populateTable(newGrade);
+    }
+    public void populateArchive() throws SQLException {
+        List<Grade> newGrade = fetchTable(true);
         populateTable(newGrade);
     }
 
