@@ -64,6 +64,29 @@ public class AttendanceTabController {
         return attendants;
     }
 
+    public List<Attendant> fetchTableByCourse(boolean isArchive, String course) throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        List<Attendant> attendants = new ArrayList<>();
+        if (!isArchive) {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM attendance WHERE archived = 0 AND course ='" + course + "'");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("student_id"));
+                String firstName = result.getString("first_name");
+                String surname = result.getString("surname");
+                String attended = result.getString("attended");
+                String cause = result.getString("cause_for_concern");
+                String courseResult = result.getString("course");
+                String module = result.getString("module");
+                attendants.add(new Attendant(id, firstName, surname, attended, cause, courseResult, module));
+            }
+        }
+        return attendants;
+    }
+
     public void populateTable(List<Attendant> newAttendant) {
         studentCol.setCellValueFactory(new PropertyValueFactory<Attendant, Integer>("id"));
         firstCol.setCellValueFactory(new PropertyValueFactory<Attendant, String>("firstName"));
@@ -94,6 +117,10 @@ public class AttendanceTabController {
 
     public void populate() throws SQLException {
         List<Attendant> newAttendant = fetchTable(false);
+        populateTable(newAttendant);
+    }
+    public void populateByCourse(String course) throws SQLException {
+        List<Attendant> newAttendant = fetchTableByCourse(false, course);
         populateTable(newAttendant);
     }
     public void populateArchive() throws SQLException {

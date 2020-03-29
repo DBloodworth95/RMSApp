@@ -5,8 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
@@ -174,12 +172,12 @@
                <children>
                   <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAssessmentTabT" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="ASSESSMENTS">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAssessmentTabRS" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="ASSESSMENTS">
                            <font>
                               <Font size="12.0" />
                            </font></Button>
                         <Separator minWidth="-Infinity" prefHeight="0.0" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAttendanceTabT" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="ATTENDANCE">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAttendanceTabRS" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="ATTENDANCE">
                            <font>
                               <Font size="12.0" />
                            </font></Button>
@@ -187,45 +185,21 @@
                            <HBox.margin>
                               <Insets />
                            </HBox.margin></Separator>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createGradesTabT" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="GRADES">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createGradesTabRS" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="GRADES">
                            <font>
                               <Font size="12.0" />
                            </font></Button>
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;" />
-                        <MenuButton alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="MODULES">
-                           <items>
-                              <MenuItem mnemonicParsing="false">
-                                 <graphic>
-                                    <MenuButton alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="RIGHT" text="Module 1">
-                                       <items>
-                                          <MenuItem mnemonicParsing="false" text="View students" />
-                                          <MenuItem mnemonicParsing="false" text="View staff" />
-                                          <MenuItem mnemonicParsing="false" text="View module file" />
-                                       </items>
-                                    </MenuButton>
-                                 </graphic>
-                              </MenuItem>
-                              <MenuItem mnemonicParsing="false">
-                                 <graphic>
-                                    <MenuButton alignment="CENTER_RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" popupSide="RIGHT" text="Module 2">
-                                       <items>
-                                          <MenuItem mnemonicParsing="false" text="View students" />
-                                          <MenuItem mnemonicParsing="false" text="View staff" />
-                                          <MenuItem mnemonicParsing="false" text="View module file" />
-                                       </items>
-                                    </MenuButton>
-                                 </graphic>
-                              </MenuItem>
-                           </items>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createModuleTab" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="MODULES">
                            <font>
                               <Font size="12.0" />
                            </font>
-                        </MenuButton>
+                        </Button>
                         <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin></Separator>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createTutorshipTabT" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="PERSONAL TUTORSHIP">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createTutorTab" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="PERSONAL TUTORSHIP">
                            <font>
                               <Font size="12.0" />
                            </font></Button>

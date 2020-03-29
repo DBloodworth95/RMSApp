@@ -2,15 +2,13 @@ package model;
 
 public class Appointment {
     private int studentId, tutorId;
-    private String studentFN, studentS, tutorFN, tutorS, course, module, year, appDate, patForm;
+    private String studentFN, studentS, course, module, year, appDate, patForm;
 
-    public Appointment(int studentId, int tutorId, String studentFN, String studentS, String tutorFN, String tutorS, String course, String module, String year, String appDate, String patForm) {
+    public Appointment(int studentId, int tutorId, String studentFN, String studentS, String course, String module, String year, String appDate, String patForm) {
         this.studentId = studentId;
         this.tutorId = tutorId;
         this.studentFN = studentFN;
         this.studentS = studentS;
-        this.tutorFN = tutorFN;
-        this.tutorS = tutorS;
         this.course = course;
         this.module = module;
         this.year = year;
@@ -48,22 +46,6 @@ public class Appointment {
 
     public void setStudentS(String studentS) {
         this.studentS = studentS;
-    }
-
-    public String getTutorFN() {
-        return tutorFN;
-    }
-
-    public void setTutorFN(String tutorFN) {
-        this.tutorFN = tutorFN;
-    }
-
-    public String getTutorS() {
-        return tutorS;
-    }
-
-    public void setTutorS(String tutorS) {
-        this.tutorS = tutorS;
     }
 
     public String getCourse() {

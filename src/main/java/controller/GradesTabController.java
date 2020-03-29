@@ -77,6 +77,7 @@ public class GradesTabController {
         return grades;
     }
 
+
     public void populateTable(List<Grade> newGrade) {
         idCol.setCellValueFactory(new PropertyValueFactory<Grade, Integer>("id"));
         yearCol.setCellValueFactory(new PropertyValueFactory<Grade, String>("year"));
@@ -113,6 +114,12 @@ public class GradesTabController {
     public void populate() throws SQLException {
         List<Grade> newGrade = fetchTable(false);
         populateTable(newGrade);
+    }
+    public void populateTutor() throws SQLException {
+        List<Grade> newGrade = fetchTable(false);
+        populateTable(newGrade);
+        createBtn.setVisible(false);
+        archiveBtn.setVisible(false);
     }
     public void populateArchive() throws SQLException {
         List<Grade> newGrade = fetchTable(true);

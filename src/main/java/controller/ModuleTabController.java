@@ -72,6 +72,33 @@ public class ModuleTabController {
         return modules;
     }
 
+    public List<Module> fetchTableByCourse(boolean isArchive, String course) throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        List<Module> modules = new ArrayList<>();
+        if (!isArchive) {
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM modules WHERE archived = 0 AND course='" + course + "'");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("module_id"));
+                String code = result.getString("module_code");
+                String start = result.getString("start_year");
+                String end = result.getString("end_year");
+                String level = result.getString("level");
+                String credits = result.getString("credits");
+                String title = result.getString("title");
+                int leader = Integer.parseInt(result.getString("leader"));
+                String desc = result.getString("description");
+                String aims = result.getString("aims_and_objectives");
+                String courseResult = result.getString("course");
+                modules.add(new Module(id, code, courseResult, start, end, level, credits, title, desc, aims, leader));
+            }
+        }
+        return modules;
+    }
+
     public void populateTable(List<Module> newModule) {
         idCol.setCellValueFactory(new PropertyValueFactory<Module, Integer>("id"));
         codeCol.setCellValueFactory(new PropertyValueFactory<Module, String>("code"));
@@ -108,6 +135,10 @@ public class ModuleTabController {
 
     public void populate() throws SQLException {
         List<Module> newModule = fetchTable(false);
+        populateTable(newModule);
+    }
+    public void populateByCourse(String course) throws SQLException {
+        List<Module> newModule = fetchTableByCourse(false, course);
         populateTable(newModule);
     }
     public void populateArchive() throws SQLException {

@@ -5,17 +5,14 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class NewStaffTabController {
     @FXML
     private TextField idTF, firstNameTF, middleNameTF, surnameTF, pwTF, addNumberTF, houseNTF, houseSTF, houseTTF, countyTF, countryTF, zipTF, phoneTF, emailTF,
             emergPTF, emergETF;
     @FXML
-    private ComboBox genderCB, statusCB, dormCB, specialismCB;
+    private ComboBox genderCB, statusCB, dormCB, specialismCB, courseCB;
     @FXML
     private TextArea allergyTA, religiousTA, addNoteTA, medicalHTA;
     @FXML
@@ -60,17 +57,38 @@ public class NewStaffTabController {
             preparedStatement.setString(23, religiousTA.getText());
             preparedStatement.setString(24, "image");
             preparedStatement.executeUpdate();
+            Statement fetchStaff = myConnection.createStatement();
+            ResultSet getStaff = fetchStaff.executeQuery("SELECT * FROM staff WHERE first_name='" + firstNameTF.getText() + "'AND surname='" + surnameTF.getText() + "'");
+            String newUser = "INSERT INTO users(username, password, user_level, course, staff_id) VALUES (?,?,?,?,?)";
+            PreparedStatement newUserStatement = myConnection.prepareStatement(newUser);
+            newUserStatement.setString(1, firstNameTF.getText() + "" + surnameTF.getText());
+            newUserStatement.setString(2, firstNameTF.getText() + "" + surnameTF.getText());
+            newUserStatement.setInt(3, 4);
+            newUserStatement.setString(4, courseCB.getValue().toString());
+            while(getStaff.next()) {
+                newUserStatement.setString(5, String.valueOf(getStaff.getInt("staff_id")));
+            }
+            newUserStatement.execute();
             System.out.println("Student Created!");
             Stage stage = (Stage) saveBtn.getScene().getWindow();
             stage.close();
         }
     }
 
-    public void populateCB() {
+    public void populateCB() throws SQLException {
         genderCB.getItems().addAll("M", "F");
         statusCB.getItems().addAll("Provisional", "Live", "Dormant");
         dormCB.getItems().addAll("Graduated", "Withdrawn", "Terminated", "Inactive");
         specialismCB.getItems().addAll("Databases", "AI", "Software Development", "Web Development", "Systems");
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result = fetchStaff.executeQuery("SELECT course_code FROM courses");
+        while (result.next()) {
+            courseCB.getItems().addAll(result.getString("course_code"));
+        }
     }
 
     private boolean verifyFilledInputFields() {

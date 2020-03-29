@@ -74,9 +74,9 @@ public class NewAssessmentWindowController {
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT course FROM modules");
+        ResultSet result = fetchStaff.executeQuery("SELECT course_code FROM courses");
         while (result.next()) {
-            courseCB.getItems().addAll(result.getString("course"));
+            courseCB.getItems().addAll(result.getString("course_code"));
         }
     }
 

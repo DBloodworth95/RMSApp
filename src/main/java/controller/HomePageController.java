@@ -41,6 +41,7 @@ public class HomePageController {
     private int currentTabView;
     private Alert tabLimitError = new Alert(Alert.AlertType.ERROR);
 
+
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
     }
@@ -92,7 +93,7 @@ public class HomePageController {
     }
 
     public void createModuleTab() throws IOException, SQLException {
-        checkTabLimit(new ModuleTab(homePageTabPane, loader));
+        checkTabLimit(new ModuleTab(homePageTabPane, loader, ghostSessionL));
     }
 
     public void createArchiveModuleTab() throws IOException, SQLException {
@@ -108,7 +109,7 @@ public class HomePageController {
     }
 
     public void createAssessmentTabRS() throws IOException, SQLException {
-        checkTabLimit(new AssessmentTab(homePageTabPane, loader));
+        checkTabLimit(new AssessmentTab(homePageTabPane, loader, ghostSessionL));
     }
     public void createArchiveAssessmentTab() throws IOException, SQLException {
         checkTabLimit(new ArchiveAssessmentTab(homePageTabPane, loader));
@@ -124,7 +125,7 @@ public class HomePageController {
     }
 
     public void createGradesTabRS() throws IOException, SQLException {
-        checkTabLimit(new GradesTab(homePageTabPane, loader));
+        checkTabLimit(new GradesTab(homePageTabPane, loader, ghostSessionL));
     }
 
     public void createGradesTabT() throws IOException {
@@ -141,7 +142,7 @@ public class HomePageController {
     }
 
     public void createAttendanceTabRS() throws IOException, SQLException {
-        checkTabLimit(new AttendanceTab(homePageTabPane,loader));
+        checkTabLimit(new AttendanceTab(homePageTabPane,loader, ghostSessionL));
     }
 
     public void createArchiveAttendanceTab() throws IOException, SQLException {
@@ -222,6 +223,10 @@ public class HomePageController {
         homeTab.setContent(homeTabContent);
     }
 
+    public void createTutorTab() throws IOException, SQLException {
+        checkTabLimit(new TutorAppointmentTab(homePageTabPane, loader, ghostSessionL.getText()));
+    }
+
     public void refresh() throws IOException, SQLException {
         System.out.println("Refresh method called.");
         for (int i = 0; i < homePageTabPane.getTabs().size(); i++) {
@@ -235,13 +240,13 @@ public class HomePageController {
             } else if (tab instanceof StaffTab) {
                 StaffTab staffTab = new StaffTab(homePageTabPane, loader);
             } else if (tab instanceof  ModuleTab) {
-                ModuleTab moduleTab = new ModuleTab(homePageTabPane, loader);
+                ModuleTab moduleTab = new ModuleTab(homePageTabPane, loader, ghostSessionL);
             } else if (tab instanceof CourseTab) {
                 CourseTab courseTab = new CourseTab(homePageTabPane, loader);
             } else if (tab instanceof AssessmentTab) {
-                AssessmentTab assessmentTab = new AssessmentTab(homePageTabPane, loader);
+                AssessmentTab assessmentTab = new AssessmentTab(homePageTabPane, loader, ghostSessionL);
             } else if (tab instanceof GradesTab) {
-                GradesTab gradesTab = new GradesTab(homePageTabPane, loader);
+                GradesTab gradesTab = new GradesTab(homePageTabPane, loader, ghostSessionL);
             } else if (tab instanceof PersonalTutorTab) {
                 PersonalTutorTab tutorTab = new PersonalTutorTab(homePageTabPane, loader);
             } else if (tab instanceof ArchiveStudentTab) {

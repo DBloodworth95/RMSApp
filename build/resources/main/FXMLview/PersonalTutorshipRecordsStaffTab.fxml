@@ -226,12 +226,10 @@
                   <CheckBox mnemonicParsing="false" selected="true" />
                </graphic>
             </TableColumn>
-            <TableColumn fx:id="studentCol" editable="false" prefWidth="107.0" text="Student ID" />
+            <TableColumn fx:id="studentCol" editable="false" prefWidth="107.0" text="Appointment ID" />
             <TableColumn fx:id="studentFCol" editable="false" prefWidth="112.0" text="Student first name" />
             <TableColumn fx:id="studentSCol" editable="false" prefWidth="107.0" text="Student surname" />
             <TableColumn fx:id="tutorCol" prefWidth="152.12436485290527" text="Tutor ID" />
-            <TableColumn fx:id="tutorFCol" editable="false" prefWidth="112.0" text="Tutor first name" />
-            <TableColumn fx:id="tutorSCol" editable="false" prefWidth="107.0" text="Tutor surname" />
             <TableColumn fx:id="courseCol" editable="false" prefWidth="112.0" text="Student course title" />
             <TableColumn fx:id="moduleCol" editable="false" prefWidth="172.6666259765625" text="Student module title" />
             <TableColumn fx:id="yearCol" editable="false" minWidth="0.0" prefWidth="54.3333740234375" text="Year" />

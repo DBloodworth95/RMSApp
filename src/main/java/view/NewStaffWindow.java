@@ -6,10 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class NewStaffWindow {
 
-    public NewStaffWindow(StaffTabController staffTabController) throws IOException {
+    public NewStaffWindow(StaffTabController staffTabController) throws IOException, SQLException {
         FXMLLoader createStaffLoader = new FXMLLoader();
         createStaffLoader.setLocation(getClass().getResource("/FXMLview/NewStaffTab.fxml"));
         Scene scene = new Scene(createStaffLoader.load(), 1440,580);

@@ -296,7 +296,7 @@ public class StaffTabController {
         System.out.println("Removed selected items!");
     }
 
-    public void openNewStaffTab() throws IOException {
+    public void openNewStaffTab() throws IOException, SQLException {
         new NewStaffWindow(this);
     }
 

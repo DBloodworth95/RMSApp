@@ -22,7 +22,7 @@ public class PersonalTutorTabController {
     @FXML
     private TableView tutorTV;
     @FXML
-    private TableColumn studentCol, studentFCol, studentSCol, tutorCol, tutorFCol, tutorSCol, courseCol, moduleCol, yearCol, appCol, patCol;
+    private TableColumn studentCol, studentFCol, studentSCol, tutorCol, courseCol, moduleCol, yearCol, appCol, patCol;
 
     public List<Appointment> fetchTable(boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -38,32 +38,28 @@ public class PersonalTutorTabController {
                 int tutorID = Integer.parseInt(result.getString("tutor_id"));
                 String studentFN = result.getString("student_first_name");
                 String studentS = result.getString("student_surname");
-                String tutorFN = result.getString("tutor_first_name");
-                String tutorS = result.getString("tutor_surname");
                 String course = result.getString("course");
                 String module = result.getString("module");
                 String year = result.getString("year");
                 String date = result.getString("date");
                 String pat = result.getString("pat_form");
 
-                appointments.add(new Appointment(studentID, tutorID, studentFN, studentS, tutorFN, tutorS, course, module, year, date, pat));
+                appointments.add(new Appointment(studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
             }
         } else {
             ResultSet result = fetchApp.executeQuery("SELECT * FROM appointments WHERE archived = 0");
             while (result.next()) {
-                int studentID = Integer.parseInt(result.getString("student_id"));
+                int studentID = Integer.parseInt(result.getString("appointment_id"));
                 int tutorID = Integer.parseInt(result.getString("tutor_id"));
                 String studentFN = result.getString("student_first_name");
                 String studentS = result.getString("student_surname");
-                String tutorFN = result.getString("tutor_first_name");
-                String tutorS = result.getString("tutor_surname");
                 String course = result.getString("course");
                 String module = result.getString("module");
                 String year = result.getString("year");
                 String date = result.getString("date");
                 String pat = result.getString("pat_form");
 
-                appointments.add(new Appointment(studentID, tutorID, studentFN, studentS, tutorFN, tutorS, course, module, year, date, pat));
+                appointments.add(new Appointment(studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
             }
         }
         return appointments;
@@ -74,8 +70,6 @@ public class PersonalTutorTabController {
         studentFCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("studentFN"));
         studentSCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("studentS"));
         tutorCol.setCellValueFactory(new PropertyValueFactory<Appointment, Integer>("tutorId"));
-        tutorFCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("tutorFN"));
-        tutorSCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("tutorS"));
         courseCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("course"));
         moduleCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("module"));
         yearCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("year"));
@@ -86,8 +80,6 @@ public class PersonalTutorTabController {
         studentFCol.setCellFactory(TextFieldTableCell.forTableColumn());
         studentSCol.setCellFactory(TextFieldTableCell.forTableColumn());
         tutorCol.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-        tutorFCol.setCellFactory(TextFieldTableCell.forTableColumn());
-        tutorSCol.setCellFactory(TextFieldTableCell.forTableColumn());
         courseCol.setCellFactory(TextFieldTableCell.forTableColumn());
         moduleCol.setCellFactory(TextFieldTableCell.forTableColumn());
         yearCol.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -121,10 +113,6 @@ public class PersonalTutorTabController {
                 (EventHandler<TableColumn.CellEditEvent<Appointment, String>>) appointmentStringCellEditEvent -> ((Appointment) appointmentStringCellEditEvent.getTableView().getItems().get(appointmentStringCellEditEvent.getTablePosition().getRow())).setStudentS(appointmentStringCellEditEvent.getNewValue()));
         tutorCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Appointment, Integer>>) appointmentIntegerCellEditEvent -> ((Appointment) appointmentIntegerCellEditEvent.getTableView().getItems().get(appointmentIntegerCellEditEvent.getTablePosition().getRow())).setTutorId(appointmentIntegerCellEditEvent.getNewValue()));
-        tutorFCol.setOnEditCommit(
-                (EventHandler<TableColumn.CellEditEvent<Appointment, String>>) appointmentStringCellEditEvent -> ((Appointment) appointmentStringCellEditEvent.getTableView().getItems().get(appointmentStringCellEditEvent.getTablePosition().getRow())).setTutorFN(appointmentStringCellEditEvent.getNewValue()));
-        tutorSCol.setOnEditCommit(
-                (EventHandler<TableColumn.CellEditEvent<Appointment, String>>) appointmentStringCellEditEvent -> ((Appointment) appointmentStringCellEditEvent.getTableView().getItems().get(appointmentStringCellEditEvent.getTablePosition().getRow())).setTutorS(appointmentStringCellEditEvent.getNewValue()));
         courseCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Appointment, String>>) appointmentStringCellEditEvent -> ((Appointment) appointmentStringCellEditEvent.getTableView().getItems().get(appointmentStringCellEditEvent.getTablePosition().getRow())).setCourse(appointmentStringCellEditEvent.getNewValue()));
         moduleCol.setOnEditCommit(
@@ -147,8 +135,6 @@ public class PersonalTutorTabController {
             appList.get(i).add(appointment.getStudentFN());
             appList.get(i).add(appointment.getStudentS());
             appList.get(i).add(Integer.toString(appointment.getTutorId()));
-            appList.get(i).add(appointment.getTutorFN());
-            appList.get(i).add(appointment.getTutorS());
             appList.get(i).add(appointment.getCourse());
             appList.get(i).add(appointment.getModule());
             appList.get(i).add(appointment.getYear());
@@ -159,8 +145,7 @@ public class PersonalTutorTabController {
             String username = "root";
             String password = "root";
             String query = ("UPDATE appointments SET student_id='" + appointment.getStudentId() + "', student_first_name='" + appointment.getStudentFN() + "', student_surname='" + appointment.getStudentS() +
-                    "', tutor_id='" + appointment.getTutorId() + "', tutor_first_name='" + appointment.getTutorFN() + "', tutor_surname='" + appointment.getTutorS() +
-                    "', course='" + appointment.getCourse() + "', module='" + appointment.getModule() + "', year='" + appointment.getYear() + "', date='" + appointment.getAppDate() +
+                    "', tutor_id='" + appointment.getTutorId() + "' + course='" + appointment.getCourse() + "', module='" + appointment.getModule() + "', year='" + appointment.getYear() + "', date='" + appointment.getAppDate() +
                     "', pat_form='" + appointment.getPatForm() + "'WHERE student_id='" + appointment.getStudentId() + "'");
             Connection myCon = DriverManager.getConnection(dbURL, username, password);
             PreparedStatement preparedStatement = myCon.prepareStatement(query);
