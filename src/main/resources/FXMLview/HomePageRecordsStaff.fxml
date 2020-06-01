@@ -382,7 +382,7 @@
                         </Text>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="30.0" fitWidth="28.0" onMouseClicked="#createIMChat" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Images/messagesBtn.png" />
                                  </image>
@@ -392,7 +392,7 @@
                               <Insets left="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="MESSAGE">
+                        <Text fill="#464444" onMouseClicked="#createIMChat" strokeType="OUTSIDE" strokeWidth="0.0" text="MESSAGE">
                            <HBox.margin>
                               <Insets left="3.0" right="10.0" />
                            </HBox.margin>

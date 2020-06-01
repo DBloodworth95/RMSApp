@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentBoxController">
+<HBox fx:id="hBox" alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentBoxController">
    <children>
       <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
          <graphic>

@@ -64,7 +64,7 @@ public class LoginController {
                 loginButton.getScene().setRoot(homePage);
                 Object temp = loader.getController();
                 HomePageController controller = (HomePageController) temp;
-                controller.setLoginUsername("Logged in as " + session.getUsername());
+                controller.setLoginUsername(session.getUsername());
                 controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
                 controller.setGhostSessionL(Integer.toString(session.getId()));
                 controller.setDateLabel();

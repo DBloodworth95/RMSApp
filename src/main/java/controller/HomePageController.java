@@ -1,5 +1,7 @@
 package controller;
 
+import chat_client.ChatClient;
+import chat_client.UserListPane;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -40,7 +42,6 @@ public class HomePageController {
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
     private Alert tabLimitError = new Alert(Alert.AlertType.ERROR);
-
 
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
@@ -221,6 +222,10 @@ public class HomePageController {
         homePageTabPane.getTabs().add(homeTab);
         homeTab.setText("Home");
         homeTab.setContent(homeTabContent);
+    }
+
+    public void createIMChat() throws IOException {
+        new UserListPane(loginLabel.getText());
     }
 
     public void createTutorTab() throws IOException, SQLException {
