@@ -27,6 +27,7 @@ public class Main extends Application {
         LoginController controller = (LoginController) temp;
         controller.initial();
         primaryStage.setMaximized(true);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
