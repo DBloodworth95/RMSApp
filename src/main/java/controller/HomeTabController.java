@@ -58,4 +58,20 @@ public class HomeTabController {
         controller.checkForSave();
     }
 
+    public void showNewCourseWindow() throws SQLException, IOException {
+        FXMLLoader createCourseLoader = new FXMLLoader();
+        createCourseLoader.setLocation(getClass().getResource("/FXMLview/NewCourseTab.fxml"));
+        Scene scene = new Scene(createCourseLoader.load(), 1440,580);
+        Stage stage = new Stage();
+        stage.setTitle("Add a Module");
+        stage.setScene(scene);
+        stage.setResizable(true);
+        stage.setMaximized(true);
+        stage.show();
+        Object temp = createCourseLoader.getController();
+        NewCourseWindowController controller = (NewCourseWindowController) temp;
+        controller.populateCB();
+        controller.checkForSave();
+    }
+
 }

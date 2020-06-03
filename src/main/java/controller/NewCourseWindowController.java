@@ -131,4 +131,14 @@ public class NewCourseWindowController {
             }
         });
     }
+
+    public void checkForSave() {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createCourse();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

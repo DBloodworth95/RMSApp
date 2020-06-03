@@ -238,7 +238,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3">
                                        <children>
-                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewCourseWindow" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@Images/plusBtn.png" />
                                              </image>
@@ -246,7 +246,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add course" />
+                                          <Text onMouseClicked="#showNewCourseWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add course" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
