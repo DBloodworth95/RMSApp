@@ -42,4 +42,20 @@ public class HomeTabController {
         controller.checkForSave();
     }
 
+    public void showNewModuleWindow() throws SQLException, IOException {
+        FXMLLoader createModuleLoader = new FXMLLoader();
+        createModuleLoader.setLocation(getClass().getResource("/FXMLview/NewModuleTab.fxml"));
+        Scene scene = new Scene(createModuleLoader.load(), 1440,580);
+        Stage stage = new Stage();
+        stage.setTitle("Add a Module");
+        stage.setScene(scene);
+        stage.setResizable(true);
+        stage.setMaximized(true);
+        stage.show();
+        Object temp = createModuleLoader.getController();
+        NewModuleWindowController controller = (NewModuleWindowController) temp;
+        controller.populateCB();
+        controller.checkForSave();
+    }
+
 }

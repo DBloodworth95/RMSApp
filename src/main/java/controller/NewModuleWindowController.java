@@ -142,4 +142,14 @@ public class NewModuleWindowController {
             }
         });
     }
+
+    public void checkForSave() {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createModule();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

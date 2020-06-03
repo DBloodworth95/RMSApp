@@ -225,7 +225,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">
                                        <children>
-                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewModuleWindow" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@Images/plusBtn.png" />
                                              </image>
@@ -233,7 +233,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add module" />
+                                          <Text onMouseClicked="#showNewModuleWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add module" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3">
