@@ -148,4 +148,14 @@ public class NewStaffTabController {
             }
         });
     }
+
+    public void checkForSave() {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createStaff();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }

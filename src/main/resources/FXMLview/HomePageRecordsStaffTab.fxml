@@ -212,7 +212,7 @@
                                  <children>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="1">
                                        <children>
-                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewStaffWindow" pickOnBounds="true" preserveRatio="true">
                                              <HBox.margin>
                                                 <Insets right="10.0" />
                                              </HBox.margin>
@@ -220,7 +220,7 @@
                                                 <Image url="@Images/plusBtn.png" />
                                              </image>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add tutor" />
+                                          <Text onMouseClicked="#showNewStaffWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add staff" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">
