@@ -321,16 +321,16 @@
                      </HBox.margin></Separator>
                   <HBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="120.0">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCalendar" onMouseClicked="#createCalendar" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"  prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="28.0" onMouseClicked="#createCalendar" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Images/calendarBtn.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createCalendar" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="CALENDAR">
+                        <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: TRANSPARENT; -fx-background-radius: 5PX;" text="CALENDAR">
                            <font>
                               <Font size="12.0" />
                            </font></Button>
@@ -402,14 +402,14 @@
                         </Text>
                         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="30.0" fitWidth="28.0" onMouseClicked="#showDiary" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Images/diaryBtn.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="DIARY">
+                        <Text fill="#464444" onMouseClicked="#showDiary" strokeType="OUTSIDE" strokeWidth="0.0" text="DIARY">
                            <HBox.margin>
                               <Insets left="3.0" right="30.0" />
                            </HBox.margin>

@@ -204,6 +204,7 @@ public class HomePageController {
         homePageTabPane.getTabs().add(homeTab);
         homeTab.setText("Home");
         homeTab.setContent(homeTabContent);
+        homePageTabPane.getSelectionModel().select(homeTab);
     }
 
     public void createHomeTabCL() throws IOException {
@@ -213,6 +214,7 @@ public class HomePageController {
         homePageTabPane.getTabs().add(homeTab);
         homeTab.setText("Home");
         homeTab.setContent(homeTabContent);
+        homePageTabPane.getSelectionModel().select(homeTab);
     }
 
     public void createHomeTabT() throws IOException {
@@ -222,6 +224,7 @@ public class HomePageController {
         homePageTabPane.getTabs().add(homeTab);
         homeTab.setText("Home");
         homeTab.setContent(homeTabContent);
+        homePageTabPane.getSelectionModel().select(homeTab);
     }
 
     public void createIMChat() throws IOException {
