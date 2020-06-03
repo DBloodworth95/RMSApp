@@ -74,4 +74,20 @@ public class HomeTabController {
         controller.checkForSave();
     }
 
+    public void showNewGradeWindow() throws SQLException, IOException {
+        FXMLLoader createGradeLoader = new FXMLLoader();
+        createGradeLoader.setLocation(getClass().getResource("/FXMLview/NewGradeTab.fxml"));
+        Scene scene = new Scene(createGradeLoader.load(), 1440,580);
+        Stage stage = new Stage();
+        stage.setTitle("Add a Grade");
+        stage.setScene(scene);
+        stage.setResizable(true);
+        stage.setMaximized(true);
+        stage.show();
+        Object temp = createGradeLoader.getController();
+        NewGradeWindowController controller = (NewGradeWindowController) temp;
+        controller.populateCB();
+        controller.newRecordCheck();
+    }
+
 }

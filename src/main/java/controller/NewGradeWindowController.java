@@ -119,5 +119,15 @@ public class NewGradeWindowController {
             }
         });
     }
+
+    public void newRecordCheck() {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createGrade();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }
 
