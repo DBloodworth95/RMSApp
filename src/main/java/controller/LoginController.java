@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
+import view.PasswordHelpWindow;
 
 import java.io.IOException;
 import java.sql.*;
@@ -93,6 +94,10 @@ public class LoginController {
         if(key.getCode() == KeyCode.ENTER) {
             loginAttempt();
         }
+    }
+
+    public void showPasswordHelp() {
+        PasswordHelpWindow.showPasswordWindow();
     }
 
 
