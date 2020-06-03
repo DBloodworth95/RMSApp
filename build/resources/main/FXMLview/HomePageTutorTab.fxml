@@ -382,7 +382,7 @@
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3" />
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
                                        <children>
-                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewAssessmentWindow" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@Images/plusBtn.png" />
                                              </image>
@@ -390,7 +390,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add assessment" />
+                                          <Text onMouseClicked="#showNewAssessmentWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add assessment" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0">

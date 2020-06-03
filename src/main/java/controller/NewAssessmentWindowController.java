@@ -122,4 +122,14 @@ public class NewAssessmentWindowController {
             }
         });
     }
+
+    public void checkForSave() {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createAssessment();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }
