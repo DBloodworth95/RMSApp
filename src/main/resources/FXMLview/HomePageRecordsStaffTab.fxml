@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="580.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentTabController">
+<AnchorPane prefHeight="580.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeTabController">
    <children>
       <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="600.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -30,19 +30,22 @@
                                  <content>
                                     <HBox>
                                        <children>
-                                          <HBox minWidth="-Infinity" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                          <HBox minWidth="-Infinity" prefWidth="550.0" HBox.hgrow="ALWAYS" />
                                           <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <AnchorPane HBox.hgrow="ALWAYS">
                                                    <children>
                                                       <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
                                                                <children>
-                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NOTIFICATIONS">
+                                                                  <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTIFICATIONS">
                                                                      <font>
-                                                                        <Font size="12.0" />
-                                                                     </font></Text>
+                                                                        <Font size="24.0" />
+                                                                     </font>
+                                                                     <HBox.margin>
+                                                                        <Insets bottom="5.0" top="10.0" />
+                                                                     </HBox.margin></Text>
                                                                </children>
                                                                <padding>
                                                                   <Insets left="15.0" right="15.0" />
@@ -57,164 +60,12 @@
                                                                               <Insets bottom="10.0" />
                                                                            </VBox.margin>
                                                                            <font>
-                                                                              <Font size="12.0" />
+                                                                              <Font size="14.0" />
                                                                            </font>
                                                                         </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true">
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font></Label>
+                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
                                                                      </children>
                                                                   </VBox>
-                                                               </children>
-                                                               <padding>
-                                                                  <Insets left="15.0" right="15.0" />
-                                                               </padding>
-                                                            </HBox>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: #f0f0f0#f0f0f0;">
-                                                               <children>
-                                                                  <VBox>
-                                                                     <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem">
-                                                                           <VBox.margin>
-                                                                              <Insets bottom="10.0" />
-                                                                           </VBox.margin>
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font>
-                                                                        </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true">
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font></Label>
-                                                                     </children>
-                                                                  </VBox>
-                                                               </children>
-                                                               <padding>
-                                                                  <Insets left="15.0" right="15.0" />
-                                                               </padding>
-                                                            </HBox>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
-                                                               <children>
-                                                                  <VBox>
-                                                                     <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem">
-                                                                           <VBox.margin>
-                                                                              <Insets bottom="10.0" />
-                                                                           </VBox.margin>
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font>
-                                                                        </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true">
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font></Label>
-                                                                     </children>
-                                                                  </VBox>
-                                                               </children>
-                                                               <padding>
-                                                                  <Insets left="15.0" right="15.0" />
-                                                               </padding>
-                                                            </HBox>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: #f0f0f0#f0f0f0;">
-                                                               <children>
-                                                                  <VBox>
-                                                                     <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem">
-                                                                           <VBox.margin>
-                                                                              <Insets bottom="10.0" />
-                                                                           </VBox.margin>
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font>
-                                                                        </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true">
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font></Label>
-                                                                     </children>
-                                                                  </VBox>
-                                                               </children>
-                                                               <padding>
-                                                                  <Insets left="15.0" right="15.0" />
-                                                               </padding>
-                                                            </HBox>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
-                                                               <children>
-                                                                  <VBox>
-                                                                     <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem">
-                                                                           <VBox.margin>
-                                                                              <Insets bottom="10.0" />
-                                                                           </VBox.margin>
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font>
-                                                                        </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true">
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font></Label>
-                                                                     </children>
-                                                                  </VBox>
-                                                               </children>
-                                                               <padding>
-                                                                  <Insets left="15.0" right="15.0" />
-                                                               </padding>
-                                                            </HBox>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" style="-fx-background-color: #f0f0f0#f0f0f0;">
-                                                               <children>
-                                                                  <VBox>
-                                                                     <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem">
-                                                                           <VBox.margin>
-                                                                              <Insets bottom="10.0" />
-                                                                           </VBox.margin>
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font>
-                                                                        </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true">
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font></Label>
-                                                                     </children>
-                                                                  </VBox>
-                                                               </children>
-                                                               <padding>
-                                                                  <Insets left="15.0" right="15.0" />
-                                                               </padding>
-                                                            </HBox>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
-                                                               <children>
-                                                                  <VBox>
-                                                                     <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem">
-                                                                           <VBox.margin>
-                                                                              <Insets bottom="10.0" />
-                                                                           </VBox.margin>
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font>
-                                                                        </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true">
-                                                                           <font>
-                                                                              <Font size="12.0" />
-                                                                           </font></Label>
-                                                                     </children>
-                                                                  </VBox>
-                                                               </children>
-                                                               <padding>
-                                                                  <Insets left="15.0" right="15.0" />
-                                                               </padding>
-                                                            </HBox>
-                                                            <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0" style="-fx-background-color: #f0f0f0#f0f0f0;">
-                                                               <children>
-                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all...">
-                                                                     <font>
-                                                                        <Font size="11.0" />
-                                                                     </font></Text>
                                                                </children>
                                                                <padding>
                                                                   <Insets left="15.0" right="15.0" />
@@ -256,14 +107,8 @@
                                                 <Image url="@Images/studentStatIcon.png" />
                                              </image>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" courses across the university">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="100" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" courses across the university" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="1">
@@ -276,14 +121,8 @@
                                                 <Image url="@Images/scrollStatIcon.png" />
                                              </image>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" modules across the university">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="600" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" modules across the university" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">
@@ -296,14 +135,8 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="200">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 1 Students">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="200" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 1 Students" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3">
@@ -316,14 +149,8 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="175">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 2 Students">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="175" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 2 Students" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
@@ -336,14 +163,8 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="155">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 3 students">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="155" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Level 3 students" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -359,6 +180,21 @@
                               <Insets />
                            </opaqueInsets>
                         </AnchorPane>
+                        <VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="500.0" StackPane.alignment="CENTER_LEFT">
+                           <children>
+                              <ImageView fitWidth="450.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../../../../images/Woodlands.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="50.0" top="20.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
                         <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" style="-fx-border-width: 0px 0px 1px 0px; -fx-border-color: grey; -fx-border-style: solid; -fx-view-order: 0; -fx-background-color: white;" StackPane.alignment="BOTTOM_CENTER">
                            <children>
                               <GridPane alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -384,10 +220,7 @@
                                                 <Image url="@Images/plusBtn.png" />
                                              </image>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add tutor">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add tutor" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">
@@ -400,10 +233,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add module">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add module" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3">
@@ -416,10 +246,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add course">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add course" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
@@ -432,15 +259,12 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upload attendance">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upload attendance" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0">
                                        <children>
-                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewStudentWindow" pickOnBounds="true" preserveRatio="true">
                                              <HBox.margin>
                                                 <Insets right="10.0" />
                                              </HBox.margin>
@@ -448,10 +272,7 @@
                                                 <Image url="@Images/plusBtn.png" />
                                              </image>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add student">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text onMouseClicked="#showNewStudentWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add student" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="5">
@@ -464,10 +285,7 @@
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Diary entry">
-                                             <font>
-                                                <Font size="11.0" />
-                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Diary entry" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -483,21 +301,6 @@
                               <Insets />
                            </opaqueInsets>
                         </AnchorPane>
-                        <VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" StackPane.alignment="CENTER_LEFT">
-                           <children>
-                              <ImageView fitWidth="350.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
-                                 <image>
-                                    <Image url="@../../../../images/Woodlands.png" />
-                                 </image>
-                                 <viewport>
-                                    <Rectangle2D />
-                                 </viewport>
-                                 <VBox.margin>
-                                    <Insets bottom="20.0" top="20.0" />
-                                 </VBox.margin>
-                              </ImageView>
-                           </children>
-                        </VBox>
                      </children>
                   </StackPane>
                </children>

@@ -150,4 +150,14 @@ public class NewStudentTabController {
             }
         });
     }
+
+    public void checkForSave() {
+        saveBtn.setOnAction((e)-> {
+            try {
+                createStudent();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+    }
 }
