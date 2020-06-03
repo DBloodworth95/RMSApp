@@ -23,18 +23,33 @@ public class CalendarWindow {
         Statement fetchStaff = rmsConnection.createStatement();
         ResultSet result = fetchStaff.executeQuery("SELECT * FROM users WHERE user_id ='" + Integer.parseInt(label.getText()) + "'");
         while (result.next()) {
-            VCalendar vCalendar = VCalendar.parse(result.getString("calendar_info"));
-            ICalendarAgenda agenda = new ICalendarAgenda(vCalendar);
-            BorderPane root = new BorderPane();
-            Scene scene = new Scene(root, 1366, 768);
-            Stage stage = new Stage();
-            Label ghostL = new Label(label.getText());
-            setupComponents(root, agenda, ghostL);
-            root.setCenter(agenda);
-            stage.setMaximized(true);
-            stage.setScene(scene);
-            stage.show();
-            closeCalendar(stage, vCalendar, ghostL);
+                VCalendar vCalendar = VCalendar.parse(result.getString("calendar_info"));
+                if(vCalendar != null) {
+                ICalendarAgenda agenda = new ICalendarAgenda(vCalendar);
+                BorderPane root = new BorderPane();
+                Scene scene = new Scene(root, 1366, 768);
+                Stage stage = new Stage();
+                Label ghostL = new Label(label.getText());
+                setupComponents(root, agenda, ghostL);
+                root.setCenter(agenda);
+                stage.setMaximized(true);
+                stage.setScene(scene);
+                stage.show();
+                closeCalendar(stage, vCalendar, ghostL);
+            } else {
+                VCalendar newCal = new VCalendar();
+                ICalendarAgenda agenda = new ICalendarAgenda(newCal);
+                BorderPane root = new BorderPane();
+                Scene scene = new Scene(root, 1366, 768);
+                Stage stage = new Stage();
+                Label ghostL = new Label(label.getText());
+                setupComponents(root, agenda, ghostL);
+                root.setCenter(agenda);
+                stage.setMaximized(true);
+                stage.setScene(scene);
+                stage.show();
+                closeCalendar(stage, newCal, ghostL);
+            }
 
         }
     }

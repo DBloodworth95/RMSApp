@@ -193,7 +193,7 @@ public class HomePageController {
         diaryTab.setContent(diaryTabContent);
     }
 
-    public void createCalendar() throws SQLException {
+    public void showDiary() throws SQLException {
         new CalendarWindow(ghostSessionL);
     }
 
