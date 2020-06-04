@@ -16,6 +16,9 @@ import javafx.util.converter.IntegerStringConverter;
 import model.Staff;
 import model.TablePrinter;
 import view.NewStaffWindow;
+import view.NewStudentWindow;
+
+import java.awt.event.MouseListener;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -297,7 +300,7 @@ public class StaffTabController {
     }
 
     public void openNewStaffTab() throws IOException, SQLException {
-        new NewStaffWindow(this);
+        new NewStaffWindow(this, 0);
     }
 
     public void archiveStaff() throws SQLException {
@@ -315,5 +318,11 @@ public class StaffTabController {
     public void printTable() {
         TablePrinter tablePrinter = new TablePrinter();
         tablePrinter.print(Paper.A4, staffTV);
+    }
+
+    public void editStudent() throws IOException, SQLException {
+        Object selectedItems = staffTV.getSelectionModel().getSelectedItems().get(0);
+        int id = (int) staffIDCol.getCellData(selectedItems);
+        new NewStaffWindow(this, id);
     }
 }

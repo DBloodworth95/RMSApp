@@ -52,7 +52,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: #cecece; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px; -fx-opacity: 0.5;" text="Automatically generated">
+                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                                    <font>
                                                       <Font size="12.0" />
                                                    </font>

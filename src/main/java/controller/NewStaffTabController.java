@@ -29,7 +29,7 @@ public class NewStaffTabController {
             Connection myConnection = DriverManager.getConnection(dbURL, username, password);
             PreparedStatement preparedStatement = myConnection.prepareStatement(query);
             preparedStatement.setString(1, statusCB.getValue().toString());
-            if(!statusCB.getValue().toString().equals("Dormant")) {
+            if (!statusCB.getValue().toString().equals("Dormant")) {
                 preparedStatement.setString(2, "Inactive");
             } else {
                 preparedStatement.setString(2, dormCB.getValue().toString());
@@ -65,7 +65,7 @@ public class NewStaffTabController {
             newUserStatement.setString(2, firstNameTF.getText() + "" + surnameTF.getText());
             newUserStatement.setInt(3, 4);
             newUserStatement.setString(4, courseCB.getValue().toString());
-            while(getStaff.next()) {
+            while (getStaff.next()) {
                 newUserStatement.setString(5, String.valueOf(getStaff.getInt("staff_id")));
             }
             newUserStatement.execute();
@@ -92,13 +92,13 @@ public class NewStaffTabController {
     }
 
     private boolean verifyFilledInputFields() {
-        TextField[] inputForms = new TextField[] {
+        TextField[] inputForms = new TextField[]{
                 firstNameTF, middleNameTF, surnameTF, pwTF, addNumberTF, houseNTF, houseSTF, houseTTF, countyTF, countryTF, zipTF, phoneTF, emailTF,
                 emergPTF, emergETF};
-        ComboBox[] comboForms = new ComboBox[] {
+        ComboBox[] comboForms = new ComboBox[]{
                 genderCB, statusCB, dormCB, specialismCB
         };
-        TextArea[] inputFormsTA = new TextArea[] {
+        TextArea[] inputFormsTA = new TextArea[]{
                 allergyTA, religiousTA, addNoteTA, medicalHTA
         };
         for (TextField inputForm : inputForms) {
@@ -128,7 +128,7 @@ public class NewStaffTabController {
                 return true;
             }
         }
-        if(statusCB.getValue().toString().equals("Dormant") && dormCB.getValue().toString().equals("Inactive")) {
+        if (statusCB.getValue().toString().equals("Dormant") && dormCB.getValue().toString().equals("Inactive")) {
             errorAlert.setTitle("Record entry failed.");
             errorAlert.setHeaderText(null);
             errorAlert.setContentText("Entry cannot be Dormant and Inactive at the same time!");
@@ -139,7 +139,7 @@ public class NewStaffTabController {
     }
 
     public void checkForSave(StaffTabController staffTabController) {
-        saveBtn.setOnAction((e)-> {
+        saveBtn.setOnAction((e) -> {
             try {
                 createStaff();
                 staffTabController.populate();
@@ -150,12 +150,26 @@ public class NewStaffTabController {
     }
 
     public void checkForSave() {
-        saveBtn.setOnAction((e)-> {
+        saveBtn.setOnAction((e) -> {
             try {
                 createStaff();
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         });
+    }
+
+    public void fetchStudentForEdit(int id) throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection myConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = myConnection.createStatement();
+        ResultSet getStaff = fetchStaff.executeQuery("SELECT * FROM staff WHERE staff_id='" + id + "'");
+        while (getStaff.next()) {
+            idTF.setText(getStaff.getString("staff_id"));
+        }
+
+
     }
 }

@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class NewStaffWindow {
 
-    public NewStaffWindow(StaffTabController staffTabController) throws IOException, SQLException {
+    public NewStaffWindow(StaffTabController staffTabController, int id) throws IOException, SQLException {
         FXMLLoader createStaffLoader = new FXMLLoader();
         createStaffLoader.setLocation(getClass().getResource("/FXMLview/NewStaffTab.fxml"));
         Scene scene = new Scene(createStaffLoader.load(), 1440,580);
@@ -24,5 +24,7 @@ public class NewStaffWindow {
         NewStaffTabController controller = (NewStaffTabController) temp;
         controller.populateCB();
         controller.checkForSave(staffTabController);
+        if(id != 0)
+            controller.fetchStudentForEdit(id);
     }
 }
