@@ -25,6 +25,6 @@ public class NewStaffWindow {
         controller.populateCB();
         controller.checkForSave(staffTabController);
         if(id != 0)
-            controller.fetchStudentForEdit(id);
+            controller.fetchStaffForEdit(id);
     }
 }

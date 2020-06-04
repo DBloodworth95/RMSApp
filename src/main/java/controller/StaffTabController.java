@@ -320,7 +320,7 @@ public class StaffTabController {
         tablePrinter.print(Paper.A4, staffTV);
     }
 
-    public void editStudent() throws IOException, SQLException {
+    public void editStaff() throws IOException, SQLException {
         Object selectedItems = staffTV.getSelectionModel().getSelectedItems().get(0);
         int id = (int) staffIDCol.getCellData(selectedItems);
         new NewStaffWindow(this, id);

@@ -159,7 +159,7 @@ public class NewStaffTabController {
         });
     }
 
-    public void fetchStudentForEdit(int id) throws SQLException {
+    public void fetchStaffForEdit(int id) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
@@ -168,6 +168,29 @@ public class NewStaffTabController {
         ResultSet getStaff = fetchStaff.executeQuery("SELECT * FROM staff WHERE staff_id='" + id + "'");
         while (getStaff.next()) {
             idTF.setText(getStaff.getString("staff_id"));
+            firstNameTF.setText(getStaff.getString("first_name"));
+            middleNameTF.setText(getStaff.getString("middle_name"));
+            surnameTF.setText(getStaff.getString("surname"));
+            addNumberTF.setText(getStaff.getString("address_number"));
+            houseNTF.setText(getStaff.getString("address_house_name"));
+            houseSTF.setText(getStaff.getString("address_street"));
+            houseTTF.setText(getStaff.getString("address_town"));
+            countyTF.setText(getStaff.getString("address_county"));
+            countryTF.setText(getStaff.getString("address_country"));
+            zipTF.setText(getStaff.getString("zip_code").toUpperCase());
+            phoneTF.setText(getStaff.getString("telephone"));
+            emailTF.setText(getStaff.getString("email_address"));
+            emergPTF.setText(getStaff.getString("emergency_contact_phone"));
+            emergETF.setText(getStaff.getString("emergency_contact_email"));
+            genderCB.setValue(getStaff.getString("gender").toUpperCase());
+            statusCB.setValue(getStaff.getString("status"));
+            dormCB.setValue(getStaff.getString("dormancy_reason"));
+            specialismCB.setValue(getStaff.getString("specialist_subject"));
+            allergyTA.setText(getStaff.getString("medical_allergies"));
+            religiousTA.setText(getStaff.getString("medical_religious"));
+            addNoteTA.setText(getStaff.getString("additional_notes"));
+            medicalHTA.setText(getStaff.getString("medical_history"));
+            courseCB.setValue("Computing");
         }
 
 
