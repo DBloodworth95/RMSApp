@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import javafx.util.converter.IntegerStringConverter;
 import model.TablePrinter;
 import model.student.Student;
+import view.NewStaffWindow;
 import view.NewStudentWindow;
 
 import java.io.IOException;
@@ -422,8 +423,8 @@ public class StudentTabController {
         System.out.println("Saved!");
     }
 
-    public void createStudent() throws IOException {
-        new NewStudentWindow(this);
+    public void createStudent() throws IOException, SQLException {
+        new NewStudentWindow(this, 0);
     }
 
     public void removeStudent() throws SQLException {
@@ -456,6 +457,12 @@ public class StudentTabController {
     public void printTable() {
         TablePrinter tablePrinter = new TablePrinter();
         tablePrinter.print(Paper.A4, studentTV);
+    }
+
+    public void editStudent() throws IOException, SQLException {
+        Object selectedItems = studentTV.getSelectionModel().getSelectedItems().get(0);
+        int id = (int) idCol.getCellData(selectedItems);
+        new NewStudentWindow(this, id);
     }
 }
 
