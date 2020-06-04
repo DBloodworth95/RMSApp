@@ -149,7 +149,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="0.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#showPasswordHelp" style="-fx-background-color: transparent;" text="Forgot password?" textFill="WHITE" />
+                              <Button mnemonicParsing="false" onMouseClicked="#showPasswordHelp" style="-fx-background-color: transparent;" text="Forgot password?" textFill="WHITE" />
                            </children>
                         </HBox>
                      </children>

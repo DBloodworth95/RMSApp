@@ -31,7 +31,7 @@ public class HomeTabController {
         createStaffLoader.setLocation(getClass().getResource("/FXMLview/NewStaffTab.fxml"));
         Scene scene = new Scene(createStaffLoader.load(), 1440,580);
         Stage stage = new Stage();
-        stage.setTitle("Add a Student");
+        stage.setTitle("Add a staff member");
         stage.setScene(scene);
         stage.setResizable(true);
         stage.setMaximized(true);
@@ -63,7 +63,7 @@ public class HomeTabController {
         createCourseLoader.setLocation(getClass().getResource("/FXMLview/NewCourseTab.fxml"));
         Scene scene = new Scene(createCourseLoader.load(), 1440,580);
         Stage stage = new Stage();
-        stage.setTitle("Add a Module");
+        stage.setTitle("Add a Course");
         stage.setScene(scene);
         stage.setResizable(true);
         stage.setMaximized(true);

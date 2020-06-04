@@ -2,13 +2,10 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -40,7 +37,7 @@
                   <Glow />
                </effect>
                <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
                      <image>
                         <Image url="@Images/addBtn.png" />
                      </image>
@@ -61,7 +58,7 @@
                   <Glow />
                </effect>
                <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
                      <image>
                         <Image url="@Images/archiveBtn.png" />
                      </image>
@@ -82,7 +79,7 @@
                   <Glow />
                </effect>
                <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
                      <image>
                         <Image url="@Images/deleteBtn.png" />
                      </image>
@@ -100,7 +97,7 @@
             </Button>
             <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateTable" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SAVE" textFill="#09adff">
                <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
                      <image>
                         <Image url="@Images/saveBtn.png" />
                      </image>
@@ -118,7 +115,7 @@
             </Button>
             <Button alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#printTable" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="PRINT" textFill="#09adff">
                <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0">
                      <image>
                         <Image url="@Images/printBtn.png" />
                      </image>
@@ -134,106 +131,23 @@
                   <Font size="12.0" />
                </font>
             </Button>
-            <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="100.0">
-               <children>
-                  <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;" text="Search me">
-                     <HBox.margin>
-                        <Insets top="1.0" />
-                     </HBox.margin>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </TextField>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: grey; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets top="1.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/searchBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 1px 0px 1px 1px; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px;" text="DISPLAY">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-            <HBox>
-               <children>
-                  <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 1px 0px 1px 1px; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px;" text="DISPLAY">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <padding>
-                        <Insets right="10.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
-                  <ComboBox minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="75.0" promptText="100" style="-fx-background-color: white; -fx-border-radius: 0px 5px 5px 0px; -fx-border-color: grey; -fx-border-style: solid; -fx-border-width: 1px;">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </ComboBox>
-                  <Separator orientation="VERTICAL" prefHeight="200.0">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Separator>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/AZBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/ZABtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Button>
-                  <Separator orientation="VERTICAL" prefHeight="200.0">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Separator>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" text="Button">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/fullscreenBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <HBox.margin>
-                        <Insets right="60.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <ComboBox minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="75.0" promptText="100" style="-fx-background-color: white; -fx-border-radius: 0px 5px 5px 0px; -fx-border-color: grey; -fx-border-style: solid; -fx-border-width: 1px;">
+               <HBox.margin>
+                  <Insets right="18.0" />
+               </HBox.margin>
+            </ComboBox>
          </children>
          <padding>
             <Insets bottom="10.0" left="30.0" top="10.0" />
@@ -241,11 +155,6 @@
       </HBox>
       <TableView fx:id="moduleTV" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
          <columns>
-            <TableColumn fx:id="firstNameCol8" editable="false" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" sortable="false">
-               <graphic>
-                  <CheckBox mnemonicParsing="false" selected="true" />
-               </graphic>
-            </TableColumn>
             <TableColumn fx:id="idCol" prefWidth="152.12436485290527" text="id" />
             <TableColumn fx:id="codeCol" prefWidth="152.12436485290527" text="Module code" />
             <TableColumn fx:id="courseCol" prefWidth="152.12436485290527" text="Course Code" />

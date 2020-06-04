@@ -365,35 +365,20 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="1" />
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewStudentWindow" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@Images/plusBtn.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text onMouseClicked="#showNewStudentWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add student" />
+                                       </children>
+                                    </HBox>
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">
-                                       <children>
-                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@Images/plusBtn.png" />
-                                             </image>
-                                             <HBox.margin>
-                                                <Insets right="10.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upload attendance" />
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3" />
-                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
-                                       <children>
-                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewAssessmentWindow" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@Images/plusBtn.png" />
-                                             </image>
-                                             <HBox.margin>
-                                                <Insets right="10.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Text onMouseClicked="#showNewAssessmentWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add assessment" />
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0">
                                        <children>
                                           <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewGradeWindow" pickOnBounds="true" preserveRatio="true">
                                              <HBox.margin>
@@ -406,6 +391,33 @@
                                           <Text onMouseClicked="#showNewGradeWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add grades" />
                                        </children>
                                     </HBox>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="3">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#showNewAssessmentWindow" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/plusBtn.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Text onMouseClicked="#showNewAssessmentWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Add assessment" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="4">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/plusBtn.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Upload attendance" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" />
                                     <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="5" />
                                  </children>
                                  <opaqueInsets>
