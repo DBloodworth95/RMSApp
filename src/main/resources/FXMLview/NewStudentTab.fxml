@@ -44,6 +44,19 @@
                                        <children>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                              <children>
+                                                <Label minWidth="-Infinity" prefWidth="100.0" text="Student ID">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: #cecece; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px; -fx-opacity: 0.5;" text="Automatically generated" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
+                                             <children>
                                                 <Label minWidth="-Infinity" prefWidth="100.0" text="First name">
                                                    <HBox.margin>
                                                       <Insets right="5.0" />
@@ -124,6 +137,19 @@
                                                    <font>
                                                       <Font size="12.0" />
                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="pictureTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="35.0">
+                                             <children>
+                                                <Label minWidth="-Infinity" prefWidth="70.0">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
                                                 </Label>
                                                 <Button fx:id="pictureBtn" minWidth="-Infinity" mnemonicParsing="false" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
                                                    <HBox.margin>
@@ -601,7 +627,7 @@
                                     </TextField>
                                  </children>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" VBox.vgrow="ALWAYS">
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="71.0" VBox.vgrow="ALWAYS">
                                  <children>
                                     <Separator minHeight="-Infinity" prefHeight="10.0" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
@@ -714,7 +740,7 @@
                                     <Insets top="5.0" />
                                  </VBox.margin>
                               </HBox>
-                              <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="250.0" VBox.vgrow="ALWAYS">
+                              <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="280.0" VBox.vgrow="ALWAYS">
                                  <children>
                                     <Label prefWidth="135.0" text="Additional notes">
                                        <HBox.margin>
@@ -724,7 +750,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextArea fx:id="addNoteTF" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="560.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                                    <TextArea fx:id="addNoteTF" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="560.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
