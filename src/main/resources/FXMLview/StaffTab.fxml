@@ -139,12 +139,12 @@
          <columns>
             <TableColumn fx:id="staffIDCol" prefWidth="152.12436485290527" text="Staff ID" />
             <TableColumn fx:id="firstNameCol" prefWidth="107.0" text="First name" />
-            <TableColumn fx:id="lastNameCol" prefWidth="112.0" text="Last Name" />
             <TableColumn fx:id="middleNameCol" prefWidth="112.0" text="Middle Name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="112.0" text="Last Name" />
             <TableColumn fx:id="genderCol" prefWidth="107.0" text="Gender" />
+            <TableColumn fx:id="specialistCol" prefWidth="107.0" text="Specialist Subject" />
             <TableColumn fx:id="phoneCol" minWidth="4.0" prefWidth="10.0" text="Telephone" />
             <TableColumn fx:id="emailCol" prefWidth="112.0" text="Email" />
-            <TableColumn fx:id="specialistCol" prefWidth="107.0" text="Specialist Subject" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
