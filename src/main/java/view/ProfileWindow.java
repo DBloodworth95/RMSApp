@@ -25,5 +25,6 @@ public class ProfileWindow {
         stage.show();
         Object temp = profileLoader.getController();
         ProfileController controller = (ProfileController) temp;
+        controller.loadProfile(Integer.parseInt(label.getText()));
     }
 }

@@ -45,7 +45,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField promptText="Username" />
+                        <TextField fx:id="usernameTF" editable="false" promptText="Username" />
                      </children>
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -58,8 +58,8 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField promptText="Password" />
-                        <Button mnemonicParsing="false" text="Change">
+                        <TextField fx:id="passwordTF" promptText="Password" />
+                        <Button mnemonicParsing="false" onAction="#changePassword" text="Change">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
@@ -76,7 +76,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField minHeight="-Infinity" prefWidth="160.5" promptText="Path">
+                        <TextField fx:id="pictureTF" minHeight="-Infinity" prefWidth="160.5" promptText="Path">
                            <HBox.margin>
                               <Insets right="5.0" />
                            </HBox.margin>
@@ -87,13 +87,14 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </HBox>
+                  <Label fx:id="passwordChangeL" prefHeight="30.0" prefWidth="221.0" text="Password changed successfully!" textFill="#ee0a0a" visible="false" />
                </children>
             </VBox>
             <VBox alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" maxWidth="-Infinity" style="-fx-background-color: #2c787c #2c787c #2c787c #2c787c; -fx-padding: 30; -fx-border-radius: 30; -fx-background-radius: 30;">
                      <children>
-                        <ImageView fitHeight="208.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="profilePictureIMG" fitHeight="208.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Images/profile.png" />
                            </image>
