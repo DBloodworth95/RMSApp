@@ -17,7 +17,7 @@ public class NewCourseWindow {
         createCourseLoader.setLocation(getClass().getResource("/FXMLview/NewCourseTab.fxml"));
         Scene scene = new Scene(createCourseLoader.load(), 1440,580);
         Stage stage = new Stage();
-        stage.setTitle("Add a Module");
+        stage.setTitle("Add a Course");
         stage.setScene(scene);
         stage.setResizable(true);
         stage.setMaximized(true);
