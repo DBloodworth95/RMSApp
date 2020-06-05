@@ -4,6 +4,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.sql.*;
@@ -28,7 +29,9 @@ public class ProfileController {
         while (result.next()) {
             usernameTF.setText(result.getString("username"));
             passwordTF.setText(result.getString("password"));
+
         }
+        profilePictureIMG.setImage(new Image("/FXMLview/Images/noprofile.png"));
         userID = id;
     }
 
@@ -40,6 +43,6 @@ public class ProfileController {
         Connection myCon = DriverManager.getConnection(dbURL, username, password);
         PreparedStatement preparedStatement = myCon.prepareStatement(query);
         preparedStatement.execute();
-            passwordChangeL.setVisible(true);
+        passwordChangeL.setVisible(true);
     }
 }
