@@ -223,7 +223,7 @@ public class HomePageController {
 
     public void createHomeTabT() throws IOException {
         Tab homeTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutor.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutorTab.fxml"));
         AnchorPane homeTabContent = loader.load();
         homePageTabPane.getTabs().add(homeTab);
         homeTab.setText("Home");
