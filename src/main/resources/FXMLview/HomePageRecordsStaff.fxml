@@ -101,7 +101,7 @@
                         <Font size="11.0" />
                      </font>
                   </Text>
-                  <Button fx:id="profileBtn1" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                  <Button fx:id="profileBtn1" layoutX="413.0" layoutY="47.0" mnemonicParsing="false" onAction="#showProfile" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>

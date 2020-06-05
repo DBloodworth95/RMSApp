@@ -166,6 +166,10 @@ public class HomePageController {
         checkTabLimit(new ArchivePersonalTutorTab(homePageTabPane, loader));
     }
 
+    public void showProfile() throws IOException, SQLException {
+        new ProfileWindow(ghostSessionL);
+    }
+
     public void createTutorshipTabT() throws IOException {
         Tab tutorshipTab = new Tab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/PersonalTutorshipTutorTab.fxml"));
