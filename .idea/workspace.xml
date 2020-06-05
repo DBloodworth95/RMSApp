@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b22efc5-99a1-4bdf-b46f-bdad8b4e5302" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/NewStudentTabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/NewStudentTabController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/StudentTabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/StudentTabController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewStudentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewStudentTabController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/view/NewStudentWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/view/NewStudentWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/StudentTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/StudentTab.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/NewStudentWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/NewStudentWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/StaffTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/StaffTab.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/StudentTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/StudentTab.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -307,14 +299,8 @@
       <workItem from="1591134804246" duration="470000" />
       <workItem from="1591190314770" duration="10541000" />
       <workItem from="1591270238669" duration="4888000" />
-      <workItem from="1591280849437" duration="9909000" />
-    </task>
-    <task id="LOCAL-00008" summary="Notification panel updated">
-      <created>1579112290881</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1579112290881</updated>
+      <workItem from="1591280849437" duration="10255000" />
+      <workItem from="1591358670579" duration="1071000" />
     </task>
     <task id="LOCAL-00009" summary="menu changed (simplified), bugs fixed,&#10;should display ok on all screens.">
       <created>1579118077115</created>
@@ -652,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591286256585</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Edit form for student tab, including data updating.">
+      <created>1591309446299</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1591309446299</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,7 +653,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed the county in students and staff&#10;added medical file in students and staff + scroll&#10;changed the odd gap that was visible on top of the tabs." />
     <MESSAGE value="Added QoL features such as &quot;Enter&quot; to login, form validation, Tab focusing." />
     <MESSAGE value="Optimized calendar, implemented loading/saving &amp; is now user-specific." />
     <MESSAGE value="Implemented Grades Tab with functionality. Implemented auto updating of tables when new entry added." />
@@ -685,7 +677,8 @@
     <MESSAGE value="Data populating for staff edit tab" />
     <MESSAGE value="Data updating for staff edit tab." />
     <MESSAGE value="Data updating for staff edit tab &amp; added profile FXML file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data updating for staff edit tab &amp; added profile FXML file" />
+    <MESSAGE value="Edit form for student tab, including data updating." />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit form for student tab, including data updating." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2362" y="113" width="800" height="683" key="#Custom_Plugin_Repositories" timestamp="1586175622021">
@@ -705,11 +698,11 @@
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state x="191" y="243" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585255383391" />
-    <state x="469" y="34" width="860" height="855" key="CommitChangelistDialog2" timestamp="1591286256418">
+    <state x="469" y="34" width="860" height="855" key="CommitChangelistDialog2" timestamp="1591309445619">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state x="469" y="34" width="884" height="960" key="CommitChangelistDialog2/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585508577052" />
-    <state x="469" y="34" width="860" height="855" key="CommitChangelistDialog2/65.25.1855.1055@65.25.1855.1055" timestamp="1591286256418" />
+    <state x="469" y="34" width="860" height="855" key="CommitChangelistDialog2/65.25.1855.1055@65.25.1855.1055" timestamp="1591309445619" />
     <state x="251" y="115" width="1484" height="844" key="DiffContextDialog" timestamp="1585411430382">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
@@ -718,7 +711,7 @@
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state x="775" y="310" width="424" height="490" key="FileChooserDialogImpl/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1585239015386" />
-    <state width="1809" height="132" key="GridCell.Tab.0.bottom" timestamp="1591309220757">
+    <state width="1809" height="132" key="GridCell.Tab.0.bottom" timestamp="1591359739707">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="678" height="236" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1584982048436" />
@@ -726,8 +719,8 @@
     <state width="1398" height="236" key="GridCell.Tab.0.bottom/0.23.1440.841@0.23.1440.841" timestamp="1584967318143" />
     <state width="678" height="236" key="GridCell.Tab.0.bottom/0.23.1440.842@0.23.1440.842" timestamp="1584977679374" />
     <state width="1809" height="222" key="GridCell.Tab.0.bottom/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="132" key="GridCell.Tab.0.bottom/65.25.1855.1055@65.25.1855.1055" timestamp="1591309220757" />
-    <state width="1809" height="132" key="GridCell.Tab.0.center" timestamp="1591309220756">
+    <state width="1809" height="132" key="GridCell.Tab.0.bottom/65.25.1855.1055@65.25.1855.1055" timestamp="1591359739707" />
+    <state width="1809" height="132" key="GridCell.Tab.0.center" timestamp="1591359739701">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="678" height="236" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1584982048435" />
@@ -735,8 +728,8 @@
     <state width="1398" height="236" key="GridCell.Tab.0.center/0.23.1440.841@0.23.1440.841" timestamp="1584967318143" />
     <state width="678" height="236" key="GridCell.Tab.0.center/0.23.1440.842@0.23.1440.842" timestamp="1584977679373" />
     <state width="1809" height="222" key="GridCell.Tab.0.center/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="132" key="GridCell.Tab.0.center/65.25.1855.1055@65.25.1855.1055" timestamp="1591309220756" />
-    <state width="1809" height="132" key="GridCell.Tab.0.left" timestamp="1591309220756">
+    <state width="1809" height="132" key="GridCell.Tab.0.center/65.25.1855.1055@65.25.1855.1055" timestamp="1591359739701" />
+    <state width="1809" height="132" key="GridCell.Tab.0.left" timestamp="1591359739699">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="678" height="236" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1584982048434" />
@@ -744,8 +737,8 @@
     <state width="1398" height="236" key="GridCell.Tab.0.left/0.23.1440.841@0.23.1440.841" timestamp="1584967318142" />
     <state width="678" height="236" key="GridCell.Tab.0.left/0.23.1440.842@0.23.1440.842" timestamp="1584977679372" />
     <state width="1809" height="222" key="GridCell.Tab.0.left/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="132" key="GridCell.Tab.0.left/65.25.1855.1055@65.25.1855.1055" timestamp="1591309220756" />
-    <state width="1809" height="132" key="GridCell.Tab.0.right" timestamp="1591309220756">
+    <state width="1809" height="132" key="GridCell.Tab.0.left/65.25.1855.1055@65.25.1855.1055" timestamp="1591359739699" />
+    <state width="1809" height="132" key="GridCell.Tab.0.right" timestamp="1591359739704">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
     <state width="678" height="236" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1584982048435" />
@@ -753,7 +746,7 @@
     <state width="1398" height="236" key="GridCell.Tab.0.right/0.23.1440.841@0.23.1440.841" timestamp="1584967318143" />
     <state width="678" height="236" key="GridCell.Tab.0.right/0.23.1440.842@0.23.1440.842" timestamp="1584977679374" />
     <state width="1809" height="222" key="GridCell.Tab.0.right/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="132" key="GridCell.Tab.0.right/65.25.1855.1055@65.25.1855.1055" timestamp="1591309220756" />
+    <state width="1809" height="132" key="GridCell.Tab.0.right/65.25.1855.1055@65.25.1855.1055" timestamp="1591359739704" />
     <state width="1809" height="341" key="GridCell.Tab.1.bottom" timestamp="1591117582340">
       <screen x="65" y="25" width="1855" height="1055" />
     </state>
