@@ -6,10 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class BookingWindow {
 
-    public BookingWindow() throws IOException {
+    public BookingWindow() throws IOException, SQLException {
         FXMLLoader createCourseLoader = new FXMLLoader();
         createCourseLoader.setLocation(getClass().getResource("/FXMLview/BookRoomTab.fxml"));
         Scene scene = new Scene(createCourseLoader.load(), 1448, 580);
@@ -22,5 +23,6 @@ public class BookingWindow {
         Object temp = createCourseLoader.getController();
         BookingController controller = (BookingController) temp;
         controller.populateCB();
+        controller.displayTable();
     }
 }

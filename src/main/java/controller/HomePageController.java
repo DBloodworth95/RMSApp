@@ -181,7 +181,7 @@ public class HomePageController {
         new SettingsWindow();
     }
 
-    public void showBooking() throws IOException {
+    public void showBooking() throws IOException, SQLException {
         new BookingWindow();
     }
 
