@@ -315,11 +315,7 @@ public class HomePageController {
 
 
     public void openWebsite(ActionEvent event) {
-        Application a = new Application() {
-            @Override
-            public void start(Stage stage) throws Exception {
-            }
-        };
+
         try {
             Desktop.getDesktop().browse(new URI("https://woodlandsuc.uk/"));
         } catch (IOException e) {
@@ -330,11 +326,7 @@ public class HomePageController {
     }
 
     public void openTwitter(ActionEvent event) {
-        Application a = new Application() {
-            @Override
-            public void start(Stage stage) throws Exception {
-            }
-        };
+
         try {
             Desktop.getDesktop().browse(new URI("https://www.twitter.com"));
         } catch (IOException e) {
@@ -345,11 +337,7 @@ public class HomePageController {
     }
 
     public void openLinkedin(ActionEvent event) {
-        Application a = new Application() {
-            @Override
-            public void start(Stage stage) throws Exception {
-            }
-        };
+
         try {
             Desktop.getDesktop().browse(new URI("https://www.linkedin.com"));
         } catch (IOException e) {
@@ -360,11 +348,7 @@ public class HomePageController {
     }
 
     public void openGoogle(ActionEvent event) {
-        Application a = new Application() {
-            @Override
-            public void start(Stage stage) throws Exception {
-            }
-        };
+
         try {
             Desktop.getDesktop().browse(new URI("https://www.google.com"));
         } catch (IOException e) {
@@ -375,11 +359,7 @@ public class HomePageController {
     }
 
     public void openFacebook(ActionEvent event) {
-        Application a = new Application() {
-            @Override
-            public void start(Stage stage) throws Exception {
-            }
-        };
+
         try {
             Desktop.getDesktop().browse(new URI("https://www.facebook.com"));
         } catch (IOException e) {
@@ -390,11 +370,7 @@ public class HomePageController {
     }
 
     public void openWilde(ActionEvent event) {
-        Application a = new Application() {
-            @Override
-            public void start(Stage stage) throws Exception {
-            }
-        };
+
         try {
             Desktop.getDesktop().browse(new URI("https://www.google.com"));
         } catch (IOException e) {
