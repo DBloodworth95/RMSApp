@@ -181,6 +181,10 @@ public class HomePageController {
         new SettingsWindow();
     }
 
+    public void showBooking() throws IOException {
+        new BookingWindow();
+    }
+
     public void createTutorshipTabT() throws IOException {
         Tab tutorshipTab = new Tab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/PersonalTutorshipTutorTab.fxml"));

@@ -312,7 +312,7 @@
                               <Font size="12.0" />
                            </font>
                         </Text>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showBooking" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
                            <graphic>
                               <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -320,7 +320,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOK ROOM">
+                        <Text fill="#464444" onMouseClicked="#showBooking" strokeType="OUTSIDE" strokeWidth="0.0" text="BOOK ROOM">
                            <HBox.margin>
                               <Insets right="12.0" />
                            </HBox.margin>

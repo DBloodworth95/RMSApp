@@ -1,4 +1,6 @@
 package view;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -7,6 +9,8 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import jfxtras.icalendarfx.VCalendar;
 import jfxtras.scene.control.agenda.icalendar.ICalendarAgenda;
+import model.Grade;
+
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.Period;
@@ -55,6 +59,9 @@ public class CalendarWindow {
     }
 
     private void setupComponents(BorderPane root, ICalendarAgenda agenda, Label label) {
+        ObservableList<String> rooms = FXCollections.observableArrayList();
+        rooms.add("room 304");
+        rooms.add("room 500");
         Button incrementWeek = new Button(">");
         Button decrementWeek = new Button("<");
         label.setVisible(true);
