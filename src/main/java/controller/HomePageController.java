@@ -177,6 +177,10 @@ public class HomePageController {
         new ProfileWindow(ghostSessionL);
     }
 
+    public void showSettings() throws IOException {
+        new SettingsWindow();
+    }
+
     public void createTutorshipTabT() throws IOException {
         Tab tutorshipTab = new Tab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/PersonalTutorshipTutorTab.fxml"));

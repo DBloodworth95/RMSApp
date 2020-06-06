@@ -10,17 +10,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 
-
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.File;;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.*;
 
 
@@ -35,7 +26,7 @@ public class ProfileController {
     private ImageView profilePictureIMG;
     private int userID = 0;
 
-    public void loadProfile(int id) throws SQLException, IOException {
+    public void loadProfile(int id) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
