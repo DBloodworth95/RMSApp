@@ -1,25 +1,41 @@
 package controller;
 
 
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.*;
 
 
 public class ProfileController {
     @FXML
-    private TextField usernameTF, passwordTF;
+    private AnchorPane profilePane;
+    @FXML
+    private TextField usernameTF, passwordTF, pictureTF;
     @FXML
     private Label passwordChangeL;
     @FXML
     private ImageView profilePictureIMG;
     private int userID = 0;
 
-    public void loadProfile(int id) throws SQLException {
+    public void loadProfile(int id) throws SQLException, IOException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
@@ -29,9 +45,12 @@ public class ProfileController {
         while (result.next()) {
             usernameTF.setText(result.getString("username"));
             passwordTF.setText(result.getString("password"));
-
+            String path = result.getString("profile_picture");
+            System.out.println(path);
+            Image image = new Image(new File(path).toURI().toString());
+            System.out.println(path);
+            profilePictureIMG.setImage(image);
         }
-        profilePictureIMG.setImage(new Image("/FXMLview/Images/noprofile.png"));
         userID = id;
     }
 
@@ -44,5 +63,23 @@ public class ProfileController {
         PreparedStatement preparedStatement = myCon.prepareStatement(query);
         preparedStatement.execute();
         passwordChangeL.setVisible(true);
+    }
+
+    public void newPhoto() throws SQLException, IOException {
+        FileChooser photoGrabber = new FileChooser();
+        photoGrabber.setTitle("Upload a photo from system");
+        File photo = photoGrabber.showOpenDialog(profilePane.getScene().getWindow());
+        String path = photo.getAbsolutePath();
+        if (photo != null) {
+            pictureTF.setText(photo.getAbsolutePath());
+            String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+            String username = "root";
+            String password = "root";
+            String query = ("UPDATE users SET profile_picture='" + path + "'WHERE user_id='" + userID + "'");
+            Connection myCon = DriverManager.getConnection(dbURL, username, password);
+            PreparedStatement preparedStatement = myCon.prepareStatement(query);
+            preparedStatement.execute();
+            loadProfile(userID);
+        }
     }
 }
