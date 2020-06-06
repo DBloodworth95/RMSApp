@@ -15,7 +15,7 @@ public class BookingWindow {
         createCourseLoader.setLocation(getClass().getResource("/FXMLview/BookRoomTab.fxml"));
         Scene scene = new Scene(createCourseLoader.load(), 1448, 580);
         Stage stage = new Stage();
-        stage.setTitle("Settings");
+        stage.setTitle("Bookings");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setMaximized(false);
