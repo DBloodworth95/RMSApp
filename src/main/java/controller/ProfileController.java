@@ -37,9 +37,8 @@ public class ProfileController {
             usernameTF.setText(result.getString("username"));
             passwordTF.setText(result.getString("password"));
             String path = result.getString("profile_picture");
-            System.out.println(path);
             Image image = new Image(new File(path).toURI().toString());
-            System.out.println(path);
+            if (!path.isEmpty())
             profilePictureIMG.setImage(image);
         }
         userID = id;
