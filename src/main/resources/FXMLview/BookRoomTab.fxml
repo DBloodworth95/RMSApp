@@ -33,7 +33,7 @@
                         <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <DatePicker style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0 #ceedf0;">
+                  <DatePicker fx:id="datePicker" onAction="#refine" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0 #ceedf0;">
                      <HBox.margin>
                         <Insets right="15.0" />
                      </HBox.margin>

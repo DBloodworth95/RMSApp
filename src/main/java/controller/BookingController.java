@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -12,6 +13,8 @@ import model.Assessment;
 import model.Booking;
 
 import java.sql.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +26,8 @@ public class BookingController {
     private TableColumn roomCol, dateCol, timeCol, descCol;
     @FXML
     private ComboBox<String> roomCB, startCB, endCB;
+    @FXML
+    private DatePicker datePicker;
 
     public void populateCB() {
         for (int i = 100; i < 300; i++) {
@@ -77,5 +82,25 @@ public class BookingController {
     public void displayTable() throws SQLException {
         List<Booking> bookingList = fetchBookings();
         populateTable(bookingList);
+    }
+
+    public void refine() throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        String formattedString = datePicker.getValue().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        ResultSet result = fetchStaff.executeQuery("SELECT * FROM bookings WHERE room ='" + roomCB.getValue() + "' AND date='" + formattedString + "'");
+        while (result.next()) {
+            String[] start = result.getString("start").split("");
+            String[] end = result.getString("end").split("");
+            ObservableList<String> startTimes = startCB.getItems();
+            ObservableList<String> endTimes = endCB.getItems();
+            String startCheck = start[0] + start[1];
+            String endCheck = end[0] + end[1];
+            startTimes.removeIf(value -> value.contains(startCheck));
+            endTimes.removeIf(value -> value.contains(endCheck));
+        }
     }
 }
