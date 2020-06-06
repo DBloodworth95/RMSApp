@@ -582,21 +582,21 @@
                      <font>
                         <Font size="11.0" />
                      </font></Text>
-                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <Button fx:id="woodlandsBtn" mnemonicParsing="false" onAction="#openWebsite" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Images/woodlandsBtn.png" />
                            </image></ImageView>
                      </graphic></Button>
-                  <Hyperlink text="WOODLANDSUC.UK" textFill="WHITE">
+                  <Hyperlink onAction="#openWebsite" text="WOODLANDSUC.UK" textFill="WHITE">
                      <HBox.margin>
                         <Insets right="150.0" />
                      </HBox.margin>
                      <font>
                         <Font size="11.0" />
                      </font></Hyperlink>
-                  <Button fx:id="twitterBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <Button fx:id="twitterBtn" mnemonicParsing="false" onAction="#openTwitter" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -604,7 +604,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="linkedInBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <Button fx:id="linkedInBtn" mnemonicParsing="false" onAction="#openLinkedin" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -612,7 +612,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="googleBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <Button fx:id="googleBtn" mnemonicParsing="false" onAction="#openGoogle" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -620,7 +620,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="facebookBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <Button fx:id="facebookBtn" mnemonicParsing="false" onAction="#openFacebook" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -636,7 +636,7 @@
                   <Insets left="150.0" />
                </HBox.margin>
                <children>
-                  <Button fx:id="wildeBtn" mnemonicParsing="false" style="-fx-background-color: transparent;">
+                  <Button fx:id="wildeBtn" mnemonicParsing="false" onAction="#openWilde" style="-fx-background-color: transparent;">
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -645,7 +645,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Hyperlink text="WILDE" textFill="WHITE">
+                  <Hyperlink onAction="#openWilde" text="WILDE" textFill="WHITE">
                      <font>
                         <Font size="11.0" />
                      </font></Hyperlink>

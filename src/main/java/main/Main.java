@@ -20,7 +20,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXMLview/Login.fxml"));
         Parent loginPage = loader.load();
         Scene scene = new Scene(loginPage);
-        scene.getStylesheets().add("main.css");
+//        scene.getStylesheets().add("main.css");
         primaryStage.setScene(scene);
         primaryStage.setTitle("Woodlands RMS");
         Object temp = loader.getController();

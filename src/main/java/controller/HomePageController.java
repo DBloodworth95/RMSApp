@@ -2,12 +2,16 @@ package controller;
 
 import chat_client.ChatClient;
 import chat_client.UserListPane;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
@@ -19,7 +23,10 @@ import model.Session;
 import model.Staff;
 import view.*;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.YearMonth;
@@ -303,6 +310,97 @@ public class HomePageController {
             tabLimitError.setContentText("Please close some tabs before attempting to open more! (Max 10)");
             homePageTabPane.getTabs().remove(10);
             tabLimitError.showAndWait();
+        }
+    }
+
+
+    public void openWebsite(ActionEvent event) {
+        Application a = new Application() {
+            @Override
+            public void start(Stage stage) throws Exception {
+            }
+        };
+        try {
+            Desktop.getDesktop().browse(new URI("https://woodlandsuc.uk/"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openTwitter(ActionEvent event) {
+        Application a = new Application() {
+            @Override
+            public void start(Stage stage) throws Exception {
+            }
+        };
+        try {
+            Desktop.getDesktop().browse(new URI("https://www.twitter.com"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openLinkedin(ActionEvent event) {
+        Application a = new Application() {
+            @Override
+            public void start(Stage stage) throws Exception {
+            }
+        };
+        try {
+            Desktop.getDesktop().browse(new URI("https://www.linkedin.com"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openGoogle(ActionEvent event) {
+        Application a = new Application() {
+            @Override
+            public void start(Stage stage) throws Exception {
+            }
+        };
+        try {
+            Desktop.getDesktop().browse(new URI("https://www.google.com"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openFacebook(ActionEvent event) {
+        Application a = new Application() {
+            @Override
+            public void start(Stage stage) throws Exception {
+            }
+        };
+        try {
+            Desktop.getDesktop().browse(new URI("https://www.facebook.com"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openWilde(ActionEvent event) {
+        Application a = new Application() {
+            @Override
+            public void start(Stage stage) throws Exception {
+            }
+        };
+        try {
+            Desktop.getDesktop().browse(new URI("https://www.google.com"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
         }
     }
 }
