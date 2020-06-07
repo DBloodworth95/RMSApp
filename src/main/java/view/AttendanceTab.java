@@ -23,9 +23,10 @@ public class AttendanceTab extends Tab {
         ResultSet result = connect().executeQuery("SELECT * FROM users WHERE user_id ='" + Integer.parseInt(label.getText()) + "'");
         while (result.next()) {
             if(result.getInt("user_level") == 4) {
-                controller.populateByCourse(result.getString("course"));
+                controller.populateCourseCB(result.getString("course"));
+                controller.populateModuleCB(result.getString("course"));
             } else {
-                controller.populate();
+               // controller.populate();
             }
         }
         tabPane.getSelectionModel().select(attendanceTab);

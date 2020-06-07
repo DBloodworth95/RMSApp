@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
-import javafx.scene.control.Button;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.IntegerStringConverter;
@@ -16,6 +13,9 @@ import model.Attendant;
 import model.Course;
 import model.TablePrinter;
 
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.*;
 
 import java.util.ArrayList;
@@ -27,62 +27,80 @@ public class AttendanceTabController {
     @FXML
     private TableColumn studentCol, firstCol, surnameCol, attendedCol, causeCol;
     @FXML
-    private Button archiveBtn;
+    private Button generateBtn;
+    @FXML
+    private DatePicker datePicker;
+    @FXML
+    private ComboBox<String> courseCB, moduleCB;
 
-    public List<Attendant> fetchTable(boolean isArchive) throws SQLException {
-        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
-        String username = "root";
-        String password = "root";
-        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
-        Statement fetchStaff = rmsConnection.createStatement();
-        List<Attendant> attendants = new ArrayList<>();
-        if(isArchive) {
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM attendance WHERE archived = 1");
-            while (result.next()) {
-                int id = Integer.parseInt(result.getString("student_id"));
-                String firstName = result.getString("first_name");
-                String surname = result.getString("surname");
-                String attended = result.getString("attended");
-                String cause = result.getString("cause_for_concern");
-                String course = result.getString("course");
-                String module = result.getString("module");
-                attendants.add(new Attendant(id, firstName, surname, attended, cause, course, module));
-            }
-        } else {
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM attendance WHERE archived = 0");
-            while (result.next()) {
-                int id = Integer.parseInt(result.getString("student_id"));
-                String firstName = result.getString("first_name");
-                String surname = result.getString("surname");
-                String attended = result.getString("attended");
-                String cause = result.getString("cause_for_concern");
-                String course = result.getString("course");
-                String module = result.getString("module");
-                attendants.add(new Attendant(id, firstName, surname, attended, cause, course, module));
-            }
-        }
-        return attendants;
+    public void populateCourseCB(String courseVal) {
+        courseCB.getItems().add(courseVal);
+        courseCB.setValue(courseVal);
     }
 
-    public List<Attendant> fetchTableByCourse(boolean isArchive, String course) throws SQLException {
+    public void populateModuleCB(String courseVal) throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result = fetchStaff.executeQuery("SELECT module_code FROM modules WHERE course ='" + courseVal + "'");
+        while (result.next()) {
+            moduleCB.getItems().add(result.getString("module_code"));
+        }
+    }
+
+    public List<Attendant> fetchFromFile(String fileConvention) throws IOException {
+        File dir = Paths.get("attendance_records/").toFile();
+        File[] fileListings = dir.listFiles();
+        List<Attendant> attendantListInFile = null;
+        List<Attendant> attendantList = new ArrayList<>();
+        System.out.println(fileConvention);
+        for (File file : fileListings) {
+            if (file.getPath().equalsIgnoreCase("attendance_records/" + fileConvention)) {
+                try (ObjectInput inputStream = new ObjectInputStream(new FileInputStream(file))) {
+                    try {
+                        while ((attendantListInFile = (List<Attendant>) inputStream.readObject()) != null) {
+                            attendantList.addAll(attendantListInFile);
+                            break;
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } else {
+                attendantList = null;
+            }
+        }
+        return attendantList;
+    }
+
+    public void generate() {
+        try {
+            populate();
+        } catch (IOException | SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
+    public List<Attendant> fetchStudentsOnCourse(String courseVal) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
         List<Attendant> attendants = new ArrayList<>();
-        if (!isArchive) {
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM attendance WHERE archived = 0 AND course ='" + course + "'");
-            while (result.next()) {
-                int id = Integer.parseInt(result.getString("student_id"));
-                String firstName = result.getString("first_name");
-                String surname = result.getString("surname");
-                String attended = result.getString("attended");
-                String cause = result.getString("cause_for_concern");
-                String courseResult = result.getString("course");
-                String module = result.getString("module");
-                attendants.add(new Attendant(id, firstName, surname, attended, cause, courseResult, module));
-            }
+        ResultSet result = fetchStaff.executeQuery("SELECT * FROM students WHERE current_course_code ='" + courseVal + "'");
+        while (result.next()) {
+            int id = Integer.parseInt(result.getString("student_id"));
+            String firstName = result.getString("first_name");
+            String surname = result.getString("surname");
+            String attended = "N";
+            String cause = "N/A";
+            attendants.add(new Attendant(id, firstName, surname, attended, cause));
         }
         return attendants;
     }
@@ -110,18 +128,28 @@ public class AttendanceTabController {
         editColumns();
     }
 
-    public void populate() throws SQLException {
-        List<Attendant> newAttendant = fetchTable(false);
-        populateTable(newAttendant);
+    public void populate() throws IOException, SQLException {
+        String[] dateVal = datePicker.getValue().toString().split("-");
+        String[] moduleVal = moduleCB.getValue().split("-");
+        String day = dateVal[0];
+        String month = dateVal[1];
+        String year = dateVal[2];
+        String code = moduleVal[0];
+        String start = moduleVal[1];
+        String end = moduleVal[2];
+        System.out.println(day + month + year + code + start + end);
+        List<Attendant> newAttendant = fetchFromFile(day + month + year + code + start + end);
+        if (newAttendant != null)
+            populateTable(newAttendant);
+        else {
+            newAttendant = fetchStudentsOnCourse(courseCB.getValue());
+            populateTable(newAttendant);
+        }
     }
+
     public void populateByCourse(String course) throws SQLException {
-        List<Attendant> newAttendant = fetchTableByCourse(false, course);
+        List<Attendant> newAttendant = fetchStudentsOnCourse(course);
         populateTable(newAttendant);
-    }
-    public void populateArchive() throws SQLException {
-        List<Attendant> newAttendant = fetchTable(true);
-        populateTable(newAttendant);
-        archiveBtn.setVisible(false);
     }
 
     public void editColumns() {
@@ -138,31 +166,29 @@ public class AttendanceTabController {
     }
 
     public void updateTable() throws SQLException {
+        Path path = Paths.get("attendance_records");
+        String[] dateVal = datePicker.getValue().toString().split("-");
+        String[] moduleVal = moduleCB.getValue().split("-");
+        String day = dateVal[0];
+        String month = dateVal[1];
+        String year = dateVal[2];
+        String code = moduleVal[0];
+        String start = moduleVal[1];
+        String end = moduleVal[2];
         Attendant attendant;
-        List <List<String>> attendanceList = new ArrayList<>();
+        List<Attendant> attendanceList = new ArrayList<>();
         for (int i = 0; i < attendanceTV.getItems().size(); i++) {
             attendant = (Attendant) attendanceTV.getItems().get(i);
-            attendanceList.add(new ArrayList<>());
-            attendanceList.get(i).add(Integer.toString(attendant.getId()));
-            attendanceList.get(i).add(attendant.getFirstName());
-            attendanceList.get(i).add(attendant.getSurname());
-            attendanceList.get(i).add(attendant.getAttended());
-            attendanceList.get(i).add(attendant.getCause());
-            attendanceList.get(i).add(attendant.getModule());
-            attendanceList.get(i).add(attendant.getCourse());
-
-            String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
-            String username = "root";
-            String password = "root";
-            String query = ("UPDATE attendance SET student_id='" + attendant.getId() + "', first_name='" + attendant.getFirstName() + "', surname='" + attendant.getSurname() +
-                    "', attended='" + attendant.getAttended() + "', cause_for_concern='" + attendant.getCause() + "', course='" + attendant.getCourse() +
-                    "', module='" + attendant.getModule() + "'WHERE student_id='" + attendant.getId() + "'");
-            Connection myCon = DriverManager.getConnection(dbURL, username, password);
-            PreparedStatement preparedStatement = myCon.prepareStatement(query);
-            preparedStatement.execute();
+            attendanceList.add(attendant);
         }
-        System.out.println("Saved!");
+        try (ObjectOutput oos = new ObjectOutputStream(new FileOutputStream(String.valueOf(path.resolve(day + month + year + code + start + end))))) {
+            oos.writeObject(attendanceList);
+        } catch (IOException e) {
+            System.out.println("Warning! Error when writing property to file!");
+            e.printStackTrace();
+        }
     }
+
 
     public void removeAttendant() throws SQLException {
         Object selectedItems = attendanceTV.getSelectionModel().getSelectedItems().get(0);

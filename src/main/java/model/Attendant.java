@@ -1,20 +1,19 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Attendant {
+public class Attendant implements Serializable {
     private int id;
     private String firstName, surname, cause, course, module;
     private String attended;
 
-    public Attendant(int id, String firstName, String surname, String attended, String cause, String course, String module) {
+    public Attendant(int id, String firstName, String surname, String attended, String cause) {
         this.id = id;
         this.firstName = firstName;
         this.surname = surname;
         this.attended = attended;
         this.cause = cause;
-        this.course = course;
-        this.module = module;
     }
 
     public int getId() {

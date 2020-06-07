@@ -19,7 +19,6 @@ public class ArchiveAttendanceTab extends Tab {
         attendanceTab.setContent(attendanceTabContent);
         Object temp = loader.getController();
         AttendanceTabController controller = (AttendanceTabController) temp;
-        controller.populateArchive();
         tabPane.getSelectionModel().select(attendanceTab);
     }
 

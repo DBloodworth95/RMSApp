@@ -25,7 +25,7 @@
                      <HBox.margin>
                         <Insets />
                      </HBox.margin></Label>
-                  <DatePicker prefWidth="275.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey;">
+                  <DatePicker fx:id="datePicker" prefWidth="275.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey;">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
@@ -38,7 +38,7 @@
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <ComboBox minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
+                  <ComboBox fx:id="courseCB" minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
@@ -51,7 +51,7 @@
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <ComboBox minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
+                  <ComboBox fx:id="moduleCB" minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
@@ -102,7 +102,7 @@
                   <Insets right="30.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="GENERATE" textFill="#09adff">
+            <Button fx:id="generateBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#generate" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="GENERATE" textFill="#09adff">
                <font>
                   <Font size="10.0" />
                </font>
