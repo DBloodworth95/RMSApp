@@ -25,7 +25,7 @@ public class AttendanceTabController {
     @FXML
     private TableView attendanceTV;
     @FXML
-    private TableColumn studentCol, firstCol, surnameCol, attendedCol, causeCol, courseCol, moduleCol;
+    private TableColumn studentCol, firstCol, surnameCol, attendedCol, causeCol;
     @FXML
     private Button archiveBtn;
 
@@ -93,17 +93,12 @@ public class AttendanceTabController {
         surnameCol.setCellValueFactory(new PropertyValueFactory<Attendant, String>("surname"));
         attendedCol.setCellValueFactory(new PropertyValueFactory<Attendant, String>("attended"));
         causeCol.setCellValueFactory(new PropertyValueFactory<Attendant, String>("cause"));
-        moduleCol.setCellValueFactory(new PropertyValueFactory<Attendant, String>("module"));
-        courseCol.setCellValueFactory(new PropertyValueFactory<Attendant, String>("course"));
-
 
         studentCol.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         firstCol.setCellFactory(TextFieldTableCell.forTableColumn());
         surnameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         attendedCol.setCellFactory(TextFieldTableCell.forTableColumn());
         causeCol.setCellFactory(TextFieldTableCell.forTableColumn());
-        moduleCol.setCellFactory(TextFieldTableCell.forTableColumn());
-        courseCol.setCellFactory(TextFieldTableCell.forTableColumn());
 
         ObservableList<Attendant> rows = FXCollections.observableArrayList();
         for (Attendant attendant : newAttendant) {
@@ -140,10 +135,6 @@ public class AttendanceTabController {
                 (EventHandler<TableColumn.CellEditEvent<Attendant, String>>) courseIntegerCellEditEvent -> ((Attendant) courseIntegerCellEditEvent.getTableView().getItems().get(courseIntegerCellEditEvent.getTablePosition().getRow())).setAttended(courseIntegerCellEditEvent.getNewValue()));
         causeCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Attendant, String>>) courseStringCellEditEvent -> ((Attendant) courseStringCellEditEvent.getTableView().getItems().get(courseStringCellEditEvent.getTablePosition().getRow())).setCause(courseStringCellEditEvent.getNewValue()));
-        moduleCol.setOnEditCommit(
-                (EventHandler<TableColumn.CellEditEvent<Attendant, String>>) courseStringCellEditEvent -> ((Attendant) courseStringCellEditEvent.getTableView().getItems().get(courseStringCellEditEvent.getTablePosition().getRow())).setModule(courseStringCellEditEvent.getNewValue()));
-        courseCol.setOnEditCommit(
-                (EventHandler<TableColumn.CellEditEvent<Attendant, String>>) courseStringCellEditEvent -> ((Attendant) courseStringCellEditEvent.getTableView().getItems().get(courseStringCellEditEvent.getTablePosition().getRow())).setCourse(courseStringCellEditEvent.getNewValue()));
     }
 
     public void updateTable() throws SQLException {

@@ -159,14 +159,14 @@ public class BookingController {
             return true;
         }
         if (startCB.getValue() == null) {
-            errorAlert.setTitle("Record entry failed.");
+            errorAlert.setTitle("Booking entry failed.");
             errorAlert.setHeaderText(null);
             errorAlert.setContentText("Some fields were left empty!");
             errorAlert.showAndWait();
             return true;
         }
         if (endCB.getValue() == null) {
-            errorAlert.setTitle("Record entry failed.");
+            errorAlert.setTitle("Booking entry failed.");
             errorAlert.setHeaderText(null);
             errorAlert.setContentText("Some fields were left empty!");
             errorAlert.showAndWait();

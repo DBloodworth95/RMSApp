@@ -21,60 +21,75 @@
          <children>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="45.0">
                <children>
-                  <Label minWidth="-Infinity" prefWidth="56.0" text="COURSE">
+                  <Label minWidth="-Infinity" prefWidth="56.0" text="DATE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+                  <DatePicker prefWidth="275.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey;">
                      <HBox.margin>
                         <Insets right="20.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
-                  <ComboBox minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
-                     <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin>
-                  </ComboBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="45.0">
-               <children>
-                  <Label minWidth="-Infinity" prefWidth="56.0" text="MODULE">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
-                  <ComboBox minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
-                     <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin>
-                  </ComboBox>
-                  <Label minWidth="-Infinity" prefWidth="80.0" text="STUDENT ID">
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Label>
-                  <TextField style="-fx-background-radius: 5PX; -fx-border-radius: 5px; -fx-border-width: 1px; -fx-border-color: grey;" text="12345678">
-                     <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin>
-                  </TextField>
-                  <Label minWidth="-Infinity" prefWidth="56.0" text="DATE" />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="45.0">
-               <children>
-                  <DatePicker prefWidth="276.0" style="-fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey;">
-                     <HBox.margin>
-                        <Insets right="30.0" />
                      </HBox.margin>
                   </DatePicker>
+                  <Label minWidth="-Infinity" prefWidth="56.0" text="COURSE">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label minWidth="-Infinity" prefWidth="56.0" text="MODULE">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox minWidth="-Infinity" prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ComboBox>
                </children>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="45.0" prefWidth="100.0">
+               <children>
+                  <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;" text="Search me">
+                     <HBox.margin>
+                        <Insets top="1.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: grey; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="20.0" top="1.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/searchBtn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </HBox>
             <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="SHOW CAUSE FOR CONCERN ONLY">
                <font>
@@ -83,6 +98,20 @@
                <padding>
                   <Insets left="10.0" right="10.0" />
                </padding>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5px;" text="GENERATE" textFill="#09adff">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="18.0" />
+               </HBox.margin>
             </Button>
          </children>
          <padding>
@@ -181,39 +210,6 @@
                   <Font size="12.0" />
                </font>
             </Button>
-            <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="45.0" prefWidth="100.0">
-               <children>
-                  <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;" text="Search me">
-                     <HBox.margin>
-                        <Insets top="1.0" />
-                     </HBox.margin>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </TextField>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: grey; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets top="1.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/searchBtn.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets left="10.0" right="1.0" />
-               </HBox.margin>
-            </HBox>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
             <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 1px 0px 1px 1px; -fx-border-color: grey; -fx-border-radius: 5px 0px 0px 5px;" text="DISPLAY">
                <HBox.margin>
@@ -243,8 +239,6 @@
             <TableColumn fx:id="surnameCol" prefWidth="112.0" text="Surname" />
             <TableColumn fx:id="attendedCol" prefWidth="112.0" text="Attended" />
             <TableColumn fx:id="causeCol" prefWidth="107.0" text="Cause for concern" />
-            <TableColumn fx:id="courseCol" prefWidth="112.0" text="Course" />
-            <TableColumn fx:id="moduleCol" prefWidth="112.0" text="Module" />
          </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

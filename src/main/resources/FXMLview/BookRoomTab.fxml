@@ -48,7 +48,10 @@
                         <Insets right="15.0" />
                      </HBox.margin>
                   </ComboBox>
-                  <Label text="End" textFill="#2c787c" />
+                  <Label text="End" textFill="#2c787c">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Label>
                   <ComboBox fx:id="endCB" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
                </children>
                <VBox.margin>
@@ -57,8 +60,8 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
                <children>
-                  <Label prefHeight="16.0" prefWidth="195.0" text="Please provide a description" />
-                  <TextField fx:id="descTF" prefWidth="350.0" promptText="Description" />
+                  <Label prefHeight="16.0" prefWidth="190.0" text="Please provide a description:" />
+                  <TextField fx:id="descTF" prefWidth="430.0" promptText="Description" />
                </children>
                <VBox.margin>
                   <Insets bottom="10.0" left="20.0" />
