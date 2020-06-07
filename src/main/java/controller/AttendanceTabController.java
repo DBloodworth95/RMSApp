@@ -27,8 +27,6 @@ public class AttendanceTabController {
     @FXML
     private TableColumn studentCol, firstCol, surnameCol, attendedCol, causeCol;
     @FXML
-    private Button generateBtn;
-    @FXML
     private DatePicker datePicker;
     @FXML
     private ComboBox<String> courseCB, moduleCB;
@@ -55,7 +53,6 @@ public class AttendanceTabController {
         File[] fileListings = dir.listFiles();
         List<Attendant> attendantListInFile = null;
         List<Attendant> attendantList = new ArrayList<>();
-        System.out.println(fileConvention);
         for (File file : fileListings) {
             if (file.getPath().equalsIgnoreCase("attendance_records/" + fileConvention)) {
                 try (ObjectInput inputStream = new ObjectInputStream(new FileInputStream(file))) {
@@ -70,8 +67,6 @@ public class AttendanceTabController {
                         e.printStackTrace();
                     }
                 }
-            } else {
-                attendantList = null;
             }
         }
         return attendantList;
@@ -137,19 +132,16 @@ public class AttendanceTabController {
         String code = moduleVal[0];
         String start = moduleVal[1];
         String end = moduleVal[2];
-        System.out.println(day + month + year + code + start + end);
         List<Attendant> newAttendant = fetchFromFile(day + month + year + code + start + end);
-        if (newAttendant != null)
+        if (!newAttendant.isEmpty()) {
+            System.out.println("File found");
             populateTable(newAttendant);
+        }
         else {
             newAttendant = fetchStudentsOnCourse(courseCB.getValue());
             populateTable(newAttendant);
+            System.out.println("No File found");
         }
-    }
-
-    public void populateByCourse(String course) throws SQLException {
-        List<Attendant> newAttendant = fetchStudentsOnCourse(course);
-        populateTable(newAttendant);
     }
 
     public void editColumns() {
@@ -179,26 +171,23 @@ public class AttendanceTabController {
         List<Attendant> attendanceList = new ArrayList<>();
         for (int i = 0; i < attendanceTV.getItems().size(); i++) {
             attendant = (Attendant) attendanceTV.getItems().get(i);
+            attendant.setId((Integer) studentCol.getCellData(i));
+            attendant.setFirstName((String) firstCol.getCellData(i));
+            attendant.setSurname((String) surnameCol.getCellData(i));
+            attendant.setCause((String) causeCol.getCellData(i));
+            attendant.setAttended((String) attendedCol.getCellData(i));
             attendanceList.add(attendant);
+            System.out.println(attendant.getAttended());
         }
         try (ObjectOutput oos = new ObjectOutputStream(new FileOutputStream(String.valueOf(path.resolve(day + month + year + code + start + end))))) {
             oos.writeObject(attendanceList);
         } catch (IOException e) {
-            System.out.println("Warning! Error when writing property to file!");
             e.printStackTrace();
         }
     }
 
-
-    public void removeAttendant() throws SQLException {
+    public void removeAttendant() {
         Object selectedItems = attendanceTV.getSelectionModel().getSelectedItems().get(0);
-        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
-        String username = "root";
-        String password = "root";
-        String query = ("DELETE FROM attendance WHERE student_id ='" + studentCol.getCellData(selectedItems) + "'");
-        Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
-        PreparedStatement preparedStatement = myConnection.prepareStatement(query);
-        preparedStatement.execute();
         ObservableList<Course> allRows, singleRow;
         allRows = attendanceTV.getItems();
         singleRow = attendanceTV.getSelectionModel().getSelectedItems();
