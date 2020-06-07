@@ -139,6 +139,7 @@ public class BookingController {
             preparedStatement.setString(5, descTF.getText());
             preparedStatement.executeUpdate();
             System.out.println("Booking created!");
+            displayTable();
         }
     }
 
