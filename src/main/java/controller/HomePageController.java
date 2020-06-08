@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import jfxtras.icalendarfx.VCalendar;
 import jfxtras.scene.control.agenda.icalendar.ICalendarAgenda;
@@ -24,9 +25,12 @@ import model.Staff;
 import view.*;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.YearMonth;
@@ -45,6 +49,8 @@ public class HomePageController {
     private Button logoutBtn;
     @FXML
     private Label ghostSessionL;
+    @FXML
+    private AnchorPane homePaneRS, homePaneT;
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
@@ -398,6 +404,62 @@ public class HomePageController {
             e.printStackTrace();
         } catch (URISyntaxException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void saveFaqRecordsStaff() {
+        File attendanceForm = Paths.get("PDFforms/faq.pdf").toFile();
+        FileChooser fileSaver = new FileChooser();
+        fileSaver.setTitle("Save FAQ Form");
+        File destination = fileSaver.showSaveDialog(homePaneRS.getScene().getWindow());
+        if (destination != null) {
+            try {
+                Files.copy(attendanceForm.toPath(), destination.toPath());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void saveFaqTutor() {
+        File attendanceForm = Paths.get("PDFforms/faq.pdf").toFile();
+        FileChooser fileSaver = new FileChooser();
+        fileSaver.setTitle("Save FAQ Form");
+        File destination = fileSaver.showSaveDialog(homePaneT.getScene().getWindow());
+        if (destination != null) {
+            try {
+                Files.copy(attendanceForm.toPath(), destination.toPath());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void saveTosRecordsStaff() {
+        File attendanceForm = Paths.get("PDFforms/tos.pdf").toFile();
+        FileChooser fileSaver = new FileChooser();
+        fileSaver.setTitle("Save FAQ Form");
+        File destination = fileSaver.showSaveDialog(homePaneRS.getScene().getWindow());
+        if (destination != null) {
+            try {
+                Files.copy(attendanceForm.toPath(), destination.toPath());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void saveTosTutor() {
+        File attendanceForm = Paths.get("PDFforms/tos.pdf").toFile();
+        FileChooser fileSaver = new FileChooser();
+        fileSaver.setTitle("Save FAQ Form");
+        File destination = fileSaver.showSaveDialog(homePaneT.getScene().getWindow());
+        if (destination != null) {
+            try {
+                Files.copy(attendanceForm.toPath(), destination.toPath());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
