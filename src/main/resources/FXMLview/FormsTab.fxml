@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FormsTabController">
+<AnchorPane fx:id="formPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FormsTabController">
    <children>
       <GridPane alignment="CENTER_LEFT" hgap="20.0" vgap="20.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="200.0">
          <columnConstraints>
@@ -34,7 +34,7 @@
                         <Image url="@Images/fileBtn.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink minWidth="-Infinity" text="PAT">
+                  <Hyperlink minWidth="-Infinity" onAction="#savePat" text="PAT">
                      <font>
                         <Font size="12.0" />
                      </font></Hyperlink>
@@ -72,7 +72,7 @@
                         <Image url="@Images/fileBtn.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink minWidth="-Infinity" text="Cause for concern">
+                  <Hyperlink minWidth="-Infinity" onAction="#saveCauseForConcern" text="Cause for concern">
                      <font>
                         <Font size="12.0" />
                      </font></Hyperlink>
@@ -91,7 +91,7 @@
                         <Image url="@Images/fileBtn.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink minWidth="-Infinity" text="Assignment submission">
+                  <Hyperlink minWidth="-Infinity" onAction="#saveAssignmentSubmission" text="Assignment submission">
                      <font>
                         <Font size="12.0" />
                      </font></Hyperlink>
@@ -110,7 +110,7 @@
                         <Image url="@Images/fileBtn.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink minWidth="-Infinity" text="Record updates notification">
+                  <Hyperlink minWidth="-Infinity" onAction="#saveRecordUpdate" text="Record updates notification">
                      <font>
                         <Font size="12.0" />
                      </font></Hyperlink>
@@ -129,7 +129,7 @@
                         <Image url="@Images/fileBtn.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink minWidth="-Infinity" text="July Confirmation Letter">
+                  <Hyperlink minWidth="-Infinity" onAction="#saveJulyConfirmLetter" text="July Confirmation Letter">
                      <font>
                         <Font size="12.0" />
                      </font></Hyperlink>

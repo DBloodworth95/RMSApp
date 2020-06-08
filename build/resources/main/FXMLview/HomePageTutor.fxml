@@ -296,7 +296,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT">
                      <children>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createFormsTab" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
                            <graphic>
                               <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -304,7 +304,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Text fill="#464444" strokeType="OUTSIDE" strokeWidth="0.0" text="FORMS">
+                        <Text fill="#464444" onMouseClicked="#createFormsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="FORMS">
                            <HBox.margin>
                               <Insets right="18.0" />
                            </HBox.margin>
