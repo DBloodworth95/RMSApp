@@ -53,9 +53,11 @@ public class HomePageController {
     public void setLoginUsername(String name) {
         loginLabel.setText(name);
     }
+
     public void setLastLogLabel(String timestamp) {
         lastLogLabel.setText(timestamp);
     }
+
     public void setGhostSessionL(String id) {
         ghostSessionL.setText(id);
     }
@@ -90,12 +92,15 @@ public class HomePageController {
     public void createStudentTab() throws IOException, SQLException {
         checkTabLimit(new StudentTab(homePageTabPane, loader));
     }
+
     public void archiveCreateStudentTab() throws IOException, SQLException {
         checkTabLimit(new ArchiveStudentTab(homePageTabPane, loader));
     }
+
     public void createStaffTab() throws IOException, SQLException {
         checkTabLimit(new StaffTab(homePageTabPane, loader));
     }
+
     public void archiveCreateStaffTab() throws IOException, SQLException {
         checkTabLimit(new ArchiveStaffTab(homePageTabPane, loader));
     }
@@ -112,6 +117,10 @@ public class HomePageController {
         checkTabLimit(new CourseTab(homePageTabPane, loader));
     }
 
+    public void createFormsTab() throws IOException {
+        checkTabLimit(new FormsTab(homePageTabPane, loader));
+    }
+
     public void createArchiveCourseTab() throws IOException, SQLException {
         checkTabLimit(new ArchiveCourseTab(homePageTabPane, loader));
     }
@@ -119,6 +128,7 @@ public class HomePageController {
     public void createAssessmentTabRS() throws IOException, SQLException {
         checkTabLimit(new AssessmentTab(homePageTabPane, loader, ghostSessionL));
     }
+
     public void createArchiveAssessmentTab() throws IOException, SQLException {
         checkTabLimit(new ArchiveAssessmentTab(homePageTabPane, loader));
     }
@@ -150,7 +160,7 @@ public class HomePageController {
     }
 
     public void createAttendanceTabRS() throws IOException, SQLException {
-        checkTabLimit(new AttendanceTab(homePageTabPane,loader, ghostSessionL));
+        checkTabLimit(new AttendanceTab(homePageTabPane, loader, ghostSessionL));
     }
 
     public void createArchiveAttendanceTab() throws IOException, SQLException {
@@ -169,6 +179,7 @@ public class HomePageController {
     public void createTutorshipTabRS() throws IOException, SQLException {
         checkTabLimit(new PersonalTutorTab(homePageTabPane, loader));
     }
+
     public void archiveCreateTutorshipTabRS() throws IOException, SQLException {
         checkTabLimit(new ArchivePersonalTutorTab(homePageTabPane, loader));
     }
@@ -261,12 +272,12 @@ public class HomePageController {
         }
         currentTabView = homePageTabPane.getSelectionModel().getSelectedIndex();
         homePageTabPane.getTabs().clear();
-        for (Tab tab: tabArrayList) {
+        for (Tab tab : tabArrayList) {
             if (tab instanceof StudentTab) {
                 StudentTab st = new StudentTab(homePageTabPane, loader);
             } else if (tab instanceof StaffTab) {
                 StaffTab staffTab = new StaffTab(homePageTabPane, loader);
-            } else if (tab instanceof  ModuleTab) {
+            } else if (tab instanceof ModuleTab) {
                 ModuleTab moduleTab = new ModuleTab(homePageTabPane, loader, ghostSessionL);
             } else if (tab instanceof CourseTab) {
                 CourseTab courseTab = new CourseTab(homePageTabPane, loader);
@@ -292,6 +303,8 @@ public class HomePageController {
                 ArchivePersonalTutorTab archivePersonalTutorTab = new ArchivePersonalTutorTab(homePageTabPane, loader);
             } else if (tab instanceof ArchiveAttendanceTab) {
                 ArchiveAttendanceTab archiveAttendanceTab = new ArchiveAttendanceTab(homePageTabPane, loader);
+            } else if (tab instanceof FormsTab) {
+                FormsTab formsTab = new FormsTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }
@@ -312,7 +325,7 @@ public class HomePageController {
     }
 
     private void checkTabLimit(Tab tab) {
-        if(homePageTabPane.getTabs().size() > 10) {
+        if (homePageTabPane.getTabs().size() > 10) {
             tabLimitError.setTitle("Tab Limit Reached!");
             tabLimitError.setHeaderText(null);
             tabLimitError.setContentText("Please close some tabs before attempting to open more! (Max 10)");
