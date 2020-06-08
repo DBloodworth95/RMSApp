@@ -56,7 +56,7 @@ public class FormsTabController {
     }
 
     public void saveAttendanceForm() {
-        File attendanceForm = Paths.get("PDFforms/causeforconcernletter.pdf").toFile();
+        File attendanceForm = Paths.get("PDFforms/attendanceform.pdf").toFile();
         FileChooser fileSaver = new FileChooser();
         fileSaver.setTitle("Save attendance form");
         File destination = fileSaver.showSaveDialog(formPane.getScene().getWindow());
