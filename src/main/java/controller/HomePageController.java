@@ -50,11 +50,11 @@ public class HomePageController {
     @FXML
     public TabPane homePageTabPane;
     @FXML
-    private Button logoutBtn, notifBtn;
+    private Button logoutBtn, notifBtn, tutorNotifBtn;
     @FXML
     private Label ghostSessionL;
     @FXML
-    private AnchorPane homePaneRS, homePaneT, notifPane;
+    private AnchorPane homePaneRS, homePaneT, notifPane, notifPaneTutor;
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
@@ -471,15 +471,28 @@ public class HomePageController {
         TranslateTransition openTransition = new TranslateTransition(new Duration(350), notifPane);
         openTransition.setToX(0);
         TranslateTransition closeTransition = new TranslateTransition(new Duration(350), notifPane);
-        notifBtn.setOnAction((ActionEvent event)->{
-            if(notifPane.getTranslateX()!=0) {
+        notifBtn.setOnAction((ActionEvent event) -> {
+            if (notifPane.getTranslateX() != 0) {
                 openTransition.play();
             } else {
                 closeTransition.setToX(-(notifPane.getWidth()));
                 closeTransition.play();
             }
         });
+    }
 
+    public void showNotificationsTutor() {
+        TranslateTransition openTransition = new TranslateTransition(new Duration(350), notifPaneTutor);
+        openTransition.setToX(0);
+        TranslateTransition closeTransition = new TranslateTransition(new Duration(350), notifPaneTutor);
+        tutorNotifBtn.setOnAction((ActionEvent event) -> {
+            if (notifPaneTutor.getTranslateX() != 0) {
+                openTransition.play();
+            } else {
+                closeTransition.setToX(-(notifPaneTutor.getWidth()));
+                closeTransition.play();
+            }
+        });
     }
 }
 

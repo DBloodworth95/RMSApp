@@ -405,7 +405,7 @@
                   <Insets />
                </StackPane.margin>
             </HBox>
-            <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" StackPane.alignment="CENTER_RIGHT">
+            <AnchorPane fx:id="notifPane" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" StackPane.alignment="CENTER_RIGHT">
                <children>
                   <ScrollPane layoutX="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>

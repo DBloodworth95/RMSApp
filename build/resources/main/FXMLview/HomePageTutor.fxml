@@ -169,7 +169,7 @@
                   <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
                   <HBox alignment="CENTER_RIGHT">
                      <children>
-                        <Button fx:id="notifBtn" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="NOTIFICATIONS">
+                        <Button fx:id="tutorNotifBtn" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="NOTIFICATIONS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -401,7 +401,7 @@
                   </TabPane>
                </children>
             </HBox>
-            <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" StackPane.alignment="CENTER_RIGHT">
+            <AnchorPane fx:id="notifPaneTutor" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="350.0" StackPane.alignment="CENTER_RIGHT">
                <children>
                   <ScrollPane layoutX="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>

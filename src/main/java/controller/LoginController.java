@@ -56,21 +56,32 @@ public class LoginController {
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
                 if (session.getAccessLevel().hasAccessToSysAdminView() || session.getAccessLevel().hasAccessToRecView()) {
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageRecordsStaff.fxml"));
+                    Parent homePage = loader.load();
+                    loginButton.getScene().setRoot(homePage);
+                    Object temp = loader.getController();
+                    HomePageController controller = (HomePageController) temp;
+                    controller.setLoginUsername(session.getUsername());
+                    controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
+                    controller.setGhostSessionL(Integer.toString(session.getId()));
+                    controller.setDateLabel();
+                    controller.createHomeTab(session);
+                    controller.showNotifications();
                 } else if (session.getAccessLevel().hasAccessToCourseLeadView()) {
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageCourseLeader.fxml"));
+
                 } else {
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutor.fxml"));
+                    Parent homePage = loader.load();
+                    loginButton.getScene().setRoot(homePage);
+                    Object temp = loader.getController();
+                    HomePageController controller = (HomePageController) temp;
+                    controller.setLoginUsername(session.getUsername());
+                    controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
+                    controller.setGhostSessionL(Integer.toString(session.getId()));
+                    controller.setDateLabel();
+                    controller.createHomeTab(session);
+                    controller.showNotificationsTutor();
                 }
-                Parent homePage = loader.load();
-                loginButton.getScene().setRoot(homePage);
-                Object temp = loader.getController();
-                HomePageController controller = (HomePageController) temp;
-                controller.setLoginUsername(session.getUsername());
-                controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
-                controller.setGhostSessionL(Integer.toString(session.getId()));
-                controller.setDateLabel();
-                controller.createHomeTab(session);
-                controller.showNotifications();
                 Calendar currentDate = Calendar.getInstance();
                 SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
                 String dateNow = formatter.format(currentDate.getTime());
@@ -82,9 +93,10 @@ public class LoginController {
                 invalidPWLabel.setVisible(true);
             }
         }
-        if(!accountFound)
-        invalidIDLabel.setVisible(true);
+        if (!accountFound)
+            invalidIDLabel.setVisible(true);
     }
+
     public void initial() {
         invalidPWLabel.setVisible(false);
         invalidIDLabel.setVisible(false);
@@ -92,7 +104,7 @@ public class LoginController {
     }
 
     public void keyPressed(KeyEvent key) throws ParseException, SQLException, IOException {
-        if(key.getCode() == KeyCode.ENTER) {
+        if (key.getCode() == KeyCode.ENTER) {
             loginAttempt();
         }
     }
@@ -100,6 +112,4 @@ public class LoginController {
     public void showPasswordHelp() {
         PasswordHelpWindow.showPasswordWindow();
     }
-
-
 }
