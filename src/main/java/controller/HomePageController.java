@@ -2,6 +2,7 @@ package controller;
 
 import chat_client.ChatClient;
 import chat_client.UserListPane;
+import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,9 +15,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import jfxtras.icalendarfx.VCalendar;
 import jfxtras.scene.control.agenda.icalendar.ICalendarAgenda;
 import model.Course;
@@ -25,6 +28,7 @@ import model.Staff;
 import view.*;
 
 import java.awt.*;
+import java.awt.ScrollPane;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
@@ -46,11 +50,11 @@ public class HomePageController {
     @FXML
     public TabPane homePageTabPane;
     @FXML
-    private Button logoutBtn;
+    private Button logoutBtn, notifBtn;
     @FXML
     private Label ghostSessionL;
     @FXML
-    private AnchorPane homePaneRS, homePaneT;
+    private AnchorPane homePaneRS, homePaneT, notifPane;
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
@@ -461,6 +465,21 @@ public class HomePageController {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void showNotifications() {
+        TranslateTransition openTransition = new TranslateTransition(new Duration(350), notifPane);
+        openTransition.setToX(0);
+        TranslateTransition closeTransition = new TranslateTransition(new Duration(350), notifPane);
+        notifBtn.setOnAction((ActionEvent event)->{
+            if(notifPane.getTranslateX()!=0) {
+                openTransition.play();
+            } else {
+                closeTransition.setToX(-(notifPane.getWidth()));
+                closeTransition.play();
+            }
+        });
+
     }
 }
 

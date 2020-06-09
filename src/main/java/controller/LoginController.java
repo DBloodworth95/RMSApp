@@ -70,6 +70,7 @@ public class LoginController {
                 controller.setGhostSessionL(Integer.toString(session.getId()));
                 controller.setDateLabel();
                 controller.createHomeTab(session);
+                controller.showNotifications();
                 Calendar currentDate = Calendar.getInstance();
                 SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
                 String dateNow = formatter.format(currentDate.getTime());
