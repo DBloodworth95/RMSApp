@@ -32,7 +32,7 @@ public class LoginController {
     private boolean accountFound = false;
 
 
-    public void loginAttempt() throws SQLException, IOException, ParseException {
+    public void loginAttempt() throws SQLException, IOException {
         initial();
         String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";

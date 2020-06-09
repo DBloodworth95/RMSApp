@@ -418,17 +418,17 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement from staff member would go here" wrappingWidth="292.6640625" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement from staff member would go here" wrappingWidth="285.6640625" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement from staff member would go here" wrappingWidth="289.6640625" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
@@ -454,17 +454,17 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notification would go here" wrappingWidth="1113.33251953125" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notification would go here" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notification would go here" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">

@@ -51,19 +51,37 @@
                                                                   <Insets left="15.0" right="15.0" />
                                                                </padding>
                                                             </HBox>
-                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0">
+                                                            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="377.0" prefWidth="888.0">
                                                                <children>
-                                                                  <VBox>
+                                                                  <VBox prefHeight="159.0" prefWidth="858.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem">
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Cause for Concern" wrappingWidth="228.5869140625">
                                                                            <VBox.margin>
-                                                                              <Insets bottom="10.0" />
+                                                                              <Insets />
                                                                            </VBox.margin>
                                                                            <font>
                                                                               <Font size="14.0" />
                                                                            </font>
                                                                         </Text>
-                                                                        <Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+                                                                        <Label prefHeight="69.0" prefWidth="858.0" text="Student ID: 12345678 has registered 2 consecutive absences in your module CSY2030. An email has been sent to them. Please follow university protocol in order to address this issue. " wrapText="true" />
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Confirmation letter required">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Label prefHeight="73.0" prefWidth="858.0" text="Student ID: 23344455 background checks completed. The student has been admitted and is ready to be enrolled on Course CSY2021. Please forward Confirmation letter." wrapText="true" />
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Personal data update">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Label prefHeight="70.0" prefWidth="858.0" text="This is to inform you that your personal record, ID: 99999999, has been updated. Please contact administration if you have any further enquiries." wrapText="true" />
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: PT Appointment">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                        <Label prefHeight="47.0" prefWidth="511.0" text="You have a new appointment pending. Please check your personal tutor page." wrapText="true" />
                                                                      </children>
                                                                   </VBox>
                                                                </children>
