@@ -66,6 +66,7 @@ public class LoginController {
                     controller.setDateLabel();
                     controller.createHomeTab(session);
                     controller.showNotifications();
+                    controller.populateSearchCB();
                 } else if (session.getAccessLevel().hasAccessToCourseLeadView()) {
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageCourseLeader.fxml"));
 
@@ -81,6 +82,7 @@ public class LoginController {
                     controller.setDateLabel();
                     controller.createHomeTab(session);
                     controller.showNotificationsTutor();
+                    controller.populateSearchCBT();
                 }
                 Calendar currentDate = Calendar.getInstance();
                 SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");

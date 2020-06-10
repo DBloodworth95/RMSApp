@@ -200,7 +200,7 @@
                <children>
                   <HBox alignment="CENTER" prefWidth="200.0">
                      <children>
-                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="215.0" promptText="Search me" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #9ccce4#9ccce4; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;">
+                        <TextField fx:id="searchTFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="204.0" promptText="Search me" style="-fx-background-radius: 5px 0px 0px 5px; -fx-background-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-color: #9ccce4#9ccce4; -fx-border-radius: 5px 0px 0px 5px; -fx-background-insets: 2px;">
                            <HBox.margin>
                               <Insets top="1.0" />
                            </HBox.margin>
@@ -224,7 +224,7 @@
                      <padding>
                         <Insets left="10.0" />
                      </padding></HBox>
-                  <ComboBox minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="155.0" promptText="STUDENTS" style="-fx-background-color: white; -fx-border-color: #9ccce4#9ccce4 #9ccce4#9ccce4;">
+                  <ComboBox fx:id="searchCBT" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="168.0" promptText="Select a Tab" style="-fx-background-color: white; -fx-border-color: #9ccce4#9ccce4 #9ccce4#9ccce4;">
                      <padding>
                         <Insets left="35.0" />
                      </padding>

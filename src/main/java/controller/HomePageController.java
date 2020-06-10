@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
@@ -55,6 +56,10 @@ public class HomePageController {
     private Label ghostSessionL;
     @FXML
     private AnchorPane homePaneRS, homePaneT, notifPane, notifPaneTutor;
+    @FXML
+    private ComboBox<String> searchCB, searchCBT;
+    @FXML
+    private TextField searchTF, searchTFT;
     private FXMLLoader loader;
     public ArrayList<Tab> tabArrayList = new ArrayList<>();
     private int currentTabView;
@@ -493,6 +498,23 @@ public class HomePageController {
                 closeTransition.play();
             }
         });
+    }
+
+    public void populateSearchCB() {
+        searchCB.getItems().add("STUDENTS");
+        searchCB.getItems().add("STAFF");
+        searchCB.getItems().add("MODULES");
+        searchCB.getItems().add("COURSES");
+        searchCB.getItems().add("ASSESSMENTS");
+        searchCB.getItems().add("GRADES");
+        searchCB.getItems().add("ATTENDANCE");
+        searchCB.getItems().add("PERSONAL TUTOR");
+    }
+    public void populateSearchCBT() {
+        searchCB.getItems().add("ASSESSMENTS");
+        searchCB.getItems().add("ATTENDANCE");
+        searchCB.getItems().add("GRADES");
+        searchCB.getItems().add("MODULES");
     }
 }
 
