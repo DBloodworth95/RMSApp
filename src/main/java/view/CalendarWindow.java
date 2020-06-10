@@ -59,9 +59,6 @@ public class CalendarWindow {
     }
 
     private void setupComponents(BorderPane root, ICalendarAgenda agenda, Label label) {
-        ObservableList<String> rooms = FXCollections.observableArrayList();
-        rooms.add("room 304");
-        rooms.add("room 500");
         Button incrementWeek = new Button(">");
         Button decrementWeek = new Button("<");
         label.setVisible(true);
