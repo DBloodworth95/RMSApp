@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class StudentTab extends Tab {
 
-    public StudentTab(TabPane tabPane, FXMLLoader loader) throws IOException, SQLException {
+    public StudentTab(TabPane tabPane, FXMLLoader loader, String id) throws IOException, SQLException {
         StudentTab studentTab = new StudentTab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
@@ -20,7 +20,7 @@ public class StudentTab extends Tab {
         studentTab.setContent(studentTabContent);
         Object temp = loader.getController();
         StudentTabController controller = (StudentTabController) temp;
-        controller.populate();
+        controller.populate(id);
         tabPane.getSelectionModel().select(studentTab);
     }
 

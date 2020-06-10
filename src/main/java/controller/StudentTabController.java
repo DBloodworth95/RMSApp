@@ -33,7 +33,7 @@ public class StudentTabController {
     @FXML
     private Button createBtn, archiveBtn;
 
-    public List<Student> fetchTable(Boolean isArchive) throws SQLException {
+    public List<Student> fetchTable(Boolean isArchive, String searchID) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
@@ -41,8 +41,12 @@ public class StudentTabController {
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
         List<Student> students = new ArrayList<>();
+        ResultSet result;
         if(isArchive) {
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 1");
+            if (searchID == null)
+            result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 1");
+            else
+                result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 1 AND student_id='" + searchID + "'");
             while (result.next()) {
                 int id = Integer.parseInt(result.getString("student_id"));
                 String pw = result.getString("password");
@@ -87,7 +91,10 @@ public class StudentTabController {
                         , homeHouseCountry, homeHouseZip, email));
             }
         } else {
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 0");
+            if (searchID == null)
+                result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 0");
+            else
+                result = fetchStaff.executeQuery("SELECT * FROM students WHERE archived = 0 AND student_id='" + searchID + "'");
             while (result.next()) {
                 int id = Integer.parseInt(result.getString("student_id"));
                 String pw = result.getString("password");
@@ -169,12 +176,12 @@ public class StudentTabController {
         editColumns();
     }
 
-    public void populate() throws SQLException {
-        List<Student> newStudent = fetchTable(false);
+    public void populate(String id) throws SQLException {
+        List<Student> newStudent = fetchTable(false, id);
         populateTable(newStudent);
     }
-    public void populateArchive() throws SQLException {
-        List<Student> newStudent = fetchTable(true);
+    public void populateArchive(String id) throws SQLException {
+        List<Student> newStudent = fetchTable(true, id);
         populateTable(newStudent);
         createBtn.setVisible(false);
         archiveBtn.setVisible(false);
@@ -279,7 +286,7 @@ public class StudentTabController {
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
         PreparedStatement preparedStatement = myConnection.prepareStatement(query);
         preparedStatement.execute();
-        populate();
+        populate(null);
     }
 
     public void printTable() {

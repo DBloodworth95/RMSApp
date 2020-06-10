@@ -32,15 +32,19 @@ public class StaffTabController {
     @FXML
     private Button createBtn, archiveBtn;
 
-    public List<Staff> fetchTable(Boolean isArchive) throws SQLException {
+    public List<Staff> fetchTable(Boolean isArchive, String searchID) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
         List<Staff> staff = new ArrayList<>();
-        if(isArchive){
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 1");
+        ResultSet result;
+        if (isArchive) {
+            if (searchID == null)
+                result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 1");
+            else
+                result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 1 AND staff_id='" + searchID + "'");
             while (result.next()) {
                 int id = Integer.parseInt(result.getString("staff_id"));
                 String status = result.getString("status");
@@ -73,7 +77,10 @@ public class StaffTabController {
                         medicalA, medicalR, image));
             }
         } else {
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 0");
+            if (searchID == null)
+                result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 0");
+            else
+                result = fetchStaff.executeQuery("SELECT * FROM staff WHERE archived = 0 AND staff_id='" + searchID + "'");
             while (result.next()) {
                 int id = Integer.parseInt(result.getString("staff_id"));
                 String status = result.getString("status");
@@ -137,12 +144,13 @@ public class StaffTabController {
         editColumns();
     }
 
-    public void populate() throws SQLException {
-        List<Staff> newStaff = fetchTable(false);
+    public void populate(String id) throws SQLException {
+        List<Staff> newStaff = fetchTable(false, id);
         populateTable(newStaff);
     }
+
     public void populateArchive() throws SQLException {
-        List<Staff> newStaff = fetchTable(true);
+        List<Staff> newStaff = fetchTable(true, null);
         populateTable(newStaff);
         createBtn.setVisible(false);
         archiveBtn.setVisible(false);
@@ -169,7 +177,7 @@ public class StaffTabController {
 
     public void updateTable() throws SQLException {
         Staff staff;
-        List <List<String>> staffList = new ArrayList<>();
+        List<List<String>> staffList = new ArrayList<>();
         for (int i = 0; i < staffTV.getItems().size(); i++) {
             staff = (Staff) staffTV.getItems().get(i);
             staffList.add(new ArrayList<>());
@@ -223,7 +231,7 @@ public class StaffTabController {
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
         PreparedStatement preparedStatement = myConnection.prepareStatement(query);
         preparedStatement.execute();
-        populate();
+        populate(null);
     }
 
     public void printTable() {

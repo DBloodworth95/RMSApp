@@ -259,7 +259,7 @@
                               <Insets left="9.0" top="1.0" />
                            </HBox.margin>
                         </ComboBox>
-                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: #9ccce4#9ccce4; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#performSearchByTabAndID" prefHeight="27.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 0px 5px 5px 0px; -fx-padding: 5px; -fx-border-color: #9ccce4#9ccce4; -fx-border-width: 1px 1px 1px 0px; -fx-border-radius: 0px 5px 5px 0px; -fx-background-insets: 1px;" textFill="WHITE">
                            <HBox.margin>
                               <Insets top="1.0" />
                            </HBox.margin>

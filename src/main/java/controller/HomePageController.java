@@ -105,15 +105,15 @@ public class HomePageController {
     }
 
     public void createStudentTab() throws IOException, SQLException {
-        checkTabLimit(new StudentTab(homePageTabPane, loader));
+        checkTabLimit(new StudentTab(homePageTabPane, loader, null));
     }
 
     public void archiveCreateStudentTab() throws IOException, SQLException {
-        checkTabLimit(new ArchiveStudentTab(homePageTabPane, loader));
+        checkTabLimit(new ArchiveStudentTab(homePageTabPane, loader, null));
     }
 
     public void createStaffTab() throws IOException, SQLException {
-        checkTabLimit(new StaffTab(homePageTabPane, loader));
+        checkTabLimit(new StaffTab(homePageTabPane, loader, null));
     }
 
     public void archiveCreateStaffTab() throws IOException, SQLException {
@@ -289,9 +289,9 @@ public class HomePageController {
         homePageTabPane.getTabs().clear();
         for (Tab tab : tabArrayList) {
             if (tab instanceof StudentTab) {
-                StudentTab st = new StudentTab(homePageTabPane, loader);
+                StudentTab st = new StudentTab(homePageTabPane, loader, null);
             } else if (tab instanceof StaffTab) {
-                StaffTab staffTab = new StaffTab(homePageTabPane, loader);
+                StaffTab staffTab = new StaffTab(homePageTabPane, loader, null);
             } else if (tab instanceof ModuleTab) {
                 ModuleTab moduleTab = new ModuleTab(homePageTabPane, loader, ghostSessionL);
             } else if (tab instanceof CourseTab) {
@@ -303,7 +303,7 @@ public class HomePageController {
             } else if (tab instanceof PersonalTutorTab) {
                 PersonalTutorTab tutorTab = new PersonalTutorTab(homePageTabPane, loader);
             } else if (tab instanceof ArchiveStudentTab) {
-                ArchiveStudentTab archiveStudentTab = new ArchiveStudentTab(homePageTabPane, loader);
+                ArchiveStudentTab archiveStudentTab = new ArchiveStudentTab(homePageTabPane, loader, null);
             } else if (tab instanceof ArchiveStaffTab) {
                 ArchiveStaffTab archiveStaffTab = new ArchiveStaffTab(homePageTabPane, loader);
             } else if (tab instanceof ArchiveAssessmentTab) {
@@ -515,6 +515,15 @@ public class HomePageController {
         searchCB.getItems().add("ATTENDANCE");
         searchCB.getItems().add("GRADES");
         searchCB.getItems().add("MODULES");
+    }
+
+    public void performSearchByTabAndID() throws IOException, SQLException {
+        String id = searchTF.getText();
+        if (searchCB.getValue().equalsIgnoreCase("STUDENTS")) {
+            checkTabLimit(new StudentTab(homePageTabPane, loader, id));
+        } else if (searchCB.getValue().equalsIgnoreCase("STAFF")) {
+            checkTabLimit(new StaffTab(homePageTabPane, loader, id));
+        }
     }
 }
 

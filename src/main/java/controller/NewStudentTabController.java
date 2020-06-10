@@ -148,7 +148,7 @@ public class NewStudentTabController {
         saveBtn.setOnAction((e)-> {
             try {
                 createStudent();
-                studentTabController.populate();
+                studentTabController.populate(null);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }

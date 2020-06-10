@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class ArchiveStudentTab extends Tab {
 
-    public ArchiveStudentTab(TabPane tabPane, FXMLLoader loader) throws IOException, SQLException {
+    public ArchiveStudentTab(TabPane tabPane, FXMLLoader loader, String id) throws IOException, SQLException {
         ArchiveStudentTab studentTab = new ArchiveStudentTab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/StudentTab.fxml"));
         AnchorPane studentTabContent = loader.load();
@@ -20,7 +20,7 @@ public class ArchiveStudentTab extends Tab {
         studentTab.setContent(studentTabContent);
         Object temp = loader.getController();
         StudentTabController controller = (StudentTabController) temp;
-        controller.populateArchive();
+        controller.populateArchive(id);
         tabPane.getSelectionModel().select(studentTab);
     }
 

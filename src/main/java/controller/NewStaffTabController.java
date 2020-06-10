@@ -146,7 +146,7 @@ public class NewStaffTabController {
         saveBtn.setOnAction((e) -> {
             try {
                 createStaff();
-                staffTabController.populate();
+                staffTabController.populate(null);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
