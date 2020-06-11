@@ -178,6 +178,12 @@ public class AssessmentTabController {
         }
     }
 
+    public void populateYearCB() {
+        for (int i = 2018; i<3000; i++) {
+            yearCB.getItems().addAll(String.valueOf(i));
+        }
+    }
+
     public void editColumns() {
         idCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Assessment, Integer>>) assessmentIntegerCellEditEvent -> ((Assessment) assessmentIntegerCellEditEvent.getTableView().getItems().get(assessmentIntegerCellEditEvent.getTablePosition().getRow())).setId(assessmentIntegerCellEditEvent.getNewValue()));

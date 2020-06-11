@@ -30,6 +30,7 @@ public class AssessmentTab extends Tab {
             }
             controller.populateCourseCB(result.getInt("user_level"), result.getString("course"));
             controller.populateModuleCB(result.getInt("user_level"), result.getString("course"));
+            controller.populateYearCB();
         }
         tabPane.getSelectionModel().select(assessmentTab);
     }
