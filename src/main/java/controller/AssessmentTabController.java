@@ -5,10 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
-import javafx.scene.control.Button;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.FloatStringConverter;
@@ -16,6 +13,7 @@ import javafx.util.converter.IntegerStringConverter;
 import model.Assessment;
 import model.TablePrinter;
 import view.NewAssessmentWindow;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -28,6 +26,8 @@ public class AssessmentTabController {
     private TableColumn idCol, courseCol, moduleCol, yearCol, termCol, typeCol, weightCol, statusCol, briefCol;
     @FXML
     private Button createBtn, archiveBtn;
+    @FXML
+    private ComboBox<String> courseCB, moduleCB, yearCB;
 
     public List<Assessment> fetchTable(Boolean isArchive) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -130,15 +130,36 @@ public class AssessmentTabController {
         List<Assessment> newAssessment = fetchTable(false);
         populateTable(newAssessment);
     }
+
     public void populateByCourse(String course) throws SQLException {
         List<Assessment> newAssessment = fetchTableByCourse(false, course);
         populateTable(newAssessment);
     }
+
     public void populateArchive() throws SQLException {
         List<Assessment> newAssessment = fetchTable(true);
         populateTable(newAssessment);
         createBtn.setVisible(false);
         archiveBtn.setVisible(false);
+    }
+
+    public void populateCourseCB(int id, String courseVal) throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result;
+        if (id == 4) {
+            courseCB.getItems().add(courseVal);
+            courseCB.setValue(courseVal);
+        }
+        else {
+            result = fetchStaff.executeQuery("SELECT DISTINCT course_code FROM courses");
+            while (result.next()) {
+                courseCB.getItems().add(result.getString("course_code"));
+            }
+        }
     }
 
     public void editColumns() {
@@ -164,7 +185,7 @@ public class AssessmentTabController {
 
     public void updateTable() throws SQLException {
         Assessment assessment;
-        List <List<String>> assessmentList = new ArrayList<>();
+        List<List<String>> assessmentList = new ArrayList<>();
         for (int i = 0; i < assessmentTV.getItems().size(); i++) {
             assessment = (Assessment) assessmentTV.getItems().get(i);
             assessmentList.add(new ArrayList<>());

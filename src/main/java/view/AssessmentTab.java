@@ -23,11 +23,12 @@ public class AssessmentTab extends Tab {
         AssessmentTabController controller = (AssessmentTabController) temp;
         ResultSet result = connect().executeQuery("SELECT * FROM users WHERE user_id ='" + Integer.parseInt(label.getText()) + "'");
         while (result.next()) {
-            if(result.getInt("user_level") == 4) {
+            if (result.getInt("user_level") == 4) {
                 controller.populateByCourse(result.getString("course"));
             } else {
                 controller.populate();
             }
+            controller.populateCourseCB(result.getInt("user_level"), result.getString("course"));
         }
         tabPane.getSelectionModel().select(assessmentTab);
     }
