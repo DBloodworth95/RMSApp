@@ -96,6 +96,36 @@ public class AssessmentTabController {
         return assessments;
     }
 
+    public List<Assessment> fetchTableByModule(Boolean isArchive, String course, String module) throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        List<Assessment> assessments = new ArrayList<>();
+        ResultSet result;
+        if (!isArchive) {
+            if (course != null)
+            result = fetchStaff.executeQuery("SELECT * FROM assessments WHERE archived = 0 AND course_code ='" + course + "' AND module_code ='" + module + "'");
+            else
+                result = fetchStaff.executeQuery("SELECT * FROM assessments WHERE archived = 0 AND module_code ='" + module + "'");
+            while (result.next()) {
+                int id = Integer.parseInt(result.getString("assessment_id"));
+                String moduleCode = result.getString("module_code");
+                String type = result.getString("type");
+                String term = result.getString("term");
+                float weight = Float.parseFloat(result.getString("weighting"));
+                String brief = result.getString("brief");
+                String status = result.getString("status");
+                String year = result.getString("year");
+                String courseCode = result.getString("course_code");
+
+                assessments.add(new Assessment(id, courseCode, moduleCode, year, term, type, status, brief, weight));
+            }
+        }
+        return assessments;
+    }
+
     public void populateTable(List<Assessment> newAssessment) {
         idCol.setCellValueFactory(new PropertyValueFactory<Assessment, Integer>("id"));
         courseCol.setCellValueFactory(new PropertyValueFactory<Assessment, String>("course"));
@@ -189,6 +219,16 @@ public class AssessmentTabController {
             List<Assessment> newAssessment = null;
             try {
                 newAssessment = fetchTableByCourse(false, courseCB.getValue());
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            populateTable(newAssessment);
+        });
+
+        moduleCB.setOnAction(e-> {
+            List<Assessment> newAssessment = null;
+            try {
+                newAssessment = fetchTableByModule(false, courseCB.getValue(), moduleCB.getValue());
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
