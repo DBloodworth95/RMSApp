@@ -26,7 +26,7 @@
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <ComboBox prefWidth="150.0" promptText="CS" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
+                  <ComboBox fx:id="courseCB" prefWidth="150.0" promptText="Select a course" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
                      <HBox.margin>
                         <Insets right="100.0" />
                      </HBox.margin>
@@ -39,7 +39,7 @@
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <ComboBox prefWidth="150.0" promptText="CSY2020" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
+                  <ComboBox fx:id="moduleCB" prefHeight="28.0" prefWidth="157.0" promptText="Select a module" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;">
                      <HBox.margin>
                         <Insets right="100.0" />
                      </HBox.margin>
@@ -52,7 +52,7 @@
                         <Font size="12.0" />
                      </font>
                   </Label>
-                  <ComboBox prefWidth="150.0" promptText="2019" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;" />
+                  <ComboBox fx:id="yearCB" prefWidth="150.0" promptText="Select a year" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-color: grey; -fx-border-radius: 5px;" />
                </children>
             </HBox>
          </children>

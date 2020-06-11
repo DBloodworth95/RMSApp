@@ -162,6 +162,22 @@ public class AssessmentTabController {
         }
     }
 
+    public void populateModuleCB(int id, String courseVal) throws SQLException {
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result;
+        if (id == 4)
+            result = fetchStaff.executeQuery("SELECT module_code FROM modules WHERE course ='" + courseVal + "' AND archived = 0");
+        else
+            result = fetchStaff.executeQuery("SELECT DISTINCT module_code FROM modules");
+        while (result.next()) {
+            moduleCB.getItems().add(result.getString("module_code"));
+        }
+    }
+
     public void editColumns() {
         idCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Assessment, Integer>>) assessmentIntegerCellEditEvent -> ((Assessment) assessmentIntegerCellEditEvent.getTableView().getItems().get(assessmentIntegerCellEditEvent.getTablePosition().getRow())).setId(assessmentIntegerCellEditEvent.getNewValue()));
