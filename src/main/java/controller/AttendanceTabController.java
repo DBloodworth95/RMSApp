@@ -31,18 +31,34 @@ public class AttendanceTabController {
     @FXML
     private ComboBox<String> courseCB, moduleCB;
 
-    public void populateCourseCB(String courseVal) {
-        courseCB.getItems().add(courseVal);
-        courseCB.setValue(courseVal);
+    public void populateCourseCB(String courseVal, int id) throws SQLException {
+        if (id == 4) {
+            courseCB.getItems().add(courseVal);
+            courseCB.setValue(courseVal);
+        } else {
+            String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+            String username = "root";
+            String password = "root";
+            Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+            Statement fetchStaff = rmsConnection.createStatement();
+            ResultSet result;
+            result = fetchStaff.executeQuery("SELECT DISTINCT course_code FROM courses");
+            while (result.next())
+                courseCB.getItems().add(result.getString("course_code"));
+        }
     }
 
-    public void populateModuleCB(String courseVal) throws SQLException {
+    public void populateModuleCB(String courseVal, int id) throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT module_code FROM modules WHERE course ='" + courseVal + "'");
+        ResultSet result;
+        if (id == 4)
+        result = fetchStaff.executeQuery("SELECT module_code FROM modules WHERE course ='" + courseVal + "'");
+        else
+            result = fetchStaff.executeQuery("SELECT DISTINCT module_code FROM modules");
         while (result.next()) {
             moduleCB.getItems().add(result.getString("module_code"));
         }

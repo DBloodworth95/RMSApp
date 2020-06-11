@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 import java.sql.*;
 
@@ -22,12 +23,8 @@ public class AttendanceTab extends Tab {
         AttendanceTabController controller = (AttendanceTabController) temp;
         ResultSet result = connect().executeQuery("SELECT * FROM users WHERE user_id ='" + Integer.parseInt(label.getText()) + "'");
         while (result.next()) {
-            if(result.getInt("user_level") == 4) {
-                controller.populateCourseCB(result.getString("course"));
-                controller.populateModuleCB(result.getString("course"));
-            } else {
-               // controller.populate();
-            }
+            controller.populateCourseCB(result.getString("course"), result.getInt("user_level"));
+            controller.populateModuleCB(result.getString("course"), result.getInt("user_level"));
         }
         tabPane.getSelectionModel().select(attendanceTab);
     }

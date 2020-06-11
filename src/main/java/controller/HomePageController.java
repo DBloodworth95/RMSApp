@@ -511,10 +511,10 @@ public class HomePageController {
         searchCB.getItems().add("PERSONAL TUTOR");
     }
     public void populateSearchCBT() {
-        searchCB.getItems().add("ASSESSMENTS");
-        searchCB.getItems().add("ATTENDANCE");
-        searchCB.getItems().add("GRADES");
-        searchCB.getItems().add("MODULES");
+        searchCBT.getItems().add("ASSESSMENTS");
+        searchCBT.getItems().add("ATTENDANCE");
+        searchCBT.getItems().add("GRADES");
+        searchCBT.getItems().add("MODULES");
     }
 
     public void performSearchByTabAndID() throws IOException, SQLException {
