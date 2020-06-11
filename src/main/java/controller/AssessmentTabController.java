@@ -184,6 +184,18 @@ public class AssessmentTabController {
         }
     }
 
+    public void initializeEventListeners() {
+        courseCB.setOnAction(e-> {
+            List<Assessment> newAssessment = null;
+            try {
+                newAssessment = fetchTableByCourse(false, courseCB.getValue());
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            populateTable(newAssessment);
+        });
+    }
+
     public void editColumns() {
         idCol.setOnEditCommit(
                 (EventHandler<TableColumn.CellEditEvent<Assessment, Integer>>) assessmentIntegerCellEditEvent -> ((Assessment) assessmentIntegerCellEditEvent.getTableView().getItems().get(assessmentIntegerCellEditEvent.getTablePosition().getRow())).setId(assessmentIntegerCellEditEvent.getNewValue()));
