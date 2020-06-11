@@ -8,11 +8,15 @@ import javafx.print.Paper;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.util.converter.IntegerStringConverter;
 import model.Attendant;
 import model.Course;
 import model.TablePrinter;
+import view.AttendanceTab;
 
+import javax.swing.event.ChangeEvent;
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,6 +34,8 @@ public class AttendanceTabController {
     private DatePicker datePicker;
     @FXML
     private ComboBox<String> courseCB, moduleCB;
+    @FXML
+    private TextField searchTFRS;
 
     public void populateCourseCB(String courseVal, int id) throws SQLException {
         if (id == 4) {
@@ -56,7 +62,7 @@ public class AttendanceTabController {
         Statement fetchStaff = rmsConnection.createStatement();
         ResultSet result;
         if (id == 4)
-        result = fetchStaff.executeQuery("SELECT module_code FROM modules WHERE course ='" + courseVal + "'");
+        result = fetchStaff.executeQuery("SELECT module_code FROM modules WHERE course ='" + courseVal + "' AND archived = 0");
         else
             result = fetchStaff.executeQuery("SELECT DISTINCT module_code FROM modules");
         while (result.next()) {
@@ -64,7 +70,7 @@ public class AttendanceTabController {
         }
     }
 
-    public List<Attendant> fetchFromFile(String fileConvention) throws IOException {
+    public List<Attendant> fetchFromFile(String fileConvention, String id) throws IOException {
         File dir = Paths.get("attendance_records/").toFile();
         File[] fileListings = dir.listFiles();
         List<Attendant> attendantListInFile = null;
@@ -74,12 +80,20 @@ public class AttendanceTabController {
                 try (ObjectInput inputStream = new ObjectInputStream(new FileInputStream(file))) {
                     try {
                         while ((attendantListInFile = (List<Attendant>) inputStream.readObject()) != null) {
-                            attendantList.addAll(attendantListInFile);
+                            if (!id.isEmpty()) {
+                                for (Attendant attendant : attendantListInFile) {
+                                    if (String.valueOf(attendant.getId()).contains(id)) {
+                                        attendantList.add(attendant);
+                                    } else {
+                                        attendantList.add(new Attendant(0, "null", "null", "null", "null"));
+                                    }
+                                }
+                            } else {
+                                attendantList.addAll(attendantListInFile);
+                            }
                             break;
                         }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (ClassNotFoundException e) {
+                    } catch (IOException | ClassNotFoundException e) {
                         e.printStackTrace();
                     }
                 }
@@ -90,10 +104,36 @@ public class AttendanceTabController {
 
     public void generate() {
         try {
-            populate();
+            populate("");
         } catch (IOException | SQLException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void startSearcherForRecordsStaff() {
+        searchTFRS.setOnKeyTyped(e -> {
+            try {
+                populate(searchTFRS.getText());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        });
+        searchTFRS.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent e) {
+                if (e.getCode() == KeyCode.BACK_SPACE) {
+                    try {
+                        populate(searchTFRS.getText());
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    } catch (SQLException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 
 
@@ -131,7 +171,9 @@ public class AttendanceTabController {
 
         ObservableList<Attendant> rows = FXCollections.observableArrayList();
         for (Attendant attendant : newAttendant) {
-            rows.add(attendant);
+            if (attendant.getId() != 0) {
+                rows.add(attendant);
+            }
         }
         attendanceTV.setItems(rows);
         attendanceTV.setEditable(true);
@@ -139,7 +181,7 @@ public class AttendanceTabController {
         editColumns();
     }
 
-    public void populate() throws IOException, SQLException {
+    public void populate(String id) throws IOException, SQLException {
         String[] dateVal = datePicker.getValue().toString().split("-");
         String[] moduleVal = moduleCB.getValue().split("-");
         String day = dateVal[0];
@@ -148,7 +190,11 @@ public class AttendanceTabController {
         String code = moduleVal[0];
         String start = moduleVal[1];
         String end = moduleVal[2];
-        List<Attendant> newAttendant = fetchFromFile(day + month + year + code + start + end);
+        List<Attendant> newAttendant;
+        if (id.isEmpty())
+        newAttendant = fetchFromFile(day + month + year + code + start + end, "");
+        else
+            newAttendant = fetchFromFile(day + month + year + code + start + end, id);
         if (!newAttendant.isEmpty()) {
             System.out.println("File found");
             populateTable(newAttendant);

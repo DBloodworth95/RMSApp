@@ -25,6 +25,7 @@ public class AttendanceTab extends Tab {
         while (result.next()) {
             controller.populateCourseCB(result.getString("course"), result.getInt("user_level"));
             controller.populateModuleCB(result.getString("course"), result.getInt("user_level"));
+            controller.startSearcherForRecordsStaff();
         }
         tabPane.getSelectionModel().select(attendanceTab);
     }
