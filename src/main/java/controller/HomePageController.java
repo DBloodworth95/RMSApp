@@ -525,5 +525,9 @@ public class HomePageController {
             checkTabLimit(new StaffTab(homePageTabPane, loader, id));
         }
     }
+
+    public void showTimetable() {
+        new TimetableWindow();
+    }
 }
 
