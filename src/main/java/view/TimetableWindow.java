@@ -9,6 +9,9 @@ import javafx.stage.Stage;
 import jfxtras.icalendarfx.VCalendar;
 import jfxtras.scene.control.agenda.icalendar.ICalendarAgenda;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -45,11 +48,11 @@ public class TimetableWindow {
             File destination = fileSaver.showSaveDialog(root.getScene().getWindow());
             try {
                 if (destination != null) {
-                    PrintWriter timetableFile = new PrintWriter(destination + ".txt");
-                    timetableFile.println(calendar.toString());
-                    System.out.println(calendar.toString());
+                    Rectangle screenSize = new Rectangle(70, 90, 1830, 1100);
+                    BufferedImage timetableImg = new Robot().createScreenCapture(screenSize);
+                    ImageIO.write(timetableImg, "png", new File(destination.toString()));
                 }
-            } catch (FileNotFoundException ex) {
+            } catch (AWTException | IOException ex) {
                 ex.printStackTrace();
             }
         });
