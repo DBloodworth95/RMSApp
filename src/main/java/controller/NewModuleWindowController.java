@@ -63,7 +63,7 @@ public class NewModuleWindowController {
         ResultSet result = fetchStaff.executeQuery("SELECT * FROM modules");
 
         String text = courseCB.getValue().toString();
-        String code = new String();
+        StringBuilder code = new StringBuilder();
         int amount = 1;
         while (result.next()) {
             ++amount;
@@ -72,7 +72,7 @@ public class NewModuleWindowController {
             if (text.charAt(i) == '-') {
                 break;
             } else {
-                code += text.charAt(i);
+                code.append(text.charAt(i));
             }
         }
         String genCode = code + "0" + amount + "-" + startCB.getValue().toString().charAt(2) + startCB.getValue().toString().charAt(3) + "-" + endCB.getValue().toString().charAt(2) +

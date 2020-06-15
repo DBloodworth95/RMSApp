@@ -58,7 +58,7 @@ public class NewAssessmentWindowController {
         String password = "root";
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchStaff = rmsConnection.createStatement();
-        ResultSet result = fetchStaff.executeQuery("SELECT module_code FROM modules");
+        ResultSet result = fetchStaff.executeQuery("SELECT module_code FROM modules WHERE archived = 0");
         while (result.next()) {
             moduleCB.getItems().addAll(result.getString("module_code"));
         }
