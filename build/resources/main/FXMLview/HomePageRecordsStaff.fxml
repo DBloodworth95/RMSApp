@@ -22,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="homePaneRS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+<AnchorPane fx:id="homePaneRS" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" stylesheets="@Stylesheets/main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="7.0" layoutY="6.0" minHeight="-Infinity" prefHeight="40.0" prefWidth="1440.0" style="-fx-background-color: #378d94#378d94;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -437,7 +437,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text onMouseClicked="#createHomeTabRS" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>
@@ -473,7 +473,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text onMouseClicked="#createHomeTabRS" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>
@@ -509,7 +509,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text onMouseClicked="#createHomeTabRS" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>

@@ -4,5 +4,16 @@
     -fx-background-position: center ;
     -fx-background-repeat: no-repeat;
     -fx-background-color: white;
+}
 
+Button:hover {
+    -fx-underline: true;
+}
+
+Label:hover {
+    -fx-underline: true;
+}
+
+Text:hover {
+    -fx-underline: true;
 }

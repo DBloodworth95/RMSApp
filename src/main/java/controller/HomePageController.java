@@ -229,15 +229,6 @@ public class HomePageController {
         notificationTab.setContent(notificationTabContent);
     }
 
-    public void createDiaryTab() throws IOException {
-        Tab diaryTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/DiaryTab.fxml"));
-        AnchorPane diaryTabContent = loader.load();
-        homePageTabPane.getTabs().add(diaryTab);
-        diaryTab.setText("Diary");
-        diaryTab.setContent(diaryTabContent);
-    }
-
     public void showDiary() throws SQLException {
         new CalendarWindow(ghostSessionL);
     }
