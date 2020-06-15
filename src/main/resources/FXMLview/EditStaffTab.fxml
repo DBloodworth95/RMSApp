@@ -8,6 +8,8 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -52,7 +54,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: #cecece #cecece; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px; -fx-opacity: 0.5;" text="Not editable">
                                                    <font>
                                                       <Font size="12.0" />
                                                    </font>
@@ -124,22 +126,12 @@
                                                 </ComboBox>
                                              </children>
                                           </HBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <children>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                              <children>
-                                                <Label minWidth="-Infinity" prefWidth="105.0" text="Password">
+                                                <Label minWidth="-Infinity" prefWidth="135.0" text="Password">
                                                    <HBox.margin>
                                                       <Insets right="5.0" />
                                                    </HBox.margin>
-                                                   <padding>
-                                                      <Insets left="15.0" />
-                                                   </padding>
                                                    <font>
                                                       <Font size="12.0" />
                                                    </font>
@@ -149,13 +141,10 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                              <children>
-                                                <Label minWidth="-Infinity" prefWidth="105.0" text="Gender">
+                                                <Label minWidth="-Infinity" prefWidth="135.0" text="Gender">
                                                    <HBox.margin>
                                                       <Insets right="5.0" />
                                                    </HBox.margin>
-                                                   <padding>
-                                                      <Insets left="15.0" />
-                                                   </padding>
                                                    <font>
                                                       <Font size="12.0" />
                                                    </font>
@@ -170,39 +159,29 @@
                                                 <Insets top="5.0" />
                                              </VBox.margin>
                                           </HBox>
-                                          <HBox alignment="CENTER_RIGHT" prefHeight="35.0">
+                                       </children>
+                                    </VBox>
+                                    <VBox HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="35.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                                              <children>
-                                                <Label minWidth="-Infinity" prefHeight="29.0" prefWidth="105.0" text="Picture">
-                                                   <HBox.margin>
-                                                      <Insets right="5.0" />
-                                                   </HBox.margin>
-                                                   <padding>
-                                                      <Insets left="15.0" />
-                                                   </padding>
-                                                   <font>
-                                                      <Font size="12.0" />
-                                                   </font>
-                                                </Label>
-                                                <TextField fx:id="pictureTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                                   <image>
+                                                      <Image url="@Images/newProfile.png" />
+                                                   </image>
+                                                </ImageView>
                                              </children>
-                                             <VBox.margin>
-                                                <Insets top="5.0" />
-                                             </VBox.margin>
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" prefHeight="35.0">
                                              <children>
-                                                <Label minWidth="-Infinity" prefHeight="29.0" prefWidth="105.0">
+                                                <TextField fx:id="pictureTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                                    <HBox.margin>
-                                                      <Insets right="5.0" />
-                                                   </HBox.margin>
-                                                   <padding>
-                                                      <Insets left="15.0" />
-                                                   </padding>
-                                                   <font>
-                                                      <Font size="12.0" />
-                                                   </font>
-                                                </Label>
-                                                <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
+                                                      <Insets right="3.0" />
+                                                   </HBox.margin></TextField>
+                                                <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
                                                    <HBox.margin>
                                                       <Insets />
                                                    </HBox.margin>
@@ -211,8 +190,14 @@
                                                    </font>
                                                 </Button>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
                                           </HBox>
                                        </children>
+                                       <padding>
+                                          <Insets left="15.0" />
+                                       </padding>
                                     </VBox>
                                  </children>
                               </HBox>
@@ -604,14 +589,27 @@
                                           <Insets right="5.0" />
                                        </HBox.margin>
                                     </Label>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="170.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
+                                    <TextField fx:id="resumeTF" minWidth="-Infinity" prefWidth="170.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                       <HBox.margin>
+                                          <Insets right="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
                                        <font>
                                           <Font size="12.0" />
                                        </font>
                                     </Button>
                                  </children>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" prefHeight="5.0">
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0">
+                                 <padding>
+                                    <Insets right="30.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="67.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="35.0">
                                  <children>
                                     <Separator HBox.hgrow="ALWAYS">
                                        <HBox.margin>
@@ -622,9 +620,6 @@
                                  <padding>
                                     <Insets right="30.0" />
                                  </padding>
-                                 <VBox.margin>
-                                    <Insets bottom="20.0" top="67.0" />
-                                 </VBox.margin>
                               </HBox>
                               <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0">
                                  <children>

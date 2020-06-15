@@ -8,6 +8,8 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -52,7 +54,7 @@
                                                       <Font size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                                <TextField fx:id="idTF" editable="false" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: #cecece; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px; -fx-opacity: 0.5;" text="Not editable" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
@@ -94,13 +96,9 @@
                                                 <TextField fx:id="surnameTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                              </children>
                                           </HBox>
-                                       </children>
-                                    </VBox>
-                                    <VBox>
-                                       <children>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                              <children>
-                                                <Label minWidth="-Infinity" prefWidth="70.0" text="Password">
+                                                <Label minWidth="-Infinity" prefWidth="100.0" text="Password">
                                                    <HBox.margin>
                                                       <Insets right="5.0" />
                                                    </HBox.margin>
@@ -113,7 +111,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
                                              <children>
-                                                <Label minWidth="-Infinity" prefWidth="70.0" text="Gender">
+                                                <Label minWidth="-Infinity" prefWidth="100.0" text="Gender">
                                                    <HBox.margin>
                                                       <Insets right="5.0" />
                                                    </HBox.margin>
@@ -128,33 +126,29 @@
                                                 </ComboBox>
                                              </children>
                                           </HBox>
-                                          <HBox alignment="CENTER_LEFT" prefHeight="35.0">
+                                       </children>
+                                    </VBox>
+                                    <VBox>
+                                       <children>
+                                          <HBox alignment="CENTER" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                                              <children>
-                                                <Label minWidth="-Infinity" prefWidth="70.0" text="Picture">
-                                                   <HBox.margin>
-                                                      <Insets right="5.0" />
-                                                   </HBox.margin>
-                                                   <font>
-                                                      <Font size="12.0" />
-                                                   </font>
-                                                </Label>
-                                                <TextField fx:id="pictureTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                                   <image>
+                                                      <Image url="@Images/newProfile.png" />
+                                                   </image>
+                                                </ImageView>
                                              </children>
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" prefHeight="35.0">
                                              <children>
-                                                <Label minWidth="-Infinity" prefWidth="70.0">
-                                                   <font>
-                                                      <Font size="12.0" />
-                                                   </font>
+                                                <TextField fx:id="pictureTF" minWidth="-Infinity" prefWidth="204.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                                    <HBox.margin>
-                                                      <Insets right="5.0" />
-                                                   </HBox.margin>
-                                                </Label>
-                                                <Button fx:id="pictureBtn" minWidth="-Infinity" mnemonicParsing="false" prefWidth="204.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
-                                                   <HBox.margin>
-                                                      <Insets />
-                                                   </HBox.margin>
+                                                      <Insets right="3.0" />
+                                                   </HBox.margin></TextField>
+                                                <Button fx:id="pictureBtn" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
                                                    <font>
                                                       <Font size="12.0" />
                                                    </font>
@@ -518,18 +512,22 @@
                                           <Insets />
                                        </HBox.margin>
                                     </TextField>
-                                    <Label contentDisplay="RIGHT" prefWidth="135.0" text="Current Year">
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0">
+                                 <padding>
+                                    <Insets right="30.0" />
+                                 </padding>
+                                 <children>
+                                    <Label prefWidth="135.0" text="Current Year">
                                        <HBox.margin>
                                           <Insets right="5.0" />
                                        </HBox.margin>
-                                       <padding>
-                                          <Insets left="15.0" />
-                                       </padding>
                                        <font>
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="currYearCB" minWidth="-Infinity" prefHeight="29.0" prefWidth="67.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <ComboBox fx:id="currYearCB" minWidth="-Infinity" prefHeight="29.0" prefWidth="180.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0">
@@ -547,31 +545,52 @@
                                           <Insets left="60.0" />
                                        </padding>
                                     </ComboBox>
-                                    <Label contentDisplay="RIGHT" prefWidth="135.0" text="Entry qualifications">
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label contentDisplay="RIGHT" prefWidth="135.0" text="Personal tutor ID">
                                        <HBox.margin>
                                           <Insets right="5.0" />
                                        </HBox.margin>
-                                       <padding>
-                                          <Insets left="15.0" />
-                                       </padding>
                                        <font>
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="entryQCB1" minWidth="-Infinity" prefHeight="28.0" prefWidth="77.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
-                                    <ComboBox fx:id="entryQCB2" minWidth="-Infinity" prefWidth="77.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <TextField fx:id="ptIDTF" prefWidth="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0">
+                                 <padding>
+                                    <Insets right="30.0" />
+                                 </padding>
+                                 <children>
+                                    <Label prefWidth="135.0" text="Entry qualifications">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="entryQCB1" minWidth="-Infinity" prefHeight="28.0" prefWidth="90.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                                    <ComboBox fx:id="entryQCB2" minWidth="-Infinity" prefWidth="90.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets left="1.0" />
                                        </HBox.margin>
                                     </ComboBox>
-                                    <ComboBox fx:id="entryQCB3" minWidth="-Infinity" prefWidth="77.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="entryQCB3" minWidth="-Infinity" prefWidth="90.0" promptText="---" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
                                     </ComboBox>
                                  </children>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" VBox.vgrow="ALWAYS">
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0">
                                  <children>
                                     <Label contentDisplay="RIGHT" prefWidth="135.0" text="Status">
                                        <HBox.margin>
@@ -608,23 +627,6 @@
                                           <Insets left="60.0" />
                                        </padding>
                                     </ComboBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" VBox.vgrow="ALWAYS">
-                                 <children>
-                                    <Label contentDisplay="RIGHT" prefWidth="135.0" text="Personal tutor ID">
-                                       <HBox.margin>
-                                          <Insets right="5.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font size="12.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="ptIDTF" prefWidth="180.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </TextField>
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="71.0" VBox.vgrow="ALWAYS">
