@@ -433,7 +433,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>
@@ -469,7 +469,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>
@@ -505,7 +505,7 @@
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>

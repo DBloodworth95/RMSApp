@@ -237,6 +237,10 @@ public class HomePageController {
         checkTabLimit(new HomeTabRS(homePageTabPane, loader));
     }
 
+    public void createNotificationsTab() throws IOException {
+        checkTabLimit(new NotificationTab(homePageTabPane, loader));
+    }
+
     public void createHomeTabCL() throws IOException {
         Tab homeTab = new Tab();
         loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutor.fxml"));
@@ -303,6 +307,8 @@ public class HomePageController {
                 HomeTabRS homeTabRS = new HomeTabRS(homePageTabPane, loader);
             } else if (tab instanceof HomeTabTutor) {
                 HomeTabTutor homeTabTutor = new HomeTabTutor(homePageTabPane, loader);
+            } else if (tab instanceof NotificationTab) {
+                NotificationTab notificationTab = new NotificationTab(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }

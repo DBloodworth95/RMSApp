@@ -185,8 +185,8 @@
                                                 <Image url="@Images/scrollStatIcon.png" />
                                              </image>
                                           </ImageView>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" students on yout modules" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Students on your modules" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" GridPane.columnIndex="2">

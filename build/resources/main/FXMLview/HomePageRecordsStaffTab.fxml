@@ -124,7 +124,7 @@
                                                                         </VBox>
                                                                         <VBox alignment="BOTTOM_RIGHT" prefHeight="15.0" prefWidth="100.0">
                                                                            <children>
-                                                                              <Label text="View all..." textFill="#2c787c" />
+                                                                              <Label fx:id="viewAllL" text="View all..." textFill="#2c787c" />
                                                                            </children>
                                                                            <padding>
                                                                               <Insets right="10.0" top="5.0" />
