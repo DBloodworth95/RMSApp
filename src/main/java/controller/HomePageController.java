@@ -257,13 +257,7 @@ public class HomePageController {
     }
 
     public void createHomeTabT() throws IOException {
-        Tab homeTab = new Tab();
-        loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutorTab.fxml"));
-        AnchorPane homeTabContent = loader.load();
-        homePageTabPane.getTabs().add(homeTab);
-        homeTab.setText("Home");
-        homeTab.setContent(homeTabContent);
-        homePageTabPane.getSelectionModel().select(homeTab);
+        checkTabLimit(new HomeTabTutor(homePageTabPane, loader));
     }
 
     public void createIMChat() throws IOException {
@@ -314,6 +308,10 @@ public class HomePageController {
                 ArchiveAttendanceTab archiveAttendanceTab = new ArchiveAttendanceTab(homePageTabPane, loader);
             } else if (tab instanceof FormsTab) {
                 FormsTab formsTab = new FormsTab(homePageTabPane, loader);
+            } else if (tab instanceof HomeTabRS) {
+                HomeTabRS homeTabRS = new HomeTabRS(homePageTabPane, loader);
+            } else if (tab instanceof HomeTabTutor) {
+                HomeTabTutor homeTabTutor = new HomeTabTutor(homePageTabPane, loader);
             } else {
                 homePageTabPane.getTabs().add(tab);
             }
@@ -504,6 +502,7 @@ public class HomePageController {
         searchCB.getItems().add("ATTENDANCE");
         searchCB.getItems().add("PERSONAL TUTOR");
     }
+
     public void populateSearchCBT() {
         searchCBT.getItems().add("ASSESSMENTS");
         searchCBT.getItems().add("ATTENDANCE");
