@@ -39,9 +39,9 @@ public class NewStaffTabController {
     }
 
     public void createStaff() throws SQLException, IOException {
-        FileInputStream imageFile = new FileInputStream(pictureTF.getText());
         if (!verifyFilledInputFields()) {
             if (idTF.getText().equalsIgnoreCase("automatically generated")) {
+                FileInputStream imageFile = new FileInputStream(pictureTF.getText());
                 String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
                 String username = "root";
                 String password = "root";
@@ -231,7 +231,7 @@ public class NewStaffTabController {
                 "', address_country='" + countryTF.getText() + "', zip_code='" + zipTF.getText() + "', telephone='" + phoneTF.getText() + "', email_address='" + emailTF.getText() +
                 "', emergency_contact_phone='" + emergPTF.getText() + "', emergency_contact_email='" + emergETF.getText() + "', specialist_subject='" + specialismCB.getValue().toString() +
                 "', resume='" + "resume" + "', additional_notes='" + addNoteTA.getText() + "', medical_history='" + medicalHTA.getText() + "', medical_allergies='" +
-                allergyTA.getText() + "', medical_religious='" + religiousTA.getText() + "', image='" + "image" + "' WHERE staff_id='" + idTF.getText() + "'");
+                allergyTA.getText() + "', medical_religious='" + religiousTA.getText() + "' WHERE staff_id='" + idTF.getText() + "'");
         Connection myCon = DriverManager.getConnection(dbURL, username, password);
         PreparedStatement preparedStatement = myCon.prepareStatement(query);
         preparedStatement.execute();

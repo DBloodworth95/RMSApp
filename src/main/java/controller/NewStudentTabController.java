@@ -36,9 +36,9 @@ public class NewStudentTabController {
     }
 
     public void createStudent() throws SQLException, IOException {
-        FileInputStream imageFile = new FileInputStream(pictureTF.getText());
         if(!verifyFilledInputFields()) {
             if (idTF.getText().equalsIgnoreCase("automatically generated")) {
+                FileInputStream imageFile = new FileInputStream(pictureTF.getText());
                 String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
                 String username = "root";
                 String password = "root";
@@ -239,7 +239,7 @@ public class NewStudentTabController {
         String username = "root";
         String password = "root";
         String query = ("UPDATE students SET personal_tutor='" + ptIDTF.getText() + "', password='" + passwordTF.getText() + "', status='" + statusCB.getValue().toString() + "', dormancy_reason='" + dormCB.getValue().toString() +
-                "', first_name='" + firstNameTF.getText() + "', middle_name='" + midNameTF.getText() + "', surname='" + surnameTF.getText() + "', image='" + "image" + "', gender='" + genderCB.getValue().toString() +
+                "', first_name='" + firstNameTF.getText() + "', middle_name='" + midNameTF.getText() + "', surname='" + surnameTF.getText() + "', gender='" + genderCB.getValue().toString() +
                 "', telephone='" + emergPhoneTF.getText() + "', current_course_code='" + currCourseTF.getText() + "', current_year='" + currYearCB.getValue().toString() + "', enrollment_year='" + enrolYearCB.getValue().toString() +
                 "', entry_qualifications='" + entryQCB1.getValue().toString() + " " + entryQCB2.getValue().toString() + " " + entryQCB3.getValue().toString() + "', emergency_contact_phone='" + emergPhoneTF.getText() + "', emergency_contact_email='" + emergEmailTF.getText() +
                 "', employer='" + employerTF.getText() + "', additional_notes='" + addNoteTF.getText() + "', personal_tutor='" + ptIDTF.getText() + "', medical_history='" + medicalTF.getText() +
