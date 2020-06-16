@@ -8,10 +8,7 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.sql.*;
 
 public class NewStudentTabController {
@@ -26,7 +23,7 @@ public class NewStudentTabController {
     @FXML
     private TextArea addNoteTF, religionTF, medicalTF;
     @FXML
-    private ImageView imageIV;
+    private ImageView imageIV, pictureIV;
     private Alert errorAlert = new Alert(Alert.AlertType.INFORMATION);
 
     public void handleUpload() throws FileNotFoundException {
@@ -231,6 +228,9 @@ public class NewStudentTabController {
             addNoteTF.setText(getStudent.getString("additional_notes"));
             religionTF.setText(getStudent.getString("medical_religious"));
             medicalTF.setText(getStudent.getString("medical_history"));
+            InputStream imageStream = getStudent.getBinaryStream("image");
+            Image picture = new Image(imageStream);
+            imageIV.setImage(picture);
         }
     }
 

@@ -11,6 +11,8 @@ import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 
 public class NewStaffTabController {
@@ -36,7 +38,8 @@ public class NewStaffTabController {
         imageIV.setImage(image);
     }
 
-    public void createStaff() throws SQLException {
+    public void createStaff() throws SQLException, IOException {
+        FileInputStream imageFile = new FileInputStream(pictureTF.getText());
         if (!verifyFilledInputFields()) {
             if (idTF.getText().equalsIgnoreCase("automatically generated")) {
                 String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -73,7 +76,7 @@ public class NewStaffTabController {
                 preparedStatement.setString(21, medicalHTA.getText());
                 preparedStatement.setString(22, allergyTA.getText());
                 preparedStatement.setString(23, religiousTA.getText());
-                preparedStatement.setString(24, "image");
+                preparedStatement.setBinaryStream(24, imageFile, imageFile.available());
                 preparedStatement.executeUpdate();
                 Statement fetchStaff = myConnection.createStatement();
                 ResultSet getStaff = fetchStaff.executeQuery("SELECT * FROM staff WHERE first_name='" + firstNameTF.getText() + "'AND surname='" + surnameTF.getText() + "'");
@@ -164,7 +167,7 @@ public class NewStaffTabController {
             try {
                 createStaff();
                 staffTabController.populate(null);
-            } catch (SQLException ex) {
+            } catch (SQLException | IOException ex) {
                 ex.printStackTrace();
             }
         });
@@ -174,7 +177,7 @@ public class NewStaffTabController {
         saveBtn.setOnAction((e) -> {
             try {
                 createStaff();
-            } catch (SQLException ex) {
+            } catch (SQLException | IOException ex) {
                 ex.printStackTrace();
             }
         });
@@ -212,6 +215,9 @@ public class NewStaffTabController {
             addNoteTA.setText(getStaff.getString("additional_notes"));
             medicalHTA.setText(getStaff.getString("medical_history"));
             courseCB.setValue("Computing");
+            InputStream imageStream = getStaff.getBinaryStream("image");
+            Image picture = new Image(imageStream);
+            imageIV.setImage(picture);
         }
     }
 
