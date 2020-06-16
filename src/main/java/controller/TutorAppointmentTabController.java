@@ -67,12 +67,13 @@ public class TutorAppointmentTabController {
         String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
         String username = "root";
         String password = "root";
-        String query = "INSERT INTO appointments(student_first_name, student_surname, tutor_id, course, module, date, student_id) VALUES (?,?,?,?,?,?,?)";
+        String query = "INSERT INTO appointments(student_first_name, student_surname, tutor_id, course, module, date, student_id, tutor_first_name, tutor_surname) VALUES (?,?,?,?,?,?,?,?,?)";
         String getStudents = "SELECT * FROM students WHERE student_id='" + Integer.parseInt(studentCB.getValue().toString()) + "'";
         String getStaffID = "SELECT * FROM users WHERE user_id='" + Integer.parseInt(ghostSessionL.getText()) + "'";
         String getCourse = "SELECT course FROM modules WHERE module_code='" + moduleCB.getValue().toString() + "'";
         Connection myConnection = DriverManager.getConnection(dbURL, username, password);
         Statement returnStudents = myConnection.createStatement();
+        Statement returnStaff = myConnection.createStatement();
         ResultSet studentResult = returnStudents.executeQuery(getStudents);
         PreparedStatement preparedStatement = myConnection.prepareStatement(query);
         while (studentResult.next()) {
@@ -82,6 +83,12 @@ public class TutorAppointmentTabController {
         ResultSet staffIDResult = returnStudents.executeQuery(getStaffID);
         while (staffIDResult.next()) {
             preparedStatement.setInt(3, staffIDResult.getInt("staff_id"));
+            String getStaffNames = "SELECT first_name, surname FROM staff WHERE staff_id='" + staffIDResult.getInt("staff_id") + "'";
+            ResultSet getStaffNameResult = returnStaff.executeQuery(getStaffNames);
+            while (getStaffNameResult.next()) {
+                preparedStatement.setString(8, getStaffNameResult.getString("first_name"));
+                preparedStatement.setString(9, getStaffNameResult.getString("surname"));
+            }
         }
         ResultSet courseResult = returnStudents.executeQuery(getCourse);
         while (courseResult.next()) {

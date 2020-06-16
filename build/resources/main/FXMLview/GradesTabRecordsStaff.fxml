@@ -220,7 +220,7 @@
       </HBox>
       <TableView fx:id="gradesTV" editable="true" layoutX="1.0" layoutY="139.0" prefHeight="578.0" prefWidth="1764.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
          <columns>
-            <TableColumn fx:id="idCol" prefWidth="152.12436485290527" text="Grade ID" />
+            <TableColumn fx:id="idCol" prefWidth="152.12436485290527" text="Grade ID" visible="false" />
             <TableColumn fx:id="yearCol" prefWidth="152.12436485290527" text="Year" />
             <TableColumn fx:id="studentCol" prefWidth="152.12436485290527" text="Student ID" />
             <TableColumn fx:id="moduleCol" prefWidth="107.0" text="Module Code" />

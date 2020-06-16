@@ -20,7 +20,7 @@ public class NewGradeWindow {
         stage.setTitle("Add a Grade");
         stage.setScene(scene);
         stage.setResizable(true);
-        stage.setMaximized(true);
+        stage.setMaximized(false);
         stage.show();
         Object temp = createGradeLoader.getController();
         NewGradeWindowController controller = (NewGradeWindowController) temp;
