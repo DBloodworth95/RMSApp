@@ -20,7 +20,7 @@ public class NewAssessmentWindow {
         stage.setTitle("Add an Assessment");
         stage.setScene(scene);
         stage.setResizable(true);
-        stage.setMaximized(true);
+        stage.setMaximized(false);
         stage.show();
         Object temp = createCourseLoader.getController();
         NewAssessmentWindowController controller = (NewAssessmentWindowController) temp;

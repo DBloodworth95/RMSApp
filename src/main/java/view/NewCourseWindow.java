@@ -20,7 +20,7 @@ public class NewCourseWindow {
         stage.setTitle("Add a Course");
         stage.setScene(scene);
         stage.setResizable(true);
-        stage.setMaximized(true);
+        stage.setMaximized(false);
         stage.show();
         Object temp = createCourseLoader.getController();
         NewCourseWindowController controller = (NewCourseWindowController) temp;

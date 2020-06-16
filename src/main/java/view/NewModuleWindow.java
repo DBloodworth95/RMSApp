@@ -20,7 +20,7 @@ public class NewModuleWindow {
         stage.setTitle("Add a Module");
         stage.setScene(scene);
         stage.setResizable(true);
-        stage.setMaximized(true);
+        stage.setMaximized(false);
         stage.show();
         Object temp = createModuleLoader.getController();
         NewModuleWindowController controller = (NewModuleWindowController) temp;
