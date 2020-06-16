@@ -251,7 +251,7 @@
                               <Font size="12.0" />
                            </font>
                         </TextField>
-                        <ComboBox fx:id="searchCB" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="170.0" promptText="Select a Tab" style="-fx-background-color: white; -fx-border-color: #9ccce4#9ccce4 #9ccce4#9ccce4;">
+                        <ComboBox fx:id="searchCB" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="170.0" promptText="Category" style="-fx-background-color: white; -fx-border-color: #9ccce4#9ccce4 #9ccce4#9ccce4;">
                            <padding>
                               <Insets left="35.0" />
                            </padding>
@@ -417,7 +417,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -453,7 +453,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -489,7 +489,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -525,7 +525,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">

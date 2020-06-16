@@ -36,11 +36,11 @@
                      </graphic>
                   </Button>
                   <Separator prefWidth="25.0" rotate="90.0" />
-                  <Button fx:id="redoBtn1" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: transparent;" text="Redo" textFill="WHITE">
+                  <Button fx:id="refreshBtn1" mnemonicParsing="false" onAction="#refresh" prefWidth="100.0" style="-fx-background-color: transparent;" text="Refresh" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Images/redoBtn.png" />
+                              <Image url="@Images/refreshBtn.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -224,7 +224,7 @@
                      <padding>
                         <Insets left="10.0" />
                      </padding></HBox>
-                  <ComboBox fx:id="searchCBT" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="168.0" promptText="Select a Tab" style="-fx-background-color: white; -fx-border-color: #9ccce4#9ccce4 #9ccce4#9ccce4;">
+                  <ComboBox fx:id="searchCBT" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="168.0" promptText="Category" style="-fx-background-color: white; -fx-border-color: #9ccce4#9ccce4 #9ccce4#9ccce4;">
                      <padding>
                         <Insets left="35.0" />
                      </padding>
@@ -234,7 +234,7 @@
                   </ComboBox>
                   <Separator minWidth="-Infinity" prefWidth="40.0" rotate="90.0" style="-fx-background-color: white;">
                      <HBox.margin>
-                        <Insets left="10.0" right="10.0" />
+                        <Insets left="8.0" right="10.0" />
                      </HBox.margin>
                   </Separator>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0">
@@ -413,7 +413,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -449,7 +449,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -485,7 +485,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -521,7 +521,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
