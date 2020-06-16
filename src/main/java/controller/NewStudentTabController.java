@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -24,13 +26,15 @@ public class NewStudentTabController {
     private TextArea addNoteTF, religionTF, medicalTF;
     @FXML
     private ImageView imageIV, pictureIV;
+    @FXML
+    private AnchorPane mainPane;
     private Alert errorAlert = new Alert(Alert.AlertType.INFORMATION);
 
     public void handleUpload() throws FileNotFoundException {
-        JFileChooser imgChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-        imgChooser.showOpenDialog(null);
-        pictureTF.setText(imgChooser.getSelectedFile().getAbsolutePath());
-        FileInputStream imageFileStream = new FileInputStream(imgChooser.getSelectedFile().getAbsoluteFile());
+        FileChooser imgChooser = new FileChooser();
+        File photo = imgChooser.showOpenDialog(mainPane.getScene().getWindow());
+        pictureTF.setText(photo.getAbsolutePath());
+        FileInputStream imageFileStream = new FileInputStream(photo.getAbsoluteFile());
         Image image = new Image(imageFileStream);
         imageIV.setImage(image);
     }

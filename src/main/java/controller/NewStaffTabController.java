@@ -4,15 +4,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.*;
 
 public class NewStaffTabController {
@@ -27,13 +26,15 @@ public class NewStaffTabController {
     private Button saveBtn;
     @FXML
     private ImageView imageIV;
+    @FXML
+    private AnchorPane mainPane;
     private Alert errorAlert = new Alert(Alert.AlertType.INFORMATION);
 
     public void handleUpload() throws FileNotFoundException {
-        JFileChooser imgChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-        imgChooser.showOpenDialog(null);
-        pictureTF.setText(imgChooser.getSelectedFile().getAbsolutePath());
-        FileInputStream imageFileStream = new FileInputStream(imgChooser.getSelectedFile().getAbsoluteFile());
+        FileChooser imgChooser = new FileChooser();
+        File photo = imgChooser.showOpenDialog(mainPane.getScene().getWindow());
+        pictureTF.setText(photo.getAbsolutePath());
+        FileInputStream imageFileStream = new FileInputStream(photo.getAbsoluteFile());
         Image image = new Image(imageFileStream);
         imageIV.setImage(image);
     }
