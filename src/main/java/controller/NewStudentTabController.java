@@ -2,23 +2,44 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.*;
 
 public class NewStudentTabController {
     @FXML
     private TextField idTF, firstNameTF, midNameTF, surnameTF, passwordTF, termNTF, termSTF, termCountryTF, termHNTF,
             termTTF, termZTF, homeNTF, homeSTF, homeCountryTF, homeHNTF, homeTTF, homeZTF, currCourseTF, ptIDTF,
-            emergPhoneTF, emergEmailTF, employerTF, allergyTF, homeCountyTF, termCountyTF;
+            emergPhoneTF, emergEmailTF, employerTF, allergyTF, homeCountyTF, termCountyTF, pictureTF;
     @FXML
     private ComboBox genderCB, currYearCB, enrolYearCB, statusCB, entryQCB1, entryQCB2, entryQCB3, dormCB;
     @FXML
     private Button pictureBtn, saveBtn, mediSaveBtn;
     @FXML
     private TextArea addNoteTF, religionTF, medicalTF;
+    @FXML
+    private ImageView imageIV;
     private Alert errorAlert = new Alert(Alert.AlertType.INFORMATION);
 
-    public void createStudent() throws SQLException {
+    public void handleUpload() throws FileNotFoundException {
+        JFileChooser imgChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        imgChooser.showOpenDialog(null);
+        pictureTF.setText(imgChooser.getSelectedFile().getAbsolutePath());
+        FileInputStream imageFileStream = new FileInputStream(imgChooser.getSelectedFile().getAbsoluteFile());
+        Image image = new Image(imageFileStream);
+        imageIV.setImage(image);
+    }
+
+    public void createStudent() throws SQLException, IOException {
+        FileInputStream imageFile = new FileInputStream(pictureTF.getText());
         if(!verifyFilledInputFields()) {
             if (idTF.getText().equalsIgnoreCase("automatically generated")) {
                 String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
@@ -38,7 +59,7 @@ public class NewStudentTabController {
                 preparedStatement.setString(4, firstNameTF.getText());
                 preparedStatement.setString(5, midNameTF.getText());
                 preparedStatement.setString(6, surnameTF.getText());
-                preparedStatement.setString(7, "image");
+                preparedStatement.setBinaryStream(7, imageFile, imageFile.available());
                 preparedStatement.setString(8, genderCB.getValue().toString());
                 preparedStatement.setString(9, termHNTF.getText());
                 preparedStatement.setInt(10, Integer.parseInt(currCourseTF.getText()));
@@ -149,7 +170,7 @@ public class NewStudentTabController {
             try {
                 createStudent();
                 studentTabController.populate(null);
-            } catch (SQLException ex) {
+            } catch (SQLException | IOException ex) {
                 ex.printStackTrace();
             }
         });
@@ -159,7 +180,7 @@ public class NewStudentTabController {
         saveBtn.setOnAction((e)-> {
             try {
                 createStudent();
-            } catch (SQLException ex) {
+            } catch (SQLException | IOException ex) {
                 ex.printStackTrace();
             }
         });

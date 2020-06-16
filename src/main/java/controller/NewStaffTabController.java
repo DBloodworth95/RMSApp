@@ -2,22 +2,39 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.*;
 
 public class NewStaffTabController {
     @FXML
     private TextField idTF, firstNameTF, middleNameTF, surnameTF, pwTF, addNumberTF, houseNTF, houseSTF, houseTTF, countyTF, countryTF, zipTF, phoneTF, emailTF,
-            emergPTF, emergETF;
+            emergPTF, emergETF, pictureTF;
     @FXML
     private ComboBox genderCB, statusCB, dormCB, specialismCB, courseCB;
     @FXML
     private TextArea allergyTA, religiousTA, addNoteTA, medicalHTA;
     @FXML
     private Button saveBtn;
+    @FXML
+    private ImageView imageIV;
     private Alert errorAlert = new Alert(Alert.AlertType.INFORMATION);
+
+    public void handleUpload() throws FileNotFoundException {
+        JFileChooser imgChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        imgChooser.showOpenDialog(null);
+        pictureTF.setText(imgChooser.getSelectedFile().getAbsolutePath());
+        FileInputStream imageFileStream = new FileInputStream(imgChooser.getSelectedFile().getAbsoluteFile());
+        Image image = new Image(imageFileStream);
+        imageIV.setImage(image);
+    }
 
     public void createStaff() throws SQLException {
         if (!verifyFilledInputFields()) {

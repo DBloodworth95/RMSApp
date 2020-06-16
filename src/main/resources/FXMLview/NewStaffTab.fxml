@@ -168,7 +168,7 @@
                                        <children>
                                           <HBox alignment="CENTER" prefHeight="35.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
                                              <children>
-                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                                <ImageView fx:id="imageIV" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                                                    <image>
                                                       <Image url="@Images/newProfile.png" />
                                                    </image>
@@ -181,7 +181,7 @@
                                                    <HBox.margin>
                                                       <Insets right="3.0" />
                                                    </HBox.margin></TextField>
-                                                <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
+                                                <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUpload" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-radius: 2px; -fx-border-color: #ceedf0#ceedf0;" text="Upload">
                                                    <HBox.margin>
                                                       <Insets />
                                                    </HBox.margin>
