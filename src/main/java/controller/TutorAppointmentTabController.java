@@ -37,7 +37,13 @@ public class TutorAppointmentTabController {
         while(userResult.next()) {
             ResultSet result = fetchStaff.executeQuery("SELECT * FROM appointments WHERE tutor_id='" + userResult.getString("staff_id") + "'");
             while (result.next()) {
-                appVBox.getChildren().add(new AppointmentBox(appVBox, result.getString("student_first_name"), String.valueOf(result.getInt("student_id")), result.getString("date")));
+                String[] studentName = new String[2];
+                studentName[0] = result.getString("student_first_name");
+                studentName[1] = result.getString("student_surname");
+                String[] tutorName = new String[2];
+                tutorName[0] = result.getString("tutor_first_name");
+                tutorName[1] = result.getString("tutor_surname");
+                appVBox.getChildren().add(new AppointmentBox(appVBox, studentName, String.valueOf(result.getInt("student_id")), result.getString("date"), result.getString("tutor_id"), tutorName));
             }
         }
     }

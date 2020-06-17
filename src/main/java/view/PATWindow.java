@@ -1,5 +1,6 @@
 package view;
 
+import controller.AppointmentBoxController;
 import controller.BookingController;
 import controller.PATFormController;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,7 @@ import java.io.IOException;
 
 public class PATWindow {
 
-    public PATWindow() throws IOException {
+    public PATWindow(AppointmentBoxController appointmentBoxController) throws IOException {
         FXMLLoader createCourseLoader = new FXMLLoader();
         createCourseLoader.setLocation(getClass().getResource("/FXMLview/PATForm.fxml"));
         Scene scene = new Scene(createCourseLoader.load(), 1448, 580);
@@ -22,5 +23,7 @@ public class PATWindow {
         stage.show();
         Object temp = createCourseLoader.getController();
         PATFormController controller = (PATFormController) temp;
+        controller.setSaveBtnListener(appointmentBoxController);
+        controller.populateFields(appointmentBoxController.getStudentID(), appointmentBoxController.getStudentName(), appointmentBoxController.getTutorID(), appointmentBoxController.getTutorName());
     }
 }
