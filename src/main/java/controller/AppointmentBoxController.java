@@ -16,21 +16,22 @@ public class AppointmentBoxController {
     private HBox hBox;
     @FXML
     private Button uploadBtn;
-
+    private int appointmentID;
     private String tutorID;
     private String[] tutorName;
 
-    public void setValues(String[] student, String id, String date, String idOfTutor, String[] nameOfTutor) {
+    public void setValues(String[] student, String id, String date, String idOfTutor, String[] nameOfTutor, int idOfAppointment) {
         hBox.setMargin(hBox, new Insets(10,0,10,0));
         studentT.setText(student[0] + " " + student[1]);
         idT.setText(id);
         dateT.setText(date);
         tutorID = idOfTutor;
         tutorName = nameOfTutor;
+        appointmentID = idOfAppointment;
     }
 
     public void openPATWindow() throws IOException {
-        new PATWindow(this);
+        new PATWindow(this, appointmentID);
     }
 
     public void setUploadBtnToUploaded() {
@@ -52,5 +53,9 @@ public class AppointmentBoxController {
 
     public String[] getTutorName() {
         return tutorName;
+    }
+
+    public int getAppointmentID() {
+        return appointmentID;
     }
 }

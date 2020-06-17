@@ -17,13 +17,13 @@ public class AppointmentBox extends HBox {
     private Text studentT, idT, dateT;
 
 
-    public AppointmentBox(VBox vbox, String[] student, String id, String date, String tutorID, String[] tutorName) throws IOException {
+    public AppointmentBox(VBox vbox, String[] student, String id, String date, String tutorID, String[] tutorName, int appointmentID) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXMLview/AppointmentBox.fxml"));
         HBox appointmentBoxContent = loader.load();
         vbox.getChildren().add(appointmentBoxContent);
         Object temp = loader.getController();
         AppointmentBoxController controller = (AppointmentBoxController) temp;
-        controller.setValues(student, id, date, tutorID, tutorName);
+        controller.setValues(student, id, date, tutorID, tutorName, appointmentID);
     }
 
     public AppointmentBox() {

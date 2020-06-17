@@ -20,7 +20,7 @@
    <children>
       <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_LEFT">
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
                <children>
                   <Label fx:id="ghostSessionL" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="0.0" text="Label" visible="false" />
                   <VBox alignment="CENTER" prefHeight="200.0" HBox.hgrow="ALWAYS">
@@ -95,33 +95,40 @@
                   </VBox>
                </children>
                <padding>
-                  <Insets left="30.0" right="30.0" />
+                  <Insets bottom="1.0" left="30.0" right="30.0" top="1.0" />
                </padding>
             </HBox>
             <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
                <children>
-                  <ScrollPane HBox.hgrow="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" HBox.hgrow="ALWAYS">
                      <content>
-                        <VBox fx:id="appVBox" alignment="CENTER" minWidth="-Infinity" prefWidth="560.0" spacing="3.0">
+                        <VBox fx:id="appVBox" alignment="CENTER" prefWidth="580.0" spacing="3.0">
                            <children>
-                              <HBox fx:id="upcomingHBox" alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS">
+                              <HBox fx:id="upcomingHBox" alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0">
                                  <children>
                                     <Text fill="#378d94" strokeType="OUTSIDE" strokeWidth="0.0" text="APPOINTMENTS">
                                        <HBox.margin>
                                           <Insets right="30.0" />
                                        </HBox.margin>
                                     </Text>
-                                    <DatePicker prefHeight="29.0" prefWidth="256.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
+                                    <DatePicker prefHeight="29.0" prefWidth="256.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
                                  </children>
                                  <VBox.margin>
                                     <Insets top="30.0" />
                                  </VBox.margin>
                               </HBox>
                            </children>
+                           <padding>
+                              <Insets left="10.0" right="25.0" />
+                           </padding>
                         </VBox>
                      </content>
                      <padding>
-                        <Insets left="10.0" right="10.0" top="1.0" />
+                        <Insets bottom="1.0" top="1.0" />
                      </padding>
                   </ScrollPane>
                </children>
@@ -129,14 +136,14 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" minWidth="-Infinity">
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
                <children>
-                  <ScrollPane HBox.hgrow="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                      <content>
-                        <VBox spacing="3.0">
+                        <VBox alignment="CENTER" spacing="3.0">
                            <children>
                               <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS">
                                  <children>
@@ -564,52 +571,14 @@
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
-                                 <children>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
-                                       <graphic>
-                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@Images/appointmentBtnBlue.png" />
-                                             </image>
-                                          </ImageView>
-                                       </graphic>
-                                    </Button>
-                                    <VBox alignment="CENTER" minWidth="-Infinity" prefWidth="120.0">
-                                       <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student name" />
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12345678" />
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </VBox>
-                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
-                                       <HBox.margin>
-                                          <Insets left="10.0" right="10.0" />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets left="15.0" right="15.0" />
-                                       </padding>
-                                    </Button>
-                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
-                                       <padding>
-                                          <Insets left="15.0" right="15.0" />
-                                       </padding>
-                                    </Button>
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </padding>
-                                 <effect>
-                                    <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
-                                 </effect>
-                              </HBox>
                            </children>
+                           <padding>
+                              <Insets left="10.0" right="25.0" />
+                           </padding>
                         </VBox>
                      </content>
                      <padding>
-                        <Insets bottom="1.0" left="15.0" right="15.0" top="1.0" />
+                        <Insets bottom="1.0" top="1.0" />
                      </padding>
                   </ScrollPane>
                </children>

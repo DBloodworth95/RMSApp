@@ -103,7 +103,7 @@
                                           <Font size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="Finished" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                                    <ComboBox fx:id="statusCB" minWidth="-Infinity" prefWidth="204.0" promptText="Finished" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                                        <padding>
                                           <Insets left="60.0" />
                                        </padding>
@@ -135,7 +135,7 @@
                                           <Insets right="5.0" />
                                        </HBox.margin>
                                     </VBox>
-                                    <ComboBox minWidth="-Infinity" prefWidth="204.0" promptText="1st term" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                                    <ComboBox fx:id="meetingCB" minWidth="-Infinity" prefWidth="204.0" promptText="1st term" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                                        <padding>
                                           <Insets left="60.0" />
                                        </padding>
@@ -202,7 +202,7 @@
                               <Insets right="5.0" />
                            </HBox.margin>
                         </VBox>
-                        <DatePicker prefWidth="200.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
+                        <DatePicker fx:id="nextMeetingDP" prefWidth="200.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="35.0">
@@ -215,7 +215,7 @@
                               <Font size="12.0" />
                            </font>
                         </Label>
-                        <ComboBox minWidth="-Infinity" prefWidth="200.0" promptText="15:00" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="24">
+                        <ComboBox fx:id="startCB" minWidth="-Infinity" prefWidth="200.0" promptText="15:00" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="24">
                            <padding>
                               <Insets left="60.0" />
                            </padding>
@@ -232,7 +232,7 @@
                               <Font size="12.0" />
                            </font>
                         </Label>
-                        <ComboBox minWidth="-Infinity" prefWidth="200.0" promptText="13:00" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="24">
+                        <ComboBox fx:id="endCB" minWidth="-Infinity" prefWidth="200.0" promptText="13:00" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" visibleRowCount="24">
                            <padding>
                               <Insets left="60.0" />
                            </padding>
@@ -296,7 +296,7 @@
                   </HBox>
                   <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0">
                      <children>
-                        <TextArea maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                        <TextArea fx:id="summaryTA" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -326,7 +326,7 @@
                   </HBox>
                   <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="150.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <TextArea maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
+                        <TextArea fx:id="actionPointsTA" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -347,7 +347,7 @@
                               <Insets right="5.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                        <TextField fx:id="tutorSigTF" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
@@ -363,7 +363,7 @@
                                     <Insets right="5.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                              <TextField fx:id="studentSigTF" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                            </children>
                            <HBox.margin>
                               <Insets />

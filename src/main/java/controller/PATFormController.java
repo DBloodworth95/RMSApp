@@ -1,18 +1,27 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+import model.PATForm;
 
 public class PATFormController {
     @FXML
     private Button saveBtn;
     @FXML
-    private TextField studentIDTF, studentNameTF, tutorIDTF, tutorNameTF;
+    private TextField studentIDTF, studentNameTF, tutorIDTF, tutorNameTF, tutorSigTF, studentSigTF;
+    @FXML
+    private TextArea summaryTA, actionPointsTA;
+    @FXML
+    private ComboBox<String> statusCB, meetingCB, startCB, endCB;
+    @FXML
+    private DatePicker nextMeetingDP;
 
-    public void setSaveBtnListener(AppointmentBoxController appointmentBoxController) {
+    public void setSaveBtnListener(AppointmentBoxController appointmentBoxController, int appointmentID) {
         saveBtn.setOnAction(e -> {
+            PATForm patForm = new PATForm(studentIDTF.getText(), studentNameTF.getText(), tutorIDTF.getText(), tutorNameTF.getText(), statusCB.getValue(),
+                    meetingCB.getValue(), nextMeetingDP.getValue().toString(), startCB.getValue(), endCB.getValue(), summaryTA.getText(), actionPointsTA.getText(),
+                    tutorSigTF.getText(), studentSigTF.getText());
             appointmentBoxController.setUploadBtnToUploaded();
             Stage stage = (Stage) saveBtn.getScene().getWindow();
             stage.close();
