@@ -272,7 +272,7 @@
             <Insets left="30.0" />
          </padding>
       </HBox>
-      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="690.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <VBox alignment="CENTER_LEFT" minHeight="-Infinity" prefWidth="750.0" HBox.hgrow="ALWAYS">
                <children>
@@ -339,10 +339,7 @@
                   <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" VBox.vgrow="ALWAYS" />
                   <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0">
                      <children>
-                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="94.0" text="Tutor signature" textFill="#378d94">
-                           <padding>
-                              <Insets right="5.0" />
-                           </padding>
+                        <Label minHeight="-Infinity" prefHeight="40.0" prefWidth="100.0" text="Tutor signature" textFill="#378d94" HBox.hgrow="ALWAYS">
                            <font>
                               <Font size="12.0" />
                            </font>
@@ -350,22 +347,23 @@
                               <Insets right="5.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField minWidth="-Infinity" prefWidth="160.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
+                        <TextField prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;">
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
                         </TextField>
+                        <HBox prefWidth="0.0" HBox.hgrow="ALWAYS" />
                         <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
                            <children>
-                              <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0" text="Student signature" textFill="#378d94">
-                                 <padding>
-                                    <Insets right="5.0" />
-                                 </padding>
+                              <Label minHeight="-Infinity" prefHeight="40.0" prefWidth="112.0" text="Student signature" textFill="#378d94" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font size="12.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
                               </Label>
-                              <TextField minWidth="-Infinity" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
+                              <TextField prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                            </children>
                            <HBox.margin>
                               <Insets />
