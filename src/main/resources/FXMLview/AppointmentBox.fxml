@@ -30,7 +30,7 @@
             <Insets left="15.0" right="15.0" />
          </HBox.margin>
       </VBox>
-      <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c;" text="Upload PAT" textFill="WHITE">
+      <Button fx:id="uploadBtn" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#openPATWindow" prefHeight="30.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c;" text="Upload PAT" textFill="WHITE">
          <HBox.margin>
             <Insets right="10.0" />
          </HBox.margin>
