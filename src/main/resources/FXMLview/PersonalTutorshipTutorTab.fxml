@@ -13,18 +13,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TutorAppointmentTabController">
    <children>
       <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT">
                <children>
-                  <Label fx:id="ghostSessionL" text="Label" visible="false" />
-                  <VBox prefHeight="200.0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="ghostSessionL" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="0.0" text="Label" visible="false" />
+                  <VBox alignment="CENTER" prefHeight="200.0" HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets left="30.0" />
+                        <Insets />
                      </HBox.margin>
                      <children>
                         <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0">
@@ -35,9 +36,6 @@
                                  </HBox.margin>
                               </Label>
                            </children>
-                           <padding>
-                              <Insets left="30.0" />
-                           </padding>
                            <VBox.margin>
                               <Insets top="30.0" />
                            </VBox.margin>
@@ -47,38 +45,35 @@
                               <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Select module" />
                               <ComboBox fx:id="moduleCB" minWidth="-Infinity" prefWidth="204.0" promptText="CSY2020" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                            </children>
-                           <padding>
-                              <Insets left="30.0" />
-                           </padding>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0">
                            <children>
                               <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Select student ID" />
                               <ComboBox fx:id="studentCB" minWidth="-Infinity" prefWidth="204.0" promptText="12345678" style="-fx-background-color: WHITE; -fx-background-radius: 2px; -fx-border-color: #ceedf0#ceedf0 #ceedf0#ceedf0; -fx-border-radius: 2px;" />
                            </children>
-                           <padding>
-                              <Insets left="30.0" />
-                           </padding>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0">
                            <children>
                               <Label minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Select date" />
-                              <DatePicker fx:id="datePicker" prefWidth="200.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
+                              <DatePicker fx:id="datePicker" prefWidth="204.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
                            </children>
-                           <padding>
-                              <Insets left="30.0" />
-                           </padding>
                         </HBox>
-                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#createAppointment" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="SEND">
+                              <Button contentDisplay="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAppointment" prefHeight="30.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="SEND" textFill="WHITE">
                                  <padding>
-                                    <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                    <Insets left="15.0" right="15.0" />
                                  </padding>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="19.0" />
+                                 </HBox.margin>
                               </Button>
                            </children>
                            <VBox.margin>
-                              <Insets right="30.0" />
+                              <Insets top="10.0" />
                            </VBox.margin>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -89,47 +84,34 @@
                                  </padding>
                               </Separator>
                            </children></HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Button minHeight="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DOWNLOAD PAT FORM">
-                                 <padding>
-                                    <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
-                                 </padding>
-                              </Button>
-                           </children></HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Separator prefWidth="200.0" HBox.hgrow="ALWAYS">
-                                 <padding>
-                                    <Insets left="15.0" right="15.0" />
-                                 </padding>
-                              </Separator>
-                           </children>
-                        </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <VBox.margin>
                               <Insets bottom="50.0" top="20.0" />
                            </VBox.margin>
                         </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
                      </children>
                   </VBox>
                </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
             </HBox>
             <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
                <children>
                   <ScrollPane HBox.hgrow="ALWAYS">
                      <content>
-                        <VBox fx:id="appVBox" prefWidth="421.0">
+                        <VBox fx:id="appVBox" alignment="CENTER" minWidth="-Infinity" prefWidth="560.0" spacing="3.0">
                            <children>
                               <HBox fx:id="upcomingHBox" alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS">
                                  <children>
-                                    <Text fill="#378d94" strokeType="OUTSIDE" strokeWidth="0.0" text="UPCOMING APPOINTMENTS">
+                                    <Text fill="#378d94" strokeType="OUTSIDE" strokeWidth="0.0" text="APPOINTMENTS">
                                        <HBox.margin>
                                           <Insets right="30.0" />
                                        </HBox.margin>
                                     </Text>
-                                    <DatePicker prefWidth="200.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
+                                    <DatePicker prefHeight="29.0" prefWidth="256.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                                  <VBox.margin>
                                     <Insets top="30.0" />
@@ -139,7 +121,7 @@
                         </VBox>
                      </content>
                      <padding>
-                        <Insets bottom="1.0" left="40.0" right="20.0" top="1.0" />
+                        <Insets left="10.0" right="10.0" top="1.0" />
                      </padding>
                   </ScrollPane>
                </children>
@@ -154,7 +136,7 @@
                         <Insets />
                      </HBox.margin>
                      <content>
-                        <VBox>
+                        <VBox spacing="3.0">
                            <children>
                               <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="50.0" VBox.vgrow="ALWAYS">
                                  <children>
@@ -163,7 +145,7 @@
                                           <Insets right="30.0" />
                                        </HBox.margin>
                                     </Text>
-                                    <DatePicker prefWidth="200.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
+                                    <DatePicker prefHeight="29.0" prefWidth="260.0" showWeekNumbers="true" style="-fx-background-color: white; -fx-background-radius: 2px; -fx-border-color: #ceedf0 #ceedf0; -fx-border-radius: 2px;" />
                                  </children>
                                  <VBox.margin>
                                     <Insets top="30.0" />
@@ -189,25 +171,25 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <VBox.margin>
-                                    <Insets right="15.0" top="4.0" />
+                                    <Insets top="4.0" />
                                  </VBox.margin>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
@@ -233,29 +215,26 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
-                                 <VBox.margin>
-                                    <Insets right="15.0" top="5.0" />
-                                 </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
                                  <children>
@@ -277,29 +256,26 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
-                                 <VBox.margin>
-                                    <Insets right="15.0" top="5.0" />
-                                 </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
                                  <children>
@@ -321,29 +297,26 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
-                                 <VBox.margin>
-                                    <Insets right="15.0" top="5.0" />
-                                 </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
                                  <children>
@@ -365,29 +338,26 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
-                                 <VBox.margin>
-                                    <Insets right="15.0" top="5.0" />
-                                 </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
                                  <children>
@@ -409,29 +379,26 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
-                                 <VBox.margin>
-                                    <Insets right="15.0" top="5.0" />
-                                 </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
                                  <children>
@@ -453,29 +420,26 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
-                                 <VBox.margin>
-                                    <Insets right="15.0" top="5.0" />
-                                 </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
                                  <children>
@@ -497,35 +461,155 @@
                                           <Insets />
                                        </HBox.margin>
                                     </VBox>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="ACCEPT">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="10.0" right="10.0" />
                                        </HBox.margin>
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
-                                    <Button minWidth="-Infinity" mnemonicParsing="false" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DECLINE">
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
                                        <padding>
-                                          <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                                          <Insets left="15.0" right="15.0" />
                                        </padding>
                                     </Button>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+                                    <Insets bottom="10.0" top="10.0" />
                                  </padding>
                                  <effect>
                                     <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
                                  </effect>
-                                 <VBox.margin>
-                                    <Insets right="15.0" top="5.0" />
-                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
+                                 <children>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/appointmentBtnBlue.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefWidth="120.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student name" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12345678" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
+                                 </effect>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
+                                 <children>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/appointmentBtnBlue.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefWidth="120.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student name" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12345678" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
+                                 </effect>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px;">
+                                 <children>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/appointmentBtnBlue.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefWidth="120.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student name" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12345678" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="ACCEPT" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-border-color: #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DECLINE" textFill="WHITE">
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#eeeeee" height="2.0" offsetX="2.0" offsetY="2.0" radius="0.5" spread="1.0" width="2.0" />
+                                 </effect>
                               </HBox>
                            </children>
                         </VBox>
                      </content>
                      <padding>
-                        <Insets bottom="1.0" left="40.0" right="20.0" top="1.0" />
+                        <Insets bottom="1.0" left="15.0" right="15.0" top="1.0" />
                      </padding>
                   </ScrollPane>
                </children>
