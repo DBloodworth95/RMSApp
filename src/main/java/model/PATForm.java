@@ -4,16 +4,14 @@ import java.io.Serializable;
 
 public class PATForm implements Serializable {
     private String studentID, studentName, tutorID,
-    tutorName, status, meetingType, nextMeetingDate, startTime, endTime, summary, actionPoints,
+            tutorName, nextMeetingDate, startTime, endTime, summary, actionPoints,
             tutorSig, studentSig;
 
-    public PATForm(String studentID, String studentName, String tutorID, String tutorName, String status, String meetingType, String nextMeetingDate, String startTime, String endTime, String summary, String actionPoints, String tutorSig, String studentSig) {
+    public PATForm(String studentID, String studentName, String tutorID, String tutorName, String nextMeetingDate, String startTime, String endTime, String summary, String actionPoints, String tutorSig, String studentSig) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.tutorID = tutorID;
         this.tutorName = tutorName;
-        this.status = status;
-        this.meetingType = meetingType;
         this.nextMeetingDate = nextMeetingDate;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -53,22 +51,6 @@ public class PATForm implements Serializable {
 
     public void setTutorName(String tutorName) {
         this.tutorName = tutorName;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getMeetingType() {
-        return meetingType;
-    }
-
-    public void setMeetingType(String meetingType) {
-        this.meetingType = meetingType;
     }
 
     public String getNextMeetingDate() {

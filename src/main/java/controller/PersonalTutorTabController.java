@@ -34,7 +34,7 @@ public class PersonalTutorTabController {
         Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
         Statement fetchApp = rmsConnection.createStatement();
         List<Appointment> appointments = new ArrayList<>();
-        if(isArchive) {
+        if (isArchive) {
             ResultSet result = fetchApp.executeQuery("SELECT * FROM appointments WHERE archived = 1");
             while (result.next()) {
                 int id = Integer.parseInt(result.getString("appointment_id"));
@@ -48,7 +48,7 @@ public class PersonalTutorTabController {
                 String date = result.getString("date");
                 String pat = result.getString("pat_form");
 
-                appointments.add(new Appointment(id,studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
+                appointments.add(new Appointment(id, studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
             }
         } else {
             ResultSet result = fetchApp.executeQuery("SELECT * FROM appointments WHERE archived = 0");
@@ -134,6 +134,7 @@ public class PersonalTutorTabController {
         List<Appointment> newAppointment = fetchTable(false);
         populateTable(newAppointment);
     }
+
     public void populateArchive() throws SQLException {
         List<Appointment> newAppointment = fetchTable(true);
         populateTable(newAppointment);
@@ -162,7 +163,7 @@ public class PersonalTutorTabController {
 
     public void updateTable() throws SQLException {
         Appointment appointment;
-        List <List<String>> appList = new ArrayList<>();
+        List<List<String>> appList = new ArrayList<>();
         for (int i = 0; i < tutorTV.getItems().size(); i++) {
             appointment = (Appointment) tutorTV.getItems().get(i);
             appList.add(new ArrayList<>());
