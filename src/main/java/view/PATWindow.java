@@ -8,10 +8,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class PATWindow {
 
-    public PATWindow(AppointmentBoxController appointmentBoxController, int appointmentID) throws IOException {
+    public PATWindow(AppointmentBoxController appointmentBoxController, int appointmentID) throws IOException, SQLException {
         FXMLLoader createCourseLoader = new FXMLLoader();
         createCourseLoader.setLocation(getClass().getResource("/FXMLview/PATForm.fxml"));
         Scene scene = new Scene(createCourseLoader.load(), 1448, 580);
@@ -24,6 +25,9 @@ public class PATWindow {
         Object temp = createCourseLoader.getController();
         PATFormController controller = (PATFormController) temp;
         controller.setSaveBtnListener(appointmentBoxController, appointmentID);
+        if (appointmentBoxController != null)
         controller.populateFields(appointmentBoxController.getStudentID(), appointmentBoxController.getStudentName(), appointmentBoxController.getTutorID(), appointmentBoxController.getTutorName());
+        else
+            controller.loadFields(appointmentID);
     }
 }

@@ -8,6 +8,7 @@ import javafx.scene.text.Text;
 import view.PATWindow;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class AppointmentBoxController {
     @FXML
@@ -30,7 +31,7 @@ public class AppointmentBoxController {
         appointmentID = idOfAppointment;
     }
 
-    public void openPATWindow() throws IOException {
+    public void openPATWindow() throws IOException, SQLException {
         new PATWindow(this, appointmentID);
     }
 

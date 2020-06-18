@@ -2,17 +2,20 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.print.Paper;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.util.Callback;
 import javafx.util.converter.IntegerStringConverter;
 import model.Appointment;
 import model.TablePrinter;
+import view.PATWindow;
+
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +37,7 @@ public class PersonalTutorTabController {
         if(isArchive) {
             ResultSet result = fetchApp.executeQuery("SELECT * FROM appointments WHERE archived = 1");
             while (result.next()) {
+                int id = Integer.parseInt(result.getString("appointment_id"));
                 int studentID = Integer.parseInt(result.getString("student_id"));
                 int tutorID = Integer.parseInt(result.getString("tutor_id"));
                 String studentFN = result.getString("student_first_name");
@@ -44,12 +48,13 @@ public class PersonalTutorTabController {
                 String date = result.getString("date");
                 String pat = result.getString("pat_form");
 
-                appointments.add(new Appointment(studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
+                appointments.add(new Appointment(id,studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
             }
         } else {
             ResultSet result = fetchApp.executeQuery("SELECT * FROM appointments WHERE archived = 0");
             while (result.next()) {
-                int studentID = Integer.parseInt(result.getString("appointment_id"));
+                int id = Integer.parseInt(result.getString("appointment_id"));
+                int studentID = Integer.parseInt(result.getString("student_id"));
                 int tutorID = Integer.parseInt(result.getString("tutor_id"));
                 String studentFN = result.getString("student_first_name");
                 String studentS = result.getString("student_surname");
@@ -59,14 +64,14 @@ public class PersonalTutorTabController {
                 String date = result.getString("date");
                 String pat = result.getString("pat_form");
 
-                appointments.add(new Appointment(studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
+                appointments.add(new Appointment(id, studentID, tutorID, studentFN, studentS, course, module, year, date, pat));
             }
         }
         return appointments;
     }
 
     public void populateTable(List<Appointment> newAppointment) {
-        studentCol.setCellValueFactory(new PropertyValueFactory<Appointment, Integer>("studentId"));
+        studentCol.setCellValueFactory(new PropertyValueFactory<Appointment, Integer>("id"));
         studentFCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("studentFN"));
         studentSCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("studentS"));
         tutorCol.setCellValueFactory(new PropertyValueFactory<Appointment, Integer>("tutorId"));
@@ -74,8 +79,38 @@ public class PersonalTutorTabController {
         moduleCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("module"));
         yearCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("year"));
         appCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("appDate"));
-        patCol.setCellValueFactory(new PropertyValueFactory<Appointment, String>("patForm"));
+        Callback<TableColumn<Appointment, Void>, TableCell<Appointment, Void>> cellFactory = new Callback<TableColumn<Appointment, Void>, TableCell<Appointment, Void>>() {
+            @Override
+            public TableCell<Appointment, Void> call(TableColumn<Appointment, Void> appointmentVoidTableColumn) {
+                final TableCell<Appointment, Void> patColumnCell = new TableCell<Appointment, Void>() {
 
+                    private final Button viewBtn = new Button("View");
+
+                    {
+                        viewBtn.setOnAction((event) -> {
+                            Appointment appointment = getTableView().getItems().get(getIndex());
+                            try {
+                                new PATWindow(null, appointment.getId());
+                            } catch (IOException | SQLException e) {
+                                e.printStackTrace();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void appointment, boolean isCellEmpty) {
+                        super.updateItem(appointment, isCellEmpty);
+                        if (isCellEmpty)
+                            setGraphic(null);
+                        else
+                            setGraphic(viewBtn);
+                    }
+                };
+                return patColumnCell;
+            }
+        };
+
+        patCol.setCellFactory(cellFactory);
         studentCol.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
         studentFCol.setCellFactory(TextFieldTableCell.forTableColumn());
         studentSCol.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -84,7 +119,7 @@ public class PersonalTutorTabController {
         moduleCol.setCellFactory(TextFieldTableCell.forTableColumn());
         yearCol.setCellFactory(TextFieldTableCell.forTableColumn());
         appCol.setCellFactory(TextFieldTableCell.forTableColumn());
-        patCol.setCellFactory(TextFieldTableCell.forTableColumn());
+
         ObservableList<Appointment> rows = FXCollections.observableArrayList();
         for (Appointment appointment : newAppointment) {
             rows.add(appointment);
