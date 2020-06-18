@@ -16,7 +16,7 @@ public class AppointmentBoxController {
     @FXML
     private HBox hBox;
     @FXML
-    private Button uploadBtn;
+    private Button uploadBtn, completeBtn;
     private int appointmentID;
     private String tutorID;
     private String[] tutorName;
@@ -70,5 +70,25 @@ public class AppointmentBoxController {
 
     public int getAppointmentID() {
         return appointmentID;
+    }
+
+    public void addCompleteBtnListener(TutorAppointmentTabController tutorAppointmentTabController) {
+        completeBtn.setOnAction(event -> {
+            String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+            String username = "root";
+            String password = "root";
+            String updatequery = ("UPDATE appointments SET is_complete = ? WHERE appointment_id='" + appointmentID + "'");
+            Connection myCon = null;
+            try {
+                myCon = DriverManager.getConnection(dbURL, username, password);
+                PreparedStatement preparedStatement = myCon.prepareStatement(updatequery);
+                PreparedStatement updateStatement = myCon.prepareStatement(updatequery);
+                preparedStatement.setInt(1, 1);
+                preparedStatement.executeUpdate();
+                tutorAppointmentTabController.populateUpcoming();
+        } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+            });
     }
 }

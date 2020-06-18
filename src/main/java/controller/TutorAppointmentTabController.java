@@ -22,7 +22,7 @@ public class TutorAppointmentTabController {
     @FXML
     private HBox upcomingHBox;
 
-    public void setGhostSessionL(String sessionId) throws IOException {
+    public void setGhostSessionL(String sessionId) {
         ghostSessionL.setText(sessionId);
     }
 
@@ -43,7 +43,7 @@ public class TutorAppointmentTabController {
                 String[] tutorName = new String[2];
                 tutorName[0] = result.getString("tutor_first_name");
                 tutorName[1] = result.getString("tutor_surname");
-                appVBox.getChildren().add(new AppointmentBox(appVBox, studentName, String.valueOf(result.getInt("student_id")), result.getString("date"), result.getString("tutor_id"), tutorName, result.getInt("appointment_id")));
+                appVBox.getChildren().add(new AppointmentBox(appVBox, studentName, String.valueOf(result.getInt("student_id")), result.getString("date"), result.getString("tutor_id"), tutorName, result.getInt("appointment_id"), this));
             }
         }
     }
