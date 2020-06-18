@@ -10,6 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 
 public class AppointmentBox extends HBox {
@@ -17,7 +18,7 @@ public class AppointmentBox extends HBox {
     private Text studentT, idT, dateT;
 
 
-    public AppointmentBox(VBox vbox, String[] student, String id, String date, String tutorID, String[] tutorName, int appointmentID) throws IOException {
+    public AppointmentBox(VBox vbox, String[] student, String id, String date, String tutorID, String[] tutorName, int appointmentID) throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXMLview/AppointmentBox.fxml"));
         HBox appointmentBoxContent = loader.load();
         vbox.getChildren().add(appointmentBoxContent);

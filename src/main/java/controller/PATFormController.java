@@ -34,10 +34,13 @@ public class PATFormController {
             String username = "root";
             String password = "root";
             String query = ("INSERT INTO pats (student_id, student_name, tutor_id, tutor_name, next_meeting_date, start_time, end_time, summary, action_points, tutor_sig, student_sig, appointment_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+            String updatequery = ("UPDATE appointments SET uploaded_pat = ? WHERE appointment_id='" + appointmentID + "'");
+
             Connection myCon = null;
             try {
                 myCon = DriverManager.getConnection(dbURL, username, password);
                 PreparedStatement preparedStatement = myCon.prepareStatement(query);
+                PreparedStatement updateStatement = myCon.prepareStatement(updatequery);
                 preparedStatement.setString(1, patForm.getStudentID());
                 preparedStatement.setString(2, patForm.getStudentName());
                 preparedStatement.setString(3, patForm.getTutorID());
@@ -50,6 +53,8 @@ public class PATFormController {
                 preparedStatement.setString(10, patForm.getStudentSig());
                 preparedStatement.setString(11, patForm.getTutorSig());
                 preparedStatement.setInt(12, appointmentID);
+                updateStatement.setInt(1, 1);
+                updateStatement.executeUpdate();
                 preparedStatement.executeUpdate();
                 System.out.println(patForm.getActionPoints());
             } catch (SQLException ex) {

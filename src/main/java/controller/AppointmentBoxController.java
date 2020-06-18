@@ -8,7 +8,7 @@ import javafx.scene.text.Text;
 import view.PATWindow;
 
 import java.io.IOException;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class AppointmentBoxController {
     @FXML
@@ -21,7 +21,7 @@ public class AppointmentBoxController {
     private String tutorID;
     private String[] tutorName;
 
-    public void setValues(String[] student, String id, String date, String idOfTutor, String[] nameOfTutor, int idOfAppointment) {
+    public void setValues(String[] student, String id, String date, String idOfTutor, String[] nameOfTutor, int idOfAppointment) throws SQLException {
         hBox.setMargin(hBox, new Insets(10,0,10,0));
         studentT.setText(student[0] + " " + student[1]);
         idT.setText(id);
@@ -29,6 +29,18 @@ public class AppointmentBoxController {
         tutorID = idOfTutor;
         tutorName = nameOfTutor;
         appointmentID = idOfAppointment;
+        String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+        String username = "root";
+        String password = "root";
+        Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+        Statement fetchStaff = rmsConnection.createStatement();
+        ResultSet result;
+        System.out.println(appointmentID);
+        result = fetchStaff.executeQuery("SELECT * FROM appointments WHERE appointment_id='" + appointmentID + "'");
+        while (result.next()) {
+            if (result.getInt("uploaded_pat") == 1)
+                setUploadBtnToUploaded();
+        }
     }
 
     public void openPATWindow() throws IOException, SQLException {

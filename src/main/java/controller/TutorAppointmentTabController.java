@@ -35,7 +35,7 @@ public class TutorAppointmentTabController {
         Statement fetchUser = rmsConnection.createStatement();
         ResultSet userResult = fetchUser.executeQuery("SELECT staff_id FROM users WHERE user_id='" + Integer.parseInt(ghostSessionL.getText()) + "'");
         while(userResult.next()) {
-            ResultSet result = fetchStaff.executeQuery("SELECT * FROM appointments WHERE tutor_id='" + userResult.getString("staff_id") + "'");
+            ResultSet result = fetchStaff.executeQuery("SELECT * FROM appointments WHERE tutor_id='" + userResult.getString("staff_id") + "' AND is_complete = 0");
             while (result.next()) {
                 String[] studentName = new String[2];
                 studentName[0] = result.getString("student_first_name");
