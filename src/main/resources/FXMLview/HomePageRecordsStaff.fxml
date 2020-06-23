@@ -422,22 +422,22 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement from staff member would go here." wrappingWidth="276.79638671875" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement from staff member would go here." wrappingWidth="270.79638671875" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement from staff member would go here." wrappingWidth="296.79638671875" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text fill="#2c787c" onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>
@@ -458,22 +458,22 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notification would go here." />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notification would go here." />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notification would go here." />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text fill="#2c787c" onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>
@@ -494,22 +494,22 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text fill="#2c787c" onMouseClicked="#createNotificationsTab" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>
@@ -530,22 +530,22 @@
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. " wrappingWidth="300.0" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="30.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="View all..." />
                                              </children>
                                           </HBox>
                                        </children>

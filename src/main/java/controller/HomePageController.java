@@ -329,10 +329,10 @@ public class HomePageController {
     }
 
     private void checkTabLimit(Tab tab) {
-        if (homePageTabPane.getTabs().size() > 10) {
+        if (homePageTabPane.getTabs().size() > 30) {
             tabLimitError.setTitle("Tab Limit Reached!");
             tabLimitError.setHeaderText(null);
-            tabLimitError.setContentText("Please close some tabs before attempting to open more! (Max 10)");
+            tabLimitError.setContentText("Please close some tabs before attempting to open more! (Max 30)");
             homePageTabPane.getTabs().remove(10);
             tabLimitError.showAndWait();
         }

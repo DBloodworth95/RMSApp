@@ -51,14 +51,14 @@
                                                             <Insets left="10.0" />
                                                          </padding>
                                                          <VBox.margin>
-                                                            <Insets bottom="15.0" right="30.0" top="10.0" />
+                                                            <Insets bottom="12.0" right="30.0" top="10.0" />
                                                          </VBox.margin>
                                                       </HBox>
                                                       <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="377.0" prefWidth="888.0">
                                                          <children>
                                                             <VBox prefHeight="159.0" prefWidth="858.0">
                                                                <children>
-                                                                  <VBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="90.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #DCDCDC#DCDCDC #DCDCDC#DCDCDC; -fx-border-width: 2px; -fx-border-style: solid; -fx-background-color: #DCDCDC#DCDCDC #DCDCDC#DCDCDC;" VBox.vgrow="ALWAYS">
+                                                                  <VBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="90.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: white; -fx-border-width: 2px; -fx-border-style: solid; -fx-background-color: white;" VBox.vgrow="ALWAYS">
                                                                      <children>
                                                                         <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Cause for Concern" wrappingWidth="228.5869140625">
                                                                            <font>
@@ -90,7 +90,7 @@
                                                                         <Insets top="3.0" />
                                                                      </VBox.margin>
                                                                   </VBox>
-                                                                  <VBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="90.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #DCDCDC#DCDCDC #DCDCDC#DCDCDC; -fx-border-width: 2px; -fx-border-style: solid; -fx-background-color: #DCDCDC#DCDCDC #DCDCDC#DCDCDC;" VBox.vgrow="ALWAYS">
+                                                                  <VBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="90.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: white; -fx-border-width: 2px; -fx-border-style: solid; -fx-background-color: white;" VBox.vgrow="ALWAYS">
                                                                      <children>
                                                                         <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="System Alert: Personal data update">
                                                                            <font>

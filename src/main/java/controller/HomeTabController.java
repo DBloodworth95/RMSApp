@@ -67,7 +67,7 @@ public class HomeTabController {
         Stage stage = new Stage();
         stage.setTitle("Add a Course");
         stage.setScene(scene);
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.setMaximized(true);
         stage.show();
         Object temp = createCourseLoader.getController();
@@ -83,7 +83,7 @@ public class HomeTabController {
         Stage stage = new Stage();
         stage.setTitle("Add a Grade");
         stage.setScene(scene);
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.setMaximized(true);
         stage.show();
         Object temp = createGradeLoader.getController();

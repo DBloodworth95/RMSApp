@@ -571,7 +571,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcements" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -607,7 +607,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -643,7 +643,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="News" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
@@ -679,7 +679,7 @@
                                        <children>
                                           <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
+                                                <Text fill="#2c787c" strokeType="OUTSIDE" strokeWidth="0.0" text="Events" />
                                              </children>
                                           </HBox>
                                           <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
