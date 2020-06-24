@@ -16,7 +16,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: -Dfile.encoding=UTF-8 -Duser.country=GB -Duser.language=en -Duser.variant main.Main
+Command Line: -Dfile.encoding=UTF-8 -Duser.country=GB -Duser.language=en -Duser.variant main.UI
 
 Host: MacBookPro15,2 x86_64 2400 MHz, 8 cores, 8G, Darwin 19.5.0
 Time: Wed Jun 10 11:21:59 2020 BST elapsed time: 596 seconds (0d 0h 9m 56s)
@@ -776,7 +776,7 @@ Dynamic libraries:
 
 VM Arguments:
 jvm_args: -Dfile.encoding=UTF-8 -Duser.country=GB -Duser.language=en -Duser.variant 
-java_command: main.Main
+java_command: main.UI
 java_class_path (initial): /Users/laura/IdeaProjects/RMSApp/build/classes/java/main:/Users/laura/IdeaProjects/RMSApp/build/resources/main:/Users/laura/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.18/e088efaa4b568bc7d9f7274b9c5ea1a00da1a45c/mysql-connector-java-8.0.18.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-all/10.0-r1/4f54690e840dfcef4d0f94fff05a1a69326e3aa1/jfxtras-all-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-icalendaragenda/10.0-r1/a45a9946b7e3d6e263a74f8ea8cb1fe31563e012/jfxtras-icalendaragenda-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-icalendarfx/10.0-r1/faa0fef4e17ad5be025322b48b9930af93678495/jfxtras-icalendarfx-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-agenda/10.0-r1/c7d9aeff12b53425be1471cd3d94a780c4a3c6f7/jfxtras-agenda-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.6.1/d06d46ecfd92ec6d0f3b423b4cd81cb38d8b924/protobuf-java-3.6.1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-controls/10.0-r1/ad14d8983c47e270cfc275ac8516940853ab76dd/jfxtras-controls-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-gauge-linear/10.0-r1/6749a65249440e8fe02e87f6c57862bf4aa662cf/jfxtras-gauge-linear-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-menu/10.0-r1/4360f457f82e9b49518dfc15d7c762f666d7196/jfxtras-menu-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-common/10.0-r1/71692ccd76b0448bb22b2b0f282576dc3e261e46/jfxtras-common-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-font-roboto/10.0-r1/bb3d18b995a086aa4ec521d731c4d40789474437/jfxtras-font-roboto-10.0-r1.jar:/Users/laura/.gradle/caches/modules-2/files-2.1/org.jfxtras/jfxtras-fxml/10.0-r1/78cdd174afae570fd0d567db1223f8afa5a51c47/jfxtras-fxml-10.0-r1.jar
 Launcher Type: SUN_STANDARD
 
