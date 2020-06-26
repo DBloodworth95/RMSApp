@@ -102,7 +102,7 @@
                               <Insets />
                            </HBox.margin>
                            <children>
-                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="MARK AS READ">
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="MARK AS READ" textFill="WHITE">
                                  <padding>
                                     <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
                                  </padding>
@@ -110,7 +110,7 @@
                                     <Insets top="15.0" />
                                  </VBox.margin>
                               </Button>
-                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DELETE">
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DELETE" textFill="WHITE">
                                  <padding>
                                     <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
                                  </padding>
@@ -192,7 +192,7 @@
                               <Insets />
                            </HBox.margin>
                            <children>
-                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="MARK AS READ">
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="MARK AS READ" textFill="WHITE">
                                  <padding>
                                     <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
                                  </padding>
@@ -200,7 +200,7 @@
                                     <Insets top="15.0" />
                                  </VBox.margin>
                               </Button>
-                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DELETE">
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DELETE" textFill="WHITE">
                                  <padding>
                                     <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
                                  </padding>
@@ -272,7 +272,7 @@
                               <Insets />
                            </HBox.margin>
                            <children>
-                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="MARK AS READ">
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="MARK AS READ" textFill="WHITE">
                                  <padding>
                                     <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
                                  </padding>
@@ -280,7 +280,7 @@
                                     <Insets top="15.0" />
                                  </VBox.margin>
                               </Button>
-                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: WHITE; -fx-border-color: #ceedf0; -fx-background-radius: 2px; -fx-border-radius: 2px;" text="DELETE">
+                              <Button minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2c787c#2c787c #2c787c#2c787c; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="DELETE" textFill="WHITE">
                                  <padding>
                                     <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
                                  </padding>

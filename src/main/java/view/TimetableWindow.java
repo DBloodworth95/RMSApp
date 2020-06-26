@@ -29,14 +29,14 @@ public class TimetableWindow {
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root, 1366, 768);
         Stage stage = new Stage();
-        setupComponents(root, newCal);
+        setupComponents(root);
         root.setCenter(agenda);
         stage.setMaximized(true);
         stage.setScene(scene);
         stage.show();
     }
 
-    private void setupComponents(BorderPane root, VCalendar calendar) {
+    private void setupComponents(BorderPane root) {
         Button saveButton = new Button("Save Timetable");
 
         HBox buttonBox = new HBox(saveButton);
@@ -44,7 +44,7 @@ public class TimetableWindow {
 
         saveButton.setOnAction((e)-> {
             FileChooser fileSaver = new FileChooser();
-            fileSaver.setTitle("Save cause for concern form");
+            fileSaver.setTitle("Save timetable");
             File destination = fileSaver.showSaveDialog(root.getScene().getWindow());
             try {
                 if (destination != null) {

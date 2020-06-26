@@ -241,21 +241,30 @@ public class StudentTabController {
             String getCurrCourseCode = student.getCurrCourseCode();
             int getCurrYear = student.getCurrYear();
             String getEmail = student.getEmail();
-
-            String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
-            String username = "root";
-            String password = "root";
-            Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
-            Statement fetchStaff = rmsConnection.createStatement();
-            String query = ("UPDATE students SET password='" + getPass + "', status='" + getStatus  +
-                    "', first_name='" + getFirstName + "', middle_name='" + getMidName + "', surname='" + getSurname  + "', gender='" + getGender +
-                    "', telephone='" + getTelephone + "', current_course_code='" + getCurrCourseCode + "', current_year='" + getCurrYear +
-                    "', email='" + getEmail + "' WHERE student_id='" + getStudentID + "'");
-            Connection myConnection = DriverManager.getConnection(dbURL, username, password);
-            PreparedStatement preparedStatement = myConnection.prepareStatement(query);
-            preparedStatement.execute();
+            if (student.isEmpty()) {
+                Alert errorAlert = new Alert(Alert.AlertType.INFORMATION);
+                errorAlert.setTitle("Record entry failed.");
+                errorAlert.setHeaderText(null);
+                errorAlert.setContentText("Some fields were left empty!");
+                errorAlert.showAndWait();
+                populate(null);
+                break;
+            } else {
+                String dbURL = "jdbc:mysql://localhost:3306/rmsdb";
+                String username = "root";
+                String password = "root";
+                Connection rmsConnection = DriverManager.getConnection(dbURL, username, password);
+                Statement fetchStaff = rmsConnection.createStatement();
+                String query = ("UPDATE students SET password='" + getPass + "', status='" + getStatus +
+                        "', first_name='" + getFirstName + "', middle_name='" + getMidName + "', surname='" + getSurname + "', gender='" + getGender +
+                        "', telephone='" + getTelephone + "', current_course_code='" + getCurrCourseCode + "', current_year='" + getCurrYear +
+                        "', email='" + getEmail + "' WHERE student_id='" + getStudentID + "'");
+                Connection myConnection = DriverManager.getConnection(dbURL, username, password);
+                PreparedStatement preparedStatement = myConnection.prepareStatement(query);
+                preparedStatement.execute();
+            }
+            System.out.println("Saved!");
         }
-        System.out.println("Saved!");
     }
 
     public void createStudent() throws IOException, SQLException {

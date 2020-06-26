@@ -370,4 +370,26 @@ public class Student {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    public boolean isEmpty() {
+        if (password.isEmpty()) return true;
+        if (status.isEmpty()) return true;
+        if (firstName.isEmpty()) return true;
+        if (middleName.isEmpty()) return true;
+        if (surname.isEmpty()) return true;
+        if (gender.isEmpty()) return true;
+        if (currCourseCode.isEmpty()) return true;
+        if (phoneNumber.isEmpty()) return true;
+        if (email.isEmpty()) return true;
+        return false;
+    }
+
+    /*
+    private int id, personalTutor, currYear, enrolYear;
+    private String password, status, dormancyReason, firstName, middleName, surname, image, phoneNumber,
+    currCourseCode, entryQual, emergContactPhone, emergContactEmail, employer, addNotes,
+    medicalHistory, medicalAllergies, medicalReligious, termAddress, homeAddress, email,
+    addTermNumber, addTermHouse, addTermTown, addTermCounty, addTermCountry, addTermZip,
+    homeNumber, homeHouse, homeTown, homeCounty, homeCountry, homeZip, addTermStreet, homeStreet, gender;
+     */
 }
