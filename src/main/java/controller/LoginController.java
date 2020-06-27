@@ -51,10 +51,12 @@ public class LoginController {
             int accesslevel = myResultSet.getInt("user_level");
             String pass = myResultSet.getString("password");
             int userId = myResultSet.getInt("user_id");
-
+            //If password matches the password field in the UI
             if (pass.equals(passwordField.getText())) {
                 Session session = new Session(userName, AccessLevel.fromInt(accesslevel), lastlogged, userId);
+                //If the user is a records staff
                 if (session.getAccessLevel().hasAccessToSysAdminView() || session.getAccessLevel().hasAccessToRecView()) {
+                    //Transition to records staff view
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageRecordsStaff.fxml"));
                     Parent homePage = loader.load();
                     loginButton.getScene().setRoot(homePage);
@@ -67,10 +69,14 @@ public class LoginController {
                     controller.createHomeTab(session);
                     controller.showNotifications();
                     controller.populateSearchCB();
+                    //If the user is a course leader
+                    //Transition to course leader view
                 } else if (session.getAccessLevel().hasAccessToCourseLeadView()) {
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageCourseLeader.fxml"));
 
                 } else {
+                    //else is a tutor
+                    //Transition to tutor staff view
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageTutor.fxml"));
                     Parent homePage = loader.load();
                     loginButton.getScene().setRoot(homePage);
@@ -91,10 +97,12 @@ public class LoginController {
                 String updateLog = "UPDATE users SET last_logged='" + dateNow + "' WHERE user_id='" + session.getId() + "'";
                 PreparedStatement updateLoggedin = myConnection.prepareStatement(updateLog);
                 updateLoggedin.execute();
+                //If password does not match, show invalid password prompt
             } else {
                 invalidPWLabel.setVisible(true);
             }
         }
+        //If account cant be found, show invalid login prompt.
         if (!accountFound)
             invalidIDLabel.setVisible(true);
     }

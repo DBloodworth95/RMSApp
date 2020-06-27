@@ -383,13 +383,4 @@ public class Student {
         if (email.isEmpty()) return true;
         return false;
     }
-
-    /*
-    private int id, personalTutor, currYear, enrolYear;
-    private String password, status, dormancyReason, firstName, middleName, surname, image, phoneNumber,
-    currCourseCode, entryQual, emergContactPhone, emergContactEmail, employer, addNotes,
-    medicalHistory, medicalAllergies, medicalReligious, termAddress, homeAddress, email,
-    addTermNumber, addTermHouse, addTermTown, addTermCounty, addTermCountry, addTermZip,
-    homeNumber, homeHouse, homeTown, homeCounty, homeCountry, homeZip, addTermStreet, homeStreet, gender;
-     */
 }
