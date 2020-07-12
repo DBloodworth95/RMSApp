@@ -300,7 +300,7 @@ public class StudentTabController {
 
     public void printTable() {
         TablePrinter tablePrinter = new TablePrinter();
-        tablePrinter.print(Paper.A4, studentTV);
+        tablePrinter.print(Paper.A3, studentTV);
     }
 
     public void editStudent() throws IOException, SQLException {

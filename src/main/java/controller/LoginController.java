@@ -73,6 +73,15 @@ public class LoginController {
                     //Transition to course leader view
                 } else if (session.getAccessLevel().hasAccessToCourseLeadView()) {
                     loader = new FXMLLoader(getClass().getResource("/FXMLview/HomePageCourseLeader.fxml"));
+                    Parent homePage = loader.load();
+                    loginButton.getScene().setRoot(homePage);
+                    Object temp = loader.getController();
+                    HomePageController controller = (HomePageController) temp;
+                    controller.setLoginUsername(session.getUsername());
+                    controller.setLastLogLabel("Last logged in: " + session.getLastLogged());
+                    controller.setGhostSessionL(Integer.toString(session.getId()));
+                    controller.setDateLabel();
+                    controller.createHomeTab(session);
 
                 } else {
                     //else is a tutor

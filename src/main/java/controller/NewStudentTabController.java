@@ -63,7 +63,7 @@ public class NewStudentTabController {
                 preparedStatement.setBinaryStream(7, imageFile, imageFile.available());
                 preparedStatement.setString(8, genderCB.getValue().toString());
                 preparedStatement.setString(9, termHNTF.getText());
-                preparedStatement.setInt(10, Integer.parseInt(currCourseTF.getText()));
+                preparedStatement.setString(10, currCourseTF.getText());
                 preparedStatement.setInt(11, Integer.parseInt(currYearCB.getValue().toString()));
                 preparedStatement.setInt(12, Integer.parseInt(enrolYearCB.getValue().toString()));
                 preparedStatement.setString(13, entryQCB1.getValue().toString() + " " + entryQCB2.getValue().toString() + " " + entryQCB3.getValue().toString());
