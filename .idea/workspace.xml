@@ -20,23 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b22efc5-99a1-4bdf-b46f-bdad8b4e5302" name="Default Changelist" comment="Tidied up &amp; Added some comments.">
-      <change afterPath="$PROJECT_DIR$/attendance_records/20200710CSY011920" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/NewStudentTabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/NewStudentTabController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/StudentTabController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/StudentTabController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/TablePrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/TablePrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/NewStudentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/NewStudentTabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StudentTabController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/TablePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/TablePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/student/Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/student/TempMedicalStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rms/Staff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rms/StudentTabController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/FXMLview/PersonalTutorshipTutorTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/FXMLview/PersonalTutorshipTutorTab.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXMLview/PersonalTutorshipTutorTab.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXMLview/PersonalTutorshipTutorTab.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,6 +262,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -368,6 +377,8 @@
       <workItem from="1594158286103" duration="6000" />
       <workItem from="1594395338887" duration="844000" />
       <workItem from="1594571959061" duration="2403000" />
+      <workItem from="1594941373844" duration="325000" />
+      <workItem from="1595087730996" duration="509000" />
     </task>
     <task id="LOCAL-00074" summary="Updated attendance/booking UI">
       <created>1591540131836</created>
@@ -716,19 +727,20 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -760,110 +772,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Tidied up &amp; Added some comments." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2362" y="113" width="800" height="683" key="#Custom_Plugin_Repositories" timestamp="1586175622021">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="397" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1603768474344">
+      <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="2362" y="113" width="800" height="683" key="#Custom_Plugin_Repositories/65.25.1855.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586175622021" />
-    <state x="477" y="131" width="800" height="683" key="#SQL_Dialects" timestamp="1586902565947">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state x="477" y="131" width="800" height="683" key="#SQL_Dialects/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1586902565947" />
-    <state x="800" y="271" width="374" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1592424635894">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state x="800" y="271" width="374" height="568" key="#com.intellij.ide.util.MemberChooser/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588519011794" />
-    <state x="800" y="271" width="374" height="568" key="#com.intellij.ide.util.MemberChooser/65.25.1855.1055@65.25.1855.1055" timestamp="1592424635894" />
-    <state x="745" y="439" width="494" height="243" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592401278702">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state x="745" y="439" width="494" height="243" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/65.25.1855.1055@65.25.1855.1055" timestamp="1592401278702" />
-    <state x="65" y="25" width="846" height="1055" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592235298031">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state x="65" y="25" width="846" height="1055" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/65.25.1855.1055@65.25.1855.1055" timestamp="1592235298031" />
-    <state x="476" y="225" width="696" height="681" key="CommitChangelistDialog2" timestamp="1592496492205">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state x="314" y="30" width="696" height="681" key="CommitChangelistDialog2/0.23.1440.840@0.23.1440.840" timestamp="1591447291796" />
-    <state x="476" y="225" width="860" height="855" key="CommitChangelistDialog2/65.25.1855.1055@65.25.1855.1055" timestamp="1592496492205" />
-    <state x="775" y="310" width="424" height="490" key="FileChooserDialogImpl" timestamp="1591532763820">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state x="775" y="310" key="FileChooserDialogImpl/65.25.1855.1055@65.25.1855.1055" timestamp="1591532763820" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1594578004247">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1351" height="125" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1592915901642" />
-    <state width="1398" height="170" key="GridCell.Tab.0.bottom/0.23.1440.840@0.23.1440.840" timestamp="1591452844800" />
-    <state width="1809" height="222" key="GridCell.Tab.0.bottom/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="291" key="GridCell.Tab.0.bottom/65.25.1855.1055@65.25.1855.1055" timestamp="1592498248548" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594578004247" />
-    <state width="1802" height="267" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1594138240639" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1594578004247">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1351" height="125" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1592915901641" />
-    <state width="1398" height="170" key="GridCell.Tab.0.center/0.23.1440.840@0.23.1440.840" timestamp="1591452844800" />
-    <state width="1809" height="222" key="GridCell.Tab.0.center/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="291" key="GridCell.Tab.0.center/65.25.1855.1055@65.25.1855.1055" timestamp="1592498248547" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594578004247" />
-    <state width="1802" height="267" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1594138240639" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1594578004246">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1351" height="125" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1592915901641" />
-    <state width="1398" height="170" key="GridCell.Tab.0.left/0.23.1440.840@0.23.1440.840" timestamp="1591452844799" />
-    <state width="1809" height="222" key="GridCell.Tab.0.left/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="291" key="GridCell.Tab.0.left/65.25.1855.1055@65.25.1855.1055" timestamp="1592498248547" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594578004246" />
-    <state width="1802" height="267" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1594138240639" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1594578004247">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1351" height="125" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1592915901642" />
-    <state width="1398" height="170" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1591452844800" />
-    <state width="1809" height="222" key="GridCell.Tab.0.right/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546548971" />
-    <state width="1809" height="291" key="GridCell.Tab.0.right/65.25.1855.1055@65.25.1855.1055" timestamp="1592498248547" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594578004247" />
-    <state width="1802" height="267" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1594138240639" />
-    <state width="1809" height="341" key="GridCell.Tab.1.bottom" timestamp="1591117582340">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state width="1809" height="341" key="GridCell.Tab.1.bottom/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546291829" />
-    <state width="1809" height="341" key="GridCell.Tab.1.bottom/65.25.1855.1055@65.25.1855.1055" timestamp="1591117582340" />
-    <state width="1809" height="341" key="GridCell.Tab.1.center" timestamp="1591117582338">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state width="1809" height="341" key="GridCell.Tab.1.center/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546291829" />
-    <state width="1809" height="341" key="GridCell.Tab.1.center/65.25.1855.1055@65.25.1855.1055" timestamp="1591117582338" />
-    <state width="1809" height="341" key="GridCell.Tab.1.left" timestamp="1591117582335">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state width="1809" height="341" key="GridCell.Tab.1.left/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546291829" />
-    <state width="1809" height="341" key="GridCell.Tab.1.left/65.25.1855.1055@65.25.1855.1055" timestamp="1591117582335" />
-    <state width="1809" height="341" key="GridCell.Tab.1.right" timestamp="1591117582339">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state width="1809" height="341" key="GridCell.Tab.1.right/65.25.1855.1055/1920.0.1920.1080@65.25.1855.1055" timestamp="1588546291829" />
-    <state width="1809" height="341" key="GridCell.Tab.1.right/65.25.1855.1055@65.25.1855.1055" timestamp="1591117582339" />
-    <state x="372" y="98" width="1197" height="736" key="SettingsEditor" timestamp="1591532825971">
-      <screen x="65" y="25" width="1855" height="1055" />
-    </state>
-    <state x="2238" y="75" key="SettingsEditor/65.25.1855.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586175623696" />
-    <state x="372" y="98" width="1197" height="736" key="SettingsEditor/65.25.1855.1055@65.25.1855.1055" timestamp="1591532825971" />
-    <state x="320" y="182" key="Vcs.Push.Dialog.v2" timestamp="1591447321114">
-      <screen x="0" y="23" width="1440" height="840" />
-    </state>
-    <state x="320" y="182" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1591447321114" />
-    <state x="305" y="144" width="1372" height="825" key="new project wizard" timestamp="1593271792361">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="305" y="144" width="1372" height="825" key="new project wizard/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1593271792361" />
-    <state x="458" y="207" width="670" height="539" key="search.everywhere.popup" timestamp="1592912339342">
-      <screen x="0" y="23" width="1440" height="838" />
-    </state>
-    <state x="458" y="207" width="670" height="539" key="search.everywhere.popup/0.23.1440.838@0.23.1440.838" timestamp="1592912339342" />
-    <state x="655" y="257" width="672" height="678" key="search.everywhere.popup/65.25.1855.1055@65.25.1855.1055" timestamp="1592488688972" />
+    <state x="397" y="272" key="com.intellij.ide.util.TipDialog/0.23.1440.834@0.23.1440.834" timestamp="1603768474344" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled$CreateGUI.ic" NAME="CreateGUI Coverage Results" MODIFIED="1578915040701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
